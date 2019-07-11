@@ -1,0 +1,81 @@
+<!-- /match-page/player-html5.html -->
+
+<!--
+<div class="fullscreener">
+  <i id="stream-expand" class="gti-expand active tip" data-placement="left" title="На весь экран"></i>
+  <i id="stream-compress" class="gti-compress tip" data-placement="left" title="Свернуть"></i>
+</div>
+-->
+
+<i id="player-menu" class="gti-chevron-right"></i>
+
+  <div class="iframer">
+{#
+    <iframe rel="stream" site="twitch" title="starladder1" allowfullscreen="" frameborder="0" width="100%" height="100%" src="http://player.twitch.tv/?autoplay=false&amp;channel=moonducktv"></iframe>
+#}
+{#
+    <div class="subs">
+      <div class="subsc">
+        <span class="nap">
+          напомнить мне<br>
+          об этом матче
+        </span>
+        <div>
+          <div class="btn-group">
+            <button type="button" class="btn btn-sm btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="gti-clock-o"></i> За 1 час <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="#">За 1 час</a></li>
+              <li><a href="#">За 2 часа</a></li>
+              <li><a href="#">За 12 часов</a></li>
+              <li><a href="#">За 24 часа</a></li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <i class="gti-envelope-o"></i>
+          <input class="form-control input-sm" type="text" placeholder="Email адрес">
+        </div>
+        <div>
+          <a href="" class="btn-input btn btn-sm btn-primary">OK</a>
+        </div>
+      </div>
+    </div>
+#}
+    <div id="clickMe" class="iframerClicker" style="background-image:url(../img/w-100.jpg);position:absolute; top:0;left:0;right:0;bottom:0;">
+      <div class="iframerChannel">
+        <img src="../img/news.jpg"/>
+        <div>
+          <h4>Starladder1</h4>
+          <h5>[RU] T.O.T. vs NL5.Reborn | Grand Final | WESG 2016 Asia-Pacific</h5>
+          <span class="pviews"><i class="gti-eye"></i> 2345 зрителя</span>
+        </div>
+      </div>
+    </div>
+    <script>
+    $(document).ready(function () {
+        $('#clickMe').click(function (){
+          $('.iframer').show();
+          $(this).hide();
+          $('.iframeBanner').addClass('active');
+          $('.iframer').addClass('active');
+        });
+    });
+    </script>
+  </div>
+
+
+<!-- NO -->
+<!--
+<div class="iframer">
+  <div class="white_noize"> 
+    <div class="nostream">   
+        <i class="fa fa-frown-o"></i> нет видео
+    </div>
+  </div>
+</div>
+-->
+<!--<div class="bn iframeBanner">
+  <img src="../img/ad_player.jpg" alt="">
+</div>-->

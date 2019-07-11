@@ -1,0 +1,177 @@
+{% set title = "Турнир Dota 2" %}
+
+{% set team = ['Wings', 'OG', 'Evil Geniuses', 'EHOME', 'NewBee', 'Virtus.Pro', 'LGD.Forever Young', 'Invictus Gaming'] %}
+{% set flag = ['1', '2', '3', '4', '5', '6'] %}
+{% set rate = ['1,744', '1,622', '1,511', '1,497', '1,496', '1,469', '—'] %}
+{% set logo = ['pic-20161110-600x600-7320131375.png', 'pic-20161110-300x300-2206743285.png', 'pic-20161110-600x600-5478339632.png', 'pic-20161110-500x500-918003572.png', 'pic-20161110-600x450-6323255579.png'] %}
+{% set player = ['Bulba', 'Miracle', 'MATUMBAMAN ', 'KuroKy', 'MinD_ContRoL'] %}
+
+<!DOCTYPE html>
+<html>
+{% include "template/head.html" %}
+<body class="">
+  <div class="container mainwrap pad120">
+    <div class="otstup">
+      <section class="hero pageTourHero" style="background-image:url(http://ggscore.com/media/tournament/pic-20160831-478x178-7586446600.jpeg);">
+        <div class="heroBg" style="background-image:url(http://ggscore.com/media/tournament/pic-20160831-478x178-7586446600.jpeg);"></div>
+        <h1>Dota 2 турнир WESG </h1>
+        {% include "template/match-page/stage-block.html" %}
+    </section>
+     
+    <section class="t-top m-sec">
+      <div class="row">
+        <div class="col-md-8">
+          
+          <h3 class="mlh mlh-first"><span>О турнире WESG</span></h3>
+          <div class="ppcontent">
+              <h2>Региональные квалификации</h2>
+              <p>Региональные квалификации WESG пройдут в четырех регионах: SEA, Европа и СНГ, Северная и Южная Америка, Африка и Средний Восток.</p>
+              <p>
+                <a class="fancybox" href="http://starladder.com/content/uploads/2016/08/Europe_infographics_FullHD_rus-6.jpg"><img class="img-responsive" src="http://starladder.com/content/uploads/2016/08/Europe_infographics_FullHD_rus-6.jpg" alt=""></a>
+              </p>
+              <p>Как зарегистрироваться на турнир вы можете узнать перейдя <a href="/go?url=https://wesg.starladder.com/en/dota2/faqs/27">по ссылке</a></p>
+              <h3>Africa &amp; Middle East</h3>
+              <p><span style="text-decoration: underline;">Открытые квалификации</span> (топ 2 команды проходят в региональную квалификацию)&nbsp;</p>
+              <ul>
+                <li>Турция (13 августа) - <a href="/go?url=https://wesg.starladder.com/en/dota2/tournaments/1345">полная сетка</a>&nbsp;</li>
+                <li>N &amp; W Африка (13 августа) - <a href="/go?url=https://wesg.starladder.com/en/dota2/tournaments/1346">полная сетка</a>&nbsp;</li>
+                <li>S &amp; E Африка (13 августа) - <a href="/go?url=https://wesg.starladder.com/en/dota2/tournaments/1347">полная сетка</a>&nbsp;</li>
+                <li>Средний восток (13 августа) - <a href="/go?url=https://wesg.starladder.com/en/dota2/tournaments/1348">полная сетка</a>&nbsp;</li>
+              </ul>
+              <p><span style="text-decoration: underline;">Региональная квалификация</span> (LAN финал в Дубае)&nbsp;</p>
+              <ul>
+                <li><a href="/dota-2/wesg/mea-group">2 группы</a> по 4 команды, BO1 матчи, Топ 2 команды каждой группы проходят в Плей-офф</li>
+                <li><a href="/dota-2/wesg/mea-group">Плей-офф</a> single elimination сетка&nbsp;на 4 команды</li>
+                <li>Топ 3 команды проходят в Global Grand Finals</li>
+              </ul>
+              <h3>Europe &amp; CIS</h3>
+              <p><span style="text-decoration: underline;">Открытые квалификации</span> (число слотов на региональную квалификацию указано в скобках)&nbsp;</p>
+              <ul>
+                <li>UK, Ireland &amp; Iceland (1) - <a href="/go?url=https://wesg.starladder.com/en/dota2/tournaments/1357">полная сетка</a></li>
+                <li>N Europe &amp; Post CIS (1) - <a href="/go?url=https://wesg.starladder.com/en/dota2/tournaments/1355">полная сетка</a>&nbsp;</li>
+                <li>South-Eastern Europe (1) - <a href="/go?url=https://wesg.starladder.com/en/dota2/tournaments/1350">полная сетка</a></li>
+                <li>Benelux (1) - <a href="/go?url=https://wesg.starladder.com/en/dota2/tournaments/1360">полная сетка</a></li>
+                <li>Central Europe (1) - <a href="/go?url=https://wesg.starladder.com/en/dota2/tournaments/1353">полная сетка</a></li>
+                <li>Iberia (1) - <a href="/go?url=https://wesg.starladder.com/en/dota2/tournaments/1352">полная сетка</a></li>
+                <li>Adriatica (1) - <a href="/go?url=https://wesg.starladder.com/en/dota2/tournaments/1349">полная сетка</a></li>
+                <li>France and Monaco (1) - <a href="/go?url=https://wesg.starladder.com/en/dota2/tournaments/1351">полная сетка</a>&nbsp;</li>
+                <li>Sweden (2) - <a href="/go?url=https://wesg.starladder.com/en/dota2/tournaments/1354">полная сетка</a></li>
+                <li>Germany (2) - <a href="/go?url=https://wesg.starladder.com/en/dota2/tournaments/1358">полная сетка</a></li>
+                <li>Poland (1) - <a href="/go?url=https://wesg.starladder.com/en/dota2/tournaments/1363">полная сетка</a></li>
+                <li>Russia (2) - <a href="/go?url=https://wesg.starladder.com/en/dota2/tournaments/1356">полная сетка</a></li>
+                <li>Ukraine (2) - <a href="/go?url=https://wesg.starladder.com/en/dota2/tournaments/1362">полная сетка</a></li>
+                <li>Denmark (2) - <a href="/go?url=https://wesg.starladder.com/en/dota2/tournaments/1359">полная сетка</a></li>
+                <li>Norway (1) - <a href="/go?url=https://wesg.starladder.com/en/dota2/tournaments/1361">полная сетка</a></li>
+              </ul>
+              <p><span style="text-decoration: underline;">Региональная квалификация</span> (LAN финал в Киеве)&nbsp;</p>
+              <ul>
+                <li>Дата проведения: 2016-10-06</li>
+                <li>20 команд&nbsp;</li>
+                <li>Топ 8 команд проходят в Global Grand Finals</li>
+              </ul>
+              <h3>Group Stage</h3>
+              <ul>
+                <li>4 группы по 6 команд</li>
+                <li>Round-Robin</li>
+                <li>Команды с первого места проходят в 1/4 финала</li>
+                <li>Последние 3 команды каждой группы покидают турнир</li>
+              </ul>
+              <h3>Playoff</h3>
+              <ul>
+                <li>Single-Elimination сетка</li>
+                <li>Best-of-3 матчи</li>
+              </ul>
+            </div>
+          
+          <div class="t-t-block">
+            <h3 class="mlh"><span>Приглашенные команды</span></h3>
+            <div class="teams-block">
+              {% for i in 1..5 %}
+                <div class="tb">
+                  <a href="">{{random(team)}}</a>
+                  <div>
+                    <figure>
+                      <img alt="Evil Geniuses" src="http://game-tournaments.com/media/logo/{{random(logo)}}">
+                    </figure>
+                    <div class="teamcard">
+                       <table>
+                        {% for i in 1..5 %}
+                          <tr>
+                            <th>{{i}}</th><td><a href="" title="Russia"><img alt="Russia" src="http://game-tournaments.com/media/flag/{{random(flag)}}.png" width="16"></a>&nbsp;<a href="" title="{{random(player)}}">{{random(player)}}</a></td>
+                          </tr>
+                        {% endfor %}
+                      </table>
+                    </div>
+                  </div>
+                  <span>Invited</span>
+                </div>
+              {% endfor %}
+            </div>
+            <h3 class="mlh"><span>Прошедшие квалификацию <b class="badge">24</b></span></h3>
+            <div class="teams-block">
+                {% for i in 1..24 %}
+                  <div class="tb">
+                  <a href="">{{random(team)}}</a>
+                  <div>
+                    <figure>
+                      <img alt="Evil Geniuses" src="http://game-tournaments.com/media/logo/{{random(logo)}}">
+                    </figure>
+                    <div class="teamcard">
+                       <table>
+                        {% for i in 1..5 %}
+                          <tr>
+                            <th>{{i}}</th><td><a href="" title="Russia"><img alt="Russia" src="http://game-tournaments.com/media/flag/{{random(flag)}}.png" width="16"></a>&nbsp;<a href="" title="{{random(player)}}">{{random(player)}}</a></td>
+                          </tr>
+                        {% endfor %}
+                      </table>
+                    </div>
+                  </div>
+                  <span>Americas Qualifier</span>
+                </div>
+                {% endfor %}
+            </div>
+            <center>
+              <a href="http://ggscore.com/ru/dota-2/team?event=1171" class="btn btn-default btn-sm">Остальные команды</a>
+            </center>
+          </div>
+          <div class="t-m-block">
+             <h3 class="mlh" style="margin-bottom: -14px;"><span>Последние матчи</span></h3>
+            
+            {% include "template/match-list/match-list2.html" %}
+            
+            {% include "template/match-list/match-list-future.html" %}
+            
+            {% include "template/match-list/match-list-past.html" %}
+            {% include "template/pager.html" %}
+          </div>
+        </div>
+        <div class="col-md-4">
+
+          {% include "template/tours/tour-block.html" %}
+          {% include "template/liveblock.html" %}
+          
+          <h4 class="mlh"><span>Новости турнира</span></h4>
+          {% include "template/news/newslist-block-mini.html" %}
+          {% include "template/pager.html" %}
+          
+        </div>
+      </div>
+    </section>
+      
+
+    {#
+      <div class="bn">
+        <img src="../img/ad.jpg" alt="">
+      </div>
+    #}
+      {% include "template/breadcrumbs.html" %}
+      {% include "template/footer.html" %}
+  </div>
+</div>
+{% include "template/branding.html" %}
+{% include "template/bar.html" %}
+{% include "template/modal.html" %}
+{% include "template/scripts.html" %}
+
+</body>
+</html>

@@ -1,0 +1,751 @@
+{% set title = "NEWS Page" %}
+
+<!DOCTYPE html>
+<html>
+{% include "template/head.html" %}
+<body class="">
+    {% include "template/header.html" %}
+  <div class="container mainwrap">
+    <div class="otstup">
+      <section class="newstop" style="background-image:url(https://ggscore.com/media/news/no.jpg)">
+        <div>
+	        <ul class="news-games">
+		        <li class="active"><a href="/ru/dota-2/news"><i class="gti-582"></i>#Dota 2</a></li>
+				<li><a href="/ru/csgo/news"><i class="gti-704"></i>#CS:GO</a></li>
+				<li><a href="/ru/lol/news"><i class="gti-313"></i>#LoL</a></li>
+				<li><a href="/ru/overwatch/news"><i class="gti-800"></i>#OW</a></li>
+				<li><a href="/ru/hearthstone/news"><i class="gti-755"></i>#HS</a></li>
+			</ul>
+			<h1>Новости <strong>#Dota 2</strong></h1>
+        </div>
+      </section>
+
+      <section class="news-text m-even">
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="news-desc">
+              <p>Компания Astro Malaysia Holdings запустила в Юго-Восточной Азии киберспортивный телеканал под названием&nbsp;eGG (Every Good Game). Канал будет работать в режиме 24/7, на нем будут освещаться дисциплины&nbsp;Dota 2,&nbsp;CS:GO,&nbsp;League of&nbsp;Legends,&nbsp;Hearthstone,&nbsp;Heroes of&nbsp;the Storm и&nbsp;StarCraft II.&nbsp;</p>
+
+              <h2>Подзаголовок</h2>
+              <p>Компания Astro Malaysia Holdings запустила в Юго-Восточной Азии киберспортивный телеканал под названием&nbsp;eGG (Every Good Game). Канал будет работать в режиме 24/7, на нем будут освещаться дисциплины&nbsp;Dota 2,&nbsp;CS:GO,&nbsp;League of&nbsp;Legends,&nbsp;Hearthstone,&nbsp;Heroes of&nbsp;the Storm и&nbsp;StarCraft II.&nbsp;</p>
+
+              <div class="quote">
+              Первыми турнирами, которые будут показаны по новому телеканалу, станут Esports Championship Series, ELEAGUE и The International 2016.
+              </div>
+
+              <p>Комментарий главы спортивного направления Astro, Ли Чунг Хая:&nbsp;"В 2015 году&nbsp;Astro первым в Юго-Восточной Азии транслировал в прямом эфире чемпионат мира по Dota 2.&nbsp;TI5 тогда был чрезвычайно популярен среди молодежи, что стимулировало нас на трансляцию большего количества киберспортивных турниров, что позволит охватить несколько миллионов зрителей. Мы считаем, что киберспорт лучше всего подходит для трансляции на больших экранах, так что теперь поклонники смогут наслаждаться любимыми чемпионатами в HD-качестве, также, как любители футбола. В отличие от традиционных видов спорта, где люди болеют за конкретную команду или игроков, &nbsp;поклонники киберспорта привязаны к самой игре. Создание подобного сообщества может внести элемент социальной активности и движения".</p>
+
+              <h3>Подзаголовок</h3>
+
+              <p>Первыми турнирами, которые будут показаны по новому телеканалу, станут&nbsp;<a href="http://game-tournaments.com/csgo/esports-championship-series-season-1">Esports Championship Series</a>, <a href="http://game-tournaments.com/csgo/eleague-season-1">ELEAGUE</a> и&nbsp;<a href="http://game-tournaments.com/dota-2/international-2016">The International 2016</a>.</p>
+              <p>Astro Malaysia Holdings являются ведущей кабельным оператором в Малайзии и Юго-Восточной Азии. Клиентская база&nbsp;Astro насчитывает 4,8 млн. человек. Компания предлагает своим абонентам 183 канала, из которых 54 транслируют в качестве HD.&nbsp;</p>
+
+              <h4>Подзаголовок</h4>
+
+              <ul>
+              <li> Клиентская база</li>
+              <li> Клиентская база</li>
+              <li> Клиентская база</li>
+              <li> Клиентская база</li>
+              <li> Клиентская база</li>
+              <li> Клиентская база</li>
+              </ul>
+              
+              <div class="block-br n_share">
+                <h5>1 картинка</h5>
+                <div class="one-pic">
+                    {% for i in 5..5 %}
+                    <a class="fancybox-thumb" href="https://tympanus.net/Development/AutomaticImageMontage/images/{{i}}.jpg"><img src="https://tympanus.net/Development/AutomaticImageMontage/images/{{i}}.jpg" title="Image 1"></a>
+                    {% endfor %}
+                </div>
+              </div>
+              <div class="block-br n_share">
+                <h5>1 картинка 100% высокая</h5>
+                <div class="one-pic one-pic-100">
+                    {% for i in 5..5 %}
+                    <a class="fancybox-thumb" href="https://tympanus.net/Development/AutomaticImageMontage/images/{{i}}.jpg"><img src="https://tympanus.net/Development/AutomaticImageMontage/images/{{i}}.jpg" title="Image 1"></a>
+                    {% endfor %}
+                </div>
+              </div>
+              <div class="block-br n_share">
+                <h5>1 картинка 100% широкая</h5>
+                <div class="one-pic one-pic-100">
+                    {% for i in 8..8 %}
+                    <a class="fancybox-thumb" href="https://tympanus.net/Development/AutomaticImageMontage/images/{{i}}.jpg"><img src="https://tympanus.net/Development/AutomaticImageMontage/images/{{i}}.jpg" title="Image 1"></a>
+                    {% endfor %}
+                </div>
+              </div>
+              <style>
+                .one-pic {margin: 10px 15px 15px;}
+                .one-pic a {display: inline-block; max-width:100%;width: 300px;}
+                .one-pic a img {width:100%}
+                .one-pic-100 a{width: 1000%; max-height: 400px;overflow: hidden;}
+              </style>
+              
+              <div class="block-br n_share">
+                <h5>2 картинки Collage</h5>
+                <div class="Collage">
+                    {% for i in 5..6 %}
+                    <a rel="fancybox-thumb" class="fancybox-thumb" href="https://tympanus.net/Development/AutomaticImageMontage/images/{{i}}.jpg"><img src="https://tympanus.net/Development/AutomaticImageMontage/images/{{i}}.jpg" title="Image 1"></a>
+                    {% endfor %}
+                </div>
+              </div>
+              
+             <hr>
+              
+              <div class="block-br n_share">
+                <h5>Галерея Collage</h5>
+                <div class="Collage">
+                    {% for i in 1..10 %}
+                    <a rel="fancybox-thumb" class="fancybox-thumb" href="https://tympanus.net/Development/AutomaticImageMontage/images/{{i}}.jpg"><img src="https://tympanus.net/Development/AutomaticImageMontage/images/{{i}}.jpg" title="Image {{i}}"></a>
+                    {% endfor %}
+                </div>
+              </div>
+              <style>
+              .Collage{
+                padding:0 5px;
+                margin: 10px 10px;
+              }
+              .Collage a{
+                vertical-align:bottom;
+                opacity:0;
+              }
+              .effect-parent {
+                -webkit-perspective: 1300px;
+                -moz-perspective: 1300px;
+                perspective: 1300px;
+              }
+              /* EFFECT 5 */
+              .effect-2 {
+                  -webkit-transform: translateY(200px);
+                  -moz-transform: translateY(200px);
+                  transform: translateY(200px);
+                  -webkit-animation: moveUp ease forwards;
+                  -moz-animation: moveUp ease forwards;
+                  animation: moveUp ease forwards;
+              }
+              @-webkit-keyframes moveUp {
+                  to { -webkit-transform: translateY(0); opacity: 1; }
+              }
+
+              @-moz-keyframes moveUp {
+                  to { -moz-transform: translateY(0); opacity: 1; }
+              }
+
+              @keyframes moveUp {
+                  to { transform: translateY(0); opacity: 1; }
+              }
+              .effect-duration-1{
+                  -webkit-animation-duration: .4s;
+                  -moz-animation-duration:    .4s;
+                  animation-duration:         .4s;
+              }
+              .effect-duration-2{
+                  -webkit-animation-duration: .5s;
+                  -moz-animation-duration:    .5s;
+                  animation-duration:         .5s;
+              }
+              .effect-duration-3{
+                  -webkit-animation-duration: .6s;
+                  -moz-animation-duration:    .6s;
+                  animation-duration:         .6s;
+              }
+              .effect-duration-4{
+                  -webkit-animation-duration: .7s;
+                  -moz-animation-duration:    .7s;
+                  animation-duration:         .7s;
+              }
+              .effect-duration-5{
+                  -webkit-animation-duration: .8s;
+                  -moz-animation-duration:    .8s;
+                  animation-duration:         .8s;
+              }
+              .effect-duration-6{
+                  -webkit-animation-duration: .9s;
+                  -moz-animation-duration:    .9s;
+                  animation-duration:         .9s;
+              }
+              .effect-duration-7{
+                  -webkit-animation-duration: .95s;
+                  -moz-animation-duration:    .95s;
+                  animation-duration:         .95s;
+              }
+              .effect-duration-8{
+                  -webkit-animation-duration: 1s;
+                  -moz-animation-duration:    1s;
+                  animation-duration:         1s;
+              }
+              .effect-duration-9{
+                  -webkit-animation-duration: 1.05s;
+                  -moz-animation-duration:    1.05s;
+                  animation-duration:         1.05s;
+              }
+              .effect-duration-10{
+                  -webkit-animation-duration: 1.1s;
+                  -moz-animation-duration:    1.1s;
+                  animation-duration:         1.1s;
+              }
+              </style>
+              <script src="http://collageplus.edlea.com/javascripts/example/jquery.collagePlus.min.js"></script>
+              <script>
+              $(document).ready(function () {
+
+                  (function(a){a.fn.removeWhitespace=function(){this.contents().filter(function(){return this.nodeType==3&&!/\S/.test(this.nodeValue)}).remove();return this}})(jQuery)
+
+                  $(window).load(function () {
+                    $(document).ready(function(){
+                      collage();
+                    });
+                  });
+                  // Here we apply the actual CollagePlus plugin
+                  function collage() {
+                    $('.Collage').removeWhitespace().collagePlus({
+                      'fadeSpeed'     : 2000,
+                      'targetHeight'  : 200,
+                      'effect' : 'effect-2'
+                    });
+                  };
+
+                  // This is just for the case that the browser window is resized
+                  var resizeTimer = null;
+                  $(window).bind('resize', function() {
+                      // hide all the images until we resize them
+                      $('.Collage a').css("opacity", 0);
+                      // set a timer to re-apply the plugin
+                      if (resizeTimer) clearTimeout(resizeTimer);
+                      resizeTimer = setTimeout(collage, 200);
+                  });
+              });
+              </script>
+              
+              <hr>
+              
+              <div class="block-br n_share">
+                <h5>Галерея AutomaticImageMontage</h5>
+                <div class="am-container" id="am-container">
+                    {% for i in 1..10 %}
+                    <a rel="fancybox-thumb" class="am-wrapper fancybox-thumb"  href="https://tympanus.net/Development/AutomaticImageMontage/images/{{i}}.jpg"><img src="https://tympanus.net/Development/AutomaticImageMontage/images/{{i}}.jpg" title="Image 1"></a>
+                    {% endfor %}
+                </div>
+              </div>
+              <style>
+                .am-container{
+                  overflow: hidden;
+                  margin: 10px 10px;
+                }
+                .am-wrapper{
+                    float:left;
+                    position:relative;
+                    overflow:hidden;
+                }
+                .am-wrapper img{
+                    position:absolute;
+                    outline:none;
+                }
+              </style>
+              <script>
+                $(function() {
+                  var $container 	= $('#am-container'),
+                      $imgs		    = $container.find('img').hide(),
+                      totalImgs	    = $imgs.length,
+                      cnt			= 0;
+
+                  $imgs.each(function(i) {
+                      var $img	= $(this);
+                      $('<img/>').load(function() {
+                          ++cnt;
+                          if( cnt === totalImgs ) {
+                              $imgs.show();
+                              $container.montage({
+                                  fillLastRow				: true,
+                                  alternateHeight			: true,
+                                  alternateHeightRange	: {
+                                      min	: 90,
+                                      max	: 240
+                                  }
+                              });
+                          }
+                      }).attr('src',$img.attr('src'));
+                  });
+                });
+              </script>
+              
+              
+              <div class="tags">
+                <i class="gti gti-hand-o-up"></i>
+                <sapn>Источник:</sapn>
+                <a href="/dota-2/international">#ссылка</a>
+              </div>
+              
+              <div class="sub_ms">
+                <div class="sub_m">
+                  <div class="sbtns">
+                  
+                    <ul>
+                      <li><a href="#!"><i class="gti-vk hi-1 hi-1a"></i></a></li>
+                      <li><a href="#!"><i class="gti-facebook hi-1 hi-1a"></i></a></li>
+                      <li><a href="#!"><i class="gti-twitter hi-1 hi-1a"></i></a></li>
+                      <li><a href="#!"><i class="gti-google-plus hi-1 hi-1a"></i></a></li>
+                      <!--<li><a href="#!"><i class="gti-instagram hi-1 hi-1a"></i></a></li>-->
+                    </ul>
+                    
+                    {#<a class="btn btn-sm btn-default">Подробнее</a>#}
+                  </div>
+                  <a href="" class="si hi-1 hi-1a"><span><img src="http://game-tournaments.com/media/logo/200-308px-Crazy.jpg"></span></a>
+                  <h4><a href="">Crazy</a> <span>Oleg Kolesnichenko</span> <img src="http://game-tournaments.com/media/flag/3.png" alt="country"> <b>Support</b></h4>
+                  {#
+                  <div>
+                    <dl>
+                      <dt class="odtip" title="Кills \ Убийства">K</dt>
+                      <dd>0.08</dd>
+                    </dl>
+                    <dl>
+                      <dt class="odtip" title="Death \ Смерти">D</dt>
+                      <dd>0.13</dd>
+                    </dl>
+                    <dl>
+                      <dt class="odtip" title="Assists \ Помощь">A</dt>
+                      <dd>0.35</dd>
+                    </dl>
+                    <dl>
+                      <dt>Форма</dt>
+                      <dd class="green">132%</dd>
+                    </dl>
+                    <dl>
+                      <dt>GPM</dt>
+                      <dd>272</dd>
+                    </dl>
+                    <dl>
+                      <dt>MMR</dt>
+                      <dd>-</dd>
+                    </dl>
+                  </div>
+                  #}
+                </div>
+
+                <div class="sub_m">
+                  <div class="sbtns">
+                    <ul>
+                      <li><a href="#!"><i class="gti-vk hi-1 hi-1a"></i></a></li>
+                      <li><a href="#!"><i class="gti-facebook hi-1 hi-1a"></i></a></li>
+                      <li><a href="#!"><i class="gti-twitter hi-1 hi-1a"></i></a></li>
+                      <li><a href="#!"><i class="gti-google-plus hi-1 hi-1a"></i></a></li>
+                      <li><a href="#!"><i class="gti-instagram hi-1 hi-1a"></i></a></li>
+                    </ul>
+                    {#<a class="btn btn-sm btn-default">Подробнее</a>#}
+                  </div>
+                  <a href="" class="si hi-1 hi-1a"><span><img src="http://game-tournaments.com/media/logo/_60/power-rangers-2633707.png"></span></a>
+                  <h4><a href="">PR</a> <span>Power Rangers</span> <img src="http://game-tournaments.com/media/flag/3.png" alt="country"> <b class="badge">#6</b></h4>
+                  {#
+                  <div>
+                    <dl>
+                      <dt class="odtip" title="Games \ Игр">G</dt>
+                      <dd>0.08</dd>
+                    </dl>
+                    <dl>
+                      <dt class="odtip" title="Win \ Победы">W</dt>
+                      <dd>0.13</dd>
+                    </dl>
+                    <dl>
+                      <dt class="odtip" title="Lose \ Поражения">L</dt>
+                      <dd>0.35</dd>
+                    </dl>
+                    <dl>
+                      <dt class="odtip" title="Rating \ Рейтинг">R</dt>
+                      <dd class="green">1322</dd>
+                    </dl>
+                  </div>
+                  #}
+                </div>
+
+                <div class="sub_m">
+                  <div class="sbtns">
+                    <ul>
+                      <li><a href="#!"><i class="gti-vk hi-1 hi-1a"></i></a></li>
+                      <li><a href="#!"><i class="gti-facebook hi-1 hi-1a"></i></a></li>
+                      <li><a href="#!"><i class="gti-twitter hi-1 hi-1a"></i></a></li>
+                      <li><a href="#!"><i class="gti-google-plus hi-1 hi-1a"></i></a></li>
+                      <li><a href="#!"><i class="gti-instagram hi-1 hi-1a"></i></a></li>
+                    </ul>
+                    {#<a class="btn btn-sm btn-default">Подробнее</a>#}
+                  </div>
+                  <a href="" class="si hi-1 hi-1a"><span><img src="http://stogorodov.ru/images/cities/shanghai/shanghai-1.jpg"></span></a>
+                  <h4><a href="">Shanhai</a> <span>Chaina Mega Arena</span> <img src="http://game-tournaments.com/media/flag/3.png" alt="country"> </h4>
+                  {#<div>
+                    International 2016
+                  </div>#}
+                </div>
+              </div>
+
+              <div class="tags" style="float:none;">
+                <i class="gti gti-hashtag"></i>
+                <a href="/dota-2/international">#GT</a>
+                <a href="/dota-2/international">#dota2</a>
+                <a href="/dota-2/international">#PowerRangers</a>
+                <a href="/dota-2/international">#Shanhai</a>
+                <a href="/dota-2/international">#Major2017</a>
+                <a href="/dota-2/international">#заболел</a>
+                <a href="/dota-2/international">#Crazy</a>
+              </div>
+
+              <div class="block-br n_share">
+                <h5>Поделись новостью с друзьями</h5>
+                <div class="btxt">
+                  <a href="" class="btn btn-vk"><i class="gti-vk"></i> Вконтакте</a>
+                  <a href="" class="btn btn-facebook"><i class="gti-facebook"></i> Facebook</a>
+                  <a href="" class="btn btn-twitter"><i class="gti-twitter"></i> Twitter</a>
+                  <a href="" class="btn btn-google-plus"><i class="gti-google-plus"></i> Google</a>
+                  <!--<a href="" class="btn btn-instagram"><i class="gti-instagram"></i> Instagram</a>-->
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+          {#
+            <div class="tr_block">
+              <a class="tr_img" href=""><img src="http://game-tournaments.com/media/tournament/pic-20160613-280x80-1999640874.jpeg" alt="турнир joinDOTA Season 10 Europe"></a>
+              <h4><span>турнир</span> <a href="">joinDOTA Season 10 Europe</a></h4>
+              <div>
+                <table>
+                  <tr>
+                    <td><i class="tric-t"></i></td>
+                    <td><i class="tric-d"></i></td>
+                    <td><i class="tric-p"></i></td>
+                  </tr>
+                  <tr>
+                    <td><b>16 команд</b></td>
+                    <td><b>2 августа 2016</b></td>
+                    <td><b>20,000,000$</b></td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          #}
+           
+          <div class="pAva t-block">
+            <div class="pAvaBg">
+              <span class="tLogo">
+                <img src="http://ggscore.com/media/tournament/pic-20160831-478x178-7586446600.jpeg" alt="WESG">
+              </span>
+              <div class="pInf">
+                <h1 class="mlh"><span>Dota 2 турнир WESG</span></h1>
+                <table>
+                  <tbody>
+                    <tr>
+                      <td width="200px">Турнир проводится</td>
+                      <td>с 12 января, 2017</td>
+                    </tr>
+                    <tr>
+                      <td>Дата окончания</td>
+                      <td>22 января, 2017</td>
+                    </tr>
+                    <tr>
+                      <td>Призовой фонд</td>
+                      <td><b>$ 1,700,000</b></td>
+                    </tr>
+                    <tr>
+                      <td>Команд участвует</td>
+                      <td>105</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="fans">
+                <a href="#" class="btn btn-primary tip" title="" data-original-title="Подписаться на новости и уведомления о матчах"><i class="gti-flag-o"></i>Подписаться</a>
+              </div>
+            </div>
+          </div>
+           
+           
+          <div class="m-top-block nw">
+            <h3><span>матч</span></h3>
+            <div class="m-top-cont">
+              <a class="m-top-link" href="#" title="EHOME VS Vici Gaming"></a>
+              <table>
+                <tbody>
+                  <tr>
+                    <td class="mt1">
+                      <figure><img src="http://game-tournaments.com/media/logo/_60/ehome.png"></figure> <u>EHOME</u> </td>
+                    <td> <em><sup data-countdown="2016/06/30 22:34:56">До начала 00:00:00</sup></em> </td>
+                    <td class="mt2">
+                      <figure><img src="http://game-tournaments.com/media/logo/_60/vg-6040233.png"></figure> <u>Vici Gaming</u> </td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <h3><span>напомнить о событии</span></h3>
+              <div class="subs">
+                <div class="row">
+                  <div class="col-sm-5">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">За 1 час <span class="caret"></span></button>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">За 1 час</a></li>
+                        <li><a href="#">За 2 часа</a></li>
+                        <li><a href="#">За 12 часов</a></li>
+                        <li><a href="#">За 24 часа</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-sm-5">
+                    <input class="form-control input-sm" type="text" placeholder="Email">
+                  </div>
+                  <div class="col-sm-2">
+                      <a href="#" class="btn-input btn btn-sm btn-primary">OK</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="m-top-block nw">
+            <h3><span>коэффициенты</span></h3>
+            <div class="m-top-cont">
+              <div class="tse-sc ps-container ps-theme-default ps-active-y" data-ps-id="3ecf0ca9-9b34-51c7-de60-ec7f6304a722">
+                <div class="tse-content">
+                  <table class="table nkf">
+                    <tbody>
+                      <tr>
+                        <td><img class="bl" src="http://game-tournaments.com/html/img/logo_d2l.png" alt=""></td>
+                        <td class="td-tn1"><a class="tn1" href="">London Conspiracy Dota2</a></td>
+                        <td class="tkf"><span class="kbig">12.41</span> : <span class="ksm">1.45</span></td>
+                        <td class="td-tn2"><a class="tn2" href="">London Conspiracy Dota2 Conspiracy Dota2</a></td>
+                        <td class="td-btn"><a class="btn btn-xs btn-primary">Ставка</a></td>
+                      </tr>
+                      <tr>
+                        <td><img class="bl" src="http://game-tournaments.com/html/img/logo_d2l.png" alt=""></td>
+                        <td class="td-tn1"><a class="tn1" href="">London Conspiracy Dota2</a></td>
+                        <td class="tkf"><span class="kbig">12.41</span> : <span class="ksm">1.45</span></td>
+                        <td class="td-tn2"><a class="tn2" href="">London Conspiracy Dota2 Conspiracy Dota2</a></td>
+                        <td class="td-btn"><a class="btn btn-xs btn-primary">Ставка</a></td>
+                      </tr>
+                      <tr>
+                        <td><img class="bl" src="http://game-tournaments.com/html/img/logo_d2l.png" alt=""></td>
+                        <td class="td-tn1"><a class="tn1" href="">London Conspiracy Dota2</a></td>
+                        <td class="tkf"><span class="kbig">12.41</span> : <span class="ksm">1.45</span></td>
+                        <td class="td-tn2"><a class="tn2" href="">London Conspiracy Dota2 Conspiracy Dota2</a></td>
+                        <td class="td-btn"><a class="btn btn-xs btn-primary">Ставка</a></td>
+                      </tr>
+                      <tr>
+                        <td><img class="bl" src="http://game-tournaments.com/html/img/logo_d2l.png" alt=""></td>
+                        <td class="td-tn1"><a class="tn1" href="">London Conspiracy Dota2</a></td>
+                        <td class="tkf"><span class="kbig">12.41</span> : <span class="ksm">1.45</span></td>
+                        <td class="td-tn2"><a class="tn2" href="">London Conspiracy Dota2 Conspiracy Dota2</a></td>
+                        <td class="td-btn"><a class="btn btn-xs btn-primary">Ставка</a></td>
+                      </tr>
+                      <tr>
+                        <td><img class="bl" src="http://game-tournaments.com/html/img/logo_d2l.png" alt=""></td>
+                        <td class="td-tn1"><a class="tn1" href="">London Conspiracy Dota2</a></td>
+                        <td class="tkf"><span class="kbig">12.41</span> : <span class="ksm">1.45</span></td>
+                        <td class="td-tn2"><a class="tn2" href="">London Conspiracy Dota2 Conspiracy Dota2</a></td>
+                        <td class="td-btn"><a class="btn btn-xs btn-primary">Ставка</a></td>
+                      </tr>
+                      <tr>
+                        <td><img class="bl" src="http://game-tournaments.com/html/img/logo_d2l.png" alt=""></td>
+                        <td class="td-tn1"><a class="tn1" href="">London Conspiracy Dota2</a></td>
+                        <td class="tkf"><span class="kbig">12.41</span> : <span class="ksm">1.45</span></td>
+                        <td class="td-tn2"><a class="tn2" href="">London Conspiracy Dota2 Conspiracy Dota2</a></td>
+                        <td class="td-btn"><a class="btn btn-xs btn-primary">Ставка</a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="ps-scrollbar-x-rail" style="left: 0px; bottom: 3px;">
+                  <div class="ps-scrollbar-x" tabindex="0" style="left: 0px; width: 0px;"></div>
+                </div>
+                <div class="ps-scrollbar-y-rail" style="top: 0px; height: 191px; right: 3px;">
+                  <div class="ps-scrollbar-y" tabindex="0" style="top: 0px; height: 181px;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          
+          {#
+            {% include "template/news/match-top-news.html" %}
+          #}
+          </div>
+        </div>
+      </section>
+
+      <div class="bn">
+        <img src="../img/ad.jpg" alt="">
+      </div>
+
+      <section class="m-even n_com">
+        <div class="row">
+          <div class="col-lg-7">
+            <div class="news-com">
+              <div class="block" id="m-com">
+                <div class="bh clearfix">
+                  <ul class="stm_nav_block" role="tablist" style="display: table;">
+                    <li class="active"><a href="#c-com" role="tab" data-toggle="tab"><i class="gti-comments-o"></i> <span>GT 123</span></a>
+                    </li><li><a href="#c-vk" role="tab" data-toggle="tab"><i class="gti-vk"></i><span>123</span></a>
+                    </li><li><a href="#c-fb" role="tab" data-toggle="tab"><i class="gti-facebook"></i>  <span>23</span></a>
+                  </li></ul>
+                </div><!-- bh -->
+
+                <div class="tab-content">
+                  <div class="tab-pane active" role="tabpanel" id="c-com">
+                    <div class="comblock">
+                      <div class="tse-sc tse-com ps-container ps-theme-default" data-ps-id="0c97b002-cc78-9e6a-4c7d-3fcd02fac2a3">
+                          <div class="tse-content">
+                            <ul class="m-com-list">
+                              {% for i in 0..4 %}
+                              <li>
+                                <a href=""><img src="../img/uava.png" alt=""></a>
+                                <div>
+                                  <b>BorodachBets</b> • 
+                                  <span>27 февраля, 23:49</span>
+                                  <p>
+                                    ВП плохо отыгрывали свои последние игры, проиграли даже МБ которые казалось бы должны были отлететь 2-0, но всё произошло наоборот:) Ликвиды тоже играли очень слабо, поэтому матч спорный. СТавлю 500$ на один из матчей мажора, скрины в группе
+                                  </p>
+                                </div>
+                              </li>
+                              {% endfor %}
+                            </ul>
+
+                          </div>
+                      <div class="ps-scrollbar-x-rail" style="left: 0px; bottom: 3px;"><div class="ps-scrollbar-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps-scrollbar-y-rail" style="top: 0px; right: 3px;"><div class="ps-scrollbar-y" tabindex="0" style="top: 0px; height: 0px;"></div></div></div>
+
+                      <!-- текстарея их чата -->
+
+                      <div class="chat-action">
+                        <a href="" class="iava"><img src="../img/uava.png" alt=""></a>
+                        <div class="chat-text">
+                          <form method="POST" action="chat" name="msg">
+                            <textarea name="txt" id="chat_txt" placeholder="Комментировать" onkeypress="if (event.keyCode==10 || (event.ctrlKey &amp;&amp; event.keyCode==13)) {chat_msg(); return false;}"></textarea>
+                            <a onclick="chat_msg();" class="btn btn-chat">OK</a>
+                            <a id="emotic-btn" class="emotic-btn"><i class="gti-smile-o"></i></a>
+                            <div class="emo_block" id="emo_block">
+                              <div class="tse-sc stickerer ps-container ps-theme-default" id="stickerer" data-ps-id="da3f24bc-3608-5b3d-ec2c-4c866ba45514">
+                                <div class="tse-content">
+                                  <div class="stickers-list">
+                                    <a onclick="insert_smile('angry');">
+                                      <img src="http://game-tournaments.com/media/smile/angry.png" title="angry">
+                                    </a>
+                                  </div>
+                                </div>
+                              <div class="ps-scrollbar-x-rail" style="left: 0px; bottom: 3px;"><div class="ps-scrollbar-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps-scrollbar-y-rail" style="top: 0px; right: 3px;"><div class="ps-scrollbar-y" tabindex="0" style="top: 0px; height: 0px;"></div></div></div>    
+                            </div>
+                          </form>
+                        </div>
+                        <!--
+                        <div class="mmore visible" id="mmore" onclick="chat_scroll_down()">Новые сообщения</div>
+                        -->
+                      </div>
+                      <!-- //текстарея их чата -->
+                    </div>
+                    <div class="c_inf"><a href="/"><i class="gti-comment"></i> &nbsp; Обсудить на форуме</a></div>
+                  </div><!-- #c-com -->
+                  <div class="tab-pane" role="tabpanel" id="c-vk">
+
+                  </div><!-- #c-vk -->
+                  <div class="tab-pane" role="tabpanel" id="c-fb">
+
+                  </div><!-- #c-fb -->
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="n_soc">
+              {% include "template/match-page/section-soc.html" %}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="bn">
+        <img src="../img/ad.jpg" alt="">
+      </div>
+
+      <section class="m-even n_more">
+        <div class="facts">
+          <h3 class="n-title">
+            <span>Интересные факты</span>
+          </h3>
+          <ul>
+            <li>
+              <a href="">Нави последний раз если борщ на Мажоре в Гонконге</a>
+              <a href="" class="btn btn-sm btn-default">Подробнее</a>
+            </li>
+            <li>
+              Последний раз Денди было плохо после борща в Гонконге
+              <a href="" class="btn btn-sm btn-default">Подробнее</a>
+            </li>
+            <li>
+              Сегодня будет 1000050300128 матчей 150-летнего дедугана геймера Витальки
+              <a href="" class="btn btn-sm btn-default">Подробнее</a>
+            </li>
+            <li>
+              Во дела - жена Денди родила!
+              <a href="" class="btn btn-sm btn-default">Подробнее</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="morelinks">
+          <div class="nrm-slider ns1">
+            <div class="mlh"><i class="gti-newspaper-o"></i><span>Также рекомендуем почитать</span></div>
+            <ul>
+
+              {% for i in 0..6 %}
+              <li>
+                <a class="npl" href=""><b>Dota2</b><img src="http://megaobzor.com/uploads/stories/100190/keyarena5.jpg" alt="Заголовок"></a>
+                <a class="nph" href="">«Akke» прокомментировал выступление Alliance на TI6</a>
+                <em>13 августа 2016, 17:16</em>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+
+        <div class="morelinks">
+          <div class="nrm-slider ns2">
+            <div class="mlh"><i class="gti-video-camera"></i><span>Рекомендуем посмотреть</span></div>
+            <ul>
+              {% for i in 0..6 %}
+              <li>
+                <a class="npl" href=""><b>Dota2</b><img src="http://megaobzor.com/uploads/stories/100190/keyarena5.jpg" alt="Заголовок"></a>
+                <a class="nph" href="">«Akke» прокомментировал выступление Alliance на TI6</a>
+                <em>13 августа 2016, 17:16</em>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+
+        <div class="morelinks">
+          <div class="nrm-slider ns3">
+            <div class="mlh"><i class="gti-play"></i><span>Последние<br>видео</span></div>
+            <ul>
+              {% for i in 0..6 %}
+              <li>
+                <a class="npl" href=""><b>Dota2</b><img src="http://megaobzor.com/uploads/stories/100190/keyarena5.jpg" alt="Заголовок"></a>
+                <a class="nph" href="">«Akke» прокомментировал выступление Alliance на TI6</a>
+                <em>13 августа 2016, 17:16</em>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+
+      </section>
+    {#
+      <div class="bn">
+        <img src="../img/ad.jpg" alt="">
+      </div>
+    #}
+      {% include "template/breadcrumbs.html" %}
+      {% include "template/footer.html" %}
+    </div>
+  </div>
+{% include "template/bar.html" %}
+{% include "template/modal.html" %}
+{% include "template/scripts.html" %}
+
+</body>
+</html>

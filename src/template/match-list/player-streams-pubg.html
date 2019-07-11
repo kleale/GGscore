@@ -1,0 +1,40 @@
+<!-- match-list/player-streams-pubg.html -->
+
+<div id="player-streams" rel="stream" class="stmblock active">
+  <div class="subm">
+    <div class="dropdown">
+      <button class="btn btn-default btn-xs dropdown-toggle" type="button" id="droplang" data-toggle="dropdown"><span id="current_stream_lang">Языки</span> <span class="caret"></span></button>
+      <ul class="dropdown-menu new_langs" id="langs">
+          <li><span rel="RU" onclick="stream_lang_new('RU','Русский')"><input type="checkbox" name="RU" id="RU"> Русский</span></li>
+          <li><span rel="EN" onclick="stream_lang_new('EN','English')"><input type="checkbox" name="EN" id="EN"> English</span></li>
+      </ul>
+    </div>
+    <!--
+    <em class="active"><i class="gti-video-camera"></i></em>
+    <em><i class="gti-youtube-play"></i></em>
+    -->
+    <div class="strm-filter">
+      <input id="strm-filter" type="text" placeholder="Фильтр...">
+    </div>
+  </div>
+  <div class="tse-sc tse_slist" style="top:40px;">
+    <div class="tse-content">
+      <ul id="index_stream" class="slist">
+        {% for i in 0..1 %}
+          <li class="{% if i==1 %}active live{% endif %}">
+            <span>
+              <img src="../img/news.jpg" alt="Stream">
+              <time>Live</time>
+            </span>
+            <div>
+              <strong>Prime Time Legaue 2016 Season Prime Time Legaue 2016 Season</strong>
+              <u><i class="gti-play"></i>&nbsp; Dota2 Esports</u>
+              <i class="gti-user"></i>&nbsp; 345 зрителей
+            </div>
+            <em></em>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>

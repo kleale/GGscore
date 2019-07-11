@@ -1,0 +1,65 @@
+{% set title = "Logos" %}
+
+<!DOCTYPE html>
+<html>
+{% include "template/head.html" %}
+<body class="logospage">
+ 
+<style>
+  body{
+    text-align: center;
+    background:#32353f;
+    padding: 0;
+  }
+  h1{
+    text-transform: uppercase;
+    font-size: 18px;
+    letter-spacing: 4px;
+    padding-top: 50px;
+  }
+  section img{
+    width:100%;
+    max-width: 1200px;
+  }
+  .section0 img{
+    max-width: 100%;
+  }
+  .section1{
+    background: #32353f;
+    color: #fff;
+  }
+  .section2{
+    background: #fff;
+    color: #32353f;
+  }
+</style>
+
+  <section class="section0">
+    <img src="/img/logo0.png"/>
+  </section>
+  <section class="section1">
+    <h1>Концепт 1</h1> 
+    <h2>"Простой + мечи"</h2>
+    <img src="/img/logo1.png"/>
+  </section>
+  <section class="section2">
+    <h1>Концепт 2</h1>
+    <h2>"Щит"</h2>
+    <img src="/img/logo2.png"/>
+  </section>
+  <section class="section1">
+    <h1>Концепт 3 <br/><small>Плей \ Буквы GG \ Пауза \ Окно стрима - удобный лаконичный лого</small></h1> 
+    <img src="/img/logo3.png"/>
+  </section>
+  <section class="section2">
+    <h1>Концепт 3 <br/><small> черный - для анализа только формы</small></h1> 
+    <img src="/img/logo4.png"/>
+  </section>
+  <section class="section1">
+    <h1>Текстовые варианты без фигуры</h1>
+    <img src="/img/logo5.png"/>
+  </section>
+  {% include "template/scripts.html" %}
+  
+</body>
+</html>

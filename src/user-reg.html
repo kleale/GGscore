@@ -1,0 +1,74 @@
+{% set title = "Регистрация" %}
+
+
+<!DOCTYPE html>
+<html>
+{% include "template/head.html" %}
+<body class="loginpage">
+
+  <section class="login">
+        <form name="reg" method="POST" action="reg" class="login-form withJsLabel">
+          <div class="panel panel-light panel-login">
+            <div class="panel-heading">
+              <h3 class="panel-title mlh"><span>Регистрация</span></h3>
+            </div>
+            <div class="panel-body">
+              <div class="form-group has-error" rel="email">
+                <input type="text" class="form-control input" name="email" placeholder="Email">
+                <p id="ferr" class="help-block">Укажи свой Email</p>
+              </div>
+              <div class="form-group" rel="nick"><input type="text" class="form-control" name="nick" maxlength="20" placeholder="Ник" value=""></div>
+              <div class="form-group" rel="pwd"><input type="password" class="form-control" name="pwd" placeholder="Пароль" value=""></div>
+              <div class="form-group" rel="repwd"><input type="password" class="form-control" name="repwd" placeholder="Повтор пароля" value=""></div>
+              
+              <button type="button" onclick="sform('reg')" class="btn btn-primary btn-block btn-lg">Зарегистрироваться</button>
+              
+              <div class="soc-enter">
+                <h3 class="mlh mlhSM">
+                  <span>или зарегистрироваться через:</span>
+                </h3>
+                <div class="row">
+                  <div class="col-sm-3">
+                    <a class="btn btn-vk tip" href="" title="Через Вконтакте"><i class="gti-vk"></i> <span>Вконтакте</span></a>
+                  </div>
+                  <div class="col-sm-3">
+                    <a class="btn btn-fb tip" href="" title="Через Facebook"><i class="gti-facebook"></i><span>Facebook</span></a>
+                  </div>
+                  <div class="col-sm-3">
+                    <a class="btn btn-gp tip" href="" title="Через Google"><i class="gti-google-plus"></i><span>Google</span></a>
+                  </div>
+                  <div class="col-sm-3">
+                    <a class="btn btn-steam tip" href="" title="Через Steam"><i class="gti-steam"></i><span>Steam</span></a>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="well well-sm bg-warning" style="margin:15px 0 0 0;">
+                  На ggScore уже есть пользователь, привязанный к этому аккаунту
+              </div>
+              <div class="well well-sm bg-primary" style="margin:15px 0 0 0;">
+                  На ggScore уже есть пользователь, привязанный к этому аккаунту
+              </div>
+              <div class="well well-sm bg-warnsuccessing" style="margin:15px 0 0 0;">
+                  На ggScore уже есть пользователь, привязанный к этому аккаунту
+              </div>
+              <div class="well well-sm bg-info" style="margin:15px 0 0 0;">
+                  На ggScore уже есть пользователь, привязанный к этому аккаунту
+              </div>
+              <div class="well well-sm bg-danger" style="margin:15px 0 0 0;">
+                  На ggScore уже есть пользователь, привязанный к этому аккаунту
+              </div>
+            </div>
+          </div>
+        </form>     
+</section>
+     
+{#
+{% include "template/branding.html" %}
+#}
+{% include "template/bar.html" %}
+{% include "template/modal.html" %}
+{% include "template/scripts.html" %}
+
+</body>
+</html>

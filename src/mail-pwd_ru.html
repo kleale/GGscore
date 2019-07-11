@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Восстановление пароля</title>
+  <link href="http://fonts.googleapis.com/css?family=Roboto:400,300,700,900&subset=latin,cyrillic" rel="stylesheet" type="text/css"> </head>
+
+<body class="outlook">
+  <!--[if mso]>
+        <style type="text/css">
+            .outlook {
+                font-family: Arial, sans-serif;
+            }
+        </style>
+        <![endif]-->
+  <style type="text/css">
+    a:hover {
+      text-decoration: none;
+    }
+    
+    .abline a {
+      text-decoration: underline;
+    }
+    
+    .abline a:hover {
+      text-decoration: none;
+    }
+    
+    .but-w:hover {
+      color: #007dab!important;
+      background: #fff;
+    }
+    
+    .but-b:hover {
+      color: #fff!important;
+      background: #007dab!important;
+    }
+  </style>
+  <div bgcolor="#eef5f8" style="background:#eef5f8 url(http://ggscore.com/html/img/mail/mail_bg_dota.jpg) 50% 0 repeat-x;margin:0px;padding: 50px 0;" marginwidth="0" marginheight="0">
+    <table width="100%" cellspacing="0" cellpadding="0" border="0"  style="border-collapse:collapse;">
+      <tbody>
+        <tr>
+          <td>
+            <table width="600" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; margin: 10px auto;">
+              <tbody>
+                <tr>
+                  <td width="20"></td>
+                  <td>
+                    <p style="float: right; margin: 0px; font: bold 11px/20px Roboto,Helvetica,Arial,sans-serif; color: rgb(255, 255, 255);">Изображения не показываются? <a href="http://{{site}}/ru/mail?code={{code}}" style="color:#fff;">Нажми сюда!</a></p> <a href="http://{{site}}/ru" style="color: rgb(255, 255, 255); text-transform: uppercase; text-decoration: none; font: bold 11px/20px Roboto,Helvetica,Arial,sans-serif; letter-spacing: 2px;">ggscore.com</a> </td>
+                  <td width="20"></td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <table width="600" cellspacing="0" cellpadding="0" border="0" bgcolor="#007dab" align="center" style="border-collapse:collapse;margin:auto;background-color:#007dab;">
+              <tbody>
+                <tr>
+                  <td style="color:#fff;">
+                    <table width="600" cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;">
+                      <tbody>
+                        <tr>
+                          <td align="left" width="120" style="width: 120px; padding: 10px 20px;">
+                            <a href="http://{{site}}/ru"><img width="100" height="50" src="http://ggscore.com/html/img/mail/gt-logo-mail.png"></a>
+                          </td>
+                          <td align="center" style="text-align:center;"> {% for key, val in games %} <a href="http://{{site}}/ru/{{key}}" style="color: rgb(255, 255, 255); text-decoration: none; font: bold 14px/16px Roboto,Helvetica,Arial,sans-serif;">{{val}}</a>{% if not loop.last %} &nbsp;•&nbsp; {% endif %} {% endfor %} </td>
+                          <td align="right" width="120" style="width: 120px; padding: 10px 20px;"> <a href="http://{{site}}/ru/login" class="but-w" style="border: 2px solid rgb(255, 255, 255); color: rgb(255, 255, 255); text-decoration: none; display: block; float: right; border-radius: 20px; text-transform: uppercase; font: 800 12px/16px Roboto,Helvetica,Arial,sans-serif; padding: 10px 26px;">Войти</a> </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <table width="600" cellspacing="0" cellpadding="0" border="0" class="abline" style="border-collapse: collapse; background: rgba(255, 255, 255, 0.16) none repeat scroll 0% 0%;border-bottom-width:1px; border-bottom-color:#93c7da; border-bottom-style:solid;border-top-width:1px; border-top-color:#93c7da; border-top-style:solid;">
+                      <tbody>
+                        <tr>
+                          <td width="10"></td>
+                          <td align="center" style="text-align:center; padding: 6px 0 10px"> <span style="color: rgb(255, 255, 255); font: 300 10px/16px Roboto,Helvetica,Arial,sans-serif; text-transform:uppercase;">Стримы и видео матчей</span> &nbsp;•&nbsp; <span style="color: rgb(255, 255, 255); font: 300 10px/16px Roboto,Helvetica,Arial,sans-serif; text-transform:uppercase;">Cтатистика команд и игроков</span> &nbsp;•&nbsp; <span style="color: rgb(255, 255, 255); font: 300 10px/16px Roboto,Helvetica,Arial,sans-serif; text-transform:uppercase;">Хайлайты</span> &nbsp;•&nbsp; <span style="color: rgb(255, 255, 255); font: 300 10px/16px Roboto,Helvetica,Arial,sans-serif; text-transform:uppercase;">Прогнозы</span> </td>
+                          <td width="10"></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <h1 style="margin: 50px 40px 50px;color: rgb(255, 255, 255); font: 300 30px/36px Roboto,Helvetica,Arial,sans-serif;text-align:center;">Ты запросил восстановление пароля на <a style="color: rgb(255, 255, 255); text-decoration:none;">ggscore.com</a></h1> <a href="{{link}}" class="but-w" style="border: 3px solid rgb(255, 255, 255); color: rgb(255, 255, 255); text-decoration: none; display: block; text-transform: uppercase; width: 150px; text-align: center; font: 800 14px/16px Roboto,Helvetica,Arial,sans-serif; padding: 15px 25px; margin: 0px auto 20px;">Сменить пароль</a>
+                    <div style="text-align: center; font: 10px/12px Roboto,Helvetica,Arial,sans-serif; margin: 20px 0px 30px;"> Или перейти по ссылке:
+                      <br/> <a href="{{link}}" style="color: rgb(255, 255, 255); text-decoration:underline;">{{link}}</a> </div>
+                    <p style="text-align:center;margin:30px 20px 30px;font: 300 14px/18px Roboto,Helvetica,Arial,sans-serif;"> Если же ты этого не делал(а), то проигнорируй это письмо.
+                      <p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <table width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;border-top-width:1px; border-top-color:#93c7da; border-top-style:solid;">
+                      <tbody>
+                        <td style="padding:10px 20px" width="150">
+                          <p style="color:#93c7da; font:12px/20px Helvetica,Arial,sans-serif; margin:0"> © {{'now'|date('Y')}} </p>
+                        </td>
+                        <td align="center"></td>
+                        <td align="right" style="padding:10px 20px" width="150">
+                          <a href="http://{{site}}/ru/account/email" style="color:#93c7da; font:12px/20px Helvetica,Arial,sans-serif; margin:0">
+                          Настройка рассылок
+                         </a>
+                        </td>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div style="white-space:nowrap;font-variant:normal;font-style:normal;line-height:normal;font-weight:normal;font-size:14px;font-family:courier"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </div>
+  </div>
+</body>
+
+</html>
+
+
+
+
+{% include "template/scripts.html" %}

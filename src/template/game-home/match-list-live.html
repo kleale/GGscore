@@ -1,0 +1,45 @@
+<!-- /game-home/match-list-live-home.html -->
+
+  
+{% set game = ['logo-582.png', 'logo-704.png', 'logo-313.png', 'logo-758.png', 'logo-755.png'] %}
+   
+  <div class="block mlt mlt-sm">
+    
+    <div class="block-content">
+      <h3 class="mh mh-sm"><span>Live матчи</span></h3>
+      <table class="mtable">
+        {% for i in 0..4 %}
+          <tr class="m-item{% if i == 0 %} active{% endif %}" data-href="http://game-tournaments.com/link" itemscope="itemscope" itemtype="https://schema.org/Event">
+            <td>
+              <i class="livebetpin"></i>
+              <i class="gti-youtube-play"></i>
+            </td>
+            <td class="td-m">
+              <a class="tn1" href="">Secret</a>
+              <a href="" class="mp1"><img src="http://game-tournaments.com/media/flag/2.png"></a>
+              <a href="" class="ml1"><sup>27</sup><img src="http://game-tournaments.com/media/logo/pic-20150825-340x216-3370444942.png"></a>
+              <span class="bet-p">(1.60)</span>
+              <span class="mscore">vs</span>
+              <span class="bet-p">(2.30)</span>
+              <a href="" class="ml2"><sup>2</sup><img src="http://game-tournaments.com/media/logo/pic-20150825-340x216-3370444942.png"></a>
+              <a href="" class="mp2"><img src="http://game-tournaments.com/media/flag/1.png"></a>
+              <a class="tn2" href="">London Conspiracy Dota2 Conspiracy Dota2</a>
+            </td>
+            <td class="tdate"><time title="17 июн 2016, 11:00" datetime="2016-06-17T11:00:00+03:00" itemprop="startDate">12 авг в 10:15</time></td>
+            <td class="tname">
+              <a class="tour-pop" itemprop="name" data-placement="top" data-container="body" title="Esports Championship League - Америка" data-content="<img src='http://game-tournaments.com/media/tournament/pic-20160615-264x150-3615944418.jpeg'><b>Регулярный сезон</b>
+              <span><i class='gti gti-trophy'></i> Малайзия, Куала Лумпур</span>
+              <span><i class='gti gti-clock-o'></i> 10 апр — 20 апр</span><span><i class='gti gti-money'></i> 200 000$</span>">
+                <img src="http://game-tournaments.com/media/tournament/_60/pic-20161211-280x80-7531323404.jpeg">
+              </a>
+            </td>
+            <td>
+              <a href="#prognoz" class="dice-win" data-toggle="modal"><i class="gti-dice"></i></a>
+            </td>
+          </tr>
+        {% endfor %}
+      </table>
+    </div>
+  </div>
+
+

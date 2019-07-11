@@ -1,0 +1,107 @@
+<!--template/match-page/section-pubg-table.html-->
+{% set pname = ['Player Nick', 'Babagon1994', 'PilotSamoleta', 'Vasyok'] %}
+{% set pteam = ['TeamName', 'NaVi', 'EHOME', 'Virtus.Pro'] %}
+
+
+{% set teamlogo = ['https://ggscore.com/media/logo/_60/pic-20180411-300x257-8715397445.png',
+'https://ggscore.com/media/logo/_60/pic-20180726-600x667-1561836185.png',
+'https://ggscore.com/media/logo/_60/pic-20180726-600x600-5560664199.png'] %}
+
+
+<div class="row">
+  <div class="col-md-6">
+    <table class="mtable pubgTeams">
+      <thead>
+        <tr>
+          <th width="40">
+            #
+          </th>
+          <th>
+            Команда
+          </th>
+          <th>
+              Число убийств
+          </th>
+          <th>
+              Очки
+          </th>
+        </tr>
+      </thead>
+      {% for i in 0..19 %}
+        <tr>
+          <td>
+            #{{i}}
+          </td>
+          <td class="pr">
+            <div>
+              <a href="" class="tic"><img style="width:35px;margin-right:5px" src="{{random(teamlogo)}}"></a>
+              <a href="">{{random(pteam)}}</a>
+            </div>
+          </td>
+          <td class="pr">
+            {{i}} kills 
+          </td>
+          <td class="score">
+            100{{i}}
+          </td>
+        </tr>
+      {% endfor %}
+    </table>
+  </div>
+  <div class="col-md-6">
+    <table class="mtable pubgTeams">
+      <thead>
+        <tr>
+          <th>
+            #
+          </th>
+          <th width="210">
+              Игрок
+          </th>
+          <th>
+              Убийства (HS)
+          </th>
+          <th>
+              Расстояние, км
+          </th>
+          <th>
+              Дальний килл, м
+          </th>
+          <th>
+              Выживание, мин.
+          </th>
+          <th>
+              Урон, HP
+          </th>
+        </tr>
+      </thead>
+      {% for i in 0..80 %}
+        <tr>
+          <td>
+            #{{i}}
+          </td>
+          <td class="pr">
+            <a href="" class="ava-sm" style="vertical-align: middle; background-image:url(http://game-tournaments.com/media/logo/_60/582-no-p.png);"></a>
+            <a class="nick" href="">{{random(pteam)}}.{{random(pname)}}</a> 
+            <img height="12px" class="flag" src="http://game-tournaments.com/media/flag/27.png">
+          </td>
+          <td class="pr">
+            123
+          </td>
+          <td class="pr">
+            123
+          </td>
+          <td class="pr">
+            4112
+          </td>
+          <td class="pr">
+            <b>1234</b>
+          </td>
+          <td class="score">
+            <b>{{i}}100</b>
+          </td>
+        </tr>
+      {% endfor %}
+    </table>
+  </div>
+</div>

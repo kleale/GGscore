@@ -1,0 +1,100 @@
+<!-- /match-list/match-listPUBG.html -->
+{% set tname = ['Thorn', 'Balaboly', 'The Deadly Yozhik', 'The Vasek & Co', 'CherikStyle'] %}
+
+<script>
+  
+// команда-турнир фильтр
+  $(document).ready(function() {
+    $('#mlt-filter').on('keyup', function(){
+      $('.mlt-filter').addClass('open');
+    });
+    
+    $(document).click(function(){
+      $('.mlt-filter').removeClass('open');
+    });
+    $("#dropdown").click(function(e){
+      e.stopPropagation();
+      $('.mlt-filter').removeClass('open');
+    });
+  });
+</script>
+ 
+  <div class="block mlt">
+    
+    <div class="bh">
+      <h1 class="mH1">Матчи PUBG</h1>
+      <div class="ft">
+        <div class="ft2">
+          <div class="mlt-filter">
+            <input id="mlt-filter" type="text" value="" placeholder="Команда или турнир..." class="form-control team input-sm" autocomplete="off">
+            <!--<a href="" class="sicon"></a>-->
+            <ul class="dropdown-menu" id="#t1">
+              <li class="dropdown-header">Выбери команду</li>
+              </ul>
+          </div>
+        </div>
+        <div class="ft3">
+          <label class="checkbox-inline1 tip" title="Показать\скрыть счет">
+            <input type="checkbox" name="score1">
+          </label>
+        </div>
+        <div class="ft4">
+          <div class="dropdown">
+            <button class="btn btn-sm btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="true"><i class="gti-clock-o"></i> <span class="utime">09:57 MSK</span> <span class="caret"></span></button>
+            <ul class="dropdown-menu timezone">
+              <li>
+                <input class="elapsed" type="checkbox" name="elapsed" onclick="set_elapsed(this.checked)"> Время до матча</li>
+            </ul>
+          </div>
+        </div>
+        <div class="ft5">
+          <div class="dropdown">
+            <button class="btn btn-sm btn-default dropdown-toggle" type="button" data-toggle="dropdown"><span id="bookmaker">ggBet</span> <span class="caret"></span></button>
+            <ul class="dropdown-menu" id="bookmakers">
+              <li class="active" rel="gg"><a href="javascript:;" onclick="bookmaker('gg')">ggBet</a></li>
+              <li rel="egb"><a href="javascript:;" onclick="bookmaker('egb')">EGB.com</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="block-content">
+      <h3 class="mh"><span>Live матчи</span></h3>
+      <div class="table-responsive">
+        <table class="mtable mtablePubg">
+            
+          {% for i in 0..10 %}
+            <tr class="m-item rshow" data-id="{{i}}" data-score="" data-time="0" data-bm="" data-href="http://game-tournaments.com/link">
+              <td> <i class="gti-youtube-play"></i> </td>
+              <td class="td-m">
+                <sup>+ 23 <em>команды</em></sup>
+                <span class="teamsList">
+                  {% for i in 1..3 %}
+                    <img src="https://ggscore.com/media/flag/{{i}}.png">
+                    {{random(tname)}}
+                  {% endfor %}
+                </span> 
+              </td>
+              <td class="tdate">
+                <time class="sct mtime" data-format="%j% %ms%%y%, %h%:%i%" data-time="1503052200">18 авг, 13:30</time>
+              </td>
+              <td class="tname">
+                <a class="tour-pop tip" title="" href="/ru/dota-2/prodota-cup-sea-9/group" data-original-title="ProDotA Cup SEA #9"><img src="https://ggscore.com/media/tournament/_60/pic-20170810-255x101-3797348318.png"></a>
+              </td>
+              <td>
+                <!--<a href="javascript:;" class="dice-win wmsb"><i class="gti-dice"></i></a> -->
+                <a href="#prognoz" class="dice-win" data-toggle="modal"><i class="gti-dice"></i></a>
+              </td>
+
+            </tr>
+          {% endfor %}
+        </table>
+      </div>
+      
+      <div class="mltText text-center">
+        Нет матчей
+      </div>
+      
+    </div>
+  </div>

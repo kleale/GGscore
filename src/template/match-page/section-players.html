@@ -1,0 +1,188 @@
+<!-- /match-page/section-players.html -->
+ 
+  <div class="row" id="m-players">
+    <div class="col-md-12">
+      <div class="block">
+        <div class="bh clearfix">
+          <h3>
+            <i class="ih gti-male"></i>
+            Сравнение игроков
+            <i data-toggle="popover" data-placement="bottom" data-trigger="hover" data-content="О сравнении" class="inf gti-info-circle"></i>
+          </h3>
+        </div><!-- bh -->
+
+        <div class="block-content">
+          {% for i in 1..5 %}
+            <div class="pl-c">
+            <div class="pthead">
+              <div class="pth pt1">
+                <h4><a href="">Lucky8</a></h4>
+                <span><u>Captain</u>Alex Shmidt</span>
+              </div>
+              <div class="pt_rate">
+                <span class="thumb th1">
+                  <i class="gti-thumbs-o-up"></i>
+                  <b>13</b>
+                </span>
+                <em>VS</em>
+                <span class="thumb th2">
+                  <b>1</b>
+                  <i class="gti-thumbs-o-up"></i>
+                </span>
+              </div>
+              <div class="pth pt2">
+                <h4><a href="">Boss super player long name</a></h4>
+                <span>Alex Shmidt<u>Captain</u></span>
+              </div>
+            </div><!-- pthead -->
+              
+            <div class="ptc">
+              <div class="ptcs ptcs1">
+                <table>
+                  <tr>
+                    <th>kills</th>
+                    <td class="green">100</td>
+                  </tr>
+                  <tr>
+                    <th>deaths</th>
+                    <td class="green">14</td>
+                  </tr>
+                  <tr>
+                    <th>Assists</th>
+                    <td class="green">11</td>
+                  </tr>
+                  <tr>
+                    <th>LH</th>
+                    <td class="red">2</td>
+                  </tr>
+                  <tr>
+                    <th>GPM</th>
+                    <td>10</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="ptc_bar">
+                <div id="ptc_bar{{i}}"></div>
+              </div>
+              <div class="ptcs ptcs2">
+                <table>
+                  <tr>
+                    <td class="green">100</td>
+                    <th>kills</th>
+                  </tr>
+                  <tr>
+                    <td class="green">14</td>
+                    <th>deaths</th>
+                  </tr>
+                  <tr>
+                    <td class="green">11</td>
+                    <th>Assists</th>
+                  </tr>
+                  <tr>
+                    <td class="red">2</td>
+                    <th>LH</th>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <th>GPM</th>
+                  </tr>
+                </table>
+              </div>
+            </div><!-- ptc -->
+              
+          </div><!-- pl-c -->
+          {% endfor %}
+          
+        </div><!-- block-content -->
+      </div><!-- block -->
+    </div><!-- col-sm-7 -->
+    
+    
+{#
+    <div class="col-md-5">
+      <div class="block" id="m-history">
+        <div class="bh clearfix">
+          <h3>
+            <i class="ih gti-history"></i>
+            История матчей
+            <i data-toggle="popover" data-placement="bottom" data-trigger="hover" data-content="О сравнении" class="inf gti-info-circle"></i>
+          </h3>
+        </div><!-- bh -->
+
+        <div class="block-content">
+          <div class="histb">
+            <h3>
+            История личных встреч:
+            </h3>
+            <table>
+               {% for i in 0..2 %}
+                <tr>
+                  <th>2016-02-24</th>
+                  <td><u class="tip lg" title="Click-Storm Dota 2 League">Click-Storm Dota 2 League</u></td>
+                  <td class="red"><u>Secret</u></td>
+                  <td class="hisc"><b class="red">43</b> : 67</td>
+                  <td><u class="tip" title="London Conspyracy Dota2">London Conspyracy Dota2</u></td>
+                </tr>
+                <tr>
+                  <th>2016-02-24</th>
+                  <td><u class="tip lg" title="Click-Storm Dota 2 League">Click-Storm Dota 2 League</u></td>
+                  <td class="green"><u>Secret</u></td>
+                  <td class="hisc"><b class="green">3</b> : 7</td>
+                  <td><u class="tip" title="London Conspyracy Dota2">London Conspyracy Dota2</u></td>
+                </tr>
+              {% endfor %}
+            </table>
+          </div><!-- histb -->
+          <div class="histb">
+            <h3 class="blue">
+            История личных встреч:
+            </h3>
+            <table>
+              {% for i in 0..2 %}
+              <tr>
+                <th>2016-02-24</th>
+                <td><u class="tip lg" title="Click-Storm Dota 2 League">Click-Storm Dota 2 League</u></td>
+                <td class="red"><u>Secret</u></td>
+                <td class="hisc">43 : 67</td>
+                <td><u class="tip" title="London Conspyracy Dota2">London Conspyracy Dota2</u></td>
+              </tr>
+              <tr>
+                <th>2016-02-24</th>
+                <td><u class="tip lg" title="Click-Storm Dota 2 League">Click-Storm Dota 2 League</u></td>
+                <td class="green"><u>Secret</u></td>
+                <td class="hisc">3 : 7</td>
+                <td><u class="tip" title="London Conspyracy Dota2">London Conspyracy Dota2</u></td>
+              </tr>
+              {% endfor %}
+            </table>
+          </div><!-- histb -->
+          <div class="histb">
+            <h3 class="red">
+            История личных встреч:
+            </h3>
+            <table>
+              {% for i in 0..2 %}
+              <tr>
+                <th>2016-02-24</th>
+                <td><u class="tip lg" title="Click-Storm Dota 2 League">Click-Storm Dota 2 League</u></td>
+                <td class="red"><u>Secret</u></td>
+                <td class="hisc">43 : 67</td>
+                <td><u class="tip" title="London Conspyracy Dota2">London Conspyracy Dota2</u></td>
+              </tr>
+              <tr>
+                <th>2016-02-24</th>
+                <td><u class="tip lg" title="Click-Storm Dota 2 League">Click-Storm Dota 2 League</u></td>
+                <td class="green"><u>Secret</u></td>
+                <td class="hisc">3 : 7</td>
+                <td><u class="tip" title="London Conspyracy Dota2">London Conspyracy Dota2</u></td>
+              </tr>
+              {% endfor %}
+            </table>
+          </div><!-- histb -->
+        </div><!-- block-content -->
+      </div><!-- block -->
+    </div><!-- col-sm-5 -->
+#}
+  </div><!-- row -->
+
+<!-- /Players compare -->

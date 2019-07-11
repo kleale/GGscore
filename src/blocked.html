@@ -1,0 +1,40 @@
+{% set title = "Доступ с вашего IP-адреса временно ограничен" %}
+
+<!DOCTYPE html>
+<html>
+{% include "template/head.html" %}
+<link href="https://fonts.googleapis.com/css?family=Play&amp;subset=cyrillic" rel="stylesheet"> 
+
+<body class="blockedPage">
+  {#
+    {% include "template/bar.html" %}
+  #}
+  
+  <a class="gg-logo" href="/"><i class="gti-gt1"></i></a>
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5">
+        <i class="monster"></i>
+      </div>
+      <div class="col-md-7">
+        <div class="blockedText">
+          <i class="gti-gt2 gtl"></i>
+          <p> 
+          Доступ с вашего IP-адреса временно ограничен, т.к. мы обнаружили на нём подозрительную активность, нарушающую работоспособность GT.
+          </p>
+          <h4>Чтобы снять ограничение поставьте галочку ниже:</h4>
+          <div class="gbot">
+            <script src='https://www.google.com/recaptcha/api.js'></script>
+
+            <div class="g-recaptcha" data-theme="dark"  data-sitekey="6LfzkRoTAAAAAB_SwacN7h63BLU0OG27O3SbTVWv"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% include "template/scripts.html" %}
+
+</body>
+</html>

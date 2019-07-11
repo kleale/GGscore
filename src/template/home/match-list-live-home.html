@@ -1,0 +1,169 @@
+<!-- /home/match-list-live-home.html -->
+
+  
+{% set game = ['logo-582.png', 'logo-704.png', 'logo-313.png', 'logo-758.png', 'logo-755.png'] %}
+   
+  <div class="block mlt">
+    <div class="bh clearfix">
+      <div class="rigter">
+        <i class="gti-undo" id="refresher"></i>
+          <label class="checkbox-inline score-on">
+            <input type="checkbox" name="switch" data-on-text="ДА" data-off-text="НЕТ" data-label-text="счет">
+          </label> 
+        <!--
+        <div class="dropdown">
+          <button class="btn btn-sm btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+             Dota2Lounge.com
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </div>
+        -->
+      </div>
+      <h1 class="mH1">Расписание матчей по киберспорту</h1>
+      <div class="mlt-filter">
+        <input id="mlt-filter" class="form-control" type="text" placeholder="Команда или турнир...">
+        <a href=""></a>
+      </div>
+    </div><!-- bh -->
+    <div class="block-content">
+      <h3 class="mh"><span>Live матчи</span></h3>
+      <table class="mtable">
+        <thead>
+          <th></th>
+          <th width="70"><span>Дата &nbsp;<i class="gti-clock-o"></i>&nbsp;&nbsp;<a href="">CET</a><!--<i class="gti-chevron-down sorter active"></i>--></span></th>
+          <th><span>Матч <!--<i class="gti-chevron-up sorter"></i>--></span></th>
+          <th><span>Турнир <!--<i class="gti-chevron-up sorter"></i>--></span></th>
+          <th></th>
+        </thead>
+         
+          <!-- progress 2 -->
+          
+          <tr class="m-item" data-href="http://game-tournaments.com/link" itemscope="itemscope" itemtype="https://schema.org/Event">
+            <td class="ticon">
+              <a href="" class="gameico">
+                <img src="http://game-tournaments.com/html/img/{{random(game)}}">
+              </a>
+            </td>
+            <td class="tdate"><time title="17 июн 2016, 11:00" datetime="2016-06-17T11:00:00+03:00" itemprop="startDate">12 авг в 10:15</time><i class="gti-youtube-play" title="Имеется стрим или видео"></i></td>
+            <td class="td-m">
+              <span class="tn1" href="">Secret</span>
+              <span href="" class="mp1"><sup>11</sup><img src="http://game-tournaments.com/media/flag/4.png"></span>
+              <span class="bet-p">(1.60)</span>
+              <span class="mscore">
+                VS
+                <b class="mprogress t1"><u style="width:0%"></u></b>
+                <b class="mprogress t2"><u style="width:21%"></u></b>
+              </span>
+              <span class="bet-p">(2.30)</span>
+              <span href="" class="mp2"><sup>2</sup><img src="http://game-tournaments.com/media/flag/3.png"></span>
+              <span class="tn2" href="">London Conspiracy Dota2 Conspiracy Dota2</span>
+            </td>
+            <td class="tname">
+              <a class="tour-pop"  itemprop="name" data-placement="top" data-container="body" title="Esports Championship League - Америка" data-content=" <img src='http://game-tournaments.com/media/tournament/pic-20160615-264x150-3615944418.jpeg'><b>Регулярный сезон</b>
+              <span><i class='gti gti-trophy'></i> Малайзия, Куала Лумпур</span>
+              <span><i class='gti gti-clock-o'></i> 10 апр — 20 апр</span><span><i class='gti gti-money'></i> 200 000$</span>">Esports - Америка</a>
+            </td>
+            <td>
+              <a href="#prognoz" class="dice-win" data-toggle="modal"><i class="gti-dice"></i></a>
+            </td>
+          </tr>
+          
+          <tr class="m-item" data-href="http://game-tournaments.com/link" itemscope="itemscope" itemtype="https://schema.org/Event">
+            <td class="ticon">
+              <a href="" class="gameico">
+                <img src="http://game-tournaments.com/html/img/{{random(game)}}">
+              </a>
+            </td>
+            <td class="tdate"><time title="17 июн 2016, 11:00" datetime="2016-06-17T11:00:00+03:00" itemprop="startDate">12 авг в 10:15</time><i class="gti-youtube-play" title="Имеется стрим или видео"></i></td>
+            <td class="td-m">
+              <span class="tn1" href="">Secret</span>
+              <span href="" class="mp1"><sup>11</sup><img src="http://game-tournaments.com/media/flag/4.png"></span>
+              <span class="bet-p">(1.60)</span>
+              <span class="mscore">
+                VS
+                <b class="mprogress t1"><u style="width:70%"></u></b>
+                <b class="mprogress t2"><u style="width:0%"></u></b>
+              </span>
+              <span class="bet-p">(2.30)</span>
+              <span href="" class="mp2"><sup>2</sup><img src="http://game-tournaments.com/media/flag/3.png"></span>
+              <span class="tn2" href="">London Conspiracy Dota2 Conspiracy Dota2</span>
+            </td>
+            <td class="tname">
+              <a class="tour-pop"  itemprop="name" data-placement="top" data-container="body" title="Esports Championship League - Америка" data-content=" <img src='http://game-tournaments.com/media/tournament/pic-20160615-264x150-3615944418.jpeg'><b>Регулярный сезон</b>
+              <span><i class='gti gti-trophy'></i> Малайзия, Куала Лумпур</span>
+              <span><i class='gti gti-clock-o'></i> 10 апр — 20 апр</span><span><i class='gti gti-money'></i> 200 000$</span>">Esports - Америка</a>
+            </td>
+            <td>
+              <a href="#prognoz" class="dice-win" data-toggle="modal"><i class="gti-dice"></i></a>
+            </td>
+          </tr>
+          
+          <tr class="m-item" data-href="http://game-tournaments.com/link" itemscope="itemscope" itemtype="https://schema.org/Event">
+            <td class="ticon">
+              <a href="" class="gameico">
+                <img src="http://game-tournaments.com/html/img/{{random(game)}}">
+              </a>
+            </td>
+            <td class="tdate"><time title="17 июн 2016, 11:00" datetime="2016-06-17T11:00:00+03:00" itemprop="startDate">12 авг в 10:15</time><i class="gti-youtube-play" title="Имеется стрим или видео"></i></td>
+            <td class="td-m">
+              <span class="tn1" href="">Secret</span>
+              <span href="" class="mp1"><sup>11</sup><img src="http://game-tournaments.com/media/flag/4.png"></span>
+              <span class="bet-p">(1.60)</span>
+              <span class="mscore">
+                VS
+                <b class="mprogress t1"><u style="width:4%"></u></b>
+                <b class="mprogress t2"><u style="width:0%"></u></b>
+              </span>
+              <span class="bet-p">(2.30)</span>
+              <span href="" class="mp2"><sup>2</sup><img src="http://game-tournaments.com/media/flag/3.png"></span>
+              <span class="tn2" href="">London Conspiracy Dota2 Conspiracy Dota2</span>
+            </td>
+            <td class="tname">
+              <a class="tour-pop"  itemprop="name" data-placement="top" data-container="body" title="Esports Championship League - Америка" data-content=" <img src='http://game-tournaments.com/media/tournament/pic-20160615-264x150-3615944418.jpeg'><b>Регулярный сезон</b>
+              <span><i class='gti gti-trophy'></i> Малайзия, Куала Лумпур</span>
+              <span><i class='gti gti-clock-o'></i> 10 апр — 20 апр</span><span><i class='gti gti-money'></i> 200 000$</span>">Esports - Америка</a>
+            </td>
+            <td>
+              <a href="#prognoz" class="dice-win" data-toggle="modal"><i class="gti-dice"></i></a>
+            </td>
+          </tr>
+          
+        {% for i in 0..20 %}
+          <tr class="m-item" data-href="http://game-tournaments.com/link" itemscope="itemscope" itemtype="https://schema.org/Event">
+            <td class="ticon">
+              <a href="" class="gameico">
+                <img src="http://game-tournaments.com/html/img/{{random(game)}}">
+              </a>
+            </td>
+            <td class="tdate"><time title="17 июн 2016, 11:00" datetime="2016-06-17T11:00:00+03:00" itemprop="startDate">12 авг в 10:15</time></td>
+            <td class="td-m">
+              <a class="tn1" href="">Secret</a>
+              <a href="" class="mp1"><sup>11</sup><img src="http://game-tournaments.com/media/flag/2.png"></a>
+              <span class="bet-p">(1.60)</span>
+              <span class="mscore">VS</span>
+              <span class="bet-p">(2.30)</span>
+              <a href="" class="mp2"><sup>2</sup><img src="http://game-tournaments.com/media/flag/1.png"></a>
+              <a class="tn2" href="">London Conspiracy Dota2 Conspiracy Dota2</a>
+            </td>
+            <td class="tname">
+              <a class="tour-pop" itemprop="name" data-placement="top" data-container="body" title="Esports Championship League - Америка" data-content="<img src='http://game-tournaments.com/media/tournament/pic-20160615-264x150-3615944418.jpeg'><b>Регулярный сезон</b>
+              <span><i class='gti gti-trophy'></i> Малайзия, Куала Лумпур</span>
+              <span><i class='gti gti-clock-o'></i> 10 апр — 20 апр</span><span><i class='gti gti-money'></i> 200 000$</span>">Esports - Америка</a>
+            </td>
+            <td>
+              <a href="#prognoz" class="dice-win" data-toggle="modal"><i class="gti-dice"></i></a>
+            </td>
+          </tr>
+        {% endfor %}
+      </table>
+    </div>
+  </div>
+
+

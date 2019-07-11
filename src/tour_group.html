@@ -1,0 +1,148 @@
+{% set title = "Турнир ТАКОЙТО Dota 2" %}
+
+{% set team = ['Wings', 'OG', 'Evil Geniuses', 'EHOME', 'NewBee', 'Virtus.Pro', 'LGD.Forever Young', 'Invictus Gaming'] %}
+{% set flag = ['1', '2', '3', '4', '5', '6'] %}
+{% set rate = ['1,744', '1,622', '1,511', '1,497', '1,496', '1,469', '—'] %}
+{% set logo = ['pic-20161110-600x600-7320131375.png', 'pic-20161110-300x300-2206743285.png', 'pic-20161110-600x600-5478339632.png', 'pic-20161110-500x500-918003572.png', 'pic-20161110-600x450-6323255579.png'] %}
+{% set player = ['Bulba', 'Miracle', 'MATUMBAMAN ', 'KuroKy', 'MinD_ContRoL'] %}
+
+<!DOCTYPE html>
+<html>
+{% include "template/head.html" %}
+<body class="">
+  <div class="container mainwrap pad120">
+    <div class="otstup">
+      {% include "template/header.html" %}
+      <section class="t-top">
+        <div class="heroBg" style="background-image:url(http://ggscore.com/media/tournament/pic-20160831-478x178-7586446600.jpeg);"></div>
+        <h1>Dota 2 турнир WESG </h1>
+        {#
+        {% include "template/match-page/stage-block.html" %}
+        #}
+        {% include "template/stages.html" %}
+        
+        <div class="thd">
+
+              <div class="ggrid share-it aborder draw meet">
+                {% for i in 1..5 %}
+                  <div class="gdiv">
+                    <h3 class="mlh"><span>Group {{i}}</span></h3>
+                    <div class="gtable">
+                      <table class="table-striped table table-hover">
+                        <thead>
+                          <tr>
+                            <th colspan="3"></th>
+                            <th><span data-placement="bottom" class="odtip" title="" data-original-title="Игр">И</span></th>
+                            <th><span data-placement="bottom" class="odtip" title="" data-original-title="Выиграно">В</span></th>
+                            <th><span data-placement="bottom" class="odtip" title="" data-original-title="Hичьих">H</span></th>
+                            <th><span data-placement="bottom" class="odtip" title="" data-original-title="Проиграно">П</span></th>
+                            <th><span data-placement="bottom" class="odtip" title="" data-original-title="Очков">О</span></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {% for i in 1..6 %}
+                            <tr>
+                              <td>{{i}}</td>
+                              <td width="15"><img width="15" src="http://ggscore.com/media/flag/{{random(flag)}}.png"></td>
+                              <td> <a class="" title="{{random(team)}}" href="/dota-2/team/tot">{{random(team)}}</a> </td>
+                              <td class="tpo">{{random(flag)}}</td>
+                              <td class="tpo">{{random(flag)}}</td>
+                              <td class="tpo">{{random(flag)}}</td>
+                              <td class="tpo">{{random(flag)}}</td>
+                              <td class="tpo">{{random(flag)}}</td>
+                            </tr>
+                          {% endfor %}
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="shr-sm">
+                      <a href="javascript:;" onclick="Share.vkontakte();" class="shr"><i class="gti-share"></i> Поделиться</a>
+                    </div>
+                    <!--
+                    <div class="shr-sm">
+                      <a href="javascript:;" onclick="Share.vkontakte();" class="shr"><i class="gti-vk"></i><span class="share-vk"></span></a>
+                      <a href="javascript:;" onclick="Share.facebook();" class="shr"><i class="gti-fb"></i><span class="share-fb"></span></a>
+                      <a href="javascript:;" onclick="Share.twitter();" class="shr"><i class="gti-tw"></i><span class="share-tw"></span></a>
+                      <a href="javascript:;" onclick="Share.google();" class="shr"><i class="gti-gg"></i><span class="share-gg"></span></a>
+                    </div>
+                    -->
+                  </div>
+                {% endfor %}
+                
+                <ul class="news-soc">
+                  <li><a href="javascript:;" onclick="Share.vkontakte();" class="hi-1 hi-1a"><i class="gti-vk"></i><span class="share-vk"></span></a></li>
+                  <li><a href="javascript:;" onclick="Share.facebook();" class="hi-1 hi-1a"><i class="gti-fb"></i><span class="share-fb"></span></a></li>
+                  <li><a href="javascript:;" onclick="Share.twitter();" class="hi-1 hi-1a"><i class="gti-tw"></i><span class="share-tw"></span></a></li>
+                  <li><a href="javascript:;" onclick="Share.google();" class="hi-1 hi-1a"><i class="gti-gg"></i><span class="share-gg"></span></a></li>
+                </ul>
+                
+              </div>
+        </div>
+      </section>
+      
+      <section class="m-sec m-odd">
+        <div class="row">
+          <div class="col-md-8">
+            <div class="t-m-block">
+               <h3 class="mlh" style="margin-bottom: -14px;"><span>Матчи</span></h3>
+
+              {% include "template/match-list/match-list2.html" %}
+
+              {% include "template/match-list/match-list-future.html" %}
+
+              {% include "template/match-list/match-list-past.html" %}
+              {% include "template/pager.html" %}
+            </div>
+          </div>
+          <div class="col-md-4">
+            {% include "template/tours/tour-block.html" %}
+            {% include "template/liveblock.html" %}
+
+            <h4 class="mlh"><span>Новости турнира</span></h4>
+            {% include "template/news/newslist-block-mini.html" %}
+            {% include "template/pager.html" %}
+
+          </div>
+        </div>
+      </section>
+      
+
+      
+      <section class="grid">
+        {% include "template/players/blockzames-grid.html" %}
+      </section>
+      
+      {#
+      <section id="m-zames" class="m-sec m-even m-zames">
+        {% include "template/blockzames.html" %}
+      </section>
+      #}
+      {#
+      <section id="m-news" class="m-sec m-even">
+        <div class="row">
+          <div class="col-md-7">
+            {% include "template/match-page/section-news.html" %}
+          </div>
+          <div class="col-md-5">
+            {% include "template/match-page/section-soc.html" %}
+          </div>
+        </div>
+      </section>
+      #}
+      
+    {#
+      <div class="bn">
+        <img src="../img/ad.jpg" alt="">
+      </div>
+    #}
+      {% include "template/breadcrumbs.html" %}
+      {% include "template/footer.html" %}
+    </div>
+  </div>
+{% include "template/branding.html" %}
+{% include "template/bar.html" %}
+{% include "template/modal.html" %}
+{% include "template/scripts.html" %}
+
+</body>
+</html>

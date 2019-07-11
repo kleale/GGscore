@@ -1,0 +1,19 @@
+/*
+  Base
+*/
+body{
+  color: $text-main;
+  font-family: 'Roboto', Arial, sans-serif;
+  background: $body-bg;
+  position: relative;
+/*  padding-left: 50px;*/
+}
+a{
+  color: $link-light-blue;
+  &:active,
+  &:focus,
+  &:hover{
+    color: $link-blue-active;
+    text-decoration: underline;
+  } 
+}

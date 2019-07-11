@@ -1,0 +1,124 @@
+{% set title = "Аккаунт: Студия" %}
+
+{% set pic = ['https://ggscore.com/html/img/nologo2.png', 'https://ggscore.com/html/img/nologo.png', 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Intel-logo.svg/2000px-Intel-logo.svg.png', 'https://odengah.com/wp-content/uploads/2016/11/tin-bank-600x234.png', 'https://upload.wikimedia.org/wikipedia/en/4/42/MSI_logo_for_share2017.png','https://p3.zdassets.com/hc/settings_assets/308901/200007968/yZPJSoFIH0BUdvMpHlO7qw-zQgrlvIiJdo4KzlWBgK6Jg-logo.png'] %}
+{% set name = ['ТинькофБанк','Интел','Супер пупер компания с длинным названием в километр','Gaidjin','MSI'] %}
+
+<!DOCTYPE html>
+<html>
+{% include "template/head.html" %}
+<body class="">
+  <div class="container mainwrap" style="padding-top:60px;">
+    <div class="otstup">
+      <section class="t-top user-ac">
+        <div class="heroBg" style="background-image:url(../img/noplayers.png)"></div>
+        <a href="" class="ava-sm profileava"><img src="https://ggscore.com/media/user/_60/pic-20170309-566x600-393639798.png" alt=""></a><h1 class="mlh"><span>Студия</span></h1>
+        
+        <div class="user-menu">
+            <ul class="nav nav-pills nav-stacked nav-user">
+                <li><a href="/ru/account"><i class="gti-user-circle"></i><u>Личный кабинет</u></a></li>
+                <li><a href="/ru/account/bets"><i class="gti-bullhorn"></i><u>Мои прогнозы</u></a></li>
+                <li class="active"><a href=""><i class="gti-video-camera"></i><u>Студия</u></a></li>
+                <li class=""><a href="/ru/account/subscribe"><i class="gti-bell-o"></i><u>Подписки</u></a></li>
+                <li><a href="/ru/account/pay"><i class="gti-money"></i><u>Платежи</u></a></li>
+                <li><a href="/ru/logout"><i class="gti-power-off"></i><u>Выход</u></a></li>
+            </ul>
+        </div>
+        <div class="user-body">
+          <div class="row">
+            <div class="col-lg-12 col-xl-7">
+              <div class="panel panel-light studio-panel">
+                <table class="table table-hover table-striped sbscr-list">
+                  <thead>
+                    <tr>
+                      <th class="ec">
+                        <i class="gti-envelope-o tip" title="Включить в рассылку"></i>
+                      </th>
+                      <th colspan="2">
+                        Спонсоры
+                      </th>
+                      <th>
+                      </th>
+                    </tr>
+                  </thead>
+                  {% for i in 0..5 %}
+                    <tr rel="{{i}}">
+                      <td class="ec">
+                        <div class="email_chek"><input type="checkbox" onclick=""></div>
+                      </td>
+                      <td class="icon">
+                        <a href="" class="slogo">
+                          <img src="{{random(pic)}}">
+                        </a>
+                      </td>
+                      <td class="inf pl">
+                          <!--<em>мелкое инфо \ дата</em>-->
+                          <a href="" class="name">{{random(name)}}</a>
+                          <br>
+                          <u><a href="">www.ruhub.com</a></u>
+                          <!--<p>Описание</p>-->
+                      </td>
+                      <td class="ac">
+                        <a class="gdel" href="javascript:;" onclick=""><i class="gti-times-circle-o"></i></a>
+                        <a class="gdel" href="javascript:;" onclick=""><i class="gti-pencil"></i></a>
+                      </td>
+                    </tr>
+                  {% endfor %}
+                </table>
+              </div>
+              {% include "template/pager.html" %}
+            </div>
+            <div class="col-lg-12 col-xl-5">
+              <div class="panel panel-light block-ava slogo-load">
+                <div class="panel-heading">
+                  <h3 class="panel-title mlh mlhSM"><span>Добавить спонсора студии \ канала</span></h3>
+                </div>
+                <div class="panel-body">
+                  <div id="preview" class="slogo">
+                    <img id="logo2" src="https://ggscore.com/html/img/nologo.png">
+                  </div>
+                  <div class="uavaload">
+                    <div data-count="1" data-rel="1" data-input="logo" data-title="ulogo" class="loader"></div>
+                    <div class="uava-btns">
+                      <div>
+                        <span>
+                          <a class="button-ulogo1 btn-primary btn btn-sm" href="javascript:;" style="overflow: hidden; direction: ltr;">Загрузить лого<input multiple="multiple" type="file" name="file" style="position: absolute; right: 0px; top: 0px; font-family: Arial; font-size: 18px; margin: 0px; padding: 0px; cursor: pointer; opacity: 0;"></a> 
+                          </span>
+                          <span>
+                              <a id="lb1" onclick="if (confirm('Вы уверены?')) delete_logo(this)" href="javascript:;" class="btn btn-danger btn-sm"> Удалить лого</a>
+                          </span>
+                          <!--<span>
+                              <a id="lb2" onclick="avatar_block()" href="javascript:;" class="btn btn-default btn-sm"> Миниатюра</a>
+                          </span>-->
+                       </div>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="form-group">
+                    <input type="text" value="" class="form-control input" placeholder="Имя студии" tabindex="1">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" value="" class="form-control input" placeholder="Сайт студии" tabindex="1">
+                  </div>
+                  
+                  <center><a href="javascript:;" onclick="sform('update')" class="btn btn-primary btn">Сохранить</a></center>
+                  
+                </div>
+              </div>
+            </div>
+          </div>  
+        </div>
+      </section>
+      
+      {% include "template/footer.html" %}
+    </div>
+  </div>
+{#
+{% include "template/branding.html" %}
+#}
+{% include "template/bar.html" %}
+
+{% include "template/scripts.html" %}
+
+
+</body>
+</html>

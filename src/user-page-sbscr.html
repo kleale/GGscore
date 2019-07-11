@@ -1,0 +1,180 @@
+{% set title = "Аккаунт: Лента" %}
+
+{% set pic = ['http://ggscore.com/media/logo/_60/pic-20161110-500x500-1758574228.png', 'http://ggscore.com/media/logo/_60/pic-20161110-600x600-7320131375.png'] %}
+{% set name = ['Virtus.Pro','OG','Secret'] %}
+{% set tour = ['The Kiev Major','Swiss Dota League Season 1','AEF Dota 2 League Season 1'] %}
+
+
+<!DOCTYPE html>
+<html>
+{% include "template/head.html" %}
+<body class="">
+  <div class="container mainwrap" style="padding-top:60px;">
+    {% include "template/breadcrumbs.html" %}
+    <div class="otstup">
+      <section class="t-top user-ac">
+        <div class="heroBg" style="background-image:url(../img/noplayers.png)"></div>
+        <a href="" class="ava-sm profileava"><img src="https://ggscore.com/media/user/_60/pic-20170309-566x600-393639798.png" alt=""></a><h1 class="mlh"><span>Подписки</span></h1>
+        
+         
+        <div class="user-menu">
+            <ul class="nav nav-pills nav-stacked nav-user">
+                <li><a href="/ru/account"><i class="gti-user-circle"></i><u>Личный кабинет</u></a></li>
+                <li><a href="/ru/account/bets"><i class="gti-bullhorn"></i><u>Мои прогнозы</u></a></li>
+                <li class="active"><a href="/ru/account/subscribe"><i class="gti-bell-o"></i><u>Подписки</u></a></li>
+                <li><a href="/ru/account/pay"><i class="gti-money"></i><u>Платежи</u></a></li>
+                <li><a href="/ru/logout"><i class="gti-power-off"></i><u>Выход</u></a></li>
+            </ul>
+        </div>
+        <div class="user-body">
+           
+            <div class="filter">
+              <script>
+              // команда-турнир фильтр демо автоподсказки при наборе - не в продакшн
+                $(document).ready(function() {
+                  $('#mlt-filter').on('keyup', function(){
+                    $('.mlt-filter').addClass('open');
+                  });
+
+                  $(document).click(function(){
+                    $('.mlt-filter').removeClass('open');
+                  });
+                  $("#dropdown").click(function(e){
+                    e.stopPropagation();
+                    $('.mlt-filter').removeClass('open');
+                  });
+                });
+              </script>
+              
+              <div class="row">
+                <div class="col-sm-8">
+                  <div class="mlt-filter">
+                    <input id="mlt-filter" type="text" value="" placeholder="Поиск по подпискам" class="form-control team" autocomplete="off">
+                    <a href="" class="sicon"></a>
+                    <ul class="dropdown-menu" id="#t1">
+                      <li class="dropdown-header"><a href="#">Название студии\канала</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle caret-abs" type="button" id="dm1" data-toggle="dropdown">
+                      Тип
+                      <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Команда</a></li>
+                      <li><a href="#">Игрок</a></li>
+                      <li><a href="#">Прогнозист</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="panel panel-light sbscr-panel">
+                <table class="table table-hover table-striped sbscr-list">
+                  <thead>
+                    <tr>
+                      <th class="ec">
+                        <i class="gti-envelope-o tip" title="Включить в рассылку"></i>
+                      </th>
+                      <th colspan="2">
+                        Подписки пользователя
+                      </th>
+                      <th>
+                        Удалить
+                      </th>
+                    </tr>
+                  </thead>
+                    <tr>
+                      <td class="ec">
+                        <div class="email_chek"><input type="checkbox" onclick=""></div>
+                      </td>
+                      <td class="icon">
+                        <a class="ava-sm" href="/ru/dota-2/player/xboct" style="background-image:url(http://ggscore.com/media/logo/_60/XBOCT.jpeg);"></a>
+                      </td>
+                      <td class="inf pl">
+                          <em>
+                            истекает 10.11.17
+                          </em>
+                          <a title="Lasse Urpalainen" href="/ru/dota-2/player/matumbaman">Ставки и прогнозы от Вована</a>
+                          <br>
+                          <u><a href="">www.vovanbets.com</a></u>
+                      </td>
+                      <td class="ac">
+                        <a class="gdel tip" title="Продлить подписку" href="javascript:;" onclick=""><i class="gti-refresh"></i></a>
+                      </td>
+                    </tr>
+                    
+                  {% for i in 0..5 %}
+                    <tr rel="{{i}}">
+                      <td class="ec">
+                        <div class="email_chek"><input type="checkbox" onclick=""></div>
+                      </td>
+                      <td class="icon">
+                        <a href="" class="icon_a">
+                          <img src="{{random(pic)}}">
+                        </a>
+                      </td>
+                      <td class="inf">
+                          <a href="" class="name">{{random(name)}}</a>
+                          <!--<p>Самые свежие новости игр</p>-->
+                      </td>
+                      <td class="ac">
+                        <a class="gdel" href="javascript:;" onclick=""><i class="gti-times-circle-o"></i></a>
+                      </td>
+                    </tr>
+                  {% endfor %}
+                    <tr rel="i">
+                      <td class="ec">
+                        <div class="email_chek"><input type="checkbox" onclick=""></div>
+                      </td>
+                      <td class="icon">
+                        <a class="ava-sm" href="/ru/dota-2/player/xboct" style="background-image:url(http://ggscore.com/media/logo/_60/XBOCT.jpeg);"></a>
+                      </td>
+                      <td class="inf pl">
+                          <span class="flag"><img src="http://ggscore.com/media/flag/33.png" alt="Финляндия" title="Финляндия"></span> 
+                          <a title="Lasse Urpalainen" href="/ru/dota-2/player/matumbaman">MATUMBAMAN</a>
+                          <u>Liquid</u>                                           
+                      </td>
+                      <td class="ac">
+                        <a class="gdel" href="javascript:;" onclick=""><i class="gti-times-circle-o"></i></a>
+                      </td>
+                    </tr>
+                    
+                    <tr rel="i">
+                      <td class="ec">
+                        <div class="email_chek"><input type="checkbox" onclick=""></div>
+                      </td>
+                      <td class="icon">
+                        <a class="tour" href=""><img src="http://ggscore.com/media/tournament/_60/pic-20170110-280x80-1208457909.jpeg"></a>
+                      </td>
+                      <td class="inf">
+                          <a href="" class="name">Swiss Dota League Season 1</a>
+                          <!--<p>Самые свежие новости игр</p>-->
+                      </td>
+                      <td class="ac">
+                        <a class="gdel" href="javascript:;" onclick=""><i class="gti-times-circle-o"></i></a>
+                      </td>
+                    </tr>
+                </table>
+              </div>
+              {% include "template/pager.html" %}
+              
+        </div>
+      </section>
+      
+      {% include "template/footer.html" %}
+    </div>
+  </div>
+{#
+{% include "template/branding.html" %}
+#}
+{% include "template/bar.html" %}
+
+{% include "template/scripts.html" %}
+
+
+</body>
+</html>

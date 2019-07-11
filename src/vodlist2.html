@@ -1,0 +1,207 @@
+<!-- vodlist.html -->
+{% set title = "Видео дота 2" %}
+
+{% set team = ['Wings', 'OG', ' Evil Geniuses', 'EHOME', 'NewBee', 'Virtus.Pro'] %}
+{% set logo = ['pic-20161110-600x600-7320131375.png', 'pic-20161110-300x300-2206743285.png', 'pic-20161110-600x600-5478339632.png', 'pic-20161110-500x500-918003572.png', 'pic-20161110-600x450-6323255579.png'] %}
+{% set img = ['https://i.ytimg.com/vi/hmjC4isfJ_E/maxresdefault.jpg', 'https://i.ytimg.com/vi/fgb39dOJ1js/maxresdefault.jpg', 'https://i.ytimg.com/vi/EcRKuy6jqOI/maxresdefault.jpg', 'https://i.ytimg.com/vi/UY0JWskR5zw/maxresdefault.jpg', 'https://i.ytimg.com/vi/n3bDSptN06w/maxresdefault.jpg', 'https://i.ytimg.com/vi/2SWgdXthYcM/maxresdefault.jpg'] %}
+
+{% set gr = ['gr',''] %}
+
+
+<!DOCTYPE html>
+<html>
+{% include "template/head.html" %}
+<body class="">
+  <div class="container mainwrap pad120">
+    {% include "template/breadcrumbs.html" %}
+    <div class="otstup">
+      {% include "template/header.html" %}
+      <section class="hero" data-orig-offset="0" style="background-image:url(../img/headpic.jpg);">
+        <h1 class="mh"><span>Видео <a href="/dota-2">DOTA 2</a></span></h1>
+        <p>Здесь ты можешь найти любое видео (вод) прошедшей игры. При поиске ты можешь указывать турнир, стадию, раунд, команду, игрока и даже героя</p>
+      </section>
+      <section class="m-sec m-even">
+        <div class="row">
+          <div class="col-md-8">
+            <div class="filter">
+              
+              <script>
+              // команда-турнир фильтр
+                $(document).ready(function() {
+                  $('#mlt-filter').on('keyup', function(){
+                    $('.mlt-dropdown').addClass('open');
+                  });
+
+                  $(document).click(function(){
+                    $('.mlt-dropdown').removeClass('open');
+                  });
+                  $("#dropdown").click(function(e){
+                    e.stopPropagation();
+                    $('.mlt-dropdown').removeClass('open');
+                  });
+                });
+              </script>
+              
+              <div class="row">
+                <div class="col-md-7">
+                  <div class="row">
+                    <div class="col-sm-4">
+                      <div class="dropdown">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                          Турнир
+                          <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                          <li><a href="#">Европа</a></li>
+                          <li><a href="#">Америка</a></li>
+                          <li><a href="#">Азия</a></li>
+                          <li><a href="#">Тихоокеантский регион</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="dropdown">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                          Стадия
+                          <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                          <li><a href="#">Россия</a></li>
+                          <li><a href="#">Китай</a></li>
+                          <li><a href="#">Франция</a></li>
+                          <li><a href="#">Германия</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Игрок">
+                        <div class="input-group-btn mlt-dropdown">
+                          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                          <ul class="dropdown-menu dropdown-menu-right">
+                            <li><a href="#">Мажор 1</a></li>
+                            <li><a href="#">Мажор 2</a></li>
+                            <li><a href="#">Мажор 3</a></li>
+                            <li><a href="#">Мажор 4</a></li>
+                          </ul>
+                        </div><!-- /btn-group -->
+                      </div><!-- /input-group -->
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-5">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="mlt-filter">
+                        <input id="mlt-filter" type="text" value="" placeholder="Команда..." class="form-control team" autocomplete="off">
+                        <a href="" class="sicon"></a>
+                        <ul class="dropdown-menu" id="#t1">
+                          <li class="dropdown-header">Выбери команду</li>
+                          <li><a href="javascript:;" onclick="">123</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="mlt-filter">
+                        <input id="mlt-filter" type="text" value="" placeholder="Герой..." class="form-control team" autocomplete="off">
+                        <a href="" class="sicon"></a>
+                        <ul class="dropdown-menu hero-menu" id="#t1">
+                          <li class="dropdown-header">Выбери героя</li>
+                          <li>
+                            <a href="javascript:;" onclick="">
+                              <img src="http://cdn.dota2.com/apps/dota2/images/heroes/faceless_void_sb.png">
+                              Faceless Void
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mlt vodstable">
+              <table class="mtable">
+                <thead>
+                  <tr>
+                    <th>Матч</th>
+                    <th>Канал</th>
+                    <th></th>
+                    <th>Дата</th>
+                    <th></th>
+                  </tr>
+                </thead>
+              {% for i in 0..20 %}
+                <tr class="t-item">
+                  <td class="vname">
+                    <a href="">
+                      <img src="http://game-tournaments.com/media/tournament/_60/pic-20160831-478x178-7586446600.jpeg" alt="WESG">
+                    </a>
+                    <a class="vtitle" href="http://youtu.be/L-L0XM5E3bc"> <b>[RU]</b> <span>{{random(team)}}</span> vs <span>{{random(team)}}</span> <b class="label label-default">BO3</b></a>
+                  </td>
+                  <td class="chan">
+                    Dota 2 Watch
+                  </td>
+                  <td class="vstats">
+                    <span><i class="gti-eye"></i> 123</span>
+                    <span><i class="gti-comments-o"></i> 123</span>
+                  </td>
+                  <td class="date">
+                    <span class="sct" data-format="%ms% %j%%y%" data-time="1484561700">Jan 16</span>
+                  </td>
+                  <td class="dwtd">
+                    <a href="" class="mlan dw tip" title="Logs"><i class="gti-dotaviewer"></i></a>
+                  </td>
+                </tr>
+               
+              {% endfor %}
+              </table>
+              {% include "template/pager.html" %}
+            </div>
+            
+            <div class="well text-center">
+              <h6 class="text-up">Нет видео</h6>
+            </div>
+            
+          </div>
+          <div class="col-md-4">
+            <a href="" class="historyBlock">
+              <div>
+                <div class="ibg"></div> 
+                <i class="mi-history"></i>
+                <h3 class="miHlink">История встреч между командами</h3>
+              </div>
+            </a>
+            {% include "template/liveblock.html" %}
+            {% include "template/blockzames-vertical.html" %}
+          </div>
+        </div>
+      </section>
+
+      {#
+      <section id="m-news" class="m-sec m-even">
+        <div class="row">
+          <div class="col-md-7">
+            {% include "template/match-page/section-news.html" %}
+          </div>
+          <div class="col-md-5">
+            {% include "template/match-page/section-soc.html" %}
+          </div>
+        </div>
+      </section>
+      #}
+
+      <div class="bn">
+        <img src="../img/ad.jpg" alt="">
+      </div>
+      {% include "template/footer.html" %}
+    </div>
+  </div>
+{% include "template/branding.html" %}
+{% include "template/bar.html" %}
+{% include "template/modal.html" %}
+{% include "template/scripts.html" %}
+
+</body>
+</html>

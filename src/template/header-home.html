@@ -1,0 +1,144 @@
+<!-- header-home.html -->
+<script>
+$(document).ready(function () {
+  
+  /*
+  $('.header').affix({
+    offset: {
+      top: 120,
+      bottom: function () {
+        return (this.bottom = $('.footer').outerHeight(true))
+      }
+    }
+  });
+  $('.header').on('affix.bs.affix', function () {
+    $('body').addClass('affixpad');
+  });
+  $('.header').on('affixed-top.bs.affix', function () {
+    $('body').removeClass('affixpad');
+  });
+  */
+  
+    $('#hamburger').click(function () {
+    $(this).toggleClass('active');
+    $('.tab-content').toggleClass('open');
+    $('.homenav').toggleClass('open');
+  });
+  
+});
+</script>
+<nav class="header fixedtype"><!-- fixedtype -->
+  <a class="gg-logo" href="/"><i class="gti-gt1"></i><b>beta</b></a>
+  <a class="chat-btn chat-btn-right" href="#!"><i class="gti-comment-o"></i><span>Чат</span><b>99+</b></a>
+  <div class="headerwr">
+    <div class="topper clearfix">
+      <div class="dropers">
+        <div class="s-lang">
+          <div class="dropdown">
+            <a class="dla" id="ddlang" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              RU
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="ddlang">
+              <li class="active"><a href="#">Русский</a></li>
+              <li><a href="#">English</a></li>
+              <li><a href="#">Italiano</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="s-time">
+          <div class="dropdown">
+            <a class="sub" id="ddtime" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              <b class="gti-clock-o"></b>
+              <em>15:08 (GMT +3:00)</em>
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="ddtime">
+              <li><a href="#">12:08 (GMT 0:00)</a></li>
+              <li><a href="#">13:08 (GMT +1:00)</a></li>
+              <li><a href="#">14:08 (GMT +2:00)</a></li>
+              <li class="active"><a href="#">15:08 (GMT +2:00)</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="u-block-log">
+        <a href="" class="bar-ava"><img src="https://ggscore.com/media/user/_60/pic-20170309-566x600-393639798.png"></a>
+        <div class="username">
+          <a href="/ru/account" class="bar-name">
+            kleale kleale kleale
+          </a>
+          <span class="status bar-label">pro</span>
+          <a href="/ru/logout" class="u-off"><i class="gti-sign-out"></i></a>
+          {#<a href="/ru/account" class="u-opt"><i class="gti-wrench"></i></a>#}
+        </div>
+      </div>
+      {#
+      <div class="u-block">
+        <a class="btn-log" href="/log" title="Вход в свой профиль"><i class="gti-user-o"></i><span>Войти</span></a>
+        <a class="btn-reg" href="/reg" title="Регистрация"><i class="gti-user-plus"></i><span>Рег.</span></a>
+      </div>
+      #}
+      <a href="javascript:;" class="hamburger" id="hamburger"><i class="gti-bars"></i></a>
+      <ul class="homenav">
+        <li><a href="#"><i class="gti-582"></i><span>dota2</span></a>
+        </li>
+        <li><a href="#" ><i class="gti-704"></i><span>csgo</span></a></li>
+        <li><a href="#" ><i class="gti-313"></i><span>lol</span></a></li>
+        <li><a href="#" ><i class="gti-800"></i><span>overwatch</span></a></li>
+        <li><a href="#"><i class="gti-755"></i><span>hearthstone</span></a></li>
+        <li><a href="#"><i class="gti-100"></i><span>PUBG</span></a></li>
+      </ul>
+    </div>
+{#
+    <div class="tab-content">
+      <div class="dropdown gamehome">
+        <a href="" class="" data-toggle="dropdown"><i class="gti-582"></i></a>
+        <ul class="dropdown-menu">
+          <li class="active" href="#dota2" role="tab" data-toggle="tab"><a href="/en/dota-2"><i class="gti-582"></i></a>
+          </li>
+          <li><a href="#csgo" role="tab" data-toggle="tab"><i class="gti-704"></i></a></li>
+          <li><a href="#lol" role="tab" data-toggle="tab"><i class="gti-313"></i></a></li>
+          <li><a href="#overwatch" role="tab" data-toggle="tab"><i class="gti-800"></i></a></li>
+          <li><a href="#hearthstone" role="tab" data-toggle="tab"><i class="gti-755"></i></a></li>
+        </ul>
+      </div>
+      <div class="tab-pane fade in active" id="dota2" role="tabpanel">
+        <ul class="homenav-sub">
+          <li><a href="/en/csgo/matches" title="Matches"><i class="gti-vs"></i> <span>Matches<br>& Live streams</span></a></li>
+          <li class="active"><a href="/en/csgo/tournaments" title="Events"><i class="gti-trophy2"></i><span>Tournaments<br>& events</span></a></li>
+          <li><a href="/en/csgo/news" title="News"><i class="gti-news"></i><span>Cybersport<br>News</span></a></li>
+          <li><a href="/en/csgo/team" title="Teams"><i class="gti-teams"></i><span>TEAMS STATS<br>& RATINGS</span></a></li>
+          <li><a href="/en/csgo/player" title="Players"><i class="gti-player"></i><span>PLAYERS<br>STATS</span></a></li>
+          <li><a href="/en/csgo/highlights" title="Highlights"><i class="gti-swords"></i><span>HIGHLIGHTS<br><b class="label">NEW</b></span></a></li>
+          <li><a href="/en/csgo/video" title="Video / Match vods"><i class="gti-play2"></i><span>MATCH VODS<br>WITH Full LOGS</span></a></li>
+        </ul>
+      </div>
+      <div class="tab-pane fade" id="csgo" role="tabpanel">
+        <!--<a href="" class="gamehome"><i class="gti-704"></i></a>-->
+        <ul class="homenav-sub">
+          <li><a href="/en/csgo/matches" title="Matches"><i class="gti-vs"></i> <span>Matches<br>& Live streams</span></a></li>
+        </ul>
+      </div>
+      <div class="tab-pane fade" id="lol" role="tabpanel">
+        <!--<a href="" class="gamehome"><i class="gti-313"></i></a>-->
+        <ul class="homenav-sub">
+          <li><a href="" title="Matches"><i class="gti-vs"></i> <span>Matches<br>& Live streams</span></a></li>
+        </ul>
+      </div>
+      <div class="tab-pane fade" id="overwatch" role="tabpanel">
+        <!--<a href="" class="gamehome"><i class="gti-800"></i></a>-->
+        <ul class="homenav-sub">
+          <li><a href="" title="Matches"><i class="gti-vs"></i> <span>Matches<br>& Live streams</span></a></li>
+        </ul>
+      </div>
+      <div class="tab-pane fade" id="hearthstone" role="tabpanel">
+        <!--<a href="" class="gamehome"><i class="gti-755"></i></a>-->
+        <ul class="homenav-sub">
+          <li><a href="" title="Matches"><i class="gti-vs"></i> <span>Matches<br>& Live streams</span></a></li>
+        </ul>
+      </div>
+    </div>
+#}
+  </div>
+</nav>

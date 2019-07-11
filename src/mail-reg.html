@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Подтверди регистрацию на сайте ggscore.com</title>
+  <link href="http://fonts.googleapis.com/css?family=Roboto:400,300,700,900&subset=latin,cyrillic" rel="stylesheet" type="text/css"> </head>
+
+<body class="outlook">
+  <!--[if mso]>
+        <style type="text/css">
+            .outlook {
+                font-family: Arial, sans-serif;
+            }
+        </style>
+        <![endif]-->
+  <style type="text/css">
+    a:hover {
+      text-decoration: none;
+    }
+    
+    .abline a {
+      text-decoration: underline;
+    }
+    
+    .abline a:hover {
+      text-decoration: none;
+    }
+    
+    .but-w:hover {
+      color: #007dab!important;
+      background: #fff;
+    }
+    
+    .but-b:hover {
+      color: #fff!important;
+      background: #007dab!important;
+    }
+  </style>
+  <div bgcolor="#eef5f8" style="background:#eef5f8 url(http://ggscore.com/html/img/mail/mail_bg_dota.jpg) 50% 0 repeat-x;margin:0px;padding: 50px 0;" marginwidth="0" marginheight="0">
+    <table width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;">
+      <tbody>
+        <tr>
+          <td>
+            <table width="600" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; margin: 10px auto;">
+              <tbody>
+                <tr>
+                  <td width="20"></td>
+                  <td>
+                    <p style="float: right; margin: 0px; font: bold 11px/20px Roboto,Helvetica,Arial,sans-serif; color: rgb(255, 255, 255);">Изображения не показываются? <a href="http://{{site}}/ru/mail?code={{code}}" style="color:#fff;">Нажми сюда!</a></p> <a href="http://{{site}}/ru" style="color: rgb(255, 255, 255); text-transform: uppercase; text-decoration: none; font: bold 11px/20px Roboto,Helvetica,Arial,sans-serif; letter-spacing: 2px;">ggscore.com</a> </td>
+                  <td width="20"></td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <table width="600" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff" align="center" style="border-collapse:collapse;background-color:#fff;margin:auto;">
+              <tbody>
+                <tr>
+                  <td bgcolor="#007dab" style="color:#fff;background:#007dab url(http://ggscore.com/html/img/mail/mail_header.jpg) 50% 0 no-repeat; border-bottom-width:1px; border-bottom-color:#00749e; border-bottom-style:solid;">
+                    <table width="600" cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;">
+                      <tbody>
+                        <tr>
+                          <td align="left" width="120" style="width: 120px; padding: 10px 20px;">
+                            <a href="http://{{site}}/ru"><img width="100" height="50" src="http://ggscore.com/html/img/mail/gt-logo-mail.png"></a>
+                          </td>
+                          <td align="center" style="text-align:center;"> {% for key, val in games %} <a href="http://{{site}}/en/{{key}}?utm_source=email&utm_medium=registration&utm_term=click&utm_campaign=E-mail%20verification" style="color: rgb(255, 255, 255); text-decoration: none; font: bold 14px/16px Roboto,Helvetica,Arial,sans-serif;">{{val}}</a>{% if not loop.last %} &nbsp;•&nbsp; {% endif %} {% endfor %} </td>
+                          <td align="right" width="120" style="width: 120px; padding:10px 20px;"> <a href="http://{{site}}/ru/login?utm_source=email&utm_medium=registration&utm_term=signin&utm_campaign=E-mail%20verification" class="but-w" style="border: 2px solid rgb(255, 255, 255); color: rgb(255, 255, 255); text-decoration: none; display: block; float: right; border-radius: 20px; text-transform: uppercase; font: 800 12px/16px Roboto,Helvetica,Arial,sans-serif; padding: 10px 26px;">Войти</a> </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <table width="600" cellspacing="0" cellpadding="0" border="0" class="abline" style="border-collapse: collapse; background: rgba(255, 255, 255, 0.16) none repeat scroll 0% 0%; border-top: 1px solid rgb(59, 157, 196);">
+                      <tbody>
+                        <tr>
+                          <td width="10"></td>
+                          <td align="center" style="text-align:center; padding: 6px 0 10px"> <span style="color: rgb(255, 255, 255); font: 300 10px/16px Roboto,Helvetica,Arial,sans-serif; text-transform:uppercase;">Стримы и видео матчей</span> &nbsp;•&nbsp; <span style="color: rgb(255, 255, 255); font: 300 10px/16px Roboto,Helvetica,Arial,sans-serif; text-transform:uppercase;">Cтатистика команд и игроков</span> &nbsp;•&nbsp; <span style="color: rgb(255, 255, 255); font: 300 10px/16px Roboto,Helvetica,Arial,sans-serif; text-transform:uppercase;">Хайлайты</span> &nbsp;•&nbsp; <span style="color: rgb(255, 255, 255); font: 300 10px/16px Roboto,Helvetica,Arial,sans-serif; text-transform:uppercase;">Прогнозы</span> </td>
+                          <td width="10"></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <h1 style="color: rgb(255, 255, 255); text-align: center; margin: 60px 30px 20px 30px; font: 300 26px/30px Roboto,Helvetica,Arial,sans-serif;">{{random(['Добро пожаловать','Ты вступил','Ты попал'])}} в {{random(['уникальное','эксклюзивное','единственное в своём роде'])}} {{random(['игровое','гейм'])}} {{random(['сообщество','комьюнити'])}} <a style="color: rgb(255, 255, 255); text-decoration:none;">ggscore.com</a>!</h1>
+                    <p style="text-align:center;margin:20px 20px 20px;font: 300 18px/24px Roboto,Helvetica,Arial,sans-serif;"> Для завершения регистрации {{random(['остался всего один шаг','необходимо подтвердить e-mail'])}}
+                      <p> <a href="{{link}}" class="but-w" style="border: 3px solid rgb(255, 255, 255); color: rgb(255, 255, 255); text-decoration: none; display: block; text-transform: uppercase; width: 200px; text-align: center; font: 800 14px/16px Roboto,Helvetica,Arial,sans-serif; padding: 15px 25px; margin: 0px auto;">Подтвердить email *</a>
+                        <div style="text-align: center; font: 10px/12px Roboto,Helvetica,Arial,sans-serif; margin: 20px 0px 30px;"> Или перейти по ссылке:
+                          <br/> <a href="{{link}}" style="color: rgb(255, 255, 255); text-decoration:underline;">{{link_title}}</a> </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="passer" style="padding:20px;text-align:center;border:2px dashed #fff;background-color:#007dab;">
+                      <table width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse;">
+                        <tbody>
+                          <tr>
+                            <td width="50%" align="right" style="color: rgb(255, 255, 255);font: 18px/16px Roboto,Helvetica,Arial,sans-serif; padding:10px;"> Твой логин: </td>
+                            <td width="50%" align="left" style="color: rgb(255, 255, 255); font: 800 18px/16px Roboto,Helvetica,Arial,sans-serif; padding:10px;"> <a style="color: rgb(255, 255, 255); text-decoration:none;">{{login}}</a> </td>
+                          </tr>
+                          <tr>
+                            <td width="50%" align="right" style="color: rgb(255, 255, 255);font: 18px/16px Roboto,Helvetica,Arial,sans-serif; padding:10px;"> Твой пароль: </td>
+                            <td width="50%" align="left" style="color: rgb(255, 255, 255); font: 800 18px/16px Roboto,Helvetica,Arial,sans-serif; padding:10px;"> {% if pwd %}<span id="pwd">{{pwd}}</span>{% else %}*******{% endif %} </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <table width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse">
+                      <tbody>
+                        <tr>
+                          <td width="20"></td>
+                          <td>
+                            <h2 style="color:#007dab; font: 24px/30px Roboto,Helvetica,Arial,sans-serif;text-align:center; margin:40px 0 30px;text-transform:uppercase;">На нашем сайте Ты всегда можешь:</h2>
+                            <table width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse; text-align:center;margin:20px 0 40px;">
+                              <tbody>
+                                <tr>
+                                  <td width="33.33%"> <img src="http://game-tournaments.com/html/img/mail/ico4.png" />
+                                    <p style="margin: 10px 0;color:#007dab; font: 14px/18px Roboto,Helvetica,Arial,sans-serif;text-align:center;">Смотреть
+                                      <br>стримы и матчи команд</p>
+                                  </td>
+                                  <td width="33.33%"> <img src="http://game-tournaments.com/html/img/mail/ico5.png" />
+                                    <p style="margin: 10px 0;color:#007dab; font: 14px/18px Roboto,Helvetica,Arial,sans-serif;text-align:center;">Следить за
+                                      <br>live-результатами</p>
+                                  </td>
+                                  <td width="33.33%"> <img src="http://game-tournaments.com/html/img/mail/ico6.png" />
+                                    <p style="margin: 10px 0;color:#007dab; font: 14px/18px Roboto,Helvetica,Arial,sans-serif;text-align:center;">Сравнивать лучшие
+                                      <br>коэффициенты
+                                      <br>букмекеров</p>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <hr style="color: rgb(0, 125, 171); margin: 20px 0px; border-bottom: medium none; border-top: 1px solid rgb(0, 125, 171);">
+                            <h2 style="color:#007dab; font: 24px/30px Roboto,Helvetica,Arial,sans-serif;text-align:center; margin:40px 0 30px;text-transform:uppercase;">А также не забудь:</h2>
+                            <table width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse; text-align:center;margin:20px 0 40px;">
+                              <tbody>
+                                <tr>
+                                  <td width="33.33%"> <img src="http://game-tournaments.com/html/img/mail/ico1.png" />
+                                    <p style="margin: 10px 0;color:#007dab; font: 14px/18px Roboto,Helvetica,Arial,sans-serif;text-align:center;">Комментировать
+                                      <br>матчи</p>
+                                  </td>
+                                  <td width="33.33%"> <img src="http://game-tournaments.com/html/img/mail/ico2.png" />
+                                    <p style="margin: 10px 0;color:#007dab; font: 14px/18px Roboto,Helvetica,Arial,sans-serif;text-align:center;">Управлять
+                                      <br>подписками</p>
+                                  </td>
+                                  <td width="33.33%"> <img src="http://game-tournaments.com/html/img/mail/ico3.png" />
+                                    <p style="margin: 10px 0;color:#007dab; font: 14px/18px Roboto,Helvetica,Arial,sans-serif;text-align:center;">Подписываться или
+                                      <br>размещать прогнозы</p>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                          <td width="20"></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <hr style="color: rgb(0, 125, 171); margin: 20px; border-bottom: medium none; border-top: 1px solid rgb(0, 125, 171);">
+                    <div style="text-align: center; font: 18px/30px Roboto,Helvetica,Arial,sans-serif; padding: 0px 30px 20px;"> <a href="http://{{site}}/ru?utm_source=email&utm_medium=registration&utm_term=click&utm_campaign=E-mail%20verification" style="color: rgb(0, 125, 171); text-decoration: underline; display: block;">И многое другое</a> </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding:20px;text-align:center;background-color:#007dab;">
+                    <h3 style="margin: 10px 0 20px;color: rgb(255, 255, 255); font: 300 24px/30px Roboto,Helvetica,Arial,sans-serif;text-align:center;">Начни прямо сейчас</h3>
+                    <p style="margin: 10px 0;color: rgb(255, 255, 255); font: 15px/21px Roboto,Helvetica,Arial,sans-serif;text-align:center;"> {{random(['Уникальная','Лучшая','Собственная','Универсальная'])}} статистика матчей, команд и игроков. {{random(['Самые свежие','Лучшие','Уникальные','Полные'])}} видео прошедших матчей. {{random(['Live','Живые','Прямые','Лучшие'])}} стримы и результаты. {{random(['Сетки','Таблицы','Графики','Расписание'])}} турниров и {{random(['последние','самые свежие','эксклюзивные'])}} новости. Сравнение коэффициентов от {{random(['лучших','популярных','топовых'])}} букмекеров. {{random(['Последние','Самые свежие','Эксклюзивные'])}} новости и события. </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <table width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse">
+                      <tbody>
+                        <td style="padding:10px 20px" width="100">
+                          <p style="color:#b4b4b4; font:12px/20px Helvetica,Arial,sans-serif; margin:0"> © {{'now'|date('Y')}} </p>
+                        </td>
+                        <td align="center"> <a href="http://{{site}}/ru/account/email?utm_source=email&utm_medium=registration&utm_term=options&utm_campaign=E-mail%20verification" style="color:#b4b4b4; font:12px/20px Helvetica,Arial,sans-serif; margin:0">
+                                                            Настройка рассылок
+                                                        </a> </td>
+                        <td align="right" style="padding:10px 20px" width="100"> <a href="http://{{site}}/ru/validate?email={{id}},{{login}}&utm_source=email&utm_medium=registration&utm_term=unsubscribe&utm_campaign=E-mail%20verification" style="color:#b4b4b4; font:12px/20px Helvetica,Arial,sans-serif; margin:0">
+                                                            Отписаться
+                                                        </a> </td>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div style="font: 300 11px/12px Roboto,Helvetica,Arial,sans-serif; text-align: center; width: 500px; margin: 10px auto; color: rgb(149, 174, 197);"> * Подтверждая e-mail, Ты даёшь своё согласие получать рекламные и информационные письма от портала ggscore.com и его партнёров. </div>
+    <div style="white-space:nowrap;font-variant:normal;font-style:normal;line-height:normal;font-weight:normal;font-size:14px;font-family:courier"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </div>
+  </div>
+</body>
+
+</html>
+
+
+
+
+
+{% include "template/scripts.html" %}

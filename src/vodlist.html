@@ -1,0 +1,246 @@
+<!-- vodlist.html -->
+{% set title = "Видео дота 2" %}
+
+{% set team = ['Wings', 'OG', ' Evil Geniuses', 'EHOME', 'NewBee', 'Virtus.Pro'] %}
+{% set logo = ['pic-20161110-600x600-7320131375.png', 'pic-20161110-300x300-2206743285.png', 'pic-20161110-600x600-5478339632.png', 'pic-20161110-500x500-918003572.png', 'pic-20161110-600x450-6323255579.png'] %}
+{% set img = ['https://i.ytimg.com/vi/hmjC4isfJ_E/maxresdefault.jpg', 'https://i.ytimg.com/vi/fgb39dOJ1js/maxresdefault.jpg', 'https://i.ytimg.com/vi/EcRKuy6jqOI/maxresdefault.jpg', 'https://i.ytimg.com/vi/UY0JWskR5zw/maxresdefault.jpg', 'https://i.ytimg.com/vi/n3bDSptN06w/maxresdefault.jpg', 'https://i.ytimg.com/vi/2SWgdXthYcM/maxresdefault.jpg'] %}
+
+{% set gr = ['gr',''] %}
+
+
+<!DOCTYPE html>
+<html>
+{% include "template/head.html" %}
+<body class="">
+  <div class="container mainwrap pad120">
+    {% include "template/breadcrumbs.html" %}
+    <div class="otstup">
+      {% include "template/header.html" %}
+      <section class="hero" data-orig-offset="0" style="background-image:url(../img/headpic.jpg);">
+        <h1 class="mh"><span>Видео <a href="/dota-2">DOTA 2</a></span></h1>
+        <p>Здесь ты можешь найти любое видео (вод) прошедшей игры. При поиске ты можешь указывать турнир, стадию, раунд, команду, игрока и даже героя</p>
+      </section>
+      <section class="m-sec m-even">
+        <div class="row">
+          <div class="col-md-8">
+            <div class="filter">
+              
+              <script>
+              // команда-турнир фильтр
+                $(document).ready(function() {
+                  $('#mlt-filter').on('keyup', function(){
+                    $('.mlt-dropdown').addClass('open');
+                  });
+
+                  $(document).click(function(){
+                    $('.mlt-dropdown').removeClass('open');
+                  });
+                  $("#dropdown").click(function(e){
+                    e.stopPropagation();
+                    $('.mlt-dropdown').removeClass('open');
+                  });
+                });
+              </script>
+              
+              
+              <form method="get" action="/ru/dota-2/video" id="filter">
+                <input type="hidden" name="event" value="">
+                <input type="hidden" name="stage" value="">
+                <input type="hidden" name="round" value="">
+                <input type="hidden" name="team" value="6291">
+                <input type="hidden" name="player" value="">
+                <input type="hidden" name="hero" value="">
+                <input type="hidden" name="lang" value="ru">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="input-group">
+                            <input type="text" value="" placeholder="Турнир" class="form-control tournament" autocomplete="off">
+                            <div class="input-group-btn mlt-dropdown" id="tournament">
+              <button type="button" class="btn btn-default dropdown-toggle caret-abs" data-toggle="dropdown"><span class="caret"></span></button>
+              <ul class="dropdown-menu dropdown-menu-right">
+                <li><a href="javascript:;" onclick="mfilter('event','1029');">Dotapit Season 5</a></li>
+                <li><a href="javascript:;" onclick="mfilter('event','1173');">OMEN Dota 2 Cup</a></li>
+                <li><a href="javascript:;" onclick="mfilter('event','1179');">AEF Dota 2 League Season 1</a></li>
+                <li><a href="javascript:;" onclick="mfilter('event','1171');">DAC 2017</a></li>
+                <li><a href="javascript:;" onclick="mfilter('event','1172');">ProDotA Cup Europe #14</a></li>
+                <li><a href="javascript:;" onclick="mfilter('event','1169');">ProDotA Cup SEA #4</a></li>
+                <li><a href="javascript:;" onclick="mfilter('event','1163');">KOD League Season 4</a></li>
+                <li><a href="javascript:;" onclick="mfilter('event','1144');">Dota 2 Ice</a></li>
+                <li><a href="javascript:;" onclick="mfilter('event','1137');">SL i-League StarSeries Season 3</a></li>
+              </ul>
+              </div>
+              </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="dropdown">
+                  <button type="button" class="btn btn-default dropdown-toggle caret-abs" data-toggle="dropdown">Стадия <span class="caret"></span></button>
+                  <ul class="dropdown-menu">
+                    <li class="dropdown-header">Выбери турнир</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="dropdown">
+                  <button type="button" class="btn btn-default dropdown-toggle caret-abs" data-toggle="dropdown">Раунд <span class="caret"></span></button>
+                  <ul class="dropdown-menu">
+                    <li class="dropdown-header">Выбери стадию</li>
+                  </ul>
+                </div>
+              </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-2">
+                  <div class="dropdown">
+                    <button type="button" class="btn btn-default dropdown-toggle caret-abs" data-toggle="dropdown">RU<span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li class="active"><a href="javascript:;" onclick="mfilter('lang','ru');">RU</a></li>
+                      <li><a href="javascript:;" onclick="mfilter('lang','en');">EN</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="input-group">
+                    <input type="text" value="WGU" placeholder="Команда" class="form-control fteam" autocomplete="off">
+                    <div class="input-group-btn mlt-dropdown" id="fteam">
+                      <a href="javascript:;" onclick="mfilter('team','');" class="times btn btn-default"></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="input-group btn-hide">
+                    <input type="text" value="" placeholder="Игрок" class="form-control fplayer" autocomplete="off">
+                    <div class="input-group-btn mlt-dropdown" id="fplayer">
+                      <button type="button" class="btn btn-default dropdown-toggle caret-abs" data-toggle="dropdown"><span class="caret"></span></button>
+                      <ul class="dropdown-menu dropdown-menu-right"></ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="input-group">
+                    <input type="text" value="" placeholder="Герой" class="form-control fhero" autocomplete="off">
+                    <div class="input-group-btn mlt-dropdown fhero" id="fhero">
+                      <button type="button" class="btn btn-default dropdown-toggle caret-abs" data-toggle="dropdown"><span class="caret"></span></button>
+                      <ul class="dropdown-menu dropdown-menu-right hero-menu">
+                        <li>
+                          <a href="javascript:;" onclick="mfilter('hero','102');"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/abaddon_sb.png">Abaddon</a>
+                        </li>
+                        <li>
+                          <a href="javascript:;" onclick="mfilter('hero','73');"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/alchemist_sb.png">Alchemist</a>
+                        </li>
+                        <li>
+                          <a href="javascript:;" onclick="mfilter('hero','68');"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/ancient_apparition_sb.png">Ancient Apparition</a>
+                        </li>
+                        <li>
+                          <a href="javascript:;" onclick="mfilter('hero','1');"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/antimage_sb.png">Anti-Mage</a>
+                        </li>
+                        <li>
+                          <a href="javascript:;" onclick="mfilter('hero','113');"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/arc_warden_sb.png">Arc Warden</a>
+                        </li>
+                        <li>
+                          <a href="javascript:;" onclick="mfilter('hero','2');"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/axe_sb.png">Axe</a>
+                        </li>
+                        <li>
+                          <a href="javascript:;" onclick="mfilter('hero','3');"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/bane_sb.png">Bane</a>
+                        </li>
+                        <li>
+                          <a href="javascript:;" onclick="mfilter('hero','65');"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/batrider_sb.png">Batrider</a>
+                        </li>
+                        <li>
+                          <a href="javascript:;" onclick="mfilter('hero','38');"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/beastmaster_sb.png">Beastmaster</a>
+                        </li>
+                        <li>
+                          <a href="javascript:;" onclick="mfilter('hero','4');"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/bloodseeker_sb.png">Bloodseeker</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </form>
+              
+              
+            </div>
+            
+            <div class="vodslist">
+              {% for i in 0..10 %}
+                <div class="videopost">
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <a class="video_link" href="http://youtu.be/L-L0XM5E3bc">
+                        <img src="{{random(img)}}">
+                        <!--<time><i class="gti-clock-o"></i> 9 января</time>-->
+                        <b>
+                          <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/starladder4-profile_image-793e69df11adc8ce-300x300.jpeg" alt="">
+                        </b>
+                      </a>
+                      <u>Dota 2 Watch</u>
+                    </div>
+                    <div class="col-sm-9">
+                      <div class="vinfo">
+                        <h3>
+                          <a class="video fancybox" href="http://youtu.be/L-L0XM5E3bc"> {{random(team)}} vs {{random(team)}} <b class="badge">bo3</b></a>
+                          <div class="vstats">
+                            <i class="gti-eye"></i> 123 &nbsp;&nbsp;&nbsp;
+                            <i class="gti-comments-o"></i> 123
+                          </div>
+                        </h3>
+                        <p><img src="http://game-tournaments.com/media/tournament/_60/pic-20160831-478x178-7586446600.jpeg" alt="WESG"> WESG, Playoff, Upper Bracket, Round 1</p>
+                        <time>9 января 2010 <i class="gti-clock-o"></i> 10:30</time>
+                        <a href="" class="mlan dw tip" title="Logs"><i class="gti-dotaviewer"></i></a>
+                        <a href="" class="mlan">RU</a>
+                        <a href="" class="mlan">EN</a>
+                        <a href="/dota-2/dota-2-ice/playoff/feat-vs-sweet-boys-40322" class="btn btn-xs btn-default ">Смотреть матч</a>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              {% endfor %}
+              {% include "template/pager.html" %}
+            </div>
+            
+            <div class="well text-center">
+              <h6 class="text-up">Нет видео</h6>
+            </div>
+          
+          </div>
+          <div class="col-md-4">
+            <a href="" class="historyBlock">
+              <div>
+                <div class="ibg"></div> 
+                <i class="mi-history"></i>
+                <h3 class="miHlink">История встреч между командами</h3>
+              </div>
+            </a>
+            {% include "template/liveblock.html" %}
+            {% include "template/blockzames-vertical.html" %}
+          </div>
+        </div>
+      </section>
+
+      {#
+      <section id="m-news" class="m-sec m-even">
+        <div class="row">
+          <div class="col-md-7">
+            {% include "template/match-page/section-news.html" %}
+          </div>
+          <div class="col-md-5">
+            {% include "template/match-page/section-soc.html" %}
+          </div>
+        </div>
+      </section>
+      #}
+
+      <div class="bn">
+        <img src="../img/ad.jpg" alt="">
+      </div>
+      {% include "template/footer.html" %}
+    </div>
+  </div>
+{% include "template/branding.html" %}
+{% include "template/bar.html" %}
+{% include "template/modal.html" %}
+{% include "template/scripts.html" %}
+
+</body>
+</html>

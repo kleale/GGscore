@@ -1,0 +1,217 @@
+{% set title = "Игроки дота 2. Прогноз" %}
+
+{% set team = ['Wings', 'OG', ' Evil Geniuses', 'EHOME', 'NewBee', 'Virtus.Pro'] %}
+{% set flag = ['1', '2', '3', '4', '5', '6'] %}
+{% set rate = ['1,744', '1,622', '1,511', '1,497', '1,496', '1,469', '—'] %}
+{% set txt = ['Последние 4 встречи закончились победой OG. Хотя все они были в прошлой мете и это нельзя отбрасывать. После мажора, у EG была','Для меня конечно фавориты альянс,но фнатики не настолько слабы,подавно после игры с vg.Моя ставка на +1.5 за фнатик,но побеждать должны все-же']%}
+{% set logo =['http://ggscore.com/media/logo/_60/pic-20161110-600x600-5478339632.png','http://ggscore.com/media/logo/_60/pic-20161027-600x600-9332827152.png','http://ggscore.com/media/logo/_60/pic-20161110-300x300-6683929543.png','http://ggscore.com/media/logo/_60/pic-20161110-300x300-752810928.png','http://ggscore.com/media/logo/_60/pic-20161110-600x450-6323255579.png']%}
+
+
+<!DOCTYPE html>
+<html>
+{% include "template/head.html" %}
+<body class="">
+   {% include "template/header.html" %}
+  <div class="container mainwrap pad120">
+    {% include "template/breadcrumbs.html" %}
+    <div class="otstup">
+      <section class="t-top tHero">
+		<div class="heroBg" style="background-image:url(https://ggscore.com/html/img/headpic_582.jpg)"></div>
+        <a href="/ru/dota-2/team" class="btn all btn-sm btn-default">Все прогнозисты Dota 2</a>
+        <h1>DotA 2_hot_bets <span class="label label-default upro">PRO</span></h1>        
+
+        <div class="row">
+          <div class="col-md-4">
+            <div class="pAva">
+              <div class="pAvaBg">
+                <span class="playerava">
+                  <img src="http://game-tournaments.com/media/user/pic-20170309-566x600-393639798.png" alt="DotA 2_hot_bets">
+                </span>
+                <div class="pInf">
+                  <table>
+                    <tbody>
+                      <tr>
+                        <td width="250px">Язык</td>
+                        <td>Английский <img width="16px" src="https://ggscore.com/media/flag/25.png"></td>
+                      </tr>
+                      <tr>
+                        <td width="250px">Стус</td>
+                        <td><span class="upro">PRO</span></td>
+                      </tr>
+                      <tr>
+                        <td width="250px">Ссылка</td>
+                        <td><a href="" class="pzlink">https://vk.com/betsbyboss</a></td>
+                      </tr>
+                      <tr>
+                        <td>Место в рейтинге</td>
+                        <td>#1</td>
+                      </tr>
+                      <tr>
+                        <td>Прогнозов</td>
+                        <td>16</td>
+                      </tr>
+                      <tr>
+                        <td>Проходимость</td>
+                        <td>100.0%</td>
+                      </tr>
+                      <tr>
+                        <td>Последний</td>
+                        <td>4 дн. назад</td>
+                      </tr>
+                      <tr>
+                        <td>Подписка</td>
+                        <td>бесплатно</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="fans"> <a href="javascript:;" onclick="subscribe()" class="btn btn-primary">Подписаться бесплатно</a><b>30 подписок</b> </div>
+              </div>
+            </div>
+            <br>
+            
+            <div class="przstat">
+              <div class="prztext">
+                <h3 class="mlh mlhSM"><span>О прогнозисте</span></h3>
+                Узнай, как заработать $1000 на live ставках всего за один месяц! Все live ставки я даю в группе!
+              </div>
+            </div>
+            
+            <div class="well">
+              Инфо блок.
+            </div>
+            
+            {#
+              {% include "template/liveblock.html" %}
+              {% include "template/players/blockzames-vertical.html" %}
+            #}
+          </div>
+           
+          <div class="col-md-8">
+            <div class="filter">
+              <form method="get" id="filter">
+                <div class="row">
+                  <div class="col-sm-3">
+                    <div class="dropdown">
+                      <button class="btn btn-default dropdown-toggle caret-abs" type="button" data-toggle="dropdown">По актуальности <span class="caret"></span></button>
+                      <ul class="dropdown-menu">
+                        <li><a href="javascript:;" onclick="">Актуальные</a></li>
+                        <li><a href="javascript:;" onclick="">Прошедшие</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-sm-3">
+                    <div class="dropdown">
+                      <button type="button" class="btn btn-default dropdown-toggle caret-abs" data-toggle="dropdown">По проходимости<span class="caret"></span></button>
+                      <ul class="dropdown-menu">
+                        <li><a href="javascript:;" onclick="">Сбывшиеся</a></li>
+                        <li><a href="javascript:;" onclick="">Не сбывшиеся</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-sm-3">
+                    <div class="mlt-filter">
+                      <div>
+                        <input type="text" name="t" value="" placeholder="Турнир" class="form-control" autocomplete="off">
+                        <a href="javascript:;" onclick="" class="sicon"></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-3">
+                    <div class="mlt-filter">
+                      <div>
+                        <input type="text" name="t" value="" placeholder="Название команды" class="form-control" autocomplete="off">
+                        <a href="javascript:;" onclick="" class="sicon"></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            
+            <div class="przlist">
+              <table class="mtable">
+                <thead>
+                  <tr>
+                    <th class="tmz">Прогноз</th>
+                    <th>Описание прогноза</th>
+                  </tr>
+                </thead>
+                {% for i in 0..19 %}
+                <tr>
+                  <td class="tmz tip" title="05 апр, 13:30 at Esports Championship League - Америка">
+                    <a href="#" class="{{random(['win','',''])}} logo guess tip" title="{{random(team)}}">
+                      <span><img src="{{random(logo)}}"></span>
+                      {#<b>{{random(team)}}</b>#}
+                    </a>
+                    <a href="" title="Страница матча" class="vs">vs</a>
+                    <a href="#" class="{{random(['','win',''])}} logo noguess tip" title="{{random(team)}}">
+                      <span><img src="{{random(logo)}}"></span>
+                      {#<b>{{random(team)}}</b>#}
+                    </a>
+                  </td>
+                  <td class="tprp">
+                    <div class="prpc">
+                      <div class="prt">
+                        {{random(txt)}}<em style="display: inline;">...</em><span class="hh">
+                        Риск очень высокий.<br>
+                        Советую пропустить встречу либо ставить на на отдельные карты на NewBee, если их драфт будет сильнее.</span>
+                        <a class="prm" href="javascript:;">еще</a>
+                      </div>
+                    </div>
+                </td>
+                </tr>
+                {% endfor %}
+              </table>
+              
+              <script>
+              $(document).ready(function(){
+                $(".prpf").click(function(){
+                  $(this).find('.prt em').toggle();
+                  $(this).find('.prm').html($(this).text() == 'скрыть' ? 'еще' : 'скрыть');
+                  $(this).toggleClass('open');
+                });
+              })
+              </script>
+              
+              {% include "template/pager.html" %}
+              
+              <div class="well well-info">
+                Информационное сообщение
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </section>
+
+      {#
+      <section id="m-news" class="m-sec m-even">
+        <div class="row">
+          <div class="col-md-7">
+            {% include "template/match-page/section-news.html" %}
+          </div>
+          <div class="col-md-5">
+            {% include "template/match-page/section-soc.html" %}
+          </div>
+        </div>
+      </section>
+      #}
+      {#
+      <section id="m-zames" class="m-sec m-even m-zames">
+        {% include "template/blockzames.html" %}
+      </section>
+      #}
+      <div class="bn">
+        <img src="../img/ad.jpg" alt="">
+      </div>
+      {% include "template/footer.html" %}
+    </div>
+  </div>
+{% include "template/branding.html" %}
+{% include "template/bar.html" %}
+{% include "template/modal.html" %}
+{% include "template/scripts.html" %}
+
+</body>
+</html>

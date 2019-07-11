@@ -1,0 +1,197 @@
+<!-- /match-page/section-comments.html -->
+<div class="block" id="m-com">
+ {#
+  <div class="bh clearfix">
+    <ul class="stm_nav_block" role="tablist">
+      <li class="active"><a href="#c-com" role="tab" data-toggle="tab"><i class="gti-comments-o"></i><span>123</span></a>
+      <li><a href="#c-vk" role="tab" data-toggle="tab"><i class="gti-vk"></i><span>123</span></a>
+      <li><a href="#c-fb" role="tab" data-toggle="tab"><i class="gti-facebook"></i><span>23</span></a>
+    </ul>
+  </div><!-- bh -->
+  #}
+  
+  <div class="tab-content">
+    <div class="tab-pane active" role="tabpanel" id="c-com">
+      <div class="comblock">
+        <div class="tse-com">
+            <div class="tse-content">
+              <ul class="m-com-list">
+              {% for i in 0..4 %}
+                <li>
+                  <a href=""><img src="../img/uava.png" alt=""></a>
+                  <a href="" title="Хайлайт такой-то" class="tip hlc"><i class="gti-swords"></i></a>
+                  <div>
+                    <b>BorodachBets</b> • 
+                    <span>27 февраля, 23:49</span>
+                    <p>
+                      ВП плохо отыгрывали свои последние игры, проиграли даже МБ которые казалось бы должны были отлететь 2-0, но всё произошло наоборот:) Ликвиды тоже играли очень слабо, поэтому матч спорный. СТавлю 500$ на один из матчей мажора, скрины в группе
+                    </p>
+                  </div>
+                </li>
+              {% endfor %}
+              </ul>
+              <div class="no100"><i class="gti-info-circle"></i> Ничего нет</div>
+            </div>
+        </div>
+        
+        <!-- текстарея их чата -->
+        
+        <div class="chat-action">
+          <div class="chat-text">
+            <form method="POST" action="chat" name="msg">
+              <textarea name="txt" id="chat_txt" placeholder="Комментировать матч" onkeypress="if (event.keyCode==10 || (event.ctrlKey &amp;&amp; event.keyCode==13)) {chat_msg(); return false;}"></textarea>
+              <a onclick="chat_msg();" class="btn btn-chat">OK</a>
+              <a id="emotic-btn" class="emotic-btn"><i class="gti-smile-o"></i></a>
+              <div class="emo_block" id="emo_block">
+                <div class="tse-sc stickerer" id="stickerer">
+                  <div class="tse-content">
+                    <div class="stickers-list">
+                      <a onclick="insert_smile('angry');">
+                        <img src="http://game-tournaments.com/media/smile/angry.png" title="angry">
+                      </a>
+                      <a onclick="insert_smile('cry');">
+                        <img src="http://game-tournaments.com/media/smile/cry.png" title="cry">
+                      </a>
+                      <a onclick="insert_smile('bigsmile');">
+                        <img src="http://game-tournaments.com/media/smile/bigsmile.png" title="bigsmile">
+                      </a>
+                      <a onclick="insert_smile('eyesdroped');">
+                        <img src="http://game-tournaments.com/media/smile/eyesdroped.png" title="eyesdroped">
+                      </a>
+                      <a onclick="insert_smile('love');">
+                        <img src="http://game-tournaments.com/media/smile/love.png" title="love">
+                      </a>
+                      <a onclick="insert_smile('beaten');">
+                        <img src="http://game-tournaments.com/media/smile/beaten.png" title="beaten">
+                      </a>
+                      <a onclick="insert_smile('unhappy');">
+                        <img src="http://game-tournaments.com/media/smile/unhappy.png" title="unhappy">
+                      </a>
+                      <a onclick="insert_smile('nothing');">
+                        <img src="http://game-tournaments.com/media/smile/nothing.png" title="nothing">
+                      </a>
+                      <a onclick="insert_smile('horror');">
+                        <img src="http://game-tournaments.com/media/smile/horror.png" title="horror">
+                      </a>
+                      <a onclick="insert_smile('shocked');">
+                        <img src="http://game-tournaments.com/media/smile/shocked.png" title="shocked">
+                      </a>
+                      <a onclick="insert_smile('sick');">
+                        <img src="http://game-tournaments.com/media/smile/sick.png" title="sick">
+                      </a>
+                      <a onclick="insert_smile('shockedagain');">
+                        <img src="http://game-tournaments.com/media/smile/shockedagain.png" title="shockedagain">
+                      </a>
+                      <a onclick="insert_smile('brains');">
+                        <img src="http://game-tournaments.com/media/smile/brains.png" title="brains">
+                      </a>
+                      <a onclick="insert_smile('chilling');">
+                        <img src="http://game-tournaments.com/media/smile/chilling.png" title="chilling">
+                      </a>
+                      <a onclick="insert_smile('dizzy');">
+                          <img src="http://game-tournaments.com/media/smile/dizzy.png" title="dizzy">
+                      </a>
+                      <a onclick="insert_smile('enjoying');">
+                          <img src="http://game-tournaments.com/media/smile/enjoying.png" title="enjoying">
+                      </a>
+                      <a onclick="insert_smile('gangs');">
+                          <img src="http://game-tournaments.com/media/smile/gangs.png" title="gangs">
+                      </a>
+                      <a onclick="insert_smile('high');">
+                          <img src="http://game-tournaments.com/media/smile/high.png" title="high">
+                      </a>
+                      <a onclick="insert_smile('kaboom');">
+                          <img src="http://game-tournaments.com/media/smile/kaboom.png" title="kaboom">
+                      </a>
+                      <a onclick="insert_smile('kiddingright');">
+                          <img src="http://game-tournaments.com/media/smile/kiddingright.png" title="kiddingright">
+                      </a>
+                      <a onclick="insert_smile('meaw');">
+                          <img src="http://game-tournaments.com/media/smile/meaw.png" title="meaw">
+                      </a>
+                      <a onclick="insert_smile('ninja');">
+                          <img src="http://game-tournaments.com/media/smile/ninja.png" title="ninja">
+                      </a>
+                      <a onclick="insert_smile('omg');">
+                          <img src="http://game-tournaments.com/media/smile/omg.png" title="omg">
+                      </a>
+                      <a onclick="insert_smile('onfire');">
+                          <img src="http://game-tournaments.com/media/smile/onfire.png" title="onfire">
+                      </a>
+                      <a onclick="insert_smile('seriousbusiness');">
+                          <img src="http://game-tournaments.com/media/smile/seriousbusiness.png" title="seriousbusiness">
+                      </a>
+                      <a onclick="insert_smile('slow');">
+                        <img src="http://game-tournaments.com/media/smile/slow.png" title="slow">
+                      </a>
+                      <a onclick="insert_smile('want');">
+                        <img src="http://game-tournaments.com/media/smile/want.png" title="want">
+                      </a>
+                      <a onclick="insert_smile('xd');">
+                        <img src="http://game-tournaments.com/media/smile/xd.png" title="xd">
+                      </a>
+                      <a onclick="insert_smile('yaehamnotdurnk');">
+                        <img src="http://game-tournaments.com/media/smile/yaehamnotdurnk.png" title="yaehamnotdurnk">
+                      </a>
+                      <a onclick="insert_smile('yo');">
+                        <img src="http://game-tournaments.com/media/smile/yo.png" title="yo">
+                      </a>
+                      <a onclick="insert_smile('psychotic');">
+                        <img src="http://game-tournaments.com/media/smile/psychotic.png" title="psychotic">
+                      </a>
+                      <a onclick="insert_smile('pissedoff');">
+                        <img src="http://game-tournaments.com/media/smile/pissedoff.png" title="pissedoff">
+                      </a>
+                      <a onclick="insert_smile('secretlaugh');">
+                        <img src="http://game-tournaments.com/media/smile/secretlaugh.png" title="secretlaugh">
+                      </a>
+                      <a onclick="insert_smile('snooty');">
+                        <img src="http://game-tournaments.com/media/smile/snooty.png" title="snooty">
+                      </a>
+                      <a onclick="insert_smile('shy');">
+                        <img src="http://game-tournaments.com/media/smile/shy.png" title="shy">
+                      </a>
+                      <a onclick="insert_smile('yuush');">
+                        <img src="http://game-tournaments.com/media/smile/yuush.png" title="yuush">
+                      </a>
+                      <a onclick="insert_smile('yarr');">
+                        <img src="http://game-tournaments.com/media/smile/yarr.png" title="yarr">
+                      </a>
+                      <a onclick="insert_smile('zzz');">
+                        <img src="http://game-tournaments.com/media/smile/zzz.png" title="zzz">
+                      </a>
+                      <a onclick="insert_smile('tastey');">
+                        <img src="http://game-tournaments.com/media/smile/tastey.png" title="tastey">
+                      </a>
+                      <a onclick="insert_smile('evilish');">
+                        <img src="http://game-tournaments.com/media/smile/evilish.png" title="evilish">
+                      </a>
+                      <a onclick="insert_smile('ignoring');">
+                        <img src="http://game-tournaments.com/media/smile/ignoring.png" title="ignoring">
+                      </a>
+                      <a onclick="insert_smile('brzzzzz');">
+                        <img src="http://game-tournaments.com/media/smile/brzzzzz.png" title="brzzzzz">
+                      </a>
+                    </div>
+                  </div>
+                </div>    
+              </div>
+            </form>
+          </div>
+          <div class="mmore visible" id="mmore" onclick="chat_scroll_down()">Новые сообщения</div>
+        </div>
+        <!-- //текстарея их чата -->
+      </div>
+      <div class="c_inf"><a href="/"><i class="gti-comment"></i> &nbsp; Обсудить на форуме</a></div>
+    </div><!-- #c-com -->
+    <div class="tab-pane" role="tabpanel" id="c-vk">
+      
+    </div><!-- #c-vk -->
+    <div class="tab-pane" role="tabpanel" id="c-fb">
+      
+    </div><!-- #c-fb -->
+  </div>
+  
+</div>
+
+<!-- /Comments -->

@@ -1,0 +1,1642 @@
+
+
+
+<!DOCTYPE html>
+<html>
+
+ 
+
+ <head lang="en"><!-- ADD -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>Аккаунт: Настройки</title>  
+  <!-- Import fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  
+  <link rel="icon" type="image/png" href="/favicon32.png">
+  
+   <!-- Import bootstrap -->
+  <link rel="stylesheet" href="../inc/assets/css/bootstrap.min.css">
+  
+  <!-- Import main styles -->
+  <link rel="stylesheet" href="../css/main.css?51">
+  
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  
+  <!--Import jQuery-->
+  <!--<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>-->
+  <script src="../inc/assets/js/jquery-2.1.1.min.js"></script> 
+    
+  <!-- Latest compiled and minified JavaScript -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script> --> 
+  <script src="../inc/assets/js/bootstrap.min.js"></script> 
+</head>
+<body class="">
+  <div class="container mainwrap" style="padding-top:60px;">
+    <div class="otstup">
+      <section class="t-top user-ac">
+        <div class="heroBg" style="background-image:url(../img/noplayers.png)"></div>
+        <h1 class="mlh">Username #1323</h1>
+        <div class="user-menu">
+          <ul class="nav nav-pills nav-stacked nav-user">
+            <li><a href="/account"><i class="gti-user-circle"></i><u>Мой профиль</u></a></li>
+            <li class="active"><a href="/account"><i class="gti-cog"></i><u>Настройки</u></a></li>
+            <li><a href="/account"><i class="gti-bullhorn"></i><u>Мои прогнозы</u></a></li>
+            <li><a href="/account"><i class="gti-bell-o"></i><u>Подписки</u></a></li>
+            <li><a href="/account"><i class="gti-money"></i><u>Платежи</u></a></li>
+            <li><a href="/account/logout"><i class="gti-power-off"></i><u>Выход</u></a></li>
+          </ul>
+        </div>
+        
+        <div class="user-body">
+          <form action="account" method="POST" name="update" onsubmit="sform('update'); return false;">
+            <input type="hidden" class="input" rel="2" name="x" id="crop_x" value="">
+            <input type="hidden" class="input" rel="2" name="y" id="crop_y" value="">
+            <input type="hidden" class="input" rel="2" name="h" id="crop_h" value="">
+            <input type="hidden" class="input" rel="2" name="k" id="crop_k" value="">
+            <div class="row">
+              <div class="col-md-7">
+                <div class="panel panel-light block-ava">
+                  <div class="panel-heading">
+                    <h3 class="panel-title mlh mlhSM"><span>Аватар</span></h3> </div>
+                  <div class="panel-body">
+                    <div id="preview" class="uava"> <img id="logo2" src="https://ggscore.com/media/user/_60/pic-20170309-566x600-393639798.png?47"> </div>
+                    <div class="uavaload">
+                      <div data-count="1" data-rel="1" data-input="logo" data-title="ulogo" class="loader"></div>
+                      <div class="uava-btns">
+                        <div>
+                          <span>
+                            <a class="button-ulogo1 btn-primary btn btn-sm" href="javascript:;" style="overflow: hidden; direction: ltr;">Загрузить<input multiple="multiple" type="file" name="file" style="position: absolute; right: 0px; top: 0px; font-family: Arial; font-size: 18px; margin: 0px; padding: 0px; cursor: pointer; opacity: 0;"></a> 
+                            </span> <span>
+                                <a id="lb1" onclick="if (confirm('Вы уверены?')) delete_logo(this)" href="javascript:;" class="btn btn-danger btn-sm"> Удалить</a>
+                            </span> <span>
+                                <a id="lb2" onclick="avatar_block()" href="javascript:;" class="btn btn-default btn-sm"> Миниатюра</a>
+                            </span> </div>
+                      </div>
+                    </div>
+                    <div id="avatar_block" style="display:none">
+                      <div class="imgframe well bg-warning" style="position:relative;">
+                        <p>Выбери область на картинке</p> <img style="opacity:1" id="logo" data-width="566" data-height="600" width="200px" src="/media/user/pic-20170309-566x600-393639798.png">
+                        <center style="margin-top:10px;"><a href="javascript:;" onclick="sform('update');" class="btn btn-primary btn-sm">Обновить</a></center>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-light withJsLabel">
+                  <div class="panel-heading">
+                    <h3 class="mlh mlhSM"><span>твой ID – 18</span></h3> </div>
+                  <div class="panel-body">
+                    <div rel="email" class="form-group">
+                      <div class="input-group">
+                        <div class="jvFloat">
+                          <label class="placeHolder active" for="v2i4">Email</label>
+                          <input type="text" rel="1" name="email" autocomplete="off" value="kleale@kleale.ru" class="form-control input" placeholder="Email" tabindex="1" id="v2i4">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group" rel="nick">
+                      <div class="jvFloat">
+                        <label class="placeHolder  active" for="7yxt">Твой ник на ggScore</label>
+                        <input type="text" rel="1" name="nick" value="kleale" class="form-control input" maxlength="20" placeholder="Твой ник на ggScore" tabindex="2" id="7yxt">
+                      </div>
+                    </div>
+                    <div class="form-group" rel="timezone">
+                      <select rel="1" name="timezone" class="form-control input" tabindex="3">
+                        <option value="0">Часовой пояс</option>
+                        <option value="-720">20:52 (UTC -12:00)</option>
+                        <option value="-660">21:52 (UTC -11:00)</option>
+                        <option value="-600">22:52 (UTC -10:00)</option>
+                        <option value="-540">23:52 (UTC -9:00)</option>
+                        <option value="-480">00:52 PST (UTC -8:00)</option>
+                        <option value="-420">01:52 PDT (UTC -7:00)</option>
+                        <option value="-360">02:52 CST (UTC -6:00)</option>
+                        <option value="-300">03:52 EST (UTC -5:00)</option>
+                        <option value="-240">04:52 EDT (UTC -4:00)</option>
+                        <option value="-210">05:22 (UTC -3:30)</option>
+                        <option value="-180">05:52 CLST (UTC -3:00)</option>
+                        <option value="-120">06:52 (UTC -2:00)</option>
+                        <option value="-60">07:52 (UTC -1:00)</option>
+                        <option value="0">08:52 (UTC +0:00)</option>
+                        <option value="60">09:52 CET (UTC +1:00)</option>
+                        <option value="120">10:52 CEST (UTC +2:00)</option>
+                        <option value="180" selected="">11:52 MSK (UTC +3:00)</option>
+                        <option value="210">12:22 (UTC +3:30)</option>
+                        <option value="240">12:52 (UTC +4:00)</option>
+                        <option value="270">13:22 (UTC +4:30)</option>
+                        <option value="300">13:52 (UTC +5:00)</option>
+                        <option value="330">14:22 (UTC +5:30)</option>
+                        <option value="360">14:52 (UTC +6:00)</option>
+                        <option value="420">15:52 (UTC +7:00)</option>
+                        <option value="480">16:52 SGT (UTC +8:00)</option>
+                        <option value="540">17:52 (UTC +9:00)</option>
+                        <option value="570">18:22 (UTC +9:30)</option>
+                        <option value="600">18:52 (UTC +10:00)</option>
+                        <option value="660">19:52 (UTC +11:00)</option>
+                        <option value="720">20:52 (UTC +12:00)</option>
+                      </select>
+                    </div>
+                    <h3 class="mlh mlhSM"><span>Соц. сети</span></h3>
+                    <div class="soc-enter">
+                      <div class="row">
+                        <div class="col-sm-4"> <a href="https://vk.com/id5200" target="_blank" title="" class="btn btn-vk tip" data-original-title="#5200"><i class="gti-vk"></i> <span>vk.com</span></a> </div>
+                        <div class="col-sm-4"> <a href="/ru/soc?fb" title="" class="notActive btn btn-vk tip" data-original-title="Привязать профиль к Facebook"><i class="gti-fb"></i> <span>Facebook</span></a> </div>
+                        <div class="col-sm-4"> <a href="/ru/soc?st" title="" class="notActive btn btn-steam tip" data-original-title="Привязать профиль к Steam"><i class="gti-steam"></i> <span>Steam</span></a> </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-light">
+                  <div class="panel-heading">
+                    <h3 class="panel-title mlh mlhSM"><span>Сменить пароль</span></h3> </div>
+                  <div class="panel-body" style="padding: 10px 30px">
+                    <div class="form-group" rel="pwd_new">
+                      <input type="password" rel="1" name="pwd_new" value="" class="form-control input" placeholder="Новый пароль" tabindex="4"> </div>
+                    <div class="form-group" rel="repwd">
+                      <input type="password" rel="1" name="repwd" value="" class="form-control input" placeholder="Повторить пароль" tabindex="5"> </div>
+                  </div>
+                </div>
+                <center><a href="javascript:;" onclick="sform('update')" class="btn btn-primary btn-lg">Обновить</a></center>
+              </div>
+              <div class="col-md-5">
+                
+                <div class="panel panel-light withJsLabels">
+                  <div class="panel-heading">
+                    <h3 class="panel-title mlh mlhSM"><span>Прогнозы</span></h3> </div>
+                  <div class="panel-body" style="padding: 10px 30px">
+                    <div class="form-group row col-sm">
+                      <div class="col-sm-8" rel="bet_sell">
+                        <select class="form-control input" rel="1" name="bet_sell">
+                          <option value="0" selected="">Тип аккаунта</option>
+                          <option value="1">Player $1.5 в месяц</option>
+                          <option value="2">Pro $5 в месяц</option>
+                          <option value="3">Pro+ $15 в месяц</option>
+                        </select>
+                      </div>
+                      <div class="col-sm-4">
+                        <button type="button" onclick="sform('update')" class="btn btn-primary btn-block">OK</button>
+                      </div>
+                    </div>
+                    <div class="help-block text-center" style="padding-bottom:5px;">Ваш баланс <a href="" class="tip" title="Пополнить"><i class="gti-coins3"></i> 1.09 $</a></div>
+                    <h3 class="panel-title mlh mlhSM" style="padding-bottom:15px!important;"><span>Прогнозы - настройки</span></h3>
+                    <div class="form-group" rel="bet_title">
+                      <div class="jvFloat">
+                        <label class="placeHolder active" for="bet_title">Название</label>
+                        <input type="text" class="form-control input" rel="1" maxlength="30" name="bet_title" placeholder="Название, до 30 символов" value="kleale">
+                      </div>
+                    </div>
+                    <div class="form-group" rel="bet_price">
+                      <div class="input-group">
+                        <div class="input-group-addon"><i class="gti-usd"></i></div>
+                        <input type="text" class="form-control tip input" rel="1" name="bet_price" placeholder="Стоимость подписки, $/мес." title="Стоимость подписки, $/мес." value="0.00"> </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="label--checkbox">
+                        <input type="checkbox" rel="1" class="input" value="1" name="bet_sell_582"><em>&nbsp; Dota 2</em></label>
+                      <br>
+                      <label class="label--checkbox">
+                        <input type="checkbox" rel="1" class="input" value="1" name="bet_sell_704"><em>&nbsp; CS:GO</em></label>
+                      <br>
+                      <label class="label--checkbox">
+                        <input type="checkbox" rel="1" class="input" value="1" name="bet_sell_755"><em>&nbsp; Hearthstone</em></label>
+                    </div>
+                    <div class="form-group" rel="bet_url">
+                      <input type="text" class="form-control input" rel="1" name="bet_url" placeholder="Ссылка на твой сайт" value=""> </div>
+                    <div class="form-group" rel="bet_descr">
+                      <textarea class="form-control input" rel="1" name="bet_descr" placeholder="Твое описание"></textarea>
+                    </div>
+                    
+                    <center><a href="javascript:;" onclick="sform('update')" class="btn btn-primary btn-sm">Сохранить</a></center>
+                    
+                  </div>
+                </div>
+                
+                
+                <div class="utxtblock"> С <b>PLAYER</b> аккаунтом ты можешь смотреть подробную статистику по командам за последние 7 матчей (Dota 2) - <a href="/html/img/vip-stat.jpg" class="fancybox">пример графика</a>; делать прогнозы на матчи, которые отображаются на <a href="/html/img/vip-match.jpg" class="fancybox">странице матча</a>, <a href="/html/img/vip-window.jpg" class="fancybox">окне прогнозов</a> и <a href="/html/img/vip-bets.jpg" class="fancybox">разделе прогнозов</a>
+                  <br> С <b>PRO</b> аккаунтом ты можешь смотреть подробную статистику по командам за последние 14 матчей (Dota 2) - <a href="/html/img/vip-stat.jpg" class="fancybox">пример графика</a>; делать и продавать прогнозы на матчи (набор возможностей будет дополняться)
+                  <br> В <b>PRO+</b> аккаунтах есть все возможности Player и Pro. Оплати Pro+ аккаунт, если хочешь помочь ggScore </div>
+                  
+              </div>
+            </div>
+          </form>
+        </div>
+
+      </section>
+      
+    
+      <!-- breadcrumb.html -->
+<div class="bread">
+  <ol id="breadcumbs" class="breadcrumb hidden-xs">
+    <li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="">
+      <a itemprop="url" href="/"><span itemprop="title">Турниры</span></a>
+    </li>
+    <li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="">
+      <a title="Dota 2" itemprop="url" href="/dota-2"><span itemprop="title">Dota 2</span></a>
+    </li>
+  </ol>
+</div>
+      <!-- footer.html -->
+
+<footer class="footer">
+  <div class="f-coppy">
+    <copy>© 2013-2016 GGscore</copy> &bull;
+    <span>ALL RIGHTS RESERVED. GAMEAGEVENTURES LLP</span>
+  </div>
+  <ul class="f-menu">
+    <li><a href="">О проекте</a></li>
+    <li><a href="">Правила</a></li>
+    <li><a href="">Реклама</a></li>
+    <li><a href="">Партнеры</a></li>
+  </ul>
+  <div class="f-soc">
+    Мы в соцсетях &nbsp;&nbsp;
+    <a class="soclink" href=""><i class="gti-vk"></i></a>
+    <a class="soclink" href=""><i class="gti-facebook"></i></a>
+    <a class="soclink" href=""><i class="gti-twitter"></i></a>
+  </div>
+</footer>
+    </div>
+  </div>
+
+<!-- bar.html -->
+
+
+
+<!-- bar-chat -->
+<!--<a class="chat-btn chat-btn-right" href="#!"><i class="gti-comment-o"></i><span>Чат</span><b>99+</b></a>-->
+<div class="bar-chat">
+  
+  <!-- /match-page/player-chat.html -->
+  <div id="player-chat" class="stmblocks"><!-- open-wms -->
+    <div class="chat-wms-over">
+      <!-- CHAT wms -->
+      <div class="chat-wms">
+        <button type="button" class="close"><span>×</span></button>
+        <div class="chat-wms-head"></div>
+        <div class="chat-wms-body">
+          <div class="form-group" id="rtxt">
+            <input type="text" id="rtitle" class="form-control" placeholder="Название комнаты" max="50">
+          </div>
+            <a onclick="chat_new()" class="btn btn-success btn-block">Создать комнату</a>
+        </div>
+      </div>
+      <div class="chat-wms">
+        <button type="button" class="close"><span>×</span></button>
+        <div class="chat-wms-head"></div>
+        <div class="chat-wms-body">Ошибка: ты не зарегистрирован</div>
+      </div>
+    </div>
+      <!-- .CHAT wms -->
+
+    <div class="chat-inner">
+      <div class="chat-head"><!-- CHAT head -->
+        <div class="ch_opti">
+          <div class="dropdown">
+            <a class="dropdown-toggle ch_users" data-toggle="dropdown" onclick="chat_users()">
+              <span id="ch_users_kol">124</span>
+            </a>
+            <div class="dropdown-menu ch_users_window">
+              <div class="ch_header">
+                <i class="cwcl gti-times"></i> Зрители
+                <i class="cexternal gti-external-link"></i>
+              </div>
+              <div class="chsearch">
+                  <input type="search" class="form-control input-sm" placeholder="Найти пользователя" name="query" /> 
+              </div>
+              <strong class="hhh">МОДЕРАТОРЫ</strong>
+              <ul class="ulist">
+                <li><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><a class="udo" title="Удалить модераторов"><i class="gti-times"></i></a></li>
+                <li><b style="color:#B95FF4">nnudde</b><a class="udo" title="Удалить из Чата"><i class="gti-times"></i></a></li>
+                <li><b style="color:#7F6CEF">radderz</b><a class="udo" title="Удалить модераторов"><i class="gti-times"></i></a></li>
+              </ul>
+              <strong class="hhh">Зрители</strong>
+              <ul class="ulist">
+                
+                  <li><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                  <li><b style="color:#B95FF4">nnudde</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                
+                  <li><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                  <li><b style="color:#B95FF4">nnudde</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                
+                  <li><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                  <li><b style="color:#B95FF4">nnudde</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                
+                  <li><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                  <li><b style="color:#B95FF4">nnudde</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                
+                  <li><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                  <li><b style="color:#B95FF4">nnudde</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                
+                  <li><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                  <li><b style="color:#B95FF4">nnudde</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                
+                  <li><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                  <li><b style="color:#B95FF4">nnudde</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                
+                  <li><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                  <li><b style="color:#B95FF4">nnudde</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                
+                  <li><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                  <li><b style="color:#B95FF4">nnudde</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                
+                  <li><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                  <li><b style="color:#B95FF4">nnudde</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                
+                  <li><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                  <li><b style="color:#B95FF4">nnudde</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                
+                  <li><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                  <li><b style="color:#B95FF4">nnudde</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                
+                  <li><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                  <li><b style="color:#B95FF4">nnudde</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                
+                  <li><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                  <li><b style="color:#B95FF4">nnudde</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                
+                  <li><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                  <li><b style="color:#B95FF4">nnudde</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                
+                  <li><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                  <li><b style="color:#B95FF4">nnudde</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                
+                  <li><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                  <li><b style="color:#B95FF4">nnudde</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                
+                  <li><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                  <li><b style="color:#B95FF4">nnudde</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                
+                  <li><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                  <li><b style="color:#B95FF4">nnudde</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                
+                  <li><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                  <li><b style="color:#B95FF4">nnudde</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                
+                  <li><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                  <li><b style="color:#B95FF4">nnudde</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                
+                  <li><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                  <li><b style="color:#B95FF4">nnudde</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                
+                  <li><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                  <li><b style="color:#B95FF4">nnudde</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                
+                  <li><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                  <li><b style="color:#B95FF4">nnudde</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                
+                  <li><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                  <li><b style="color:#B95FF4">nnudde</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                
+                  <li><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                  <li><b style="color:#B95FF4">nnudde</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                
+                  <li><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                  <li><b style="color:#B95FF4">nnudde</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                
+                  <li><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                  <li><b style="color:#B95FF4">nnudde</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                
+                  <li><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                  <li><b style="color:#B95FF4">nnudde</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                
+                  <li><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                  <li><b style="color:#B95FF4">nnudde</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                
+                  <li><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                  <li><b style="color:#B95FF4">nnudde</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                
+                  <li><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                  <li><b style="color:#B95FF4">nnudde</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                
+                  <li><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                  <li><b style="color:#B95FF4">nnudde</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                
+                  <li><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                  <li><b style="color:#B95FF4">nnudde</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                
+                  <li><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                  <li><b style="color:#B95FF4">nnudde</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                
+                  <li><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                  <li><b style="color:#B95FF4">nnudde</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                
+                  <li><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                  <li><b style="color:#B95FF4">nnudde</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                
+                  <li><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                  <li><b style="color:#B95FF4">nnudde</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                
+                  <li><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                  <li><b style="color:#B95FF4">nnudde</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                
+                  <li><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                  <li><b style="color:#B95FF4">nnudde</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                
+                  <li><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                  <li><b style="color:#B95FF4">nnudde</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                
+                  <li><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                  <li><b style="color:#B95FF4">nnudde</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                
+                  <li><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                  <li><b style="color:#B95FF4">nnudde</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                
+                  <li><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                  <li><b style="color:#B95FF4">nnudde</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                
+                  <li><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                  <li><b style="color:#B95FF4">nnudde</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                
+                  <li><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                  <li><b style="color:#B95FF4">nnudde</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                
+                  <li><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                  <li><b style="color:#B95FF4">nnudde</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                
+                  <li><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                  <li><b style="color:#B95FF4">nnudde</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                
+                  <li><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                  <li><b style="color:#B95FF4">nnudde</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                
+                  <li><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                  <li><b style="color:#B95FF4">nnudde</b><a class="udo" title="Сделать модератором"><i class="gti-gevel"></i></a></li>
+                
+              </ul>
+            </div>
+          </div>
+          <div class="dropdown">
+            <a class="dropdown-toggle ch_cog" data-toggle="dropdown"><i class="gti-cog"></i></a>
+            <div class="dropdown-menu ch_opti_window">
+              <div class="ch_header"><i class="cwcl gti-times"></i> Настройки чата</div>
+              <div class="ch_options">
+                <div class="checkbox"><label> <input id="chat_time" type="checkbox" value="1" onclick="chat_times()">Отметки времени</label></div>
+                <strong class="hhh">Цвет ника</strong>
+                <div class="ch_colors" id="ch_colors">
+                  <a rel="#dddddd" onclick="chat_color('#dddddd')" style="background:#dddddd" class="active"></a>
+                  <a rel="#ff0000" onclick="chat_color('#ff0000')" style="background:#ff0000"></a>
+                  <a rel="#0000ff" onclick="chat_color('#0000ff')" style="background:#0000ff"></a>
+                  <a rel="#008000" onclick="chat_color('#008000')" style="background:#008000"></a>
+                  <a rel="#b22222" onclick="chat_color('#b22222')" style="background:#b22222"></a>
+                  <a rel="#ff7f50" onclick="chat_color('#ff7f50')" style="background:#ff7f50"></a>
+                  <a rel="#9acd32" onclick="chat_color('#9acd32')" style="background:#9acd32"></a>
+                  <a rel="#ff4500" onclick="chat_color('#ff4500')" style="background:#ff4500"></a>
+                  <a rel="#2e8b57" onclick="chat_color('#2e8b57')" style="background:#2e8b57"></a>
+                  <a rel="#daa520" onclick="chat_color('#daa520')" style="background:#daa520"></a>
+                  <a rel="#d2691e" onclick="chat_color('#d2691e')" style="background:#d2691e"></a>
+                  <a rel="#5f9ea0" onclick="chat_color('#5f9ea0')" style="background:#5f9ea0"></a>
+                  <a rel="#1e90ff" onclick="chat_color('#1e90ff')" style="background:#1e90ff"></a>
+                  <a rel="#ff69b4" onclick="chat_color('#ff69b4')" style="background:#ff69b4"></a>
+                  <a rel="#8a2be2" onclick="chat_color('#8a2be2')" style="background:#8a2be2"></a>
+                  <a rel="#00ff7f" onclick="chat_color('#00ff7f')" style="background:#00ff7f"></a>
+                  <a rel="#eeeeee" onclick="chat_color('#eeeeee')" style="background:#eeeeee"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="ch_times"><i class="gti-times"></i></a>
+        </div>
+
+        <div class="ch_room dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown"><i class="gti-chevron-down"></i> <span id="chat_title">RECAST: International ranked! Получу с...</span></a>
+          <div class="ch_menu dropdown-menu">
+            <a class="room_create" id="add_room"><i class="gti-plus"></i> Создать</a>
+            <strong>Комнаты стримов</strong> 
+            <ul class="room_list" id="chat_rooms"><li><div class="r_act"><span class="badge" id="kol-stream22">124</span></div><a onclick="chat_select('stream',22,'International ranked! Получу свои 9500...')"><i class="gti-comments-o"></i> International ranked! Получу свои 9500...</a></li><li><div class="r_act"><span class="badge" id="kol-stream377">8</span></div><a onclick="chat_select('stream',377,'Wings vs Bheart | bo3 | SL i-League St...')"><i class="gti-comments-o"></i> Wings vs Bheart | bo3 | SL i-League St...</a></li><li><div class="r_act"><span class="badge" id="kol-stream8">206</span></div><a onclick="chat_select('stream',8,'Wings vs Bheart | bo3 | SL i-League St...')"><i class="gti-comments-o"></i> Wings vs Bheart | bo3 | SL i-League St...</a></li><li><div class="r_act"><span class="badge" id="kol-stream9">2</span></div><a onclick="chat_select('stream',9,'[RU] LIVE: Newbee vs. TongFu || StarSe...')"><i class="gti-comments-o"></i> [RU] LIVE: Newbee vs. TongFu || StarSe...</a></li><li><div class="r_act"><span class="badge" id="kol-stream18">0</span></div><a onclick="chat_select('stream',18,'RERUN: Imaginary Gaming vs. mousesport...')"><i class="gti-comments-o"></i> RERUN: Imaginary Gaming vs. mousesport...</a></li></ul>
+            <div id="chat_self" style="display:none">
+              <strong>Свои комнаты</strong> 
+              <ul class="room_list">
+                <li>
+                  <div class="r_act">
+                    <span class="badge">2546</span>
+                  </div>
+                  <a href="/" title="Чат матча"><i class="gti-shield"></i>    Navi vs Empire
+                  </a>
+                </li>
+                <li><a href="/" title="Моя комната"><i class="gti-star"></i> Комнатка котов</a></li>
+                <li><a href="/" title="Чат по приглашению"><i class="gti-comments-o"></i> Комнатка ежей</a></li>
+                <li><a href="/" title="Чат по приглашению"><i class="gti-comments-o"></i> Кроватка волков</a></li>
+            </ul>
+            </div>
+            <div id="chat_invite" style="display:none">
+              <strong>Не принятые приглашения</strong> 
+              <ul class="room_list">
+                <li>
+                  <div class="r_act">
+                    <span class="badge">46</span>
+                    <a class="badge" title="Удалить приглашение в комнату"><i class="gti-times"></i></a>
+                  </div>
+                  <a href="/"><i class="gti-comments-o"></i> Комнатка слоников</a>
+                </li>
+                <li>
+                  <div class="r_act">
+                    <span class="badge">25</span>
+                    <a class="badge" title="Принять приглашение в комнату"><i class="gti-plus"></i></a>
+                  </div>
+                  <a href="/"><i class="gti-comments-o"></i> Комнатка зайчиков</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- .CHAT head -->
+
+      <div class="chat-wrap">
+        <div class="tse-sc chatter" id="chatter">
+            <div class="tse-content">
+              <div class="tse-list">
+                
+                  <div class="msg-admin"><i class="gti-info-circle"></i> Привет! Добро пожаловать в комнату.</div>
+                  <div><time>5:54</time><b>ramennudderz</b><em>:</em><span>Давно стримишь?</span></div>
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+                  <div><time>5:54</time><b style="color:#F45F5F">dderz</b><em>:</em><span>Ты будешь стримить DOTA  
+                  
+                  <img srcset="" alt="dart" src="/img/smile/dart.png" class="emoticon tip" title="Who's your daddy?">
+                  <img srcset="" alt="ass" src="/img/smile/ass.png" class="emoticon tip" title="Kiss my ass!">
+                  </span></div>
+                  <div><time>5:54</time><b style="color:#5FCFF4">nudd</b><em>:</em><span>Давно <img srcset="" alt="ass" src="/img/smile/ass1.png" class="emoticon tip" title="Kiss my ass!"> стримишь?</span></div>
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+                  <div><time>5:54</time><b style="color:#F4F35F">ram</b><em>:</em><span>Ты будешь стримить DOTA или КС <img srcset="" alt="fy" src="/img/smile/fy.png" class="emoticon tip" title="F*ck you!"></span></div>
+                  <div><time>5:54</time><b style="color:#B95FF4">nnudde</b><em>:</em><span>Давно стримишь?  <img srcset="" alt="bang" src="/img/smile/bang.png" class="emoticon tip" title="Bang!"></span></div>
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+
+                  <div class="msg-admin">Системное сообщение.</div>
+
+                  <div><time>5:54</time><b style="color:#7F6CEF">radderz</b><em>:</em><span>Ты будешь стримить <img srcset="" alt="ass_bomb" src="/img/smile/ass_bomb.png" class="emoticon tip" title="Бомбит!"></span></div>
+                  <div><time>5:54</time><b style="color:#86CFD6">ramennudderz</b><em>:</em><span>Давно стримишь? <img srcset="" alt="navi" src="/img/smile/navi.png" class="emoticon tip" title="Mmmm Navi!"></span></div>
+
+                  <div class="msg-stream"><i class="gti-shield"></i> Варлок вынес Визарда ультой на 34 минуте матча</div>
+
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+                  <div><time>5:54</time><b>ramennudderz</b><em>:</em><span>Ты будешь стримить <img srcset="" alt="tamara" src="/img/smile/tamara.png" class="emoticon tip" title="Красава!">
+                  <img srcset="" alt="deal" src="/img/smile/deal.png" class="emoticon tip" title="Deal!">
+                  <img srcset="" alt="lick" src="/img/smile/lick.png" class="emoticon tip" title="Lick it!">
+                  <img srcset="" alt="wtf" src="/img/smile/wtf.png" class="emoticon tip" title="WTF!?">
+                  <img srcset="" alt="rofl" src="/img/smile/rofl.png" class="emoticon tip" title="ROFL!">
+                  <img srcset="" alt="fcplm" src="/img/smile/fcplm.png" class="emoticon tip" title="Face palm!">
+                  <img srcset="" alt="slow" src="/img/smile/slow.png" class="emoticon tip" title="Slow!">
+                  <img srcset="" alt="soidet" src="/img/smile/soidet.png" class="emoticon tip" title="Сойдет!">
+                  <img srcset="" alt="bjs" src="/img/smile/bjs.png" class="emoticon tip" title="Black Jack and sluts!">
+                  <img srcset="" alt="arr" src="/img/smile/arr.png" class="emoticon tip" title="ARRR!">
+                  </span>
+                  </div>
+                
+                  <div class="msg-admin"><i class="gti-info-circle"></i> Привет! Добро пожаловать в комнату.</div>
+                  <div><time>5:54</time><b>ramennudderz</b><em>:</em><span>Давно стримишь?</span></div>
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+                  <div><time>5:54</time><b style="color:#F45F5F">dderz</b><em>:</em><span>Ты будешь стримить DOTA  
+                  
+                  <img srcset="" alt="dart" src="/img/smile/dart.png" class="emoticon tip" title="Who's your daddy?">
+                  <img srcset="" alt="ass" src="/img/smile/ass.png" class="emoticon tip" title="Kiss my ass!">
+                  </span></div>
+                  <div><time>5:54</time><b style="color:#5FCFF4">nudd</b><em>:</em><span>Давно <img srcset="" alt="ass" src="/img/smile/ass1.png" class="emoticon tip" title="Kiss my ass!"> стримишь?</span></div>
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+                  <div><time>5:54</time><b style="color:#F4F35F">ram</b><em>:</em><span>Ты будешь стримить DOTA или КС <img srcset="" alt="fy" src="/img/smile/fy.png" class="emoticon tip" title="F*ck you!"></span></div>
+                  <div><time>5:54</time><b style="color:#B95FF4">nnudde</b><em>:</em><span>Давно стримишь?  <img srcset="" alt="bang" src="/img/smile/bang.png" class="emoticon tip" title="Bang!"></span></div>
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+
+                  <div class="msg-admin">Системное сообщение.</div>
+
+                  <div><time>5:54</time><b style="color:#7F6CEF">radderz</b><em>:</em><span>Ты будешь стримить <img srcset="" alt="ass_bomb" src="/img/smile/ass_bomb.png" class="emoticon tip" title="Бомбит!"></span></div>
+                  <div><time>5:54</time><b style="color:#86CFD6">ramennudderz</b><em>:</em><span>Давно стримишь? <img srcset="" alt="navi" src="/img/smile/navi.png" class="emoticon tip" title="Mmmm Navi!"></span></div>
+
+                  <div class="msg-stream"><i class="gti-shield"></i> Варлок вынес Визарда ультой на 34 минуте матча</div>
+
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+                  <div><time>5:54</time><b>ramennudderz</b><em>:</em><span>Ты будешь стримить <img srcset="" alt="tamara" src="/img/smile/tamara.png" class="emoticon tip" title="Красава!">
+                  <img srcset="" alt="deal" src="/img/smile/deal.png" class="emoticon tip" title="Deal!">
+                  <img srcset="" alt="lick" src="/img/smile/lick.png" class="emoticon tip" title="Lick it!">
+                  <img srcset="" alt="wtf" src="/img/smile/wtf.png" class="emoticon tip" title="WTF!?">
+                  <img srcset="" alt="rofl" src="/img/smile/rofl.png" class="emoticon tip" title="ROFL!">
+                  <img srcset="" alt="fcplm" src="/img/smile/fcplm.png" class="emoticon tip" title="Face palm!">
+                  <img srcset="" alt="slow" src="/img/smile/slow.png" class="emoticon tip" title="Slow!">
+                  <img srcset="" alt="soidet" src="/img/smile/soidet.png" class="emoticon tip" title="Сойдет!">
+                  <img srcset="" alt="bjs" src="/img/smile/bjs.png" class="emoticon tip" title="Black Jack and sluts!">
+                  <img srcset="" alt="arr" src="/img/smile/arr.png" class="emoticon tip" title="ARRR!">
+                  </span>
+                  </div>
+                
+                  <div class="msg-admin"><i class="gti-info-circle"></i> Привет! Добро пожаловать в комнату.</div>
+                  <div><time>5:54</time><b>ramennudderz</b><em>:</em><span>Давно стримишь?</span></div>
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+                  <div><time>5:54</time><b style="color:#F45F5F">dderz</b><em>:</em><span>Ты будешь стримить DOTA  
+                  
+                  <img srcset="" alt="dart" src="/img/smile/dart.png" class="emoticon tip" title="Who's your daddy?">
+                  <img srcset="" alt="ass" src="/img/smile/ass.png" class="emoticon tip" title="Kiss my ass!">
+                  </span></div>
+                  <div><time>5:54</time><b style="color:#5FCFF4">nudd</b><em>:</em><span>Давно <img srcset="" alt="ass" src="/img/smile/ass1.png" class="emoticon tip" title="Kiss my ass!"> стримишь?</span></div>
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+                  <div><time>5:54</time><b style="color:#F4F35F">ram</b><em>:</em><span>Ты будешь стримить DOTA или КС <img srcset="" alt="fy" src="/img/smile/fy.png" class="emoticon tip" title="F*ck you!"></span></div>
+                  <div><time>5:54</time><b style="color:#B95FF4">nnudde</b><em>:</em><span>Давно стримишь?  <img srcset="" alt="bang" src="/img/smile/bang.png" class="emoticon tip" title="Bang!"></span></div>
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+
+                  <div class="msg-admin">Системное сообщение.</div>
+
+                  <div><time>5:54</time><b style="color:#7F6CEF">radderz</b><em>:</em><span>Ты будешь стримить <img srcset="" alt="ass_bomb" src="/img/smile/ass_bomb.png" class="emoticon tip" title="Бомбит!"></span></div>
+                  <div><time>5:54</time><b style="color:#86CFD6">ramennudderz</b><em>:</em><span>Давно стримишь? <img srcset="" alt="navi" src="/img/smile/navi.png" class="emoticon tip" title="Mmmm Navi!"></span></div>
+
+                  <div class="msg-stream"><i class="gti-shield"></i> Варлок вынес Визарда ультой на 34 минуте матча</div>
+
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+                  <div><time>5:54</time><b>ramennudderz</b><em>:</em><span>Ты будешь стримить <img srcset="" alt="tamara" src="/img/smile/tamara.png" class="emoticon tip" title="Красава!">
+                  <img srcset="" alt="deal" src="/img/smile/deal.png" class="emoticon tip" title="Deal!">
+                  <img srcset="" alt="lick" src="/img/smile/lick.png" class="emoticon tip" title="Lick it!">
+                  <img srcset="" alt="wtf" src="/img/smile/wtf.png" class="emoticon tip" title="WTF!?">
+                  <img srcset="" alt="rofl" src="/img/smile/rofl.png" class="emoticon tip" title="ROFL!">
+                  <img srcset="" alt="fcplm" src="/img/smile/fcplm.png" class="emoticon tip" title="Face palm!">
+                  <img srcset="" alt="slow" src="/img/smile/slow.png" class="emoticon tip" title="Slow!">
+                  <img srcset="" alt="soidet" src="/img/smile/soidet.png" class="emoticon tip" title="Сойдет!">
+                  <img srcset="" alt="bjs" src="/img/smile/bjs.png" class="emoticon tip" title="Black Jack and sluts!">
+                  <img srcset="" alt="arr" src="/img/smile/arr.png" class="emoticon tip" title="ARRR!">
+                  </span>
+                  </div>
+                
+                  <div class="msg-admin"><i class="gti-info-circle"></i> Привет! Добро пожаловать в комнату.</div>
+                  <div><time>5:54</time><b>ramennudderz</b><em>:</em><span>Давно стримишь?</span></div>
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+                  <div><time>5:54</time><b style="color:#F45F5F">dderz</b><em>:</em><span>Ты будешь стримить DOTA  
+                  
+                  <img srcset="" alt="dart" src="/img/smile/dart.png" class="emoticon tip" title="Who's your daddy?">
+                  <img srcset="" alt="ass" src="/img/smile/ass.png" class="emoticon tip" title="Kiss my ass!">
+                  </span></div>
+                  <div><time>5:54</time><b style="color:#5FCFF4">nudd</b><em>:</em><span>Давно <img srcset="" alt="ass" src="/img/smile/ass1.png" class="emoticon tip" title="Kiss my ass!"> стримишь?</span></div>
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+                  <div><time>5:54</time><b style="color:#F4F35F">ram</b><em>:</em><span>Ты будешь стримить DOTA или КС <img srcset="" alt="fy" src="/img/smile/fy.png" class="emoticon tip" title="F*ck you!"></span></div>
+                  <div><time>5:54</time><b style="color:#B95FF4">nnudde</b><em>:</em><span>Давно стримишь?  <img srcset="" alt="bang" src="/img/smile/bang.png" class="emoticon tip" title="Bang!"></span></div>
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+
+                  <div class="msg-admin">Системное сообщение.</div>
+
+                  <div><time>5:54</time><b style="color:#7F6CEF">radderz</b><em>:</em><span>Ты будешь стримить <img srcset="" alt="ass_bomb" src="/img/smile/ass_bomb.png" class="emoticon tip" title="Бомбит!"></span></div>
+                  <div><time>5:54</time><b style="color:#86CFD6">ramennudderz</b><em>:</em><span>Давно стримишь? <img srcset="" alt="navi" src="/img/smile/navi.png" class="emoticon tip" title="Mmmm Navi!"></span></div>
+
+                  <div class="msg-stream"><i class="gti-shield"></i> Варлок вынес Визарда ультой на 34 минуте матча</div>
+
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+                  <div><time>5:54</time><b>ramennudderz</b><em>:</em><span>Ты будешь стримить <img srcset="" alt="tamara" src="/img/smile/tamara.png" class="emoticon tip" title="Красава!">
+                  <img srcset="" alt="deal" src="/img/smile/deal.png" class="emoticon tip" title="Deal!">
+                  <img srcset="" alt="lick" src="/img/smile/lick.png" class="emoticon tip" title="Lick it!">
+                  <img srcset="" alt="wtf" src="/img/smile/wtf.png" class="emoticon tip" title="WTF!?">
+                  <img srcset="" alt="rofl" src="/img/smile/rofl.png" class="emoticon tip" title="ROFL!">
+                  <img srcset="" alt="fcplm" src="/img/smile/fcplm.png" class="emoticon tip" title="Face palm!">
+                  <img srcset="" alt="slow" src="/img/smile/slow.png" class="emoticon tip" title="Slow!">
+                  <img srcset="" alt="soidet" src="/img/smile/soidet.png" class="emoticon tip" title="Сойдет!">
+                  <img srcset="" alt="bjs" src="/img/smile/bjs.png" class="emoticon tip" title="Black Jack and sluts!">
+                  <img srcset="" alt="arr" src="/img/smile/arr.png" class="emoticon tip" title="ARRR!">
+                  </span>
+                  </div>
+                
+                  <div class="msg-admin"><i class="gti-info-circle"></i> Привет! Добро пожаловать в комнату.</div>
+                  <div><time>5:54</time><b>ramennudderz</b><em>:</em><span>Давно стримишь?</span></div>
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+                  <div><time>5:54</time><b style="color:#F45F5F">dderz</b><em>:</em><span>Ты будешь стримить DOTA  
+                  
+                  <img srcset="" alt="dart" src="/img/smile/dart.png" class="emoticon tip" title="Who's your daddy?">
+                  <img srcset="" alt="ass" src="/img/smile/ass.png" class="emoticon tip" title="Kiss my ass!">
+                  </span></div>
+                  <div><time>5:54</time><b style="color:#5FCFF4">nudd</b><em>:</em><span>Давно <img srcset="" alt="ass" src="/img/smile/ass1.png" class="emoticon tip" title="Kiss my ass!"> стримишь?</span></div>
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+                  <div><time>5:54</time><b style="color:#F4F35F">ram</b><em>:</em><span>Ты будешь стримить DOTA или КС <img srcset="" alt="fy" src="/img/smile/fy.png" class="emoticon tip" title="F*ck you!"></span></div>
+                  <div><time>5:54</time><b style="color:#B95FF4">nnudde</b><em>:</em><span>Давно стримишь?  <img srcset="" alt="bang" src="/img/smile/bang.png" class="emoticon tip" title="Bang!"></span></div>
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+
+                  <div class="msg-admin">Системное сообщение.</div>
+
+                  <div><time>5:54</time><b style="color:#7F6CEF">radderz</b><em>:</em><span>Ты будешь стримить <img srcset="" alt="ass_bomb" src="/img/smile/ass_bomb.png" class="emoticon tip" title="Бомбит!"></span></div>
+                  <div><time>5:54</time><b style="color:#86CFD6">ramennudderz</b><em>:</em><span>Давно стримишь? <img srcset="" alt="navi" src="/img/smile/navi.png" class="emoticon tip" title="Mmmm Navi!"></span></div>
+
+                  <div class="msg-stream"><i class="gti-shield"></i> Варлок вынес Визарда ультой на 34 минуте матча</div>
+
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+                  <div><time>5:54</time><b>ramennudderz</b><em>:</em><span>Ты будешь стримить <img srcset="" alt="tamara" src="/img/smile/tamara.png" class="emoticon tip" title="Красава!">
+                  <img srcset="" alt="deal" src="/img/smile/deal.png" class="emoticon tip" title="Deal!">
+                  <img srcset="" alt="lick" src="/img/smile/lick.png" class="emoticon tip" title="Lick it!">
+                  <img srcset="" alt="wtf" src="/img/smile/wtf.png" class="emoticon tip" title="WTF!?">
+                  <img srcset="" alt="rofl" src="/img/smile/rofl.png" class="emoticon tip" title="ROFL!">
+                  <img srcset="" alt="fcplm" src="/img/smile/fcplm.png" class="emoticon tip" title="Face palm!">
+                  <img srcset="" alt="slow" src="/img/smile/slow.png" class="emoticon tip" title="Slow!">
+                  <img srcset="" alt="soidet" src="/img/smile/soidet.png" class="emoticon tip" title="Сойдет!">
+                  <img srcset="" alt="bjs" src="/img/smile/bjs.png" class="emoticon tip" title="Black Jack and sluts!">
+                  <img srcset="" alt="arr" src="/img/smile/arr.png" class="emoticon tip" title="ARRR!">
+                  </span>
+                  </div>
+                
+                  <div class="msg-admin"><i class="gti-info-circle"></i> Привет! Добро пожаловать в комнату.</div>
+                  <div><time>5:54</time><b>ramennudderz</b><em>:</em><span>Давно стримишь?</span></div>
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+                  <div><time>5:54</time><b style="color:#F45F5F">dderz</b><em>:</em><span>Ты будешь стримить DOTA  
+                  
+                  <img srcset="" alt="dart" src="/img/smile/dart.png" class="emoticon tip" title="Who's your daddy?">
+                  <img srcset="" alt="ass" src="/img/smile/ass.png" class="emoticon tip" title="Kiss my ass!">
+                  </span></div>
+                  <div><time>5:54</time><b style="color:#5FCFF4">nudd</b><em>:</em><span>Давно <img srcset="" alt="ass" src="/img/smile/ass1.png" class="emoticon tip" title="Kiss my ass!"> стримишь?</span></div>
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+                  <div><time>5:54</time><b style="color:#F4F35F">ram</b><em>:</em><span>Ты будешь стримить DOTA или КС <img srcset="" alt="fy" src="/img/smile/fy.png" class="emoticon tip" title="F*ck you!"></span></div>
+                  <div><time>5:54</time><b style="color:#B95FF4">nnudde</b><em>:</em><span>Давно стримишь?  <img srcset="" alt="bang" src="/img/smile/bang.png" class="emoticon tip" title="Bang!"></span></div>
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+
+                  <div class="msg-admin">Системное сообщение.</div>
+
+                  <div><time>5:54</time><b style="color:#7F6CEF">radderz</b><em>:</em><span>Ты будешь стримить <img srcset="" alt="ass_bomb" src="/img/smile/ass_bomb.png" class="emoticon tip" title="Бомбит!"></span></div>
+                  <div><time>5:54</time><b style="color:#86CFD6">ramennudderz</b><em>:</em><span>Давно стримишь? <img srcset="" alt="navi" src="/img/smile/navi.png" class="emoticon tip" title="Mmmm Navi!"></span></div>
+
+                  <div class="msg-stream"><i class="gti-shield"></i> Варлок вынес Визарда ультой на 34 минуте матча</div>
+
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+                  <div><time>5:54</time><b>ramennudderz</b><em>:</em><span>Ты будешь стримить <img srcset="" alt="tamara" src="/img/smile/tamara.png" class="emoticon tip" title="Красава!">
+                  <img srcset="" alt="deal" src="/img/smile/deal.png" class="emoticon tip" title="Deal!">
+                  <img srcset="" alt="lick" src="/img/smile/lick.png" class="emoticon tip" title="Lick it!">
+                  <img srcset="" alt="wtf" src="/img/smile/wtf.png" class="emoticon tip" title="WTF!?">
+                  <img srcset="" alt="rofl" src="/img/smile/rofl.png" class="emoticon tip" title="ROFL!">
+                  <img srcset="" alt="fcplm" src="/img/smile/fcplm.png" class="emoticon tip" title="Face palm!">
+                  <img srcset="" alt="slow" src="/img/smile/slow.png" class="emoticon tip" title="Slow!">
+                  <img srcset="" alt="soidet" src="/img/smile/soidet.png" class="emoticon tip" title="Сойдет!">
+                  <img srcset="" alt="bjs" src="/img/smile/bjs.png" class="emoticon tip" title="Black Jack and sluts!">
+                  <img srcset="" alt="arr" src="/img/smile/arr.png" class="emoticon tip" title="ARRR!">
+                  </span>
+                  </div>
+                
+                  <div class="msg-admin"><i class="gti-info-circle"></i> Привет! Добро пожаловать в комнату.</div>
+                  <div><time>5:54</time><b>ramennudderz</b><em>:</em><span>Давно стримишь?</span></div>
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+                  <div><time>5:54</time><b style="color:#F45F5F">dderz</b><em>:</em><span>Ты будешь стримить DOTA  
+                  
+                  <img srcset="" alt="dart" src="/img/smile/dart.png" class="emoticon tip" title="Who's your daddy?">
+                  <img srcset="" alt="ass" src="/img/smile/ass.png" class="emoticon tip" title="Kiss my ass!">
+                  </span></div>
+                  <div><time>5:54</time><b style="color:#5FCFF4">nudd</b><em>:</em><span>Давно <img srcset="" alt="ass" src="/img/smile/ass1.png" class="emoticon tip" title="Kiss my ass!"> стримишь?</span></div>
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+                  <div><time>5:54</time><b style="color:#F4F35F">ram</b><em>:</em><span>Ты будешь стримить DOTA или КС <img srcset="" alt="fy" src="/img/smile/fy.png" class="emoticon tip" title="F*ck you!"></span></div>
+                  <div><time>5:54</time><b style="color:#B95FF4">nnudde</b><em>:</em><span>Давно стримишь?  <img srcset="" alt="bang" src="/img/smile/bang.png" class="emoticon tip" title="Bang!"></span></div>
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+
+                  <div class="msg-admin">Системное сообщение.</div>
+
+                  <div><time>5:54</time><b style="color:#7F6CEF">radderz</b><em>:</em><span>Ты будешь стримить <img srcset="" alt="ass_bomb" src="/img/smile/ass_bomb.png" class="emoticon tip" title="Бомбит!"></span></div>
+                  <div><time>5:54</time><b style="color:#86CFD6">ramennudderz</b><em>:</em><span>Давно стримишь? <img srcset="" alt="navi" src="/img/smile/navi.png" class="emoticon tip" title="Mmmm Navi!"></span></div>
+
+                  <div class="msg-stream"><i class="gti-shield"></i> Варлок вынес Визарда ультой на 34 минуте матча</div>
+
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+                  <div><time>5:54</time><b>ramennudderz</b><em>:</em><span>Ты будешь стримить <img srcset="" alt="tamara" src="/img/smile/tamara.png" class="emoticon tip" title="Красава!">
+                  <img srcset="" alt="deal" src="/img/smile/deal.png" class="emoticon tip" title="Deal!">
+                  <img srcset="" alt="lick" src="/img/smile/lick.png" class="emoticon tip" title="Lick it!">
+                  <img srcset="" alt="wtf" src="/img/smile/wtf.png" class="emoticon tip" title="WTF!?">
+                  <img srcset="" alt="rofl" src="/img/smile/rofl.png" class="emoticon tip" title="ROFL!">
+                  <img srcset="" alt="fcplm" src="/img/smile/fcplm.png" class="emoticon tip" title="Face palm!">
+                  <img srcset="" alt="slow" src="/img/smile/slow.png" class="emoticon tip" title="Slow!">
+                  <img srcset="" alt="soidet" src="/img/smile/soidet.png" class="emoticon tip" title="Сойдет!">
+                  <img srcset="" alt="bjs" src="/img/smile/bjs.png" class="emoticon tip" title="Black Jack and sluts!">
+                  <img srcset="" alt="arr" src="/img/smile/arr.png" class="emoticon tip" title="ARRR!">
+                  </span>
+                  </div>
+                
+                  <div class="msg-admin"><i class="gti-info-circle"></i> Привет! Добро пожаловать в комнату.</div>
+                  <div><time>5:54</time><b>ramennudderz</b><em>:</em><span>Давно стримишь?</span></div>
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+                  <div><time>5:54</time><b style="color:#F45F5F">dderz</b><em>:</em><span>Ты будешь стримить DOTA  
+                  
+                  <img srcset="" alt="dart" src="/img/smile/dart.png" class="emoticon tip" title="Who's your daddy?">
+                  <img srcset="" alt="ass" src="/img/smile/ass.png" class="emoticon tip" title="Kiss my ass!">
+                  </span></div>
+                  <div><time>5:54</time><b style="color:#5FCFF4">nudd</b><em>:</em><span>Давно <img srcset="" alt="ass" src="/img/smile/ass1.png" class="emoticon tip" title="Kiss my ass!"> стримишь?</span></div>
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+                  <div><time>5:54</time><b style="color:#F4F35F">ram</b><em>:</em><span>Ты будешь стримить DOTA или КС <img srcset="" alt="fy" src="/img/smile/fy.png" class="emoticon tip" title="F*ck you!"></span></div>
+                  <div><time>5:54</time><b style="color:#B95FF4">nnudde</b><em>:</em><span>Давно стримишь?  <img srcset="" alt="bang" src="/img/smile/bang.png" class="emoticon tip" title="Bang!"></span></div>
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+
+                  <div class="msg-admin">Системное сообщение.</div>
+
+                  <div><time>5:54</time><b style="color:#7F6CEF">radderz</b><em>:</em><span>Ты будешь стримить <img srcset="" alt="ass_bomb" src="/img/smile/ass_bomb.png" class="emoticon tip" title="Бомбит!"></span></div>
+                  <div><time>5:54</time><b style="color:#86CFD6">ramennudderz</b><em>:</em><span>Давно стримишь? <img srcset="" alt="navi" src="/img/smile/navi.png" class="emoticon tip" title="Mmmm Navi!"></span></div>
+
+                  <div class="msg-stream"><i class="gti-shield"></i> Варлок вынес Визарда ультой на 34 минуте матча</div>
+
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+                  <div><time>5:54</time><b>ramennudderz</b><em>:</em><span>Ты будешь стримить <img srcset="" alt="tamara" src="/img/smile/tamara.png" class="emoticon tip" title="Красава!">
+                  <img srcset="" alt="deal" src="/img/smile/deal.png" class="emoticon tip" title="Deal!">
+                  <img srcset="" alt="lick" src="/img/smile/lick.png" class="emoticon tip" title="Lick it!">
+                  <img srcset="" alt="wtf" src="/img/smile/wtf.png" class="emoticon tip" title="WTF!?">
+                  <img srcset="" alt="rofl" src="/img/smile/rofl.png" class="emoticon tip" title="ROFL!">
+                  <img srcset="" alt="fcplm" src="/img/smile/fcplm.png" class="emoticon tip" title="Face palm!">
+                  <img srcset="" alt="slow" src="/img/smile/slow.png" class="emoticon tip" title="Slow!">
+                  <img srcset="" alt="soidet" src="/img/smile/soidet.png" class="emoticon tip" title="Сойдет!">
+                  <img srcset="" alt="bjs" src="/img/smile/bjs.png" class="emoticon tip" title="Black Jack and sluts!">
+                  <img srcset="" alt="arr" src="/img/smile/arr.png" class="emoticon tip" title="ARRR!">
+                  </span>
+                  </div>
+                
+                  <div class="msg-admin"><i class="gti-info-circle"></i> Привет! Добро пожаловать в комнату.</div>
+                  <div><time>5:54</time><b>ramennudderz</b><em>:</em><span>Давно стримишь?</span></div>
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+                  <div><time>5:54</time><b style="color:#F45F5F">dderz</b><em>:</em><span>Ты будешь стримить DOTA  
+                  
+                  <img srcset="" alt="dart" src="/img/smile/dart.png" class="emoticon tip" title="Who's your daddy?">
+                  <img srcset="" alt="ass" src="/img/smile/ass.png" class="emoticon tip" title="Kiss my ass!">
+                  </span></div>
+                  <div><time>5:54</time><b style="color:#5FCFF4">nudd</b><em>:</em><span>Давно <img srcset="" alt="ass" src="/img/smile/ass1.png" class="emoticon tip" title="Kiss my ass!"> стримишь?</span></div>
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+                  <div><time>5:54</time><b style="color:#F4F35F">ram</b><em>:</em><span>Ты будешь стримить DOTA или КС <img srcset="" alt="fy" src="/img/smile/fy.png" class="emoticon tip" title="F*ck you!"></span></div>
+                  <div><time>5:54</time><b style="color:#B95FF4">nnudde</b><em>:</em><span>Давно стримишь?  <img srcset="" alt="bang" src="/img/smile/bang.png" class="emoticon tip" title="Bang!"></span></div>
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+
+                  <div class="msg-admin">Системное сообщение.</div>
+
+                  <div><time>5:54</time><b style="color:#7F6CEF">radderz</b><em>:</em><span>Ты будешь стримить <img srcset="" alt="ass_bomb" src="/img/smile/ass_bomb.png" class="emoticon tip" title="Бомбит!"></span></div>
+                  <div><time>5:54</time><b style="color:#86CFD6">ramennudderz</b><em>:</em><span>Давно стримишь? <img srcset="" alt="navi" src="/img/smile/navi.png" class="emoticon tip" title="Mmmm Navi!"></span></div>
+
+                  <div class="msg-stream"><i class="gti-shield"></i> Варлок вынес Визарда ультой на 34 минуте матча</div>
+
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+                  <div><time>5:54</time><b>ramennudderz</b><em>:</em><span>Ты будешь стримить <img srcset="" alt="tamara" src="/img/smile/tamara.png" class="emoticon tip" title="Красава!">
+                  <img srcset="" alt="deal" src="/img/smile/deal.png" class="emoticon tip" title="Deal!">
+                  <img srcset="" alt="lick" src="/img/smile/lick.png" class="emoticon tip" title="Lick it!">
+                  <img srcset="" alt="wtf" src="/img/smile/wtf.png" class="emoticon tip" title="WTF!?">
+                  <img srcset="" alt="rofl" src="/img/smile/rofl.png" class="emoticon tip" title="ROFL!">
+                  <img srcset="" alt="fcplm" src="/img/smile/fcplm.png" class="emoticon tip" title="Face palm!">
+                  <img srcset="" alt="slow" src="/img/smile/slow.png" class="emoticon tip" title="Slow!">
+                  <img srcset="" alt="soidet" src="/img/smile/soidet.png" class="emoticon tip" title="Сойдет!">
+                  <img srcset="" alt="bjs" src="/img/smile/bjs.png" class="emoticon tip" title="Black Jack and sluts!">
+                  <img srcset="" alt="arr" src="/img/smile/arr.png" class="emoticon tip" title="ARRR!">
+                  </span>
+                  </div>
+                
+                  <div class="msg-admin"><i class="gti-info-circle"></i> Привет! Добро пожаловать в комнату.</div>
+                  <div><time>5:54</time><b>ramennudderz</b><em>:</em><span>Давно стримишь?</span></div>
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+                  <div><time>5:54</time><b style="color:#F45F5F">dderz</b><em>:</em><span>Ты будешь стримить DOTA  
+                  
+                  <img srcset="" alt="dart" src="/img/smile/dart.png" class="emoticon tip" title="Who's your daddy?">
+                  <img srcset="" alt="ass" src="/img/smile/ass.png" class="emoticon tip" title="Kiss my ass!">
+                  </span></div>
+                  <div><time>5:54</time><b style="color:#5FCFF4">nudd</b><em>:</em><span>Давно <img srcset="" alt="ass" src="/img/smile/ass1.png" class="emoticon tip" title="Kiss my ass!"> стримишь?</span></div>
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+                  <div><time>5:54</time><b style="color:#F4F35F">ram</b><em>:</em><span>Ты будешь стримить DOTA или КС <img srcset="" alt="fy" src="/img/smile/fy.png" class="emoticon tip" title="F*ck you!"></span></div>
+                  <div><time>5:54</time><b style="color:#B95FF4">nnudde</b><em>:</em><span>Давно стримишь?  <img srcset="" alt="bang" src="/img/smile/bang.png" class="emoticon tip" title="Bang!"></span></div>
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+
+                  <div class="msg-admin">Системное сообщение.</div>
+
+                  <div><time>5:54</time><b style="color:#7F6CEF">radderz</b><em>:</em><span>Ты будешь стримить <img srcset="" alt="ass_bomb" src="/img/smile/ass_bomb.png" class="emoticon tip" title="Бомбит!"></span></div>
+                  <div><time>5:54</time><b style="color:#86CFD6">ramennudderz</b><em>:</em><span>Давно стримишь? <img srcset="" alt="navi" src="/img/smile/navi.png" class="emoticon tip" title="Mmmm Navi!"></span></div>
+
+                  <div class="msg-stream"><i class="gti-shield"></i> Варлок вынес Визарда ультой на 34 минуте матча</div>
+
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+                  <div><time>5:54</time><b>ramennudderz</b><em>:</em><span>Ты будешь стримить <img srcset="" alt="tamara" src="/img/smile/tamara.png" class="emoticon tip" title="Красава!">
+                  <img srcset="" alt="deal" src="/img/smile/deal.png" class="emoticon tip" title="Deal!">
+                  <img srcset="" alt="lick" src="/img/smile/lick.png" class="emoticon tip" title="Lick it!">
+                  <img srcset="" alt="wtf" src="/img/smile/wtf.png" class="emoticon tip" title="WTF!?">
+                  <img srcset="" alt="rofl" src="/img/smile/rofl.png" class="emoticon tip" title="ROFL!">
+                  <img srcset="" alt="fcplm" src="/img/smile/fcplm.png" class="emoticon tip" title="Face palm!">
+                  <img srcset="" alt="slow" src="/img/smile/slow.png" class="emoticon tip" title="Slow!">
+                  <img srcset="" alt="soidet" src="/img/smile/soidet.png" class="emoticon tip" title="Сойдет!">
+                  <img srcset="" alt="bjs" src="/img/smile/bjs.png" class="emoticon tip" title="Black Jack and sluts!">
+                  <img srcset="" alt="arr" src="/img/smile/arr.png" class="emoticon tip" title="ARRR!">
+                  </span>
+                  </div>
+                
+                  <div class="msg-admin"><i class="gti-info-circle"></i> Привет! Добро пожаловать в комнату.</div>
+                  <div><time>5:54</time><b>ramennudderz</b><em>:</em><span>Давно стримишь?</span></div>
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+                  <div><time>5:54</time><b style="color:#F45F5F">dderz</b><em>:</em><span>Ты будешь стримить DOTA  
+                  
+                  <img srcset="" alt="dart" src="/img/smile/dart.png" class="emoticon tip" title="Who's your daddy?">
+                  <img srcset="" alt="ass" src="/img/smile/ass.png" class="emoticon tip" title="Kiss my ass!">
+                  </span></div>
+                  <div><time>5:54</time><b style="color:#5FCFF4">nudd</b><em>:</em><span>Давно <img srcset="" alt="ass" src="/img/smile/ass1.png" class="emoticon tip" title="Kiss my ass!"> стримишь?</span></div>
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+                  <div><time>5:54</time><b style="color:#F4F35F">ram</b><em>:</em><span>Ты будешь стримить DOTA или КС <img srcset="" alt="fy" src="/img/smile/fy.png" class="emoticon tip" title="F*ck you!"></span></div>
+                  <div><time>5:54</time><b style="color:#B95FF4">nnudde</b><em>:</em><span>Давно стримишь?  <img srcset="" alt="bang" src="/img/smile/bang.png" class="emoticon tip" title="Bang!"></span></div>
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+
+                  <div class="msg-admin">Системное сообщение.</div>
+
+                  <div><time>5:54</time><b style="color:#7F6CEF">radderz</b><em>:</em><span>Ты будешь стримить <img srcset="" alt="ass_bomb" src="/img/smile/ass_bomb.png" class="emoticon tip" title="Бомбит!"></span></div>
+                  <div><time>5:54</time><b style="color:#86CFD6">ramennudderz</b><em>:</em><span>Давно стримишь? <img srcset="" alt="navi" src="/img/smile/navi.png" class="emoticon tip" title="Mmmm Navi!"></span></div>
+
+                  <div class="msg-stream"><i class="gti-shield"></i> Варлок вынес Визарда ультой на 34 минуте матча</div>
+
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+                  <div><time>5:54</time><b>ramennudderz</b><em>:</em><span>Ты будешь стримить <img srcset="" alt="tamara" src="/img/smile/tamara.png" class="emoticon tip" title="Красава!">
+                  <img srcset="" alt="deal" src="/img/smile/deal.png" class="emoticon tip" title="Deal!">
+                  <img srcset="" alt="lick" src="/img/smile/lick.png" class="emoticon tip" title="Lick it!">
+                  <img srcset="" alt="wtf" src="/img/smile/wtf.png" class="emoticon tip" title="WTF!?">
+                  <img srcset="" alt="rofl" src="/img/smile/rofl.png" class="emoticon tip" title="ROFL!">
+                  <img srcset="" alt="fcplm" src="/img/smile/fcplm.png" class="emoticon tip" title="Face palm!">
+                  <img srcset="" alt="slow" src="/img/smile/slow.png" class="emoticon tip" title="Slow!">
+                  <img srcset="" alt="soidet" src="/img/smile/soidet.png" class="emoticon tip" title="Сойдет!">
+                  <img srcset="" alt="bjs" src="/img/smile/bjs.png" class="emoticon tip" title="Black Jack and sluts!">
+                  <img srcset="" alt="arr" src="/img/smile/arr.png" class="emoticon tip" title="ARRR!">
+                  </span>
+                  </div>
+                
+                  <div class="msg-admin"><i class="gti-info-circle"></i> Привет! Добро пожаловать в комнату.</div>
+                  <div><time>5:54</time><b>ramennudderz</b><em>:</em><span>Давно стримишь?</span></div>
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+                  <div><time>5:54</time><b style="color:#F45F5F">dderz</b><em>:</em><span>Ты будешь стримить DOTA  
+                  
+                  <img srcset="" alt="dart" src="/img/smile/dart.png" class="emoticon tip" title="Who's your daddy?">
+                  <img srcset="" alt="ass" src="/img/smile/ass.png" class="emoticon tip" title="Kiss my ass!">
+                  </span></div>
+                  <div><time>5:54</time><b style="color:#5FCFF4">nudd</b><em>:</em><span>Давно <img srcset="" alt="ass" src="/img/smile/ass1.png" class="emoticon tip" title="Kiss my ass!"> стримишь?</span></div>
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+                  <div><time>5:54</time><b style="color:#F4F35F">ram</b><em>:</em><span>Ты будешь стримить DOTA или КС <img srcset="" alt="fy" src="/img/smile/fy.png" class="emoticon tip" title="F*ck you!"></span></div>
+                  <div><time>5:54</time><b style="color:#B95FF4">nnudde</b><em>:</em><span>Давно стримишь?  <img srcset="" alt="bang" src="/img/smile/bang.png" class="emoticon tip" title="Bang!"></span></div>
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+
+                  <div class="msg-admin">Системное сообщение.</div>
+
+                  <div><time>5:54</time><b style="color:#7F6CEF">radderz</b><em>:</em><span>Ты будешь стримить <img srcset="" alt="ass_bomb" src="/img/smile/ass_bomb.png" class="emoticon tip" title="Бомбит!"></span></div>
+                  <div><time>5:54</time><b style="color:#86CFD6">ramennudderz</b><em>:</em><span>Давно стримишь? <img srcset="" alt="navi" src="/img/smile/navi.png" class="emoticon tip" title="Mmmm Navi!"></span></div>
+
+                  <div class="msg-stream"><i class="gti-shield"></i> Варлок вынес Визарда ультой на 34 минуте матча</div>
+
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+                  <div><time>5:54</time><b>ramennudderz</b><em>:</em><span>Ты будешь стримить <img srcset="" alt="tamara" src="/img/smile/tamara.png" class="emoticon tip" title="Красава!">
+                  <img srcset="" alt="deal" src="/img/smile/deal.png" class="emoticon tip" title="Deal!">
+                  <img srcset="" alt="lick" src="/img/smile/lick.png" class="emoticon tip" title="Lick it!">
+                  <img srcset="" alt="wtf" src="/img/smile/wtf.png" class="emoticon tip" title="WTF!?">
+                  <img srcset="" alt="rofl" src="/img/smile/rofl.png" class="emoticon tip" title="ROFL!">
+                  <img srcset="" alt="fcplm" src="/img/smile/fcplm.png" class="emoticon tip" title="Face palm!">
+                  <img srcset="" alt="slow" src="/img/smile/slow.png" class="emoticon tip" title="Slow!">
+                  <img srcset="" alt="soidet" src="/img/smile/soidet.png" class="emoticon tip" title="Сойдет!">
+                  <img srcset="" alt="bjs" src="/img/smile/bjs.png" class="emoticon tip" title="Black Jack and sluts!">
+                  <img srcset="" alt="arr" src="/img/smile/arr.png" class="emoticon tip" title="ARRR!">
+                  </span>
+                  </div>
+                
+                  <div class="msg-admin"><i class="gti-info-circle"></i> Привет! Добро пожаловать в комнату.</div>
+                  <div><time>5:54</time><b>ramennudderz</b><em>:</em><span>Давно стримишь?</span></div>
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+                  <div><time>5:54</time><b style="color:#F45F5F">dderz</b><em>:</em><span>Ты будешь стримить DOTA  
+                  
+                  <img srcset="" alt="dart" src="/img/smile/dart.png" class="emoticon tip" title="Who's your daddy?">
+                  <img srcset="" alt="ass" src="/img/smile/ass.png" class="emoticon tip" title="Kiss my ass!">
+                  </span></div>
+                  <div><time>5:54</time><b style="color:#5FCFF4">nudd</b><em>:</em><span>Давно <img srcset="" alt="ass" src="/img/smile/ass1.png" class="emoticon tip" title="Kiss my ass!"> стримишь?</span></div>
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+                  <div><time>5:54</time><b style="color:#F4F35F">ram</b><em>:</em><span>Ты будешь стримить DOTA или КС <img srcset="" alt="fy" src="/img/smile/fy.png" class="emoticon tip" title="F*ck you!"></span></div>
+                  <div><time>5:54</time><b style="color:#B95FF4">nnudde</b><em>:</em><span>Давно стримишь?  <img srcset="" alt="bang" src="/img/smile/bang.png" class="emoticon tip" title="Bang!"></span></div>
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+
+                  <div class="msg-admin">Системное сообщение.</div>
+
+                  <div><time>5:54</time><b style="color:#7F6CEF">radderz</b><em>:</em><span>Ты будешь стримить <img srcset="" alt="ass_bomb" src="/img/smile/ass_bomb.png" class="emoticon tip" title="Бомбит!"></span></div>
+                  <div><time>5:54</time><b style="color:#86CFD6">ramennudderz</b><em>:</em><span>Давно стримишь? <img srcset="" alt="navi" src="/img/smile/navi.png" class="emoticon tip" title="Mmmm Navi!"></span></div>
+
+                  <div class="msg-stream"><i class="gti-shield"></i> Варлок вынес Визарда ультой на 34 минуте матча</div>
+
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+                  <div><time>5:54</time><b>ramennudderz</b><em>:</em><span>Ты будешь стримить <img srcset="" alt="tamara" src="/img/smile/tamara.png" class="emoticon tip" title="Красава!">
+                  <img srcset="" alt="deal" src="/img/smile/deal.png" class="emoticon tip" title="Deal!">
+                  <img srcset="" alt="lick" src="/img/smile/lick.png" class="emoticon tip" title="Lick it!">
+                  <img srcset="" alt="wtf" src="/img/smile/wtf.png" class="emoticon tip" title="WTF!?">
+                  <img srcset="" alt="rofl" src="/img/smile/rofl.png" class="emoticon tip" title="ROFL!">
+                  <img srcset="" alt="fcplm" src="/img/smile/fcplm.png" class="emoticon tip" title="Face palm!">
+                  <img srcset="" alt="slow" src="/img/smile/slow.png" class="emoticon tip" title="Slow!">
+                  <img srcset="" alt="soidet" src="/img/smile/soidet.png" class="emoticon tip" title="Сойдет!">
+                  <img srcset="" alt="bjs" src="/img/smile/bjs.png" class="emoticon tip" title="Black Jack and sluts!">
+                  <img srcset="" alt="arr" src="/img/smile/arr.png" class="emoticon tip" title="ARRR!">
+                  </span>
+                  </div>
+                
+                  <div class="msg-admin"><i class="gti-info-circle"></i> Привет! Добро пожаловать в комнату.</div>
+                  <div><time>5:54</time><b>ramennudderz</b><em>:</em><span>Давно стримишь?</span></div>
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+                  <div><time>5:54</time><b style="color:#F45F5F">dderz</b><em>:</em><span>Ты будешь стримить DOTA  
+                  
+                  <img srcset="" alt="dart" src="/img/smile/dart.png" class="emoticon tip" title="Who's your daddy?">
+                  <img srcset="" alt="ass" src="/img/smile/ass.png" class="emoticon tip" title="Kiss my ass!">
+                  </span></div>
+                  <div><time>5:54</time><b style="color:#5FCFF4">nudd</b><em>:</em><span>Давно <img srcset="" alt="ass" src="/img/smile/ass1.png" class="emoticon tip" title="Kiss my ass!"> стримишь?</span></div>
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+                  <div><time>5:54</time><b style="color:#F4F35F">ram</b><em>:</em><span>Ты будешь стримить DOTA или КС <img srcset="" alt="fy" src="/img/smile/fy.png" class="emoticon tip" title="F*ck you!"></span></div>
+                  <div><time>5:54</time><b style="color:#B95FF4">nnudde</b><em>:</em><span>Давно стримишь?  <img srcset="" alt="bang" src="/img/smile/bang.png" class="emoticon tip" title="Bang!"></span></div>
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+
+                  <div class="msg-admin">Системное сообщение.</div>
+
+                  <div><time>5:54</time><b style="color:#7F6CEF">radderz</b><em>:</em><span>Ты будешь стримить <img srcset="" alt="ass_bomb" src="/img/smile/ass_bomb.png" class="emoticon tip" title="Бомбит!"></span></div>
+                  <div><time>5:54</time><b style="color:#86CFD6">ramennudderz</b><em>:</em><span>Давно стримишь? <img srcset="" alt="navi" src="/img/smile/navi.png" class="emoticon tip" title="Mmmm Navi!"></span></div>
+
+                  <div class="msg-stream"><i class="gti-shield"></i> Варлок вынес Визарда ультой на 34 минуте матча</div>
+
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+                  <div><time>5:54</time><b>ramennudderz</b><em>:</em><span>Ты будешь стримить <img srcset="" alt="tamara" src="/img/smile/tamara.png" class="emoticon tip" title="Красава!">
+                  <img srcset="" alt="deal" src="/img/smile/deal.png" class="emoticon tip" title="Deal!">
+                  <img srcset="" alt="lick" src="/img/smile/lick.png" class="emoticon tip" title="Lick it!">
+                  <img srcset="" alt="wtf" src="/img/smile/wtf.png" class="emoticon tip" title="WTF!?">
+                  <img srcset="" alt="rofl" src="/img/smile/rofl.png" class="emoticon tip" title="ROFL!">
+                  <img srcset="" alt="fcplm" src="/img/smile/fcplm.png" class="emoticon tip" title="Face palm!">
+                  <img srcset="" alt="slow" src="/img/smile/slow.png" class="emoticon tip" title="Slow!">
+                  <img srcset="" alt="soidet" src="/img/smile/soidet.png" class="emoticon tip" title="Сойдет!">
+                  <img srcset="" alt="bjs" src="/img/smile/bjs.png" class="emoticon tip" title="Black Jack and sluts!">
+                  <img srcset="" alt="arr" src="/img/smile/arr.png" class="emoticon tip" title="ARRR!">
+                  </span>
+                  </div>
+                
+                  <div class="msg-admin"><i class="gti-info-circle"></i> Привет! Добро пожаловать в комнату.</div>
+                  <div><time>5:54</time><b>ramennudderz</b><em>:</em><span>Давно стримишь?</span></div>
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+                  <div><time>5:54</time><b style="color:#F45F5F">dderz</b><em>:</em><span>Ты будешь стримить DOTA  
+                  
+                  <img srcset="" alt="dart" src="/img/smile/dart.png" class="emoticon tip" title="Who's your daddy?">
+                  <img srcset="" alt="ass" src="/img/smile/ass.png" class="emoticon tip" title="Kiss my ass!">
+                  </span></div>
+                  <div><time>5:54</time><b style="color:#5FCFF4">nudd</b><em>:</em><span>Давно <img srcset="" alt="ass" src="/img/smile/ass1.png" class="emoticon tip" title="Kiss my ass!"> стримишь?</span></div>
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+                  <div><time>5:54</time><b style="color:#F4F35F">ram</b><em>:</em><span>Ты будешь стримить DOTA или КС <img srcset="" alt="fy" src="/img/smile/fy.png" class="emoticon tip" title="F*ck you!"></span></div>
+                  <div><time>5:54</time><b style="color:#B95FF4">nnudde</b><em>:</em><span>Давно стримишь?  <img srcset="" alt="bang" src="/img/smile/bang.png" class="emoticon tip" title="Bang!"></span></div>
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+
+                  <div class="msg-admin">Системное сообщение.</div>
+
+                  <div><time>5:54</time><b style="color:#7F6CEF">radderz</b><em>:</em><span>Ты будешь стримить <img srcset="" alt="ass_bomb" src="/img/smile/ass_bomb.png" class="emoticon tip" title="Бомбит!"></span></div>
+                  <div><time>5:54</time><b style="color:#86CFD6">ramennudderz</b><em>:</em><span>Давно стримишь? <img srcset="" alt="navi" src="/img/smile/navi.png" class="emoticon tip" title="Mmmm Navi!"></span></div>
+
+                  <div class="msg-stream"><i class="gti-shield"></i> Варлок вынес Визарда ультой на 34 минуте матча</div>
+
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+                  <div><time>5:54</time><b>ramennudderz</b><em>:</em><span>Ты будешь стримить <img srcset="" alt="tamara" src="/img/smile/tamara.png" class="emoticon tip" title="Красава!">
+                  <img srcset="" alt="deal" src="/img/smile/deal.png" class="emoticon tip" title="Deal!">
+                  <img srcset="" alt="lick" src="/img/smile/lick.png" class="emoticon tip" title="Lick it!">
+                  <img srcset="" alt="wtf" src="/img/smile/wtf.png" class="emoticon tip" title="WTF!?">
+                  <img srcset="" alt="rofl" src="/img/smile/rofl.png" class="emoticon tip" title="ROFL!">
+                  <img srcset="" alt="fcplm" src="/img/smile/fcplm.png" class="emoticon tip" title="Face palm!">
+                  <img srcset="" alt="slow" src="/img/smile/slow.png" class="emoticon tip" title="Slow!">
+                  <img srcset="" alt="soidet" src="/img/smile/soidet.png" class="emoticon tip" title="Сойдет!">
+                  <img srcset="" alt="bjs" src="/img/smile/bjs.png" class="emoticon tip" title="Black Jack and sluts!">
+                  <img srcset="" alt="arr" src="/img/smile/arr.png" class="emoticon tip" title="ARRR!">
+                  </span>
+                  </div>
+                
+                  <div class="msg-admin"><i class="gti-info-circle"></i> Привет! Добро пожаловать в комнату.</div>
+                  <div><time>5:54</time><b>ramennudderz</b><em>:</em><span>Давно стримишь?</span></div>
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+                  <div><time>5:54</time><b style="color:#F45F5F">dderz</b><em>:</em><span>Ты будешь стримить DOTA  
+                  
+                  <img srcset="" alt="dart" src="/img/smile/dart.png" class="emoticon tip" title="Who's your daddy?">
+                  <img srcset="" alt="ass" src="/img/smile/ass.png" class="emoticon tip" title="Kiss my ass!">
+                  </span></div>
+                  <div><time>5:54</time><b style="color:#5FCFF4">nudd</b><em>:</em><span>Давно <img srcset="" alt="ass" src="/img/smile/ass1.png" class="emoticon tip" title="Kiss my ass!"> стримишь?</span></div>
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+                  <div><time>5:54</time><b style="color:#F4F35F">ram</b><em>:</em><span>Ты будешь стримить DOTA или КС <img srcset="" alt="fy" src="/img/smile/fy.png" class="emoticon tip" title="F*ck you!"></span></div>
+                  <div><time>5:54</time><b style="color:#B95FF4">nnudde</b><em>:</em><span>Давно стримишь?  <img srcset="" alt="bang" src="/img/smile/bang.png" class="emoticon tip" title="Bang!"></span></div>
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+
+                  <div class="msg-admin">Системное сообщение.</div>
+
+                  <div><time>5:54</time><b style="color:#7F6CEF">radderz</b><em>:</em><span>Ты будешь стримить <img srcset="" alt="ass_bomb" src="/img/smile/ass_bomb.png" class="emoticon tip" title="Бомбит!"></span></div>
+                  <div><time>5:54</time><b style="color:#86CFD6">ramennudderz</b><em>:</em><span>Давно стримишь? <img srcset="" alt="navi" src="/img/smile/navi.png" class="emoticon tip" title="Mmmm Navi!"></span></div>
+
+                  <div class="msg-stream"><i class="gti-shield"></i> Варлок вынес Визарда ультой на 34 минуте матча</div>
+
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+                  <div><time>5:54</time><b>ramennudderz</b><em>:</em><span>Ты будешь стримить <img srcset="" alt="tamara" src="/img/smile/tamara.png" class="emoticon tip" title="Красава!">
+                  <img srcset="" alt="deal" src="/img/smile/deal.png" class="emoticon tip" title="Deal!">
+                  <img srcset="" alt="lick" src="/img/smile/lick.png" class="emoticon tip" title="Lick it!">
+                  <img srcset="" alt="wtf" src="/img/smile/wtf.png" class="emoticon tip" title="WTF!?">
+                  <img srcset="" alt="rofl" src="/img/smile/rofl.png" class="emoticon tip" title="ROFL!">
+                  <img srcset="" alt="fcplm" src="/img/smile/fcplm.png" class="emoticon tip" title="Face palm!">
+                  <img srcset="" alt="slow" src="/img/smile/slow.png" class="emoticon tip" title="Slow!">
+                  <img srcset="" alt="soidet" src="/img/smile/soidet.png" class="emoticon tip" title="Сойдет!">
+                  <img srcset="" alt="bjs" src="/img/smile/bjs.png" class="emoticon tip" title="Black Jack and sluts!">
+                  <img srcset="" alt="arr" src="/img/smile/arr.png" class="emoticon tip" title="ARRR!">
+                  </span>
+                  </div>
+                
+                  <div class="msg-admin"><i class="gti-info-circle"></i> Привет! Добро пожаловать в комнату.</div>
+                  <div><time>5:54</time><b>ramennudderz</b><em>:</em><span>Давно стримишь?</span></div>
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+                  <div><time>5:54</time><b style="color:#F45F5F">dderz</b><em>:</em><span>Ты будешь стримить DOTA  
+                  
+                  <img srcset="" alt="dart" src="/img/smile/dart.png" class="emoticon tip" title="Who's your daddy?">
+                  <img srcset="" alt="ass" src="/img/smile/ass.png" class="emoticon tip" title="Kiss my ass!">
+                  </span></div>
+                  <div><time>5:54</time><b style="color:#5FCFF4">nudd</b><em>:</em><span>Давно <img srcset="" alt="ass" src="/img/smile/ass1.png" class="emoticon tip" title="Kiss my ass!"> стримишь?</span></div>
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+                  <div><time>5:54</time><b style="color:#F4F35F">ram</b><em>:</em><span>Ты будешь стримить DOTA или КС <img srcset="" alt="fy" src="/img/smile/fy.png" class="emoticon tip" title="F*ck you!"></span></div>
+                  <div><time>5:54</time><b style="color:#B95FF4">nnudde</b><em>:</em><span>Давно стримишь?  <img srcset="" alt="bang" src="/img/smile/bang.png" class="emoticon tip" title="Bang!"></span></div>
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+
+                  <div class="msg-admin">Системное сообщение.</div>
+
+                  <div><time>5:54</time><b style="color:#7F6CEF">radderz</b><em>:</em><span>Ты будешь стримить <img srcset="" alt="ass_bomb" src="/img/smile/ass_bomb.png" class="emoticon tip" title="Бомбит!"></span></div>
+                  <div><time>5:54</time><b style="color:#86CFD6">ramennudderz</b><em>:</em><span>Давно стримишь? <img srcset="" alt="navi" src="/img/smile/navi.png" class="emoticon tip" title="Mmmm Navi!"></span></div>
+
+                  <div class="msg-stream"><i class="gti-shield"></i> Варлок вынес Визарда ультой на 34 минуте матча</div>
+
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+                  <div><time>5:54</time><b>ramennudderz</b><em>:</em><span>Ты будешь стримить <img srcset="" alt="tamara" src="/img/smile/tamara.png" class="emoticon tip" title="Красава!">
+                  <img srcset="" alt="deal" src="/img/smile/deal.png" class="emoticon tip" title="Deal!">
+                  <img srcset="" alt="lick" src="/img/smile/lick.png" class="emoticon tip" title="Lick it!">
+                  <img srcset="" alt="wtf" src="/img/smile/wtf.png" class="emoticon tip" title="WTF!?">
+                  <img srcset="" alt="rofl" src="/img/smile/rofl.png" class="emoticon tip" title="ROFL!">
+                  <img srcset="" alt="fcplm" src="/img/smile/fcplm.png" class="emoticon tip" title="Face palm!">
+                  <img srcset="" alt="slow" src="/img/smile/slow.png" class="emoticon tip" title="Slow!">
+                  <img srcset="" alt="soidet" src="/img/smile/soidet.png" class="emoticon tip" title="Сойдет!">
+                  <img srcset="" alt="bjs" src="/img/smile/bjs.png" class="emoticon tip" title="Black Jack and sluts!">
+                  <img srcset="" alt="arr" src="/img/smile/arr.png" class="emoticon tip" title="ARRR!">
+                  </span>
+                  </div>
+                
+                  <div class="msg-admin"><i class="gti-info-circle"></i> Привет! Добро пожаловать в комнату.</div>
+                  <div><time>5:54</time><b>ramennudderz</b><em>:</em><span>Давно стримишь?</span></div>
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+                  <div><time>5:54</time><b style="color:#F45F5F">dderz</b><em>:</em><span>Ты будешь стримить DOTA  
+                  
+                  <img srcset="" alt="dart" src="/img/smile/dart.png" class="emoticon tip" title="Who's your daddy?">
+                  <img srcset="" alt="ass" src="/img/smile/ass.png" class="emoticon tip" title="Kiss my ass!">
+                  </span></div>
+                  <div><time>5:54</time><b style="color:#5FCFF4">nudd</b><em>:</em><span>Давно <img srcset="" alt="ass" src="/img/smile/ass1.png" class="emoticon tip" title="Kiss my ass!"> стримишь?</span></div>
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+                  <div><time>5:54</time><b style="color:#F4F35F">ram</b><em>:</em><span>Ты будешь стримить DOTA или КС <img srcset="" alt="fy" src="/img/smile/fy.png" class="emoticon tip" title="F*ck you!"></span></div>
+                  <div><time>5:54</time><b style="color:#B95FF4">nnudde</b><em>:</em><span>Давно стримишь?  <img srcset="" alt="bang" src="/img/smile/bang.png" class="emoticon tip" title="Bang!"></span></div>
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+
+                  <div class="msg-admin">Системное сообщение.</div>
+
+                  <div><time>5:54</time><b style="color:#7F6CEF">radderz</b><em>:</em><span>Ты будешь стримить <img srcset="" alt="ass_bomb" src="/img/smile/ass_bomb.png" class="emoticon tip" title="Бомбит!"></span></div>
+                  <div><time>5:54</time><b style="color:#86CFD6">ramennudderz</b><em>:</em><span>Давно стримишь? <img srcset="" alt="navi" src="/img/smile/navi.png" class="emoticon tip" title="Mmmm Navi!"></span></div>
+
+                  <div class="msg-stream"><i class="gti-shield"></i> Варлок вынес Визарда ультой на 34 минуте матча</div>
+
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+                  <div><time>5:54</time><b>ramennudderz</b><em>:</em><span>Ты будешь стримить <img srcset="" alt="tamara" src="/img/smile/tamara.png" class="emoticon tip" title="Красава!">
+                  <img srcset="" alt="deal" src="/img/smile/deal.png" class="emoticon tip" title="Deal!">
+                  <img srcset="" alt="lick" src="/img/smile/lick.png" class="emoticon tip" title="Lick it!">
+                  <img srcset="" alt="wtf" src="/img/smile/wtf.png" class="emoticon tip" title="WTF!?">
+                  <img srcset="" alt="rofl" src="/img/smile/rofl.png" class="emoticon tip" title="ROFL!">
+                  <img srcset="" alt="fcplm" src="/img/smile/fcplm.png" class="emoticon tip" title="Face palm!">
+                  <img srcset="" alt="slow" src="/img/smile/slow.png" class="emoticon tip" title="Slow!">
+                  <img srcset="" alt="soidet" src="/img/smile/soidet.png" class="emoticon tip" title="Сойдет!">
+                  <img srcset="" alt="bjs" src="/img/smile/bjs.png" class="emoticon tip" title="Black Jack and sluts!">
+                  <img srcset="" alt="arr" src="/img/smile/arr.png" class="emoticon tip" title="ARRR!">
+                  </span>
+                  </div>
+                
+                  <div class="msg-admin"><i class="gti-info-circle"></i> Привет! Добро пожаловать в комнату.</div>
+                  <div><time>5:54</time><b>ramennudderz</b><em>:</em><span>Давно стримишь?</span></div>
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+                  <div><time>5:54</time><b style="color:#F45F5F">dderz</b><em>:</em><span>Ты будешь стримить DOTA  
+                  
+                  <img srcset="" alt="dart" src="/img/smile/dart.png" class="emoticon tip" title="Who's your daddy?">
+                  <img srcset="" alt="ass" src="/img/smile/ass.png" class="emoticon tip" title="Kiss my ass!">
+                  </span></div>
+                  <div><time>5:54</time><b style="color:#5FCFF4">nudd</b><em>:</em><span>Давно <img srcset="" alt="ass" src="/img/smile/ass1.png" class="emoticon tip" title="Kiss my ass!"> стримишь?</span></div>
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+                  <div><time>5:54</time><b style="color:#F4F35F">ram</b><em>:</em><span>Ты будешь стримить DOTA или КС <img srcset="" alt="fy" src="/img/smile/fy.png" class="emoticon tip" title="F*ck you!"></span></div>
+                  <div><time>5:54</time><b style="color:#B95FF4">nnudde</b><em>:</em><span>Давно стримишь?  <img srcset="" alt="bang" src="/img/smile/bang.png" class="emoticon tip" title="Bang!"></span></div>
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+
+                  <div class="msg-admin">Системное сообщение.</div>
+
+                  <div><time>5:54</time><b style="color:#7F6CEF">radderz</b><em>:</em><span>Ты будешь стримить <img srcset="" alt="ass_bomb" src="/img/smile/ass_bomb.png" class="emoticon tip" title="Бомбит!"></span></div>
+                  <div><time>5:54</time><b style="color:#86CFD6">ramennudderz</b><em>:</em><span>Давно стримишь? <img srcset="" alt="navi" src="/img/smile/navi.png" class="emoticon tip" title="Mmmm Navi!"></span></div>
+
+                  <div class="msg-stream"><i class="gti-shield"></i> Варлок вынес Визарда ультой на 34 минуте матча</div>
+
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+                  <div><time>5:54</time><b>ramennudderz</b><em>:</em><span>Ты будешь стримить <img srcset="" alt="tamara" src="/img/smile/tamara.png" class="emoticon tip" title="Красава!">
+                  <img srcset="" alt="deal" src="/img/smile/deal.png" class="emoticon tip" title="Deal!">
+                  <img srcset="" alt="lick" src="/img/smile/lick.png" class="emoticon tip" title="Lick it!">
+                  <img srcset="" alt="wtf" src="/img/smile/wtf.png" class="emoticon tip" title="WTF!?">
+                  <img srcset="" alt="rofl" src="/img/smile/rofl.png" class="emoticon tip" title="ROFL!">
+                  <img srcset="" alt="fcplm" src="/img/smile/fcplm.png" class="emoticon tip" title="Face palm!">
+                  <img srcset="" alt="slow" src="/img/smile/slow.png" class="emoticon tip" title="Slow!">
+                  <img srcset="" alt="soidet" src="/img/smile/soidet.png" class="emoticon tip" title="Сойдет!">
+                  <img srcset="" alt="bjs" src="/img/smile/bjs.png" class="emoticon tip" title="Black Jack and sluts!">
+                  <img srcset="" alt="arr" src="/img/smile/arr.png" class="emoticon tip" title="ARRR!">
+                  </span>
+                  </div>
+                
+                  <div class="msg-admin"><i class="gti-info-circle"></i> Привет! Добро пожаловать в комнату.</div>
+                  <div><time>5:54</time><b>ramennudderz</b><em>:</em><span>Давно стримишь?</span></div>
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+                  <div><time>5:54</time><b style="color:#F45F5F">dderz</b><em>:</em><span>Ты будешь стримить DOTA  
+                  
+                  <img srcset="" alt="dart" src="/img/smile/dart.png" class="emoticon tip" title="Who's your daddy?">
+                  <img srcset="" alt="ass" src="/img/smile/ass.png" class="emoticon tip" title="Kiss my ass!">
+                  </span></div>
+                  <div><time>5:54</time><b style="color:#5FCFF4">nudd</b><em>:</em><span>Давно <img srcset="" alt="ass" src="/img/smile/ass1.png" class="emoticon tip" title="Kiss my ass!"> стримишь?</span></div>
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+                  <div><time>5:54</time><b style="color:#F4F35F">ram</b><em>:</em><span>Ты будешь стримить DOTA или КС <img srcset="" alt="fy" src="/img/smile/fy.png" class="emoticon tip" title="F*ck you!"></span></div>
+                  <div><time>5:54</time><b style="color:#B95FF4">nnudde</b><em>:</em><span>Давно стримишь?  <img srcset="" alt="bang" src="/img/smile/bang.png" class="emoticon tip" title="Bang!"></span></div>
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+
+                  <div class="msg-admin">Системное сообщение.</div>
+
+                  <div><time>5:54</time><b style="color:#7F6CEF">radderz</b><em>:</em><span>Ты будешь стримить <img srcset="" alt="ass_bomb" src="/img/smile/ass_bomb.png" class="emoticon tip" title="Бомбит!"></span></div>
+                  <div><time>5:54</time><b style="color:#86CFD6">ramennudderz</b><em>:</em><span>Давно стримишь? <img srcset="" alt="navi" src="/img/smile/navi.png" class="emoticon tip" title="Mmmm Navi!"></span></div>
+
+                  <div class="msg-stream"><i class="gti-shield"></i> Варлок вынес Визарда ультой на 34 минуте матча</div>
+
+                  <div><time>5:54</time><u><i class="moderator tip" title="Moderator"></i></u><b style="color:#9acd32">nagibator 4000</b><em>:</em> <span>ПОКАЖИ МНЕ СЕРДЕЧКО Ты будешь стримить DOTA или КС</span></div>
+                  <div><time>5:54</time><b>ramennudderz</b><em>:</em><span>Ты будешь стримить <img srcset="" alt="tamara" src="/img/smile/tamara.png" class="emoticon tip" title="Красава!">
+                  <img srcset="" alt="deal" src="/img/smile/deal.png" class="emoticon tip" title="Deal!">
+                  <img srcset="" alt="lick" src="/img/smile/lick.png" class="emoticon tip" title="Lick it!">
+                  <img srcset="" alt="wtf" src="/img/smile/wtf.png" class="emoticon tip" title="WTF!?">
+                  <img srcset="" alt="rofl" src="/img/smile/rofl.png" class="emoticon tip" title="ROFL!">
+                  <img srcset="" alt="fcplm" src="/img/smile/fcplm.png" class="emoticon tip" title="Face palm!">
+                  <img srcset="" alt="slow" src="/img/smile/slow.png" class="emoticon tip" title="Slow!">
+                  <img srcset="" alt="soidet" src="/img/smile/soidet.png" class="emoticon tip" title="Сойдет!">
+                  <img srcset="" alt="bjs" src="/img/smile/bjs.png" class="emoticon tip" title="Black Jack and sluts!">
+                  <img srcset="" alt="arr" src="/img/smile/arr.png" class="emoticon tip" title="ARRR!">
+                  </span>
+                  </div>
+                
+              </div>
+            </div>
+        </div>
+        <div class="chat-action">
+          <div class="chat-text">
+            <form method="POST" action="chat" name="msg">
+              <textarea name="txt" id="chat_txt" placeholder="Отправить сообщение" onkeypress="if (event.keyCode==10 || (event.ctrlKey &amp;&amp; event.keyCode==13)) {chat_msg(); return false;}"></textarea>
+              <a onclick="chat_msg();" class="btn btn-chat">OK</a>
+              <a id="emotic-btn" class="emotic-btn"><i class="gti-smile-o"></i></a>
+              <div class="emo_block" id="emo_block">
+                <div class="tse-sc stickerer" id="stickerer">
+                  <div class="tse-content">
+                    <div class="stickers-list">
+                      <a onclick="insert_smile('dart');"><img src="/img/smile/dart.png" class="emoticon tip" title="Kiss my ass!"></a>
+                      
+                      <a href=""><img srcset="" alt="ass" src="/img/smile/ass.png" class="emoticon tip" title="Kiss my ass!"></a>
+                      <a href=""><img srcset="" alt="ass" src="/img/smile/ass1.png" class="emoticon tip" title="Kiss my ass!"></a>
+                      <a href=""><img srcset="" alt="fy" src="/img/smile/fy.png" class="emoticon tip" title="F*ck you!"></a>
+                      <a href=""><img srcset="" alt="bang" src="/img/smile/bang.png" class="emoticon tip" title="Bang!"></a>
+                      <a href=""><img srcset="" alt="ass_bomb" src="/img/smile/ass_bomb.png" class="emoticon tip" title="Бомбит!"></a>
+                      <a href=""><img srcset="" alt="mid" src="/img/smile/mid.png" class="emoticon tip" title="I'm at the Mid!"></a>
+                      <a href=""><img srcset="" alt="navi" src="/img/smile/navi.png" class="emoticon tip" title="Mmmm Navi!"></a>
+                      <a href=""><img srcset="" alt="tamara" src="/img/smile/tamara.png" class="emoticon tip" title="Красава!"></a>
+                      <a href=""><img srcset="" alt="go" src="/img/smile/go.png" class="emoticon tip" title="Go! Go! Go!"></a>
+                      <a href=""><img srcset="" alt="deal" src="/img/smile/deal.png" class="emoticon tip" title="Deal!"></a>
+                      <a href=""><img srcset="" alt="lick" src="/img/smile/lick.png" class="emoticon tip" title="Lick it!"></a>
+                      <a href=""><img srcset="" alt="wtf" src="/img/smile/wtf.png" class="emoticon tip" title="WTF!?"></a>
+                      <a href=""><img srcset="" alt="rofl" src="/img/smile/rofl.png" class="emoticon tip" title="ROFL!"></a>
+                      <a href=""><img srcset="" alt="fcplm" src="/img/smile/fcplm.png" class="emoticon tip" title="Face palm!"></a>
+                      <a href=""><img srcset="" alt="slow" src="/img/smile/slow.png" class="emoticon tip" title="Slow!"></a>
+                      <a href=""><img srcset="" alt="soidet" src="/img/smile/soidet.png" class="emoticon tip" title="Сойдет!"></a>
+                      <a href=""><img srcset="" alt="bjs" src="/img/smile/bjs.png" class="emoticon tip" title="Black Jack and sluts!"></a>
+                      <a href=""><img srcset="" alt="arr" src="/img/smile/arr.png" class="emoticon tip" title="ARRR!"></a>
+                      
+                      <hr>
+                      <a onclick="insert_smile('angry');">
+                        <img src="http://game-tournaments.com/media/smile/angry.png" title="angry">
+                      </a>
+                      <a onclick="insert_smile('cry');">
+                        <img src="http://game-tournaments.com/media/smile/cry.png" title="cry">
+                      </a>
+                      <a onclick="insert_smile('bigsmile');">
+                        <img src="http://game-tournaments.com/media/smile/bigsmile.png" title="bigsmile">
+                      </a>
+                      <a onclick="insert_smile('eyesdroped');">
+                        <img src="http://game-tournaments.com/media/smile/eyesdroped.png" title="eyesdroped">
+                      </a>
+                      <a onclick="insert_smile('love');">
+                        <img src="http://game-tournaments.com/media/smile/love.png" title="love">
+                      </a>
+                      <a onclick="insert_smile('beaten');">
+                        <img src="http://game-tournaments.com/media/smile/beaten.png" title="beaten">
+                      </a>
+                      <a onclick="insert_smile('unhappy');">
+                        <img src="http://game-tournaments.com/media/smile/unhappy.png" title="unhappy">
+                      </a>
+                      <a onclick="insert_smile('nothing');">
+                        <img src="http://game-tournaments.com/media/smile/nothing.png" title="nothing">
+                      </a>
+                      <a onclick="insert_smile('horror');">
+                        <img src="http://game-tournaments.com/media/smile/horror.png" title="horror">
+                      </a>
+                      <a onclick="insert_smile('shocked');">
+                        <img src="http://game-tournaments.com/media/smile/shocked.png" title="shocked">
+                      </a>
+                      <a onclick="insert_smile('sick');">
+                        <img src="http://game-tournaments.com/media/smile/sick.png" title="sick">
+                      </a>
+                      <a onclick="insert_smile('shockedagain');">
+                        <img src="http://game-tournaments.com/media/smile/shockedagain.png" title="shockedagain">
+                      </a>
+                      <a onclick="insert_smile('brains');">
+                        <img src="http://game-tournaments.com/media/smile/brains.png" title="brains">
+                      </a>
+                      <a onclick="insert_smile('chilling');">
+                        <img src="http://game-tournaments.com/media/smile/chilling.png" title="chilling">
+                      </a>
+                      <a onclick="insert_smile('dizzy');">
+                          <img src="http://game-tournaments.com/media/smile/dizzy.png" title="dizzy">
+                      </a>
+                      <a onclick="insert_smile('enjoying');">
+                          <img src="http://game-tournaments.com/media/smile/enjoying.png" title="enjoying">
+                      </a>
+                      <a onclick="insert_smile('gangs');">
+                          <img src="http://game-tournaments.com/media/smile/gangs.png" title="gangs">
+                      </a>
+                      <a onclick="insert_smile('high');">
+                          <img src="http://game-tournaments.com/media/smile/high.png" title="high">
+                      </a>
+                      <a onclick="insert_smile('kaboom');">
+                          <img src="http://game-tournaments.com/media/smile/kaboom.png" title="kaboom">
+                      </a>
+                      <a onclick="insert_smile('kiddingright');">
+                          <img src="http://game-tournaments.com/media/smile/kiddingright.png" title="kiddingright">
+                      </a>
+                      <a onclick="insert_smile('meaw');">
+                          <img src="http://game-tournaments.com/media/smile/meaw.png" title="meaw">
+                      </a>
+                      <a onclick="insert_smile('ninja');">
+                          <img src="http://game-tournaments.com/media/smile/ninja.png" title="ninja">
+                      </a>
+                      <a onclick="insert_smile('omg');">
+                          <img src="http://game-tournaments.com/media/smile/omg.png" title="omg">
+                      </a>
+                      <a onclick="insert_smile('onfire');">
+                          <img src="http://game-tournaments.com/media/smile/onfire.png" title="onfire">
+                      </a>
+                      <a onclick="insert_smile('seriousbusiness');">
+                          <img src="http://game-tournaments.com/media/smile/seriousbusiness.png" title="seriousbusiness">
+                      </a>
+                      <a onclick="insert_smile('slow');">
+                        <img src="http://game-tournaments.com/media/smile/slow.png" title="slow">
+                      </a>
+                      <a onclick="insert_smile('want');">
+                        <img src="http://game-tournaments.com/media/smile/want.png" title="want">
+                      </a>
+                      <a onclick="insert_smile('xd');">
+                        <img src="http://game-tournaments.com/media/smile/xd.png" title="xd">
+                      </a>
+                      <a onclick="insert_smile('yaehamnotdurnk');">
+                        <img src="http://game-tournaments.com/media/smile/yaehamnotdurnk.png" title="yaehamnotdurnk">
+                      </a>
+                      <a onclick="insert_smile('yo');">
+                        <img src="http://game-tournaments.com/media/smile/yo.png" title="yo">
+                      </a>
+                      <a onclick="insert_smile('psychotic');">
+                        <img src="http://game-tournaments.com/media/smile/psychotic.png" title="psychotic">
+                      </a>
+                      <a onclick="insert_smile('pissedoff');">
+                        <img src="http://game-tournaments.com/media/smile/pissedoff.png" title="pissedoff">
+                      </a>
+                      <a onclick="insert_smile('secretlaugh');">
+                        <img src="http://game-tournaments.com/media/smile/secretlaugh.png" title="secretlaugh">
+                      </a>
+                      <a onclick="insert_smile('snooty');">
+                        <img src="http://game-tournaments.com/media/smile/snooty.png" title="snooty">
+                      </a>
+                      <a onclick="insert_smile('shy');">
+                        <img src="http://game-tournaments.com/media/smile/shy.png" title="shy">
+                      </a>
+                      <a onclick="insert_smile('yuush');">
+                        <img src="http://game-tournaments.com/media/smile/yuush.png" title="yuush">
+                      </a>
+                      <a onclick="insert_smile('yarr');">
+                        <img src="http://game-tournaments.com/media/smile/yarr.png" title="yarr">
+                      </a>
+                      <a onclick="insert_smile('zzz');">
+                        <img src="http://game-tournaments.com/media/smile/zzz.png" title="zzz">
+                      </a>
+                      <a onclick="insert_smile('tastey');">
+                        <img src="http://game-tournaments.com/media/smile/tastey.png" title="tastey">
+                      </a>
+                      <a onclick="insert_smile('evilish');">
+                        <img src="http://game-tournaments.com/media/smile/evilish.png" title="evilish">
+                      </a>
+                      <a onclick="insert_smile('ignoring');">
+                        <img src="http://game-tournaments.com/media/smile/ignoring.png" title="ignoring">
+                      </a>
+                      <a onclick="insert_smile('brzzzzz');">
+                        <img src="http://game-tournaments.com/media/smile/brzzzzz.png" title="brzzzzz">
+                      </a>
+                    </div>
+                  </div>
+                </div>    
+              </div>
+            </form>
+          </div>
+          <div class="mmore visible" id="mmore" onclick="chat_scroll_down()">Новые сообщения</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  $(document).ready(function () {
+    // chat
+    $('.ch_times').click(function () {
+      $('body').toggleClass('chat-open');
+      $(this).toggleClass('active');
+    });
+    $('.chat-btn').click(function () {
+      $('body').toggleClass('chat-open');
+      $(this).toggleClass('active');
+    });
+    $('.emotic-btn').click(function () {
+/*      alert('sd');*/
+      $('.emo_block').toggleClass('active');
+      $(this).toggleClass('active');
+    });
+    
+  });
+</script>
+
+
+<!-- -->
+
+
+
+
+
+<!-- Site Sripts -->
+<script src="../inc/main.js"></script>
+<script src="../inc/func_init.js?35"></script>
+
+<!--PAGES select only dev-->
+<style>
+  body{padding-bottom: 60px!important}
+  .project-menu{
+    position: fixed;
+    z-index: 1000;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 5px;
+    border-radius: 5px 0px 0px 0px;
+    /*display: none;*/
+  }
+  .project-menu a{
+    font-size: 10px;
+  }
+</style>
+<div class="project-menu">
+  <div class="btn-group" role="group" id="hpages">
+    <!-- <a href="../blocked.html" class="m2 btn btn-sm btn-warning">Blocked</a>
+    <a href="../pubg_matches.html" class="m2 btn btn-sm btn-warning">matchesPUBG</a>
+    <a href="../pubg_match2.html" class="m2 btn btn-sm btn-warning">matchesPUBG_NEW</a> -->
+    <!-- <a href="../pubg_match.html" class="m2 btn btn-sm btn-warning">match PUBG</a> -->
+    <!-- <a href="../pubg_tour_group.html" class="m2 btn btn-sm btn-danger">tour table PUBG</a>
+     -->
+    <!-- <a href="../user-studio.html" class="m2 btn btn-sm btn-warning">U studio</a>
+    <a href="/user-page-sbscr.html" class="m2 btn btn-sm btn-success">U sbscr</a> -->
+    <a href="../home1.html" class="m1 btn btn-sm btn-success">Home Full</a>
+    <!-- <a href="/logo.html" class="m2 btn btn-sm btn-success">Logo</a>-->
+    <!-- <a href="../home.html" class="m1 btn btn-sm btn-success">Home</a> -->
+    
+    <a href="../game-home.html" class="m1 btn btn-sm btn-success">Game Home</a>
+    <a href="../index.html" class="m1 btn btn-sm btn-success">Match</a>
+    
+    <!-- <a href="../match_end.html" class="m1 btn btn-sm btn-success">Match Vid</a>
+    <a href="../match_end2.html" class="m1 btn btn-sm btn-warning">Match Vid 2</a>
+    <a href="../matches.html" class="m2 btn btn-sm btn-success">Mathes</a>
+    <a href="../teams.html" class="m2 btn btn-sm btn-success">Teams list</a>
+    <a href="../team.html" class="m2 btn btn-sm btn-success">Team</a>
+    <a href="../news-page.html" class="m2 btn btn-sm btn-success">News Page</a>
+    <a href="../news.html" class="m2 btn btn-sm btn-success">News List</a>
+    <a href="../players.html" class="m2 btn btn-sm btn-success">Players</a>
+    <a href="../player.html" class="m2 btn btn-sm btn-success">Player</a> -->
+    <!-- <a href="../tours.html" class="m2 btn btn-sm btn-success">Tours</a>
+    <a href="../tour.html" class="m2 btn btn-sm btn-success">Tour</a> -->
+<!--    
+    <a href="../tour2.html" class="m2 btn btn-sm btn-success" style="opacity.5">Tour2</a>
+
+    <a href="../tour_group.html" class="m2 btn btn-sm btn-success">Tour Group</a>
+    <a href="../tour_poff.html" class="m2 btn btn-sm btn-success">Tour Playoff</a>
+   <a href="../404.html" class="m2 btn btn-sm btn-success">404</a>
+    <a href="../vodlist.html" class="m2 btn btn-sm btn-success">Vod List</a>
+    <a href="../vodlist2.html" class="m2 btn btn-sm btn-success" style="opacity.5">Vod List2</a>
+    <a href="../vod.html" class="m2 btn btn-sm btn-success">Vod</a>
+    <a href="../light.html" class="m2 btn btn-sm btn-success">HighLight</a> -->
+    <!--<a href="/user-login.html" class="m2 btn btn-sm btn-success">U login</a>
+    <a href="/user-reg.html" class="m2 btn btn-sm btn-success">U reg</a>
+    <a href="/user-pass.html" class="m2 btn btn-sm btn-success">U pass</a>-->
+    <!--<a href="/user-acc.html" class="m2 btn btn-sm btn-success">U acc</a>
+    <a href="/user-page.html" class="m2 btn btn-sm btn-success">U page</a>
+    <a href="/user-pay.html" class="m2 btn btn-sm btn-success">U pay</a>-->
+    <!-- <a href="../predicts.html" class="m2 btn btn-sm btn-success">Predicts</a>
+    <a href="../predict.html" class="m2 btn btn-sm btn-success">Predict</a>
+    <a href="../page.html" class="m2 btn btn-sm btn-warning">Txt</a>
+    <a href="../studio.html" class="m2 btn btn-sm btn-warning">Studio</a>
+    <a href="../studio-list.html" class="m2 btn btn-sm btn-warning">Studio List</a>
+    <a href="../studio-com.html" class="m2 btn btn-sm btn-warning">Comentators</a> -->
+
+    <!--
+    <a href="/stickers.html" class="m2 btn btn-sm btn-default">Media</a>
+    <a href="/stickers.html" class="m2 btn btn-sm btn-default">Forum</a>
+    <a href="/stickers.html" class="m2 btn btn-sm btn-default">Search</a>
+    -->
+    <!--
+    <a href="/stickers.html" class="m2 btn btn-sm btn-warning">stickers</a>
+    <a href="/fonts.html" class="m2 btn btn-sm btn-success">Ico</a>
+
+    <a href="/mail-pwd_ru.html" class="m2 btn btn-sm btn-success">m1</a>
+    <a href="/mail-pwd_count_ru.html" class="m2 btn btn-sm btn-success">m2</a>
+    <a href="/mail-reg.html" class="m2 btn btn-sm btn-success">m3</a>
+    -->
+  </div>
+</div>
+
+
+<!--PAGES js navi only dev-->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script>
+(function ($) {
+  'use strict';
+
+  $(document).ready(function () {
+    
+    $(function () {
+        setNavigation();
+    });
+
+    function setNavigation() {
+        var path = window.location.pathname;
+        path = path.replace(/\/$/, "");
+        path = decodeURIComponent(path);
+
+        $("#hpages a").each(function () {
+            var href = $(this).attr('href');
+            if (path.substring(0, href.length) === href) {
+                $(this).addClass('active');
+            }
+        });
+    }
+    
+  }); //end ready
+
+}(jQuery));
+</script>
+<!--.STYLE CHANGE dev-->
+<!--.PAGES navi dev-->
+
+<div class="modal fade in" id="wms" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+  <div class="modal-dialog" style="max-width:320px;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Пополнить свой счет</h4></div>
+      <div class="modal-body" style="padding:30px;">
+        <form action="account" method="POST" name="pay" class="form-horizontal">
+          <input type="hidden" class="input" name="method" value="robo">
+          <div class="form-group">
+            <div rel="insum" class="col-sm-12">
+              <div class="input-group">
+                <input type="text" name="insum" value="" placeholder="Сумма для перевода, $" class="form-control input">
+                <div class="input-group-addon"><i class="gti-usd"></i></div>
+              </div>
+              <p id="ferr" class="help-block"></p>
+            </div>
+          </div>
+          <div class="text-center">
+            <button class="btn btn-primary btn" onclick="sform('pay')" type="button"><i class="gti-check"></i> Подтвердить оплату</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade in" id="wms2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+  <div class="modal-dialog" style="max-width:320px;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Заказать выплату</h4></div>
+      <div class="modal-body" style="padding:30px;">
+        <form name="payout" action="account" method="POST">
+          <div class="form-group" rel="insum">
+            <input type="text" name="insum" value="" placeholder="Сколько, $ (комиссия на вывод 10%)" class="form-control">
+          </div>
+          <div class="form-group" rel="payoutmethod">
+            <select name="payoutmethod" class="form-control">
+              <option value="">Платежная система</option>
+              <option value="qiwi">QIWI</option>
+              <option value="webmoney">Webmoney</option>
+              <option value="yandex_money">Yandex</option>
+            </select>
+          </div>
+          <div class="form-group" rel="incaccount">
+            <input type="text" name="incaccount" value="" placeholder="Кошелек (WMR, Yandex, Qiwi)" class="form-control">
+          </div>
+          <center>
+            <button type="button" onclick="sform('payout')" class="btn btn-primary"><i class="gti-check"></i> Подтвердить выплату</button>
+          </center>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

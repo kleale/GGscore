@@ -1,0 +1,56 @@
+{% set title = "NEWS LIST Page" %}
+
+<!DOCTYPE html>
+<html>
+{% include "template/head.html" %}
+<body class="">
+    {% include "template/header.html" %}
+  <div class="container mainwrap">
+    <div class="otstup">
+      <section class="newstop" style="background-image:url(https://ggscore.com/media/news/no.jpg)">
+        <div>
+	        <ul class="news-games">
+		        <li class="active"><a href="/ru/dota-2/news"><i class="gti-582"></i>#Dota 2</a></li>
+            <li><a href="/ru/csgo/news"><i class="gti-704"></i>#CS:GO</a></li>
+            <li><a href="/ru/lol/news"><i class="gti-313"></i>#LoL</a></li>
+            <li><a href="/ru/overwatch/news"><i class="gti-800"></i>#OW</a></li>
+            <li><a href="/ru/hearthstone/news"><i class="gti-755"></i>#HS</a></li>
+            <li><a href=""><i class="gti-100"></i>#PUBG</a></li>
+          </ul>
+			    <h1>Новости <strong>#Dota 2</strong></h1>
+        </div>
+      </section>
+      
+      {#
+        {% include "template/vod-slider.html" %}
+      #}
+      
+      <section class="newslist m-even">
+        <div class="row">
+          <div class="col-md-8">
+            {% include "template/news/newslist-block.html" %}
+            {% include "template/pager.html" %}
+            
+            {% include "template/news/newslist.html" %}
+            
+          </div>
+          <div class="col-md-4">
+            {% include "template/blockzames-vertical.html" %}
+          </div>
+        </div>
+      </section>
+    {#
+      <div class="bn">
+        <img src="../img/ad.jpg" alt="">
+      </div>
+    #}
+      {% include "template/breadcrumbs.html" %}
+      {% include "template/footer.html" %}
+    </div>
+</div>
+{% include "template/bar.html" %}
+{% include "template/modal.html" %}
+{% include "template/scripts.html" %}
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+/* 
+404 page css
+*/
+.thereGoingSomethingStrange{
+  background: url(../img/404.jpg) 50% 0 no-repeat;
+  
+  .c404{
+    max-width: 700px;
+    margin: 820px auto 0;
+    text-align: center;
+    font-size: 27px;
+    font-family: 'Play';
+    
+    a{
+      color: #ff1b4c;
+      text-decoration: none;
+      
+      &:hover,
+      &:focus,
+      &:active{
+        text-decoration: underline;
+      }
+    }
+  }
+}

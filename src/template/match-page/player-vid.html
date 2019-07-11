@@ -1,0 +1,91 @@
+<!-- /match-page/player-vid.html -->
+
+<section class="player-video">
+  <div class="nav-wr mobmenu-open">
+    <span class="mobmenu"><i class="gti-bars"></i> Игра 1</span>
+    <ul id="videos" class="nav nav-tabs">
+      <li class="active"><a href="#">Игра 1</a></li>
+      {% for i in 2..8 %}
+          <li><a href="#">Игра {{i}}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+  
+  {#
+  Вариант для CSGO
+  
+  <div class="video_block" id="video">
+    <figure>
+      <img src="http://ggscore.com/media/csgo/maps/de_nuke.jpg">
+      <div class="rezult">
+        <div class="insider">
+            <div class="row">
+                <div class="col-xs-4">
+                    <div class="mop1">
+                        <img src="http://ggscore.com/media/logo/pic-20160121-600x739-2915549366.png">
+                        <h3 class="mteamname">Astralis</h3>
+                    </div>
+                    <div class="cs1">
+                      <div class="csscore cs_t">T 3</div>
+                      <div class="csscore cs_ct">CT 0</div>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="maction">
+                      <b>3</b> : <b>16</b>
+                      <span>Mirage</span>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="mop2">
+                        <img src="http://ggscore.com/media/logo/pic-20150615-100x100-5901597170.png">
+                        <h3 class="mteamname">Virtus.Pro</h3>
+                    </div>
+                    <div class="cs2">
+                      <div class="csscore cs_t">CT 3</div>
+                      <div class="csscore cs_ct">T 0</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </figure>
+  </div>
+  #}
+  
+
+  <div class="video_block" id="video">
+    <figure><img src="../img/match_bg_582.jpg"></figure>
+    <div class="gamevid">
+      <h2>Смотреть видео Even Team Secret vs Cloud9</h2>
+      <div id="gvlist" class="tse">
+          <div class="tse-content">
+            <a class="g-rezults fancybox" href="../img/match_bg_582.jpg">
+              <u><i class="gti-bar-chart"></i></u> 
+              <span><b>Показать результаты игры</b><em>Статистика и результаты матча</em></span> 
+              <sup><i class="gti-arrow-right"></i> Смотреть</sup>
+            </a>
+            <a class="g-rezults g-d2m" style="background-color: rgba(240, 80, 32, 0.2)" target="_blank" href="http://dotaviewer.com/ru/2916500234"> <u><i class="gti-dotaviewer"></i></u> <span><b>DotaViewer</b><em>Смотреть все важные моменты игры</em></span> <sup><i class="gti-arrow-right"></i> Смотреть</sup> </a>
+            <a class="video" href="#"> <u style="background-image:url(http://game-tournaments.com/media/flag/3.png)"><i class="gti-play"></i></u> <span><b>[RU] Cloud 9 vs TNC Pro Team, Game 1, Final, 2016 WESG Dota 2 Grand Final presented by Alipay</b><em>WESG</em><s><i class="gti-eye"></i> 3056</s></span> <sup><i class="gti-youtube-play"></i> Смотреть</sup><i class="gti-times close"></i></a>
+            <a class="video" href="#"> <u style="background-image:url(http://game-tournaments.com/media/flag/3.png)"><i class="gti-play"></i></u> <span><b>[EN] Cloud 9 vs TNC Pro Team, Game 1, Final, 2016 WESG Dota 2 Grand Final presented by Alipay</b><em>WESG</em><s><i class="gti-eye"></i> 29918</s></span> <sup><i class="gti-youtube-play"></i> Смотреть</sup><i class="gti-times close"></i></a>
+          </div>
+      </div>
+    </div>
+</div>
+
+
+</section>
+
+
+<script>
+$(document).ready(function () {
+  $("#gvlist a.video").click(function() {
+    $(".gamevid").toggleClass("vid-played");
+    $(this).toggleClass("active");
+  });
+  $(".mobmenu").click(function() {
+    $(".nav-wr").toggleClass("mobmenu-open");
+    $(this).find("i").toggleClass("gti-bars").toggleClass("gti-times");
+  });
+});
+</script>

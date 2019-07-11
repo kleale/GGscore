@@ -1,0 +1,333 @@
+<!-- /match-list/match-list2.html -->
+ 
+<script>
+  
+// команда-турнир фильтр
+  $(document).ready(function() {
+    $('#mlt-filter').on('keyup', function(){
+      $('.mlt-filter').addClass('open');
+    });
+    
+    $(document).click(function(){
+      $('.mlt-filter').removeClass('open');
+    });
+    $("#dropdown").click(function(e){
+      e.stopPropagation();
+      $('.mlt-filter').removeClass('open');
+    });
+  });
+</script>
+ 
+  <div class="block mlt">
+    <!--
+    <div class="bh">
+      <div class="rigter">
+        <i class="gti-undo" id="refresher"></i>
+        <label class="checkbox-inline score-on">
+          <input type="checkbox" name="score" data-on-text="ДА" data-off-text="НЕТ" data-label-text="счет"/>
+        </label>
+        <div class="dropdown">
+          <button class="btn btn-sm btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+            <i class="gti-clock-o"></i> CET
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a href="#"><i class="gti-clock-o"></i> CET</a></li>
+            <li><a href="#"><i class="gti-clock-o"></i> MSK</a></li>
+          </ul>
+        </div>
+        <div class="dropdown">
+          <button class="btn btn-sm btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+             Dota2Lounge.com
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </div>
+      </div>
+      <h1 class="mH1">Расписание матчей Dota 2</h1>
+      <div class="mlt-filter">
+        <input id="mlt-filter" type="text" value="" placeholder="Команда или турнир..." class="form-control team" autocomplete="off">
+        <a href="" class="sicon"></a>
+        <ul class="dropdown-menu" id="#t1">
+          <li class="dropdown-header">Выбери команду</li>
+          <li><a href="javascript:;" onclick="mfilter('team',5806);">4manDOTA+Dnarek / 4manDOTA+Dnarek</a></li>
+          <li><a href="javascript:;" onclick="mfilter('team',6537);">4ChertaiSatana / 4ChertaiSatana</a></li>
+          <li><a href="javascript:;" onclick="mfilter('team',7034);">4 Classmates + Konama / 4 Classmates + Konama</a></li>
+          <li><a href="javascript:;" onclick="mfilter('team',8223);">4 Dragons and Snake / 4 Dragons and Snake</a></li>
+          <li><a href="javascript:;" onclick="mfilter('team',8288);">"NO"NAME" / "NO"NAME"</a></li>
+          <li><a href="javascript:;" onclick="mfilter('team',8430);">#DeaD!DyNasTy# / #DeaD!DyNasTy#</a></li><li><a href="javascript:;" onclick="mfilter('team',10033);">2K Ownage / 2K Ownage</a></li>
+          <li><a href="javascript:;" onclick="mfilter('team',11925);">#PINASmile / #PINASmile</a></li><li><a href="javascript:;" onclick="mfilter('team',12549);">-Banana Esports- / -Banana Esports-</a></li>
+          <li><a href="javascript:;" onclick="mfilter('team',12692);">4 DAUNA I GRISHKA / 4 DAUNA I GRISHKA</a></li>
+        </ul>
+      </div>
+    </div>
+    -->
+    
+    
+    <div class="bh">
+      <h1 class="mH1">Матчи Dota 2</h1>
+      <div class="ft">
+       <!-- <div class="ft1">
+          <h1 class="mH1">Матчи Dota 2</h1>
+        </div>-->
+        <div class="ft2">
+          <div class="mlt-filter">
+            <input id="mlt-filter" type="text" value="" placeholder="Команда или турнир..." class="form-control team input-sm" autocomplete="off">
+            <a href="" class="sicon"></a>
+            <ul class="dropdown-menu" id="#t1">
+              <li class="dropdown-header">Выбери команду</li>
+              <li><a href="javascript:;" onclick="mfilter('team',5806);">4manDOTA+Dnarek / 4manDOTA+Dnarek</a></li>
+              <li><a href="javascript:;" onclick="mfilter('team',6537);">4ChertaiSatana / 4ChertaiSatana</a></li>
+              <li><a href="javascript:;" onclick="mfilter('team',7034);">4 Classmates + Konama / 4 Classmates + Konama</a></li>
+              <li><a href="javascript:;" onclick="mfilter('team',8223);">4 Dragons and Snake / 4 Dragons and Snake</a></li>
+              <li><a href="javascript:;" onclick="mfilter('team',8288);">"NO"NAME" / "NO"NAME"</a></li>
+              <li><a href="javascript:;" onclick="mfilter('team',8430);">#DeaD!DyNasTy# / #DeaD!DyNasTy#</a></li><li><a href="javascript:;" onclick="mfilter('team',10033);">2K Ownage / 2K Ownage</a></li>
+              <li><a href="javascript:;" onclick="mfilter('team',11925);">#PINASmile / #PINASmile</a></li><li><a href="javascript:;" onclick="mfilter('team',12549);">-Banana Esports- / -Banana Esports-</a></li>
+              <li><a href="javascript:;" onclick="mfilter('team',12692);">4 DAUNA I GRISHKA / 4 DAUNA I GRISHKA</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="ft3">
+          <label class="checkbox-inline1 tip" title="Показать\скрыть счет">
+            <input type="checkbox" name="score1">
+          </label>
+        </div>
+        <div class="ft4">
+          <div class="dropdown">
+            <button class="btn btn-sm btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="true"><i class="gti-clock-o"></i> <span class="utime">09:57 MSK</span> <span class="caret"></span></button>
+            <ul class="dropdown-menu timezone">
+              <li>
+                <input class="elapsed" type="checkbox" name="elapsed" onclick="set_elapsed(this.checked)"> Время до матча</li>
+              <li rel="-720"><a href="javascript:;" onclick="set_time(-720)">18:56 (UTC -12:00)</a></li>
+              <li rel="-660"><a href="javascript:;" onclick="set_time(-660)">19:56 (UTC -11:00)</a></li>
+              <li rel="-600"><a href="javascript:;" onclick="set_time(-600)">20:56 (UTC -10:00)</a></li>
+              <li rel="-540"><a href="javascript:;" onclick="set_time(-540)">21:56 (UTC -9:00)</a></li>
+              <li rel="-480"><a href="javascript:;" onclick="set_time(-480)">22:56 <b>PST</b> (UTC -8:00)</a></li>
+              <li rel="-420"><a href="javascript:;" onclick="set_time(-420)">23:56 <b>PDT</b> (UTC -7:00)</a></li>
+              <li rel="-360"><a href="javascript:;" onclick="set_time(-360)">00:56 <b>CST</b> (UTC -6:00)</a></li>
+              <li rel="-300"><a href="javascript:;" onclick="set_time(-300)">01:56 <b>EST</b> (UTC -5:00)</a></li>
+              <li rel="-240"><a href="javascript:;" onclick="set_time(-240)">02:56 <b>EDT</b> (UTC -4:00)</a></li>
+              <li rel="-210"><a href="javascript:;" onclick="set_time(-210)">03:26 (UTC -3:30)</a></li>
+              <li rel="-180"><a href="javascript:;" onclick="set_time(-180)">03:56 <b>CLST</b> (UTC -3:00)</a></li>
+              <li rel="-120"><a href="javascript:;" onclick="set_time(-120)">04:56 (UTC -2:00)</a></li>
+              <li rel="-60"><a href="javascript:;" onclick="set_time(-60)">05:56 (UTC -1:00)</a></li>
+              <li rel="0"><a href="javascript:;" onclick="set_time(0)">06:56 (UTC +0:00)</a></li>
+              <li rel="60"><a href="javascript:;" onclick="set_time(60)">07:56 <b>CET</b> (UTC +1:00)</a></li>
+              <li rel="120"><a href="javascript:;" onclick="set_time(120)">08:56 <b>CEST</b> (UTC +2:00)</a></li>
+              <li rel="180" class="active"><a href="javascript:;" onclick="set_time(180)">09:56 <b>MSK</b> (UTC +3:00)</a></li>
+              <li rel="210"><a href="javascript:;" onclick="set_time(210)">10:26 (UTC +3:30)</a></li>
+              <li rel="240"><a href="javascript:;" onclick="set_time(240)">10:56 (UTC +4:00)</a></li>
+              <li rel="270"><a href="javascript:;" onclick="set_time(270)">11:26 (UTC +4:30)</a></li>
+              <li rel="300"><a href="javascript:;" onclick="set_time(300)">11:56 (UTC +5:00)</a></li>
+              <li rel="330"><a href="javascript:;" onclick="set_time(330)">12:26 (UTC +5:30)</a></li>
+              <li rel="360"><a href="javascript:;" onclick="set_time(360)">12:56 (UTC +6:00)</a></li>
+              <li rel="420"><a href="javascript:;" onclick="set_time(420)">13:56 (UTC +7:00)</a></li>
+              <li rel="480"><a href="javascript:;" onclick="set_time(480)">14:56 <b>SGT</b> (UTC +8:00)</a></li>
+              <li rel="540"><a href="javascript:;" onclick="set_time(540)">15:56 (UTC +9:00)</a></li>
+              <li rel="570"><a href="javascript:;" onclick="set_time(570)">16:26 (UTC +9:30)</a></li>
+              <li rel="600"><a href="javascript:;" onclick="set_time(600)">16:56 (UTC +10:00)</a></li>
+              <li rel="660"><a href="javascript:;" onclick="set_time(660)">17:56 (UTC +11:00)</a></li>
+              <li rel="720"><a href="javascript:;" onclick="set_time(720)">18:56 (UTC +12:00)</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="ft5">
+          <div class="dropdown">
+            <button class="btn btn-sm btn-default dropdown-toggle" type="button" data-toggle="dropdown"><span id="bookmaker">ggBet</span> <span class="caret"></span></button>
+            <ul class="dropdown-menu" id="bookmakers">
+              <li class="active" rel="gg"><a href="javascript:;" onclick="bookmaker('gg')">ggBet</a></li>
+              <li rel="egb"><a href="javascript:;" onclick="bookmaker('egb')">EGB.com</a></li>
+              <li rel="1xbet"><a href="javascript:;" onclick="bookmaker('1xbet')">1xBet</a></li>
+              <li rel="will"><a href="javascript:;" onclick="bookmaker('will')">WilliamHill</a></li>
+              <li rel="home"><a href="javascript:;" onclick="bookmaker('home')">Bet at Home</a></li>
+              <li rel="tipbet"><a href="javascript:;" onclick="bookmaker('tipbet')">TipBet</a></li>
+              <li rel="pin"><a href="javascript:;" onclick="bookmaker('pin')">PinnacleSports</a></li>
+              <li rel="betway"><a href="javascript:;" onclick="bookmaker('betway')">Betway</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="block-content">
+      <h3 class="mh"><span>Live матчи</span></h3>
+      <div class="table-responsive">
+        <table class="mtable">
+         {#
+          <thead>
+            <th></th>
+            <th width="70"><span>Дата &nbsp;<i class="gti-clock-o"></i>&nbsp;&nbsp;<a href="">CET</a><!--<i class="gti-chevron-down sorter active"></i>--></span></th>
+            <th><span>Матч <!--<i class="gti-chevron-up sorter"></i>--></span></th>
+            <th><span>Турнир <!--<i class="gti-chevron-up sorter"></i>--></span></th>
+            <th></th>
+          </thead>
+          #}
+            <!-- progress 2 -->
+            <tr class="m-item" itemscope="itemscope" itemtype="https://schema.org/Event">
+              <td class="ticon">
+                <i class="livebetpin"></i>
+                <a href="http://ggscore.com/en/dota-2/" class="icon-pop" title="Атрибуты матча" data-content="<span class='m-i-1'></span><span class='m-i-2'></span>">
+                  <span class='m-i-1' title="Самый ожидаемый"></span>
+                </a>
+              </td>
+              <td class="td-m">
+                <span class="tn1" href="">Secret</span>
+                <span href="" class="mp1"><sup>11</sup><img src="http://game-tournaments.com/media/flag/4.png"></span>
+                <span class="bet-p">(1.60)</span>
+                <span class="mscore">
+                  VS
+                  <b class="mprogress t1"><u style="width:0%"></u></b>
+                  <b class="mprogress t2"><u style="width:21%"></u></b>
+                </span>
+                <span class="bet-p">(2.30)</span>
+                <span href="" class="mp2"><sup>2</sup><img src="http://game-tournaments.com/media/flag/3.png"></span>
+                <span class="tn2" href="">London Conspiracy Dota2 Conspiracy Dota2</span>
+              </td>
+              
+              <td class="tdate"><a href="https://www.google.com/"><time title="17 июн 2016, 11:00" datetime="2016-06-17T11:00:00+03:00" itemprop="startDate">12 авг в 10:15</time></a></td>
+              
+              <td class="tname">
+                <a class="tour-pop"  itemprop="name" data-placement="top" data-container="body" title="Esports Championship League - Америка" data-content=" <img src='http://game-tournaments.com/media/tournament/pic-20160615-264x150-3615944418.jpeg'><b>Регулярный сезон</b>
+                <span><i class='gti gti-trophy'></i> Малайзия, Куала Лумпур</span>
+                <span><i class='gti gti-clock-o'></i> 10 апр — 20 апр</span><span><i class='gti gti-money'></i> 200 000$</span>"><img src="http://ggscore.com/media/tournament/_60/pic-20161213-300x117-3383168368.png"></a>
+              </td>
+              <td>
+                <a href="#prognoz" class="dice-win" data-toggle="modal"><i class="gti-dice"></i></a>
+              </td>
+            </tr>
+            
+            
+            <tr class="m-item" data-href="https://www.ya.ru/" itemscope="itemscope" itemtype="https://schema.org/Event">
+              <td class="ticon">
+                <i class="livebetpin"></i>
+                <a href="http://ggscore.com/en/dota-2/" class="icon-pop" title="Атрибуты матча" data-content="<span class='m-i-1'></span><span class='m-i-2'></span>">
+                  <span class='m-i-1' title="Самый ожидаемый"></span>
+                </a>
+              </td>
+              <td class="td-m">
+                <span class="tn1" href="">Secret</span>
+                <span href="" class="mp1"><sup>11</sup><img src="http://game-tournaments.com/media/flag/4.png"></span>
+                <span class="bet-p">(1.60)</span>
+                <span class="mscore">
+                  VS
+                  <b class="mprogress t1"><u style="width:0%"></u></b>
+                  <b class="mprogress t2"><u style="width:21%"></u></b>
+                </span>
+                <span class="bet-p">(2.30)</span>
+                <span href="" class="mp2"><sup>2</sup><img src="http://game-tournaments.com/media/flag/3.png"></span>
+                <span class="tn2" href="">London Conspiracy Dota2 Conspiracy Dota2</span>
+              </td>
+              
+              <td class="tdate"><a href="https://www.google.com/"><time title="17 июн 2016, 11:00" datetime="2016-06-17T11:00:00+03:00" itemprop="startDate">12 авг в 10:15</time></a></td>
+              
+              <td class="tname">
+                <a class="tour-pop"  itemprop="name" data-placement="top" data-container="body" title="Esports Championship League - Америка" data-content=" <img src='http://game-tournaments.com/media/tournament/pic-20160615-264x150-3615944418.jpeg'><b>Регулярный сезон</b>
+                <span><i class='gti gti-trophy'></i> Малайзия, Куала Лумпур</span>
+                <span><i class='gti gti-clock-o'></i> 10 апр — 20 апр</span><span><i class='gti gti-money'></i> 200 000$</span>"><img src="http://ggscore.com/media/tournament/_60/pic-20161213-300x117-3383168368.png"></a>
+              </td>
+              <td>
+                <a href="#prognoz" class="dice-win" data-toggle="modal"><i class="gti-dice"></i></a>
+              </td>
+            </tr>
+
+            <tr class="m-item" data-href="http://game-tournaments.com/link" itemscope="itemscope" itemtype="https://schema.org/Event">
+              <td class="ticon">
+                <a class="icon-pop" title="Атрибуты матча" data-content="<span class='m-i-1'></span><span class='m-i-2'></span>">
+                  <span class='m-i-1' title="Самый ожидаемый"></span>
+                </a>
+              </td>
+              <td class="td-m">
+                <span class="tn1" href="">Secret</span>
+                <span href="" class="mp1"><sup>11</sup><img src="http://game-tournaments.com/media/flag/4.png"></span>
+                <span class="bet-p">(1.60)</span>
+                <span class="mscore">
+                  VS
+                  <b class="mprogress t1"><u style="width:70%"></u></b>
+                  <b class="mprogress t2"><u style="width:0%"></u></b>
+                </span>
+                <span class="bet-p">(2.30)</span>
+                <span href="" class="mp2"><sup>2</sup><img src="http://game-tournaments.com/media/flag/3.png"></span>
+                <span class="tn2" href="">London Conspiracy Dota2 Conspiracy Dota2</span>
+              </td>
+              <td class="tdate"><a href="/en/dota-2/esl-one-genting-2017/group-b/digital-chaos-vs-wings-40288"><time title="17 июн 2016, 11:00" datetime="2016-06-17T11:00:00+03:00" itemprop="startDate">12 авг в 10:15</time></a></td>
+              <td class="tname">
+                <a class="tour-pop"  itemprop="name" data-placement="top" data-container="body" title="Esports Championship League - Америка" data-content=" <img src='http://game-tournaments.com/media/tournament/pic-20160615-264x150-3615944418.jpeg'><b>Регулярный сезон</b>
+                <span><i class='gti gti-trophy'></i> Малайзия, Куала Лумпур</span>
+                <span><i class='gti gti-clock-o'></i> 10 апр — 20 апр</span><span><i class='gti gti-money'></i> 200 000$</span>"><img src="http://ggscore.com/media/tournament/_60/pic-20161213-300x117-3383168368.png"></a>
+              </td>
+              <td>
+                <a href="#prognoz" class="dice-win" data-toggle="modal"><i class="gti-dice"></i></a>
+              </td>
+            </tr>
+
+            <tr class="m-item" data-href="http://game-tournaments.com/link" itemscope="itemscope" itemtype="https://schema.org/Event">
+              <td class="ticon">
+                <a class="icon-pop" title="Атрибуты матча" data-content="<span class='m-i-1'></span><span class='m-i-2'></span>">
+                  <span class='m-i-1' title="Самый ожидаемый"></span>
+                </a>
+              </td>
+              <td class="td-m">
+                <span class="tn1" href="">Secret</span>
+                <span href="" class="mp1"><sup>11</sup><img src="http://game-tournaments.com/media/flag/4.png"></span>
+                <span class="bet-p">(1.60)</span>
+                <span class="mscore">
+                  VS
+                  <b class="mprogress t1"><u style="width:4%"></u></b>
+                  <b class="mprogress t2"><u style="width:0%"></u></b>
+                </span>
+                <span class="bet-p">(2.30)</span>
+                <span href="" class="mp2"><sup>2</sup><img src="http://game-tournaments.com/media/flag/3.png"></span>
+                <span class="tn2" href="">London Conspiracy Dota2 Conspiracy Dota2</span>
+              </td>
+              <td class="tdate"><a href="/en/dota-2/esl-one-genting-2017/group-b/digital-chaos-vs-wings-40288"><time title="17 июн 2016, 11:00" datetime="2016-06-17T11:00:00+03:00" itemprop="startDate">12 авг в 10:15</time></a></td>
+              <td class="tname">
+                <a class="tour-pop"  itemprop="name" data-placement="top" data-container="body" title="Esports Championship League - Америка" data-content=" <img src='http://game-tournaments.com/media/tournament/pic-20160615-264x150-3615944418.jpeg'><b>Регулярный сезон</b>
+                <span><i class='gti gti-trophy'></i> Малайзия, Куала Лумпур</span>
+                <span><i class='gti gti-clock-o'></i> 10 апр — 20 апр</span><span><i class='gti gti-money'></i> 200 000$</span>"><img src="http://ggscore.com/media/tournament/_60/pic-20161213-300x117-3383168368.png"></a>
+              </td>
+              <td>
+                <a href="#prognoz" class="dice-win" data-toggle="modal"><i class="gti-dice"></i></a>
+              </td>
+            </tr>
+
+          {% for i in 0..1 %}
+            <tr class="m-item" data-href="http://game-tournaments.com/link" itemscope="itemscope" itemtype="https://schema.org/Event">
+              <td class="ticon">
+                <span class="m-i-2" title="Самый ожидаемый"></span>
+              </td>
+              <td class="td-m">
+                <a class="tn1" href="">Secret</a>
+                <a href="" class="mp1"><sup>11</sup><img src="http://game-tournaments.com/media/flag/2.png"></a>
+                <span class="bet-p">(1.60)</span>
+                <span class="mscore">VS</span>
+                <span class="bet-p">(2.30)</span>
+                <a href="" class="mp2"><sup>2</sup><img src="http://game-tournaments.com/media/flag/1.png"></a>
+                <a class="tn2" href="">London Conspiracy Dota2 Conspiracy Dota2</a>
+              </td>
+              <td class="tdate"><a href="/en/dota-2/esl-one-genting-2017/group-b/digital-chaos-vs-wings-40288"><time title="17 июн 2016, 11:00" datetime="2016-06-17T11:00:00+03:00" itemprop="startDate">12 авг в 10:15</time></a></td>
+              <td class="tname">
+                <a class="tour-pop" itemprop="name" data-placement="top" data-container="body" title="Esports Championship League - Америка" data-content="<img src='http://game-tournaments.com/media/tournament/pic-20160615-264x150-3615944418.jpeg'><b>Регулярный сезон</b>
+                <span><i class='gti gti-trophy'></i> Малайзия, Куала Лумпур</span>
+                <span><i class='gti gti-clock-o'></i> 10 апр — 20 апр</span><span><i class='gti gti-money'></i> 200 000$</span>"><img src="http://ggscore.com/media/tournament/_60/pic-20161213-300x117-3383168368.png"></a>
+              </td>
+              <td>
+                <a href="#prognoz" class="dice-win" data-toggle="modal"><i class="gti-dice"></i></a>
+              </td>
+            </tr>
+          {% endfor %}
+        </table>
+      </div>
+      
+      <div class="mltText text-center">
+              Нет матчей
+            </div>
+      
+    </div>
+  </div>

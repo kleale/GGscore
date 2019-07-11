@@ -1,0 +1,23 @@
+{
+  "name": "gtproject",
+  "version": "0.0.0",
+  "description": "newdesign",
+  "main": "index.html",
+  "authors": [
+    "Kleale <kleale@kleale.ru>"
+  ],
+  "license": "MIT",
+  "homepage": "kleale.ru",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize.css": "*",
+    "jquery": "2.*",
+    "bootstrap": "3.*"
+  }
+}

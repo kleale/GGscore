@@ -1,0 +1,78 @@
+{% set title = "Matches Page" %}
+
+<!DOCTYPE html>
+<html>
+{% include "template/head.html" %}
+<body class="g100">
+  {% include "template/header.html" %}
+  <div class="container mainwrap pad120">
+    <div class="otstup">
+      <section class="player" id="player">
+        <!--<div id="srteamslider" class="toggled_stream srteamslider branded" rel="XXX">-->
+        <div id="srteamslider" class="srteamslider branded" rel="XXX">
+          <div class="srteamview clearfix" id="mainstream">
+            {% include "template/match-page/player-html5.html" %}
+          </div>
+          <div class="srteamtoggle">
+            <div class="st_inner">
+              <div class="stream_action">
+                <!--<span class="st-btn active" id="stream-toggle"><i class="gti-bars"></i></span>
+                <span class="st-btn odtip" id="stream-expand" title="Развернуть на весь экран"><i class="gti-expand"></i></a>-->
+                <ul id="stream_menu" class="player-menu" role="tablist">
+                  <li rel="stream"  class="active">
+                    <a role="tab" data-toggle="tab" href="#player-streams"><i class="gti-video-camera"></i>
+                    <span>Трансляции</span></a>
+                  </li>
+                </ul>
+              </div>
+
+              <div id="stmblocks" class="stmblocks tab-content">
+                {% include "template/match-list/player-streams-pubg.html" %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section><!-- /m-player" -->
+
+      <section class="m-sec m-even">
+        <div class="mlist-wr row">
+          <div class="mlist col-md-8">
+            
+            {% include "template/match-list/match-listPUBG.html" %}
+          
+              
+          {#
+            {% include "template/match-list/match-list2.html" %}
+
+            {% include "template/match-list/match-list-future.html" %}
+            {% include "template/pager.html" %}
+
+            {% include "template/match-list/match-list-past.html" %}
+          #}
+            
+            {% include "template/pager.html" %}
+          </div>
+          <div class="m-hot col-md-4">
+            {% include "template/liveblock.html" %}
+            
+            {% include "template/blockzames-vertical.html" %}
+            <div class="mltText">
+              PUBG - одна из самых популярных игр, по которой проводится множество крупных турниров.
+            </div>
+
+          </div>
+          
+        </div>
+      </section>
+      
+      {% include "template/breadcrumbs.html" %}
+      {% include "template/footer.html" %}
+    </div>
+  </div>
+{% include "template/branding.html" %}
+{% include "template/bar.html" %}
+{% include "template/modal.html" %}
+{% include "template/scripts.html" %}
+
+</body>
+</html>

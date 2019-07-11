@@ -1,0 +1,614 @@
+{% set title = "Site Home Full" %}
+
+{% set team = ['Wings', 'OG', ' Evil Geniuses', 'EHOME', 'NewBee', 'Virtus.Pro','London Conspiracy Dota2'] %}
+
+{% set logo =['http://ggscore.com/media/logo/_60/pic-20161110-600x600-5478339632.png','http://ggscore.com/media/logo/_60/pic-20161027-600x600-9332827152.png','http://ggscore.com/media/logo/_60/pic-20161110-300x300-6683929543.png','http://ggscore.com/media/logo/_60/pic-20161110-300x300-752810928.png','http://ggscore.com/media/logo/_60/pic-20161110-600x450-6323255579.png']%}
+
+{% set trrrsm = ['http://game-tournaments.com/media/tournament/_60/pic-20170203-600x400-1661038906.jpeg','http://ggscore.com/media/tournament/_60/pic-20170118-255x101-6693628211.png','http://ggscore.com/media/tournament/_60/pic-20170110-280x80-1208457909.jpeg','http://ggscore.com/media/tournament/_60/pic-20161211-280x80-7531323404.jpeg','http://ggscore.com/media/tournament/_60/pic-20170118-255x101-6693628211.png','http://ggscore.com/media/tournament/_60/pic-20170110-300x117-9029284240.png'] %}
+
+{% set trrrlg = ['http://game-tournaments.com/media/tournament/pic-20170203-600x400-1661038906.jpeg','http://ggscore.com/media/tournament/pic-20170118-255x101-6693628211.png','http://ggscore.com/media/tournament/pic-20170110-280x80-1208457909.jpeg','http://ggscore.com/media/tournament/pic-20161211-280x80-7531323404.jpeg','http://ggscore.com/media/tournament/pic-20170110-300x117-9029284240.png'] %}
+
+{% set tour = ['The International 2017', 'MarsTV League 2017', 'The Spring Major', 'WCA 2016', 'The Boston Major', 'WellPlay Invitational #5', 'SL i-League StarSeries Season 3'] %}
+
+{% set game = ['gti-582', 'gti-704','gti-313','gti-800','gti-755'] %}
+
+<style>
+  .index .header {
+    height: auto;
+  }
+</style>
+
+<!DOCTYPE html>
+<html>
+{% include "template/head.html" %}
+<body class="index">
+  {% include "template/header-home.html" %}
+  <div class="container mainwrap">
+    <div class="otstup">
+      <div class="indexwrap">
+        <div class="homepage">
+          <div class="heroBg" style="background-image:url(../img/w-home.jpg)"></div>
+          <div>
+            
+            <div class="homepage-content">
+              <div class="row">
+                <div class="col-md-4 col-lg-4">
+                  <ul class="block-filter">
+                    <li class="active">
+                      <a href=""><i class="gti-582"></i></a>
+                    </li>
+                    <li>
+                      <a href=""><i class="gti-704"></i></a>
+                    </li>
+                    <li>
+                      <a href=""><i class="gti-313"></i></a>
+                    </li>
+                    <li>
+                      <a href=""><i class="gti-800"></i></a>
+                    </li>
+                    <li>
+                      <a href=""><i class="gti-755"></i></a>
+                    </li>
+                  </ul>
+                  <h2 class="mlh mlhsm">Fresh news</h2>
+                  <div class="tnb-mini">
+                    <ul class="nlist">
+                       <li>
+                          <a class="game" href=""><i class="{{random(game)}}"></i></a>
+                          <span class="time">29 дек, 11:35</span>
+                          <i class="gti-twitter"></i>
+                          <a href="">
+                            Карло «Kuku» Палад: «После неудач мы всегда говорим, что следующий раз выступим лучше».
+                            <span class="com"><i class="gti-commenting-o"></i>&nbsp;12</span>
+                          </a>
+                        </li>
+
+<li style="padding:0">
+  <div class="br-col" style="border: 2px solid #41464b;">
+    <a href="">
+      <img src="../img/br/Banner1_CS_Mob_370x76.gif" alt="" width="100%">
+    </a>
+  </div>
+</li>
+
+                        <li class="hot">
+                          <em class="hot">hot</em>
+                          <a href="" class="pic"><img src="https://ggscore.com/media/news/pic-20170425-900x506-7293977518.jpeg" alt=""></a>
+                          <a class="game" href=""><i class="gti-704"></i></a>
+                          <span class="time">29 дек, 11:35</span>
+                          <i class="gti-gt"></i>
+                          <a href="">
+                            Пол «ReDeYe» Шалоне: «В апреле 2017 Dota 2 станет первым видом киберспорта, чьи суммарные призовые за все турниры превысят 100 миллионов долларов»
+                            <span class="com"><i class="gti-commenting-o"></i>&nbsp;12</span>
+                          </a>
+                        </li>
+                        {% for i in 1..6 %}
+                        <li>
+                          <a class="game" href=""><i class="{{random(game)}}"></i></a>
+                          <span class="time">29 дек, 11:35</span>
+                          <i class="gti-twitter"></i>
+                          <a href="">
+                            Карло «Kuku» Палад: «После неудач мы всегда говорим, что следующий раз выступим лучше».
+                            <span class="com"><i class="gti-commenting-o"></i>&nbsp;12</span>
+                          </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                  </div>
+                  
+                  <div class="box livebet lsoon-div lsoon-div-2" id="odds_live" style="margin-bottom:10px;">
+                    <a class="ggbhead" href="/go?to=gg&amp;b" target="_blank"></a>
+                    <h3>Live odds</h3>
+                    <table class="table table-striped table-condensed">
+                      <tbody>
+                        <tr>
+                          <td colspan="5" class="livetop"> <b class="livebetpin"></b>
+                            <noindex><a rel="nofollow" href="http://betahit.click/gg/bet/?mid=935319&amp;param=game-tournaments_livefeed&amp;lg=ru" target="_blank"><i class="gti-trophy"></i> <span>Team Liquid</span> vs <span>Digital Chaos</span></a></noindex>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="livebet_do">
+                            <div> Winner Map 3
+                              <noindex><a rel="nofollow" href="http://betahit.click/gg/bet/?mid=935319&amp;param=game-tournaments_livefeed&amp;lg=ru" target="_blank" class="btn btn-success btn-xs">Place a bet</a></noindex>
+                            </div>
+                          </td>
+                          <td align="right"><span class="teamname c1"><b>Team Liquid</b></span></td>
+                          <td class="livetd">4.88</td>
+                          <td class="livetd">1.15</td>
+                          <td><span class="teamname"><b>Digital Chaos</b></span></td>
+                        </tr>
+                        <tr>
+                          <td class="livebet_do">
+                            <div> Odd/Even Kills (map 3)
+                              <noindex><a rel="nofollow" href="http://betahit.click/gg/bet/?mid=935319&amp;param=game-tournaments_livefeed&amp;lg=ru" target="_blank" class="btn btn-success btn-xs">Place a bet</a></noindex>
+                            </div>
+                          </td>
+                          <td align="right"><span class="teamname c1"><b>Odd</b></span></td>
+                          <td class="livetd">1.86</td>
+                          <td class="livetd">1.86</td>
+                          <td><span class="teamname"><b>Even</b></span></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <div class="livetext"> <b><b>100%</b> Welcome bonus and <b>10$</b> Freebet now!</b>
+                    </div>
+                  </div>
+                  
+                  <div class="com-sm">
+                    <h3 class="mlh mlh-sm"><span>Что обсуждают</span></h3>
+                     <ul class="nav nav-pills nav-justified">
+                      <li class="active"><a href="#">Сейчас</a></li>
+                      <li><a href="#">Вчера</a></li>
+                      <li><a href="#">Неделя</a></li>
+                    </ul>
+                    <ul class="m-com-list">
+                      {% for i in 1..3 %}
+                      <li>
+                        <a class="game" href=""><i class="gti-582"></i></a> <i class="gti gti-gt"></i> <a href="" class="title">Квалификация SL i-League StarSeries. Geek Fam и WG.Unity сыграли вничью с Execration и Mineski...</a>
+                        <div>
+                          <span class="com"><i class="gti-commenting-o"></i>&nbsp;12</span>
+                          <time>27 февраля, 23:49</time>
+                        </div>
+                      </li>
+                      {% endfor %}
+                    </ul>
+                  </div>
+
+                </div>
+                <div class="col-md-8 col-lg-8">
+                  <ul class="block-filter">
+                    <li>
+                      <a href=""><i class="gti-582"></i></a>
+                    </li>
+                    <li>
+                      <a href=""><i class="gti-704"></i></a>
+                    </li>
+                    <li>
+                      <a href=""><i class="gti-313"></i></a>
+                    </li>
+                    <li>
+                      <a href=""><i class="gti-800"></i></a>
+                    </li>
+                    <li>
+                      <a href=""><i class="gti-755"></i></a>
+                    </li>
+                  </ul>
+                  <h2 class="mlh mlhsm"><span>Best matches of the day</span></h2>
+                  <section class="matches">
+                    {% for i in 1..3 %}
+                      <a class="mmain" target="_blank" href="" style="background-image:url(https://ggscore.com/media/tournament/pic-20170219-300x136-5033840918.jpeg);">
+                        <u class="mtr"><b>ECS Season 3</b>EU Group Stage, Season Ranking</u>
+                        <span class="tms">
+                            <em><i class="gti-582"></i></em>
+                            <u class="i1">
+                                <img src="https://ggscore.com/media/logo/pic-20150615-100x100-5901597170.png">
+                                <i>VP</i>
+                                <b class="">2.60</b>
+                            </u>
+                            <u class="i2">
+                                <img src="https://ggscore.com/media/logo/pic-20160122-300x272-3924465533.png">
+                                <i>FaZe</i>
+                                <b class="">1.47</b>
+                            </u>
+                            <u class="day sct" data-time="1493139600" data-format="%j% %m%<br>%h%:%i% %tz%">25 April<br>20:00 MSK</u>
+                        </span>
+                      </a>
+                    {% endfor %}
+                  </section>
+                  <div class="mlt-sm">
+                    <table class="mtable">
+                      <tbody>
+                        <tr class="m-item" data-href="" itemscope="itemscope" itemtype="https://schema.org/Event">
+                          <td class="gametd">
+                            <a class="game" href=""><i class="{{random(game)}}"></i></a>
+                          </td>
+                          <td class="tname">
+                            <a class="tour-pop" itemprop="name" data-placement="top" data-container="body" title="" data-content="<img src='http://game-tournaments.com/media/tournament/pic-20160615-264x150-3615944418.jpeg'><b>Регулярный сезон</b>
+                            <span><i class='gti gti-trophy'></i> Малайзия, Куала Лумпур</span>
+                            <span><i class='gti gti-clock-o'></i> 10 апр — 20 апр</span><span><i class='gti gti-money'></i> 200 000$</span>" data-original-title="Esports Championship League - Америка">
+                              <img src="{{random(trrrsm)}}">
+                            </a>
+                          </td>
+                          <td class="td-m">
+                            <a class="tn1" href="">{{random(team)}} <img src="{{random(logo)}}"></a>
+                            <a href="" class="mp1"><img src="http://game-tournaments.com/media/flag/1.png"></a>
+                            <span class="bet-p">(1.60)</span>
+                            <span class="mscore">vs</span>
+                            <span class="bet-p">(2.30)</span>
+                            <a href="" class="mp2"><img src="http://game-tournaments.com/media/flag/1.png"></a>
+                            <a class="tn2" href=""><img src="{{random(logo)}}"> {{random(team)}}</a>
+                          </td>
+                          <td class="tdate">
+                            <i class="livebetpin"></i>
+                            <time>10 мин</time>
+                          </td>
+                        </tr>
+                        {% for i in 1..3 %}
+                        <tr class="m-item" data-href="" itemscope="itemscope" itemtype="https://schema.org/Event">
+                          <td class="gametd">
+                            <a class="game" href=""><i class="{{random(game)}}"></i></a>
+                          </td>
+                          <td class="tname">
+                            <a class="tour-pop" itemprop="name" data-placement="top" data-container="body" title="" data-content="<img src='http://game-tournaments.com/media/tournament/pic-20160615-264x150-3615944418.jpeg'><b>Регулярный сезон</b>
+                            <span><i class='gti gti-trophy'></i> Малайзия, Куала Лумпур</span>
+                            <span><i class='gti gti-clock-o'></i> 10 апр — 20 апр</span><span><i class='gti gti-money'></i> 200 000$</span>" data-original-title="Esports Championship League - Америка">
+                              <img src="{{random(trrrsm)}}">
+                            </a>
+                          </td>
+                          <td class="td-m">
+                            <a class="tn1" href="">{{random(team)}} <img src="{{random(logo)}}"></a>
+                            <a href="" class="mp1"><img src="http://game-tournaments.com/media/flag/1.png"></a>
+                            <span class="bet-p">(1.60)</span>
+                            <span class="mscore">vs</span>
+                            <span class="bet-p">(2.30)</span>
+                            <a href="" class="mp2"><img src="http://game-tournaments.com/media/flag/1.png"></a>
+                            <a class="tn2" href=""><img src="{{random(logo)}}"> {{random(team)}}</a>
+                          </td>
+                          <td class="tdate">
+                            <time title="17 июн 2016, 11:00" datetime="2016-06-17T11:00:00+03:00" itemprop="startDate">12 авг в 10:15</time>
+                          </td>
+                        </tr>
+                      {% endfor %}
+                    </tbody>
+                    </table>
+                  </div>
+                  
+                  
+<div class="br-body" style="margin: 0 0 20px 0; border: 2px solid #41464b;">
+<a href="">
+  <img src="../img/br/Banner1_750x80.gif" alt="" width="100%">
+</a>
+</div>
+
+
+                  <ul class="block-filter">
+                    <li>
+                      <a href=""><i class="gti-582"></i></a>
+                    </li>
+                    <li>
+                      <a href=""><i class="gti-704"></i></a>
+                    </li>
+                    <li>
+                      <a href=""><i class="gti-313"></i></a>
+                    </li>
+                    <li>
+                      <a href=""><i class="gti-800"></i></a>
+                    </li>
+                    <li>
+                      <a href=""><i class="gti-755"></i></a>
+                    </li>
+                  </ul>
+
+
+                  <h2 class="mlh mlhsm"><span>Tournaments By games</span></h2>
+                  <section class="tournaments">
+                    {% for i in 1..3 %}
+                      <a href="" class="tra live" style="background-image:url({{random(trrrlg)}})">
+                        <!--<u><i class="gti-clock-o"></i> Live</u>-->
+                        <span><s>$ 3,000,000</s>{{random(tour)}}</span>
+                        <time class="sct" data-format="%m% %j%%y%" data-time="2017-04-24">April 24</time>
+                      </a>
+                    {% endfor %}
+                  </section>
+                  <ul class="trlist2">
+                    {% for i in 1..6 %}
+                    <li class="">
+                      <a href="">
+                        <span class="game" href=""><i class="{{random(game)}}"></i></span>
+                        <img src="{{random(trrrsm)}}" alt="{{random(tour)}}">
+                        <u>11 фев 2016</u>
+                        <s>$ 200</s>
+                        <span>{{random(tour)}}</span>
+                      </a>
+                    </li>
+                    {% endfor %}
+                  </ul>
+                  
+                  <ul class="block-filter">
+                    <li>
+                      <a href=""><i class="gti-582"></i></a>
+                    </li>
+                    <li>
+                      <a href=""><i class="gti-704"></i></a>
+                    </li>
+                    <li>
+                      <a href=""><i class="gti-313"></i></a>
+                    </li>
+                    <li>
+                      <a href=""><i class="gti-800"></i></a>
+                    </li>
+                    <li>
+                      <a href=""><i class="gti-755"></i></a>
+                    </li>
+                  </ul>
+                  <h2 class="mlh mlhsm"><span>Best players and Teams By games</span></h2>
+                  <section class="players-n-teams">
+                    <div class="block-plw">
+                      <div class="plw">
+                        <span class="game"><i class="gti-582"></i></span>
+                        <a href="" class="logo">
+                          <figure><img alt="Shadow" src="http://ggscore.com/media/logo/_60/pic-20161006-270x270-1775953271.png"></figure>
+                          <b>
+                            <img src="http://ggscore.com/media/logo/_60/pic-20160203-600x600-6826089355.png" alt="Wings">
+                          </b>
+                        </a>
+                        <div class="name">
+                          <a href="">
+                              MATUMBAMAN <img src="http://ggscore.com/media/flag/4.png" alt="China">
+                          </a>
+                          <em>Evil Geniuses <br>support 2</em>
+                        </div>
+
+                        <div class="hits">
+                          <span>LAST HITS — </span><b>79%</b>
+                        </div>
+                      </div>
+
+                      <table class="table table-sm table-striped table-condensed pTeamOther">
+                        <tbody>
+                          <tr>
+                            <td width="50">
+                              <a class="ava-sm" href="" style="background-image:url(http://ggscore.com/media/logo/_60/pic-20170116-600x799-6254104911.jpeg);"></a>
+                            </td>
+                            <td>
+                              <a class="nick" title="Super" href=""><img width="16px" src="http://ggscore.com/media/flag/5.png"> <u>ALOHADANCE</u>.<span class="gray">F.R.I.E.N.D.S</span></a>
+                            </td>
+                            <td width="24%" align="center"><b>60%</b></td>
+                            <td class="game"><i class="gti-582"></i></td>
+                          </tr>
+                          <tr>
+                            <td width="50">
+                              <a class="ava-sm" href="" style="background-image:url(http://ggscore.com/media/logo/_60/pic-20170116-600x799-6254104911.jpeg);"></a>
+                            </td>
+                            <td>
+                              <a class="nick" title="Super" href=""><img width="16px" src="http://ggscore.com/media/flag/3.png"> <u>RAMZES666</u>.<span class="gray">Virtus.Pro</span></a>
+                            </td>
+                            <td width="24%" align="center"><b>51%</b></td>
+                            <td class="game"><i class="gti-582"></i></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="block-plw block-bs">
+                      <div class="plw">
+                        <span class="game"><i class="gti-582"></i></span>
+                        <a href="" class="logo">
+                          <img src="http://ggscore.com/media/logo/_60/pic-20160203-600x600-6826089355.png" alt="Wings">
+                          <i class="beststrike"></i>
+                        </a>
+                        <div class="name">
+                          <a href="">
+                              Evil Geniuses <img src="http://ggscore.com/media/flag/4.png" alt="China">
+                          </a>
+                        </div>
+                        <div class="hits">
+                          5 побед подряд
+                          <em>C 20 января - 11 февраля</em>
+                        </div>
+                      </div>
+                      
+                      <table class="table table-sm table-striped table-condensed pTeamOther">
+                        <tbody>
+                          <tr>
+                            <td width="50">
+                              <a class="ava-sm" href="" style="background-image:url(http://ggscore.com/media/logo/_60/pic-20160203-600x600-6826089355.png);"></a>
+                            </td>
+                            <td>
+                              <a class="nick" title="Super" href=""><img width="16px" src="http://ggscore.com/media/flag/5.png"> <u>F.R.I.E.N.D.S</u></a>
+                            </td>
+                            <td width="24%" align="center"><b>3 победы подряд</b></td>
+                            <td class="game"><i class="gti-582"></i></td>
+                          </tr>
+                          <tr>
+                            <td width="50">
+                              <a class="ava-sm" href="" style="background-image:url(http://ggscore.com/media/logo/_60/pic-20160203-600x600-6826089355.png);"></a>
+                            </td>
+                            <td>
+                              <a class="nick" title="Super" href=""><img width="16px" src="http://ggscore.com/media/flag/5.png"> <u>F.R.I.E.N.D.S</u></a>
+                            </td>
+                            <td width="24%" align="center"><b>3 победы подряд</b></td>
+                            <td class="game"><i class="gti-582"></i></td>
+                          </tr>
+                          
+                        </tbody>
+                      </table>
+                    </div>
+                  </section>
+                  
+                  <ul class="block-filter">
+                    <li>
+                      <a href=""><i class="gti-582"></i></a>
+                    </li>
+                    <li>
+                      <a href=""><i class="gti-704"></i></a>
+                    </li>
+                    <li>
+                      <a href=""><i class="gti-313"></i></a>
+                    </li>
+                    <li>
+                      <a href=""><i class="gti-800"></i></a>
+                    </li>
+                    <li>
+                      <a href=""><i class="gti-755"></i></a>
+                    </li>
+                  </ul>
+                  <h2 class="mlh mlhsm"><span>Highlights By games</span></h2>
+                  <section class="highlights">
+                    <div class="bestEvent bestKill">
+                      <a href="">
+                        <b>
+                          <img src="https://ggscore.com/media/highlights/_367/17830.jpg">
+                          <span><i class="{{random(game)}}"></i> CBR VS Kudos</span>
+                        </b>
+                        <span>
+                          <figure class="heroava">
+                            <img src="https://ggscore.com/media/game/hero/582/_76/59.png">
+                          </figure>
+                          <em>Triple Kill</em>
+                          <u>Run if you can</u>
+                        </span>
+                      </a>
+                    </div>
+                    <div class="bestEvent comeBack"> 
+                      <a href="">
+                        <b><img src="https://ggscore.com/media/highlights/_367/17830.jpg" alt="Заголовок">
+                          <span><i class="{{random(game)}}"></i> Team Liquid VS Og</span>
+                          <time>3:12 - 4:11</time>
+                        </b>
+                        <span>
+                          <figure class="teamLogo">
+                            <img src="http://game-tournaments.com/media/logo/pic-20161027-600x600-9332827152.png">
+                          </figure>
+                          <em>comeBack</em>
+                          <u><span><img src="/img/gold.png"> 12341</span> <i class="gti-chevron-right"></i> Team Liquid</u>
+                        </span>
+                      </a>
+                    </div>
+                    <div class="bestEvent multideath"> 
+                      <a href="">
+                        <b><img src="https://ggscore.com/media/highlights/_367/17830.jpg" alt="Заголовок">
+                          <span><i class="{{random(game)}}"></i> Team Liquid VS Og</span>
+                          <time>3:12 - 4:11</time>
+                        </b>
+                        <span>
+                          <em>multideath</em>
+                          <figure class="teamHeroes">
+                              <u class="heroava dead"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/medusa_hphover.png"></u>
+                              <u class="heroava dead"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/medusa_hphover.png"></u>
+                              <u class="heroava"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/ember_spirit_hphover.png"></u>
+                              <u class="heroava"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/medusa_hphover.png"></u>
+                              <u class="heroava"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/rattletrap_hphover.png"></u>
+                          </figure>
+                          <figure class="teamHeroes">
+                            <u class="heroava dead"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/gyrocopter_hphover.png"></u>
+                              <u class="heroava"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/sven_hphover.png"></u>
+                              <u class="heroava"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/gyrocopter_hphover.png"></u>
+                              <u class="heroava"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/sven_hphover.png"></u>
+                              <u class="heroava"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/medusa_hphover.png"></u>
+                          </figure>
+                        </span>
+                      </a>
+                    </div>
+                  </section>
+                  
+                  <ul class="hlist">
+                    {% for i in 1..3 %}
+                      <li class="wa-r">
+                        <span class="game" href=""><i class="{{random(game)}}"></i></span>
+                        <a href="/ru/dota-2/highlights/7838" class="trpic" style="background-image:url(https://ggscore.com/media/tournament/_60/pic-20161004-600x407-3475515376.jpeg)"></a> <a class="htitle" href="https://ggscore.com/ru/dota-2/highlights/7838">Monet <b>Triple Kill</b> on Ursa vs VG</a> </li>
+                      <li class="wa-r">
+                        <span class="game" href=""><i class="{{random(game)}}"></i></span>
+                        <a href="/ru/dota-2/highlights/7953" class="trpic" style="background-image:url(https://ggscore.com/media/tournament/_60/pic-20161004-600x407-3475515376.jpeg)"></a> <a class="htitle" href="https://ggscore.com/ru/dota-2/highlights/7953">Miracle- <b>Triple Kill</b> on Puck vs Fantastic Five</a> </li>
+                      <li class="wa-r">
+                        <span class="game" href=""><i class="{{random(game)}}"></i></span>
+                        <a href="/ru/dota-2/highlights/15393" class="trpic" style="background-image:url(https://ggscore.com/media/tournament/_60/pic-20161211-280x80-7531323404.jpeg)"></a> <a class="htitle" href="https://ggscore.com/ru/dota-2/highlights/15393">Jacko snatches the Aegis on Lifestealer vs Execration</a> </li>
+                    {% endfor %}
+                  </ul>
+                  
+                  <ul class="block-filter">
+                    <li>
+                      <a href=""><i class="gti-582"></i></a>
+                    </li>
+                    <li>
+                      <a href=""><i class="gti-704"></i></a>
+                    </li>
+                    <li>
+                      <a href=""><i class="gti-313"></i></a>
+                    </li>
+                    <li>
+                      <a href=""><i class="gti-800"></i></a>
+                    </li>
+                    <li>
+                      <a href=""><i class="gti-755"></i></a>
+                    </li>
+                  </ul>
+                  <h2 class="mlh mlhsm"><span>Other news</span></h2>
+                  <section class="tnb">
+                    <ul class="nlist">
+                      {% for i in 1..3 %}
+                      <li class=" nopic">
+                        <div>
+                          <a class="game" href=""><i class="gti-582"></i></a> <time class="sct" data-time="1480670993" data-format="%ms% %j%%y%, %h%:%i%">Dec 02, 2016, 12:29</time> <i class="gti-gt"></i> <a href="/en/dota-2/news/2298">GG.bet becomes the official partner of Team NP</a> </div>
+                      </li>
+                      {% endfor %}
+                    </ul>
+                  </section>
+                  
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+        
+        <div class="hgames">
+          <a href="" style="background-image:url(../img/w-582.jpg)">
+            <i class="gti-582"></i>
+            <b>DOTA 2</b>
+            <em>90%</em>
+          </a>
+          <a href="" style="background-image:url(../img/w-704.jpg)">
+            <i class="gti-704"></i>
+            <b>Counter-Strike: GO</b>
+            <em>50%</em>
+          </a>
+          <a href="" style="background-image:url(../img/w-313.jpg)">
+            <i class="gti-313"></i>
+            <b>League of Legends</b>
+            <em>70%</em>
+          </a>
+          <a href="" style="background-image:url(../img/w-800.jpg)">
+            <i class="gti-800"></i>
+            <b>Overwatch</b>
+            <em>60%</em>
+          </a>
+          <a href="" style="background-image:url(../img/w-755.jpg)">
+            <i class="gti-755"></i>
+            <b>HEARTHSTONE</b>
+            <em>30%</em>
+          </a>
+          <a href="" style="background-image:url(../img/w-100.jpg)">
+            <i class="gti-100"></i>
+            <b>Playerunknown's Battlegrounds</b>
+            <em>30%</em>
+          </a>
+        </div>
+      </div>
+    
+    {#
+      <section class="m-sec m-even">
+        <div class="mlist-wr">
+          <div class="mlist">
+            {% include "template/home/match-list-live-home.html" %}
+          </div>
+          <div class="m-hot">
+            {% include "template/home/match-top-home.html" %}
+          </div>
+        </div>
+      </section>
+    #}
+    {#
+      <div class="bn">
+        <img src="../img/ad.jpg" alt="">
+      </div>
+    #}
+     
+     
+      {% include "template/breadcrumbs.html" %}
+      {% include "template/footer.html" %}
+    </div>
+  </div>
+
+{#
+  {% include "template/branding.html" %}
+#}
+{% include "template/branding_ban.html" %}
+
+{% include "template/bar.html" %}
+{% include "template/modal.html" %}
+{% include "template/scripts.html" %}
+
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!-- vodlist.html -->
+{% set title = "Видео дота 2" %}
+
+{% set team = ['Wings', 'OG', ' Evil Geniuses', 'EHOME', 'NewBee', 'Virtus.Pro'] %}
+{% set logo = ['pic-20161110-600x600-7320131375.png', 'pic-20161110-300x300-2206743285.png', 'pic-20161110-600x600-5478339632.png', 'pic-20161110-500x500-918003572.png', 'pic-20161110-600x450-6323255579.png'] %}
+{% set img = ['https://i.ytimg.com/vi/hmjC4isfJ_E/maxresdefault.jpg', 'https://i.ytimg.com/vi/fgb39dOJ1js/maxresdefault.jpg', 'https://i.ytimg.com/vi/EcRKuy6jqOI/maxresdefault.jpg', 'https://i.ytimg.com/vi/UY0JWskR5zw/maxresdefault.jpg', 'https://i.ytimg.com/vi/n3bDSptN06w/maxresdefault.jpg', 'https://i.ytimg.com/vi/2SWgdXthYcM/maxresdefault.jpg'] %}
+
+{% set gr = ['gr',''] %}
+
+
+<!DOCTYPE html>
+<html>
+{% include "template/head.html" %}
+<body class="pageMatch">
+  <div class="matchWrap">
+    {#
+      {% include "template/breadcrumbs.html" %}
+    #}
+    
+    <div class="bread">
+      <ol id="breadcumbs" class="breadcrumb hidden-xs">
+        <li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="">
+          <a itemprop="url" href="/"><span itemprop="title">Турниры</span></a>
+        </li>
+        <li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="">
+          <a title="Dota 2" itemprop="url" href="/dota-2"><span itemprop="title">Dota 2</span></a>
+        </li>
+      </ol>
+    
+      <div class="mheader">
+        <div class="bc">
+          <h1>DC <span>VS</span> NewBee</h1>
+          <span>ESL One Genting 2017</span>&nbsp;&nbsp;&nbsp;
+        </div>
+        <div class="dropdown mapDrop">
+          <button class="btn btn-xs dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Карта 5 <span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><a href="/ru/2902480830">Карта 1</a></li>
+            <li><a href="/ru/2902639704">Карта 2</a></li>
+            <li><a href="/ru/2902847580">Карта 3</a></li>
+            <li><a href="/ru/2903034738">Карта 4</a></li>
+            <li class="active"><a href="/ru/2903156692">Карта 5</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="sLang">
+        <div class="dropdown pull-right">
+          <a class="btn btn-sm" id="ddlang" data-toggle="dropdown">RU <span class="caret"></span></a>
+          <ul class="dropdown-menu" aria-labelledby="ddlang">
+            <li><a href="http://dotaviewer.com/en/2903156692">English</a></li>
+            <li><a href="http://dotaviewer.com/ru/2903156692" class="active">Русский</a></li>
+            <li><a href="http://dotaviewer.com/cn/2903156692">中文(简体)</a></li>
+          </ul>
+        </div>
+        <i class="gti-youtube-play"></i>
+        <div class="dropdown mdrop pull-right">
+          <button class="btn btn-sm btn-block dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span id="vtitle"><u>[RU]</u> <b>Dota 2 Watch</b> <em>/ Grand Final DC vs NewBee #5 (bo5) | ESL One Genting 2017 Dota 2</em></span>
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1" id="vlist">
+            <li class="active" rel="fgb39dOJ1js"><a href="javascript:;" onclick="video_change('fgb39dOJ1js',397)"><u>[RU]</u> <b>Dota 2 Watch</b>  <em>/Grand Final DC vs NewBee #5 (bo5) | ESL One Genting 2017 Dota 2</em></a></li>
+          </ul>
+        </div>
+      </div>
+      
+    </div>
+    <section id="b1" class="frameblock">
+      <div class="frame">
+        <iframe id="ytplayer" frameborder="0" allowfullscreen="1" title="YouTube video player" width="100%" height="100%" src="https://www.youtube.com/embed/ukg49m8fFis?enablejsapi=1&amp;origin=http%3A%2F%2Fteam-hunter.com&amp;widgetid=1"></iframe>
+        <div id="wardmap2"><div id="ward_layer_modal"></div></div>
+      </div>
+      <div class="frameBottom">
+        {% include "template/vod/match-banner.html" %}
+      </div>
+    </section>
+    <section id="b2" class="log">
+      <div class="logheader">
+        Лог матча
+        <div class="mapDrop">
+          <b>Выбрать игру</b>
+          <div class="dropdown pull-right">
+            <button class="btn btn-default btn-xs dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              Карта <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+              <li><a href="#">Карта 1</a></li>
+              <li><a href="#">Карта 2</a></li>
+              <li><a href="#">Карта 3</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="logTable">
+        {% include "template/vod/log.html" %}
+      </div>
+      <div class="summary">
+        <div class="logheader">
+          Итоги матча
+        </div>
+        <table class="table">
+          <thead>
+            <tr>
+              <td>Navi</td>
+              <td>KDA</td>
+              <td>Gold</td>
+            </tr>
+          </thead>
+          {% for i in 0..5 %}
+          <tr>
+            <th><img src="http://cdn.dota2.com/apps/dota2/images/heroes/dazzle_sb.png"></th>
+            <td>23</td>
+            <td>321</td>
+          </tr>
+          {% endfor %}
+        </table>
+        
+        <table class="table">
+          <thead>
+            <tr>
+              <td>Vega</td>
+              <td>KDA</td>
+              <td>Gold</td>
+            </tr>
+          </thead>
+          {% for i in 0..5 %}
+          <tr>
+            <th><img src="http://cdn.dota2.com/apps/dota2/images/heroes/dazzle_sb.png"></th>
+            <td>23</td>
+            <td>321</td>
+          </tr>
+          {% endfor %}
+        </table>
+      </div>
+    </section>
+    
+    {% include "template/footer.html" %}
+    
+  </div>
+  
+{% include "template/bar.html" %}
+{% include "template/modal.html" %}
+{% include "template/scripts.html" %}
+
+</body>
+</html>

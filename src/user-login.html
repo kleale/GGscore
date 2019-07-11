@@ -1,0 +1,50 @@
+{% set title = "Войти" %}
+
+
+<!DOCTYPE html>
+<html>
+{% include "template/head.html" %}
+<body class="loginpage">
+
+<section class="login">
+  <form name="login" method="POST" action="login" class="login-form withJsLabel">
+    <div class="panel panel-light panel-login">
+      <div class="panel-heading">
+        <h3 class="panel-title mlh"><span>Вход</span></h3>
+      </div>
+      <div class="panel-body">
+        <img class="profile-img-card" src="../img/enter.svg">
+        <div class="form-group has-error" rel="email">
+          <div class="input-group">
+            <input type="text" class="form-control input" name="email" placeholder="Email" value=""> 
+            <span class="input-group-btn">
+              <a class="btn btn-default tip" href="/soc?vk" title="Через Вконтакте"><i class="gti-vk"></i></a>
+              <a class="btn btn-default tip" href="/soc?fb" title="Через Facebook"><i class="gti-facebook"></i></a>
+            </span>
+          </div>
+          <p id="ferr" class="help-block">Неверный формат Email</p>
+        </div>
+        <div class="form-group" rel="pwd">
+          <div class="input-group">
+            <input type="password" class="form-control input" name="pwd" placeholder="Пароль" value="">
+              <span class="input-group-addon checkbox"><input type="checkbox" class="input tip" name="once" value="1" title="Запомнить меня"></span> <span class="input-group-btn"><a class="btn btn-default tip" href="/pwd" title="Забыл пароль"><i class="gti-question-circle"></i></a></span> </div>
+              <!--
+              <p id="ferr" class="help-block">Неверный логин или пароль</p>-->
+        </div>
+        <button type="button" onclick="sform('login')" class="btn btn-primary btn-block btn-lg">Войти</button>
+      </div>
+    </div>
+  </form>
+</section>
+
+{#
+{% include "template/branding.html" %}
+#}
+{% include "template/bar.html" %}
+{% include "template/modal.html" %}
+{% include "template/scripts.html" %}
+
+</body>
+</html>
+ 
+ 

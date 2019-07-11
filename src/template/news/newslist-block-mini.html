@@ -1,0 +1,24 @@
+<!-- /news/newslist-block-compact.html -->
+
+{% set pic = ['http://www.gosugamers.net/uploads/images/news/42728-1482872435-small.jpeg', 'http://www.gosugamers.net/uploads/images/news/42727-1482864622-small.jpeg', 'http://www.gosugamers.net/uploads/images/news/42720-1482829305-small.jpeg', 'http://www.gosugamers.net/uploads/images/news/42725-1482841447-small.jpeg', 'http://www.gosugamers.net/uploads/images/news/42723-1482835201-small.jpeg'] %}
+{% set ntype = ['gti-gt','gti-rss','gti-facebook','gti-twitter'] %}
+{% set ohot = ['hot','','',''] %}
+{% set txt = ['Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы','Александр «s1mple» Костылев попал на четвертое место в списке 20 лучших игроков 2016 года по версии HLTV.org','Виталий «V1lat» Волочай: «Мы просто хотели собрать команду друзей» ','Квалификация SL i-League StarSeries. Geek Fam и WG.Unity сыграли вничью с Execration и Mineski','Пол «ReDeYe» Шалоне: «В апреле 2017 Dota 2 станет первым видом киберспорта, чьи суммарные призовые за все турниры превысят 100 миллионов долларов»','Карло «Kuku» Палад: «После неудач мы всегда говорим, что следующий раз выступим лучше».','Питер «ppd» Дагер: «Virtus.Pro должна была брать второе или третье место на The Boston Major, но вошла лишь в топ-8»','Назван список участников квалификации DAC 2017, Na’Vi сыграют в европейском регионе'] %}
+
+
+
+<div class="tnb-mini">
+  <ul class="nlist">
+    {% for i in 0..5 %}
+     <li class="{{random(ohot)}}">
+        <time>29 дек, 11:35</time>
+        <i class="{{random(ntype)}}"></i>
+        <a href="">
+          {{random(txt)}}
+          <span class="com"><i class="gti-commenting-o"></i>&nbsp;12</span>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+

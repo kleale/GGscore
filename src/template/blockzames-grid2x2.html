@@ -1,0 +1,76 @@
+<!-- /blockzames-grid2x2.html -->
+
+{% set vid_type = ['самый массовый замес', 'больше всех убил один герой', 'самый большой камбек'] %}
+
+{% set hero = ['sniper_sb.png', 'sven_hphover.png', 'rattletrap_hphover.png','vengefulspirit_hphover.png','gyrocopter_hphover.png','ember_spirit_hphover.png','medusa_hphover.png'] %}
+
+
+<!-- /template/blockzames.html -->
+<div class="fights fightsPlayers">
+  <h3 class="mlh"><span><a href="">Лучшие моменты</a></span></h3>
+  <div class="row">
+   
+   <div class="col-sm-6">
+      <!-- bestKill -->
+      <div class="bestEvent bestKill"> 
+        <a href="">
+          <b><img src="http://download.gamezone.com/assets/old/screenshots/dota_2_3.jpg" alt="Заголовок">
+            <span><i class="gti-youtube-play"></i> Team Secret VS Og</span>
+            <time>3:12 - 4:11</time>
+          </b>
+          <span>
+            <figure class="heroava">
+              <img src="http://cdn.dota2.com/apps/dota2/images/heroes/{{random(hero)}}">
+            </figure>
+            <em>Multi kill</em>
+            <u>Potroshitel9000.<s>Team Secret</s></u>
+            <s>DMG 123</s>
+            <i>GOLD 3124</i>
+          </span>
+          <div>
+            <figure class="teamHeroes">
+              {% for i in 0..3 %}
+                <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/{{random(hero)}}"/></u>
+              {% endfor %}
+              <u></u>
+            </figure>
+          </div>
+        </a>
+      </div>
+    </div>
+    
+    {% for i in 0..2 %}
+    <div class="col-sm-6">
+    <!-- bestKill -->
+      <div class="bestEvent bestKill"> 
+        <a href="">
+          <b><img src="http://download.gamezone.com/assets/old/screenshots/dota_2_3.jpg" alt="Заголовок">
+            <span><i class="gti-youtube-play"></i> Team Secret VS Og</span>
+            <time>3:12 - 4:11</time>
+          </b>
+          <span>
+            <figure class="heroava">
+              <img src="http://cdn.dota2.com/apps/dota2/images/heroes/{{random(hero)}}">
+            </figure>
+            <em>Multi kill</em>
+            <u>Potroshitel9000.<s>Team Secret</s></u>
+            <s>DMG 123</s>
+            <i>GOLD 3124</i>
+          </span>
+          <div>
+            <figure class="teamHeroes">
+              {% for i in 0..6 %}
+                <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/{{random(hero)}}"/></u>
+              {% endfor %}
+              <u></u>
+              <u></u>
+              <u></u>
+            </figure>
+          </div>
+        </a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <div class="mlh"><span><a href="" class="btn btn-default">Все лучшие моменты</a></span></div>
+</div>

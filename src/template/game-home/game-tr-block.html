@@ -1,0 +1,44 @@
+<!-- game-tr-block.html -->
+
+{% set trrrsm = ['http://game-tournaments.com/media/tournament/_60/pic-20170203-600x400-1661038906.jpeg','http://ggscore.com/media/tournament/_60/pic-20170118-255x101-6693628211.png','http://ggscore.com/media/tournament/_60/pic-20170110-280x80-1208457909.jpeg','http://ggscore.com/media/tournament/_60/pic-20161211-280x80-7531323404.jpeg','http://ggscore.com/media/tournament/_60/pic-20170118-255x101-6693628211.png','http://ggscore.com/media/tournament/_60/pic-20170110-300x117-9029284240.png'] %}
+
+{% set trrrlg = ['http://game-tournaments.com/media/tournament/pic-20170203-600x400-1661038906.jpeg','http://ggscore.com/media/tournament/pic-20170118-255x101-6693628211.png','http://ggscore.com/media/tournament/pic-20170110-280x80-1208457909.jpeg','http://ggscore.com/media/tournament/pic-20161211-280x80-7531323404.jpeg','http://ggscore.com/media/tournament/pic-20170110-300x117-9029284240.png'] %}
+
+{% set sum = ['$ 1,700,000','$ 500,000','$ 45,000','$ 200','$ 1,340,000','$ 360,000'] %}
+{% set tour = ['The International 2017', 'MarsTV League 2017', 'The Spring Major', 'WCA 2016', 'The Boston Major', 'WellPlay Invitational #5', 'SL i-League StarSeries Season 3'] %}
+
+<div class="tr-block">
+  <div>
+    <a href="" class="btn btn-default btn-xs pull-right">Все турниры</a>
+    <h3 class="mbh"><span><i class="gti-trophy"></i> Турниры</span></h3>
+    <div class="row">
+      <div class="col-md-5">
+        {#
+          <h4 class="hlh"><span><i class="gti-dota"></i></span><span><a href="">SL i-League StarSeries Season 3</a></span></h4>
+        #}
+        <a href="" class="tra live" style="background-image:url({{random(trrrlg)}})">
+          <u><i class="gti-clock-o"></i> Live</u>
+          <time>5 Fev - 14 Fev</time>
+          <span>
+            <s>$ 1,700,000</s>
+            SL i-League StarSeries Season 3
+          </span>
+        </a>
+      </div>
+      <div class="col-md-7">
+        <ul class="trlist2 clearfix">
+          {% for i in 1..5 %}
+            <li class="">
+              <a href="">
+                <img src="{{random(trrrsm)}}" alt="">
+                <u>11 фев 2016</u>
+                <s>{{random(sum)}}</s>
+                <span>{{random(tour)}}</span>
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,77 @@
+<!-- blockzames-vertical.html -->
+
+{% set vid_type = ['самый массовый замес', 'больше всех убил один герой', 'самый большой камбек'] %}
+
+{% set hero = ['sniper_sb.png', 'sven_hphover.png', 'rattletrap_hphover.png','vengefulspirit_hphover.png','gyrocopter_hphover.png','ember_spirit_hphover.png','medusa_hphover.png'] %}
+
+
+<!-- /template/blockzames.html -->
+<div class="fights">
+  <i class="iconFights"></i>
+  <h3 class="mlh"><span><a href="">Лучшие моменты Team Liquid</a></span></h3>
+  
+  {% for i in 0..1 %}
+    <!-- bestKill -->
+    <div class="bestEvent bestKill"> 
+      <a href="">
+        <b><img src="http://download.gamezone.com/assets/old/screenshots/dota_2_3.jpg" alt="Заголовок">
+          <span><i class="gti-youtube-play"></i> Team Liquid VS Og</span>
+          <time>3:12 - 4:11</time>
+        </b>
+        <span>
+          <figure class="heroava">
+            <img src="http://cdn.dota2.com/apps/dota2/images/heroes/{{random(hero)}}">
+          </figure>
+          <em>Multi kill</em>
+          <u>Potroshitel9000</u>
+        </span>
+      </a>
+    </div>
+
+    <!-- comeBack -->
+    <div class="bestEvent comeBack"> 
+      <a href="">
+        <b><img src="http://download.gamezone.com/assets/old/screenshots/dota_2_3.jpg" alt="Заголовок">
+          <span><i class="gti-youtube-play"></i> Team Liquid VS Og</span>
+          <time>3:12 - 4:11</time>
+        </b>
+        <span>
+          <figure class="teamLogo">
+            <img src="http://game-tournaments.com/media/logo/pic-20161027-600x600-9332827152.png">
+          </figure>
+          <em>comeBack</em>
+          <u><span><img src="/img/gold.png"/> 12341</span> <i class="gti-chevron-right"></i> Team Liquid</u>
+        </span>
+      </a>
+    </div>
+
+    <!-- zames -->
+    <div class="bestEvent multideath"> 
+      <a href="">
+        <b><img src="http://download.gamezone.com/assets/old/screenshots/dota_2_3.jpg" alt="Заголовок">
+          <span><i class="gti-youtube-play"></i> Team Liquid VS Og</span>
+          <time>3:12 - 4:11</time>
+        </b>
+        <span>
+          <em>multideath</em>
+          <figure class="teamHeroes">
+              <u class="heroava dead"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/{{random(hero)}}"/></u>
+              <u class="heroava dead"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/{{random(hero)}}"/></u>
+            {% for i in 0..2 %}
+              <u class="heroava"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/{{random(hero)}}"/></u>
+            {% endfor %}
+          </figure>
+          <figure class="teamHeroes">
+            <u class="heroava dead"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/{{random(hero)}}"/></u>
+            {% for i in 0..3 %}
+              <u class="heroava"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/{{random(hero)}}"/></u>
+            {% endfor %}
+          </figure>
+        </span>
+      </a>
+    </div>
+  
+  {% endfor %}
+  
+  <div class="mlh"><span><a href="" class="btn btn-default">Все лучшие моменты</a></span></div>
+</div>

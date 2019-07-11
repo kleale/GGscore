@@ -1,0 +1,233 @@
+{% set title = "Аккаунт: Лента" %}
+
+{% set pic = ['http://www.gosugamers.net/uploads/images/news/42728-1482872435-small.jpeg', 'http://www.gosugamers.net/uploads/images/news/42727-1482864622-small.jpeg', 'http://www.gosugamers.net/uploads/images/news/42720-1482829305-small.jpeg', 'http://www.gosugamers.net/uploads/images/news/42725-1482841447-small.jpeg', 'http://www.gosugamers.net/uploads/images/news/42723-1482835201-small.jpeg'] %}
+{% set ntype = ['gti-gt','gti-rss','gti-facebook','gti-twitter'] %}
+{% set ohot = ['hot','','',''] %}
+{% set txt = ['Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы','Александр «s1mple» Костылев попал на четвертое место в списке 20 лучших игроков 2016 года по версии HLTV.org','Виталий «V1lat» Волочай: «Мы просто хотели собрать команду друзей» ','Квалификация SL i-League StarSeries. Geek Fam и WG.Unity сыграли вничью с Execration и Mineski','Пол «ReDeYe» Шалоне: «В апреле 2017 Dota 2 станет первым видом киберспорта, чьи суммарные призовые за все турниры превысят 100 миллионов долларов»','Карло «Kuku» Палад: «После неудач мы всегда говорим, что следующий раз выступим лучше».','Питер «ppd» Дагер: «Virtus.Pro должна была брать второе или третье место на The Boston Major, но вошла лишь в топ-8»','Назван список участников квалификации DAC 2017, Na’Vi сыграют в европейском регионе'] %}
+
+
+<!DOCTYPE html>
+<html>
+{% include "template/head.html" %}
+<body class="">
+  <div class="container mainwrap" style="padding-top:60px;">
+    <div class="otstup">
+      <section class="t-top user-ac">
+        <div class="heroBg" style="background-image:url(../img/noplayers.png)"></div>
+        <h1 class="mlh"><span>Лента пользователя</span></h1>
+        <div class="user-list-page">
+          <div class="row">
+            <div class="col-md-8">
+              <div class="user-list">
+<script>
+  $(document).ready(function () {
+    $('.nlist li').click(function (event) {
+      $(this).toggleClass('active');
+    });
+  });
+</script>
+                  <ul class="nlist">
+                      <li class="active">
+                        <div class="tl">
+                          <time>29 дек, 11:35</time>
+                          <i class="ntype {{random(ntype)}}"></i>
+                          <span class="com"><i class="gti-commenting-o"></i>&nbsp;12</span>
+                          <figure class="npic" style="background-image:url({{random(pic)}});background-size: cover;">
+                          </figure>
+                          <em>
+                            {{random(txt)}}.
+                          </em>
+                        </div>
+                        <div class="ts" onclick="go-to-news();">
+                          <p>Портал e-rankings.com представил список лучших новичков 2016 года.</p>
+                          <p>При оценке игроков учитывалось их выступление на различных турнирах за минувшие 12 месяцев</p>
+                          <p>На первом месте расположился игрок OG Анатан «Ana» Фам, победивший на The Boston Major.</p>
+                          <p>Следом за ним идет Чжэн «MidOne» Йек Най из Team Secret. В составе Fnatic игрок занимал 5-6 место на Shanghai Major и Manila Major, а также 4 место на The International.</p>
+                          <p>На третьей строчке представитель Team VG.J Ван «Nono» Синь.</p>
+                          <p>Полный рейтинг выглядит следующим образом:</p>
+                          <p>
+                            <a href="/go?url=http%3A%2F%2Fblog.e-rankings.com%2Fwp-content%2Fuploads%2F2017%2F02%2Fnewcomers-2.jpg"><img src="http://blog.e-rankings.com/wp-content/uploads/2017/02/newcomers-2.jpg" alt="" width="460" height="319"></a>
+                          </p>
+                          <a href="" class="btn btn-sm btn-primary"><i class="gti-commenting-o"></i>&nbsp; 12&nbsp;&nbsp;&bull;&nbsp;&nbsp; Комментировать новость &nbsp;&nbsp;<i class="gti-angle-right"></i></a>
+                        </div>
+                      </li>
+                      
+                      <li class="">
+                        <div class="tl">
+                          <time>29 дек, 11:35</time>
+                          <i class="ntype {{random(ntype)}}"></i>
+                          <span class="com"><i class="gti-commenting-o"></i>&nbsp;12</span>
+                          <figure class="npic" style="background:#3f444a url(http://game-tournaments.com/media/logo/pic-20161110-600x600-5478339632.png) no-repeat center; background-size: 80%;">
+                          </figure>
+                          <em>
+                            {{random(txt)}}.
+                          </em>
+                        </div>
+                        <div class="ts" onclick="go-to-news();">
+                          <p>Портал e-rankings.com представил список лучших новичков 2016 года.</p>
+                          <p>При оценке игроков учитывалось их выступление на различных турнирах за минувшие 12 месяцев</p>
+                          <p>На первом месте расположился игрок OG Анатан «Ana» Фам, победивший на The Boston Major.</p>
+                          <p>Следом за ним идет Чжэн «MidOne» Йек Най из Team Secret. В составе Fnatic игрок занимал 5-6 место на Shanghai Major и Manila Major, а также 4 место на The International.</p>
+                          <p>На третьей строчке представитель Team VG.J Ван «Nono» Синь.</p>
+                          <p>Полный рейтинг выглядит следующим образом:</p>
+                          <p>
+                            <a href="/go?url=http%3A%2F%2Fblog.e-rankings.com%2Fwp-content%2Fuploads%2F2017%2F02%2Fnewcomers-2.jpg"><img src="http://blog.e-rankings.com/wp-content/uploads/2017/02/newcomers-2.jpg" alt="" width="460" height="319"></a>
+                          </p>
+                          <a href="" class="btn btn-sm btn-primary"><i class="gti-commenting-o"></i>&nbsp; 12&nbsp;&nbsp;&bull;&nbsp;&nbsp; Комментировать новость &nbsp;&nbsp;<i class="gti-angle-right"></i></a>
+                        </div>
+                      </li>
+                      
+                      <li class="">
+                        <div class="tl">
+                          <time>29 дек, 11:35</time>
+                          <i class="ntype {{random(ntype)}}"></i>
+                          <span class="com"><i class="gti-commenting-o"></i>&nbsp;12</span>
+                          <figure class="npic" style="background-image:url(http://ggscore.com/media/logo/_60/Sansheng.jpeg);background-size: cover;">
+                          </figure>
+                          <em>
+                            {{random(txt)}}.
+                          </em>
+                        </div>
+                        <div class="ts" onclick="go-to-news();">
+                          <p>
+                              Игрок Team NP Джеки «EternaLEnvy» Мао провел 24-часовой стрим. За это время игрок сумел увеличить свой показатель MMR на 25.
+                          </p>
+                          <p>
+                              EternalEnvy в основном играл за Terrorblade, Naga Siren и Alchemist. Стоит заметить, что три матча Джеки закончил менее, чем за 20 минут: два проиграл и в одном одержал победу.
+                          </p>
+                          <a href="" class="btn btn-sm btn-primary"><i class="gti-commenting-o"></i>&nbsp; 12&nbsp;&nbsp;&bull;&nbsp;&nbsp; Комментировать новость &nbsp;&nbsp;<i class="gti-angle-right"></i></a>
+                        </div>
+                      </li>
+                      
+                      <li>
+                        <div class="tl">
+                          <time>29 дек, 11:35</time>
+                          <i class="ntype {{random(ntype)}}"></i>
+                          <span class="com"><i class="gti-newspaper-o"></i>&nbsp;12</span>
+                          <figure class="npic">
+                            <i class="ntype {{random(ntype)}}"></i>
+                          </figure>
+                          <em>
+                              {{random(txt)}}
+                          </em>
+                        </div>
+                        <div class="ts" onclick="go-to-news();">
+                          <p>
+                              Игрок Team NP Джеки «EternaLEnvy» Мао провел 24-часовой стрим. За это время игрок сумел увеличить свой показатель MMR на 25.
+                          </p>
+                          <p>
+                              EternalEnvy в основном играл за Terrorblade, Naga Siren и Alchemist. Стоит заметить, что три матча Джеки закончил менее, чем за 20 минут: два проиграл и в одном одержал победу.
+                          </p>
+                          <a href="" class="btn btn-sm btn-default"><i class="gti-commenting-o"></i>&nbsp; 12&nbsp;&nbsp;&bull;&nbsp;&nbsp; Комментировать новость &nbsp;&nbsp;<i class="gti-angle-right"></i></a>
+                        </div>
+                      </li>
+                      
+                    {% for i in 0..5 %}
+                      <li>
+                        <div class="tl">
+                          <time>29 дек, 11:35</time>
+                          <i class="ntype {{random(ntype)}}"></i>
+                          <span class="com"><i class="gti-commenting-o"></i>&nbsp;12</span>
+                          <figure class="npic">
+                            <i class="ntype {{random(ntype)}}"></i>
+                          </figure>
+                          <em>
+                              {{random(txt)}}
+                          </em>
+                        </div>
+                        <div class="ts" onclick="go-to-news();">
+                          <p>
+                              Игрок Team NP Джеки «EternaLEnvy» Мао провел 24-часовой стрим. За это время игрок сумел увеличить свой показатель MMR на 25.
+                          </p>
+                          <p>
+                              EternalEnvy в основном играл за Terrorblade, Naga Siren и Alchemist. Стоит заметить, что три матча Джеки закончил менее, чем за 20 минут: два проиграл и в одном одержал победу.
+                          </p>
+                          <a href="" class="btn btn-sm btn-primary"><i class="gti-commenting-o"></i>&nbsp; 12&nbsp;&nbsp;&bull;&nbsp;&nbsp; Комментировать новость &nbsp;&nbsp;<i class="gti-angle-right"></i></a>
+                        </div>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                  
+                  {% include "template/pager.html" %}
+                
+                
+              </div>
+            </div>
+            <div class="col-md-4">
+              {% include "template/news/com-block.html" %}
+              
+            </div>
+          </div>
+        </div>
+      </section>
+      {% include "template/breadcrumbs.html" %}
+      {% include "template/footer.html" %}
+    </div>
+  </div>
+{#
+{% include "template/branding.html" %}
+#}
+{% include "template/bar.html" %}
+
+{% include "template/scripts.html" %}
+
+<div class="modal fade in" id="wms" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+  <div class="modal-dialog" style="max-width:320px;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Пополнить свой счет</h4></div>
+      <div class="modal-body" style="padding:30px;">
+        <form action="account" method="POST" name="pay" class="form-horizontal">
+          <input type="hidden" class="input" name="method" value="robo">
+          <div class="form-group">
+            <div rel="insum" class="col-sm-12">
+              <div class="input-group">
+                <input type="text" name="insum" value="" placeholder="Сумма для перевода, $" class="form-control input">
+                <div class="input-group-addon"><i class="gti-usd"></i></div>
+              </div>
+              <p id="ferr" class="help-block"></p>
+            </div>
+          </div>
+          <div class="text-center">
+            <button class="btn btn-primary btn" onclick="sform('pay')" type="button"><i class="gti-check"></i> Подтвердить оплату</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade in" id="wms2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+  <div class="modal-dialog" style="max-width:320px;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Заказать выплату</h4></div>
+      <div class="modal-body" style="padding:30px;">
+        <form name="payout" action="account" method="POST">
+          <div class="form-group" rel="insum">
+            <input type="text" name="insum" value="" placeholder="Сколько, $ (комиссия на вывод 10%)" class="form-control">
+          </div>
+          <div class="form-group" rel="payoutmethod">
+            <select name="payoutmethod" class="form-control">
+              <option value="">Платежная система</option>
+              <option value="qiwi">QIWI</option>
+              <option value="webmoney">Webmoney</option>
+              <option value="yandex_money">Yandex</option>
+            </select>
+          </div>
+          <div class="form-group" rel="incaccount">
+            <input type="text" name="incaccount" value="" placeholder="Кошелек (WMR, Yandex, Qiwi)" class="form-control">
+          </div>
+          <center>
+            <button type="button" onclick="sform('payout')" class="btn btn-primary"><i class="gti-check"></i> Подтвердить выплату</button>
+          </center>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

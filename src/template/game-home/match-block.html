@@ -1,0 +1,140 @@
+<!-- match-block.html-->
+{% set team = ['Wings', 'OG', ' Evil Geniuses', 'EHOME', 'NewBee', 'Virtus.Pro','London Conspiracy Dota2'] %}
+
+{% set logo =['http://ggscore.com/media/logo/_60/pic-20161110-600x600-5478339632.png','http://ggscore.com/media/logo/_60/pic-20161027-600x600-9332827152.png','http://ggscore.com/media/logo/_60/pic-20161110-300x300-6683929543.png','http://ggscore.com/media/logo/_60/pic-20161110-300x300-752810928.png','http://ggscore.com/media/logo/_60/pic-20161110-600x450-6323255579.png']%}
+
+{% set trrrsm = ['http://game-tournaments.com/media/tournament/_60/pic-20170203-600x400-1661038906.jpeg','http://ggscore.com/media/tournament/_60/pic-20170118-255x101-6693628211.png','http://ggscore.com/media/tournament/_60/pic-20170110-280x80-1208457909.jpeg','http://ggscore.com/media/tournament/_60/pic-20161211-280x80-7531323404.jpeg','http://ggscore.com/media/tournament/_60/pic-20170118-255x101-6693628211.png','http://ggscore.com/media/tournament/_60/pic-20170110-300x117-9029284240.png'] %}
+
+{% set trrrlg = ['http://game-tournaments.com/media/tournament/pic-20170203-600x400-1661038906.jpeg','http://ggscore.com/media/tournament/pic-20170118-255x101-6693628211.png','http://ggscore.com/media/tournament/pic-20170110-280x80-1208457909.jpeg','http://ggscore.com/media/tournament/pic-20161211-280x80-7531323404.jpeg','http://ggscore.com/media/tournament/pic-20170110-300x117-9029284240.png'] %}
+
+{% set tour = ['The International 2017', 'MarsTV League 2017', 'The Spring Major', 'WCA 2016', 'The Boston Major', 'WellPlay Invitational #5', 'SL i-League StarSeries Season 3'] %}
+
+
+<div class="m-block">
+  <div>
+    <a href="" class="btn btn-default btn-xs pull-right">Все матчи</a>
+    <h3 class="mbh"><span><i class="gti-vs"></i> Матчи</span></h3>
+    <div class="row">
+      <div class="col-md-5">
+        {#
+          <h4 class="hlh"><span><i class="gti-vs"></i></span><span><a href=""><b>{{random(team)}} VS {{random(team)}}</b> на {{random(tour)}}</a></span></h4>
+        #}
+        <a class="mmain" href="" style="background-image:url({{random(trrrlg)}});">
+          <u class="mtr">
+            <b>The Summit 6</b>Playoff, Upper Bracket, Round 1
+          </u>
+          <span class="tms">
+            <em><i>Матч дня</i></em>
+            <u class="i1">
+              <img src="{{random(logo)}}">
+              <i>{{random(team)}}</i>
+              <b class="down">1.60</b>
+            </u>
+            <u class="i2">
+              <img src="{{random(logo)}}">
+              <i>{{random(team)}}</i>
+              <b class="up">1.60</b>
+            </u>
+            <u class="day">17 ноября 2016 21:00 MSK</u>
+          </span>
+        </a>
+
+      </div>
+      <div class="col-md-7 mlt-sm">
+        <table class="mtable">
+          {% for i in 1..5 %}
+            <tr class="m-item" data-href="" itemscope="itemscope" itemtype="https://schema.org/Event">
+              <td class="tname">
+                <a class="tour-pop" itemprop="name" data-placement="top" data-container="body" title="Esports Championship League - Америка" data-content="<img src='http://game-tournaments.com/media/tournament/pic-20160615-264x150-3615944418.jpeg'><b>Регулярный сезон</b>
+                <span><i class='gti gti-trophy'></i> Малайзия, Куала Лумпур</span>
+                <span><i class='gti gti-clock-o'></i> 10 апр — 20 апр</span><span><i class='gti gti-money'></i> 200 000$</span>">
+                  <img src="http://game-tournaments.com/media/tournament/_60/pic-20161211-280x80-7531323404.jpeg">
+                </a>
+              </td>
+              <td class="td-m">
+                <a class="tn1" href="">{{random(team)}}</a>
+                <a href="" class="mp1"><img src="http://game-tournaments.com/media/flag/{{i}}.png"></a>
+                <span class="bet-p">(1.60)</span>
+                <span class="mscore">vs</span>
+                <span class="bet-p">(2.30)</span>
+                <a href="" class="mp2"><img src="http://game-tournaments.com/media/flag/{{i}}.png"></a>
+                <a class="tn2" href="">{{random(team)}}</a>
+              </td>
+              <td class="tdate">
+              {% if i == 1 %}<i class="livebetpin"></i>
+                <time>10 мин</time>
+              {% else %}
+                <time title="17 июн 2016, 11:00" datetime="2016-06-17T11:00:00+03:00" itemprop="startDate">12 авг в 10:15</time>
+              {% endif %}
+              </td>
+            </tr>
+          {% endfor %}
+        </table>
+        {#
+          <div class="mlh" style="padding:20px 0 0 0"><span><a href="" class="btn btn-default btn-xs">Все матчи</a></span></div>
+        #}
+      </div>
+    </div>
+  </div>
+</div>
+
+{#
+<div class="m-block">
+  <div class="row">
+    <div class="col-md-5">
+      <h4 class="hlh"><span><i class="gti-vs"></i></span><span><a href=""><b>{{random(team)}} VS {{random(team)}}</b> на {{random(tour)}}</a></span></h4>
+      
+      <a class="mmain" href="" style="background-image:url({{random(trrrlg)}});">
+        <u class="mtr">
+          <b>The Summit 6</b>Playoff, Upper Bracket, Round 1
+        </u>
+        <span class="tms">
+          <em><i>Матч дня</i></em>
+          <u class="i1">
+            <img src="{{random(logo)}}">
+            <i>{{random(team)}}</i>
+            <b class="down">1.60</b>
+          </u>
+          <u class="i2">
+            <img src="{{random(logo)}}">
+            <i>{{random(team)}}</i>
+            <b class="up">1.60</b>
+          </u>
+          <u class="day">17 ноября 2016 21:00 MSK</u>
+        </span>
+      </a>
+      
+    </div>
+    <div class="col-md-7 mlt-sm">
+      <h3 class="mlh mlh-sm"><span><a href="">Матчи</a></span></h3>
+      
+      <table class="mtable">
+        {% for i in 1..5 %}
+          <tr class="m-item" data-href="" itemscope="itemscope" itemtype="https://schema.org/Event">
+            <td class="tname">
+              <a class="tour-pop" itemprop="name" data-placement="top" data-container="body" title="Esports Championship League - Америка" data-content="<img src='http://game-tournaments.com/media/tournament/pic-20160615-264x150-3615944418.jpeg'><b>Регулярный сезон</b>
+              <span><i class='gti gti-trophy'></i> Малайзия, Куала Лумпур</span>
+              <span><i class='gti gti-clock-o'></i> 10 апр — 20 апр</span><span><i class='gti gti-money'></i> 200 000$</span>">
+                <img src="http://game-tournaments.com/media/tournament/_60/pic-20161211-280x80-7531323404.jpeg">
+              </a>
+            </td>
+            <td class="td-m">
+              <a class="tn1" href="">{{random(team)}}</a>
+              <a href="" class="ml1"><img src="{{random(logo)}}"></a>
+              <span class="bet-p">(1.60)</span>
+              <span class="mscore">vs</span>
+              <span class="bet-p">(2.30)</span>
+              <a href="" class="ml2"><img src="{{random(logo)}}"></a>
+              <a class="tn2" href="">{{random(team)}}</a>
+            </td>
+            <td class="tdate"><time title="17 июн 2016, 11:00" datetime="2016-06-17T11:00:00+03:00" itemprop="startDate">12 авг в 10:15</time></td>
+          </tr>
+        {% endfor %}
+      </table>
+   
+      <div class="mlh" style="padding:20px 0 0 0"><span><a href="" class="btn btn-default btn-xs">Все матчи</a></span></div>
+
+    </div>
+  </div>
+</div>
+#}

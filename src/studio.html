@@ -1,0 +1,568 @@
+{% set title = "Игроки дота 2. Рейтинг игроков Dota 2" %}
+
+{% set team = ['Wings', 'OG', ' Evil Geniuses', 'EHOME', 'NewBee', 'Virtus.Pro'] %}
+{% set logo = ['pic-20161110-600x600-7320131375.png', 'pic-20161110-300x300-2206743285.png', 'pic-20161110-600x600-5478339632.png', 'pic-20161110-500x500-918003572.png', 'pic-20161110-600x450-6323255579.png'] %}
+{% set flag = ['1', '2', '3', '4', '5', '6'] %}
+{% set rate = ['1,744', '1,622', '1,511', '1,497', '1,496', '1,469', '—'] %}
+{% set vid_type = ['самый массовый замес', 'больше всех убил один герой', 'самый большой камбек'] %}
+
+{% set hero = ['sniper_sb.png', 'sven_hphover.png', 'rattletrap_hphover.png','vengefulspirit_hphover.png','gyrocopter_hphover.png','ember_spirit_hphover.png','medusa_hphover.png'] %}
+
+<!DOCTYPE html>
+<html>
+{% include "template/head.html" %}
+<body class="">
+  {% include "template/header.html" %}
+  <div class="container mainwrap pad120">
+    {% include "template/breadcrumbs.html" %}
+    <div class="otstup">
+      <section class="t-top tHero pageStudio">
+        <div class="heroBg" style="background-image:url(https://ggscore.com/html/img/headpic_582.jpg)"></div>
+        <a href="/en/dota-2/team" class="btn all btn-default">Все студии</a>
+        <h1>Студия RuHub</h1>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="pAva">
+              <div class="pAvaBg">
+                <span class="playerava">
+                  <img src="https://yt3.ggpht.com/-8LyDPfnLn7g/AAAAAAAAAAI/AAAAAAAAAAA/F34GcO1hdZI/s900-c-k-no-mo-rj-c0xffffff/photo.jpg" alt="RuHub logo">
+                </span>
+                <div class="pInf">
+                  <table>
+                    <tbody>
+                      <tr>
+                        <td>Страна</td>
+                        <td>Россия <img width="16px" src="https://ggscore.com//media/flag/3.png"></td>
+                      </tr>
+                      <tr>
+                        <td>Язык</td>
+                        <td><img width="16px" src="https://ggscore.com/media/flag/3.png"> <img width="16px" src="https://ggscore.com/media/flag/25.png"> <img width="16px" src="https://ggscore.com/media/flag/2.png"><i class="gti-question-circle tip pull-right" title="Трасляция ведется на языках"></i></td>
+                      </tr>
+                      <tr>
+                        <td>Ссылки</td>
+                        <td>
+                          <div class="splinks">
+                            <a class="slink" href="https://vk.com/dota2ruhub"><i class="gti-vk"></i></a>
+                            <a class="slink" href="https://facebook.com/dota2ruhub"><i class="gti-facebook"></i></a>
+                            <a class="slink" href="https://twitter.com/dota2ruhub"><i class="gti-twitter"></i></a>
+                            <a class="slink" href="https://twitch.com/dota2ruhub"><i class="gti-twitch"></i></a>
+                            <a class="slink" href="https://youtube.com/dota2ruhub"><i class="gti-youtube"></i></a>
+                            <a class="slink" href="https://google.com/dota2ruhub"><i class="gti-google-plus"></i></a>
+                            <a class="slink" href="https://steam.com/dota2ruhub"><i class="gti-steam"></i></a>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="fans"> <a href="javascript:;" onclick="subscribe()" class="btn btn-primary">Subscribe now</a><b>0 fans</b> </div>
+              </div>
+            </div>
+            <div class="studio-logos">
+              <a href=""><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Intel-logo.svg/2000px-Intel-logo.svg.png" alt=""></a>
+              <a href=""><img src="https://odengah.com/wp-content/uploads/2016/11/tin-bank-600x234.png" alt=""></a>
+              <a href=""><img src="http://www.arcadehotel.nl/wp-content/uploads/2017/02/razer.png" alt=""></a>
+              <a href=""><img src="https://upload.wikimedia.org/wikipedia/en/4/42/MSI_logo_for_share2017.png" alt=""></a>
+              <a href=""><img src="https://upload.wikimedia.org/wikipedia/ru/a/ad/WoT_logo.png" alt=""></a>
+              <a href=""><img src="https://p3.zdassets.com/hc/settings_assets/308901/200007968/yZPJSoFIH0BUdvMpHlO7qw-zQgrlvIiJdo4KzlWBgK6Jg-logo.png" alt=""></a>
+            </div>
+            <div class="studio-people-sm">
+              <h3 class="mlh mlhSM"><span>Состав студии Ruhab / стримеры</span></h3>
+              {#
+              {% for i in 1..8 %}
+              <div class="spm sp{{i}}">
+                <a href="" class="ava-sm">
+                  <img src="http://ggscore.com/media/logo/_60/pic-20170116-600x720-2654157159.jpeg" alt="">
+                </a>
+                <span class="nick" href=""><img width="16px" src="https://ggscore.com/media/flag/3.png"> MATUMBAMAN</span>
+                <span href="" class="name">Виталий Ивакин</span>
+                <span class="splinks">
+                  <a class="slink" href="https://vk.com/dota2ruhub"><i class="gti-vk"></i></a>
+                  <a class="slink" href="https://facebook.com/dota2ruhub"><i class="gti-facebook"></i></a>
+                  <a class="slink" href="https://twitter.com/dota2ruhub"><i class="gti-twitter"></i></a>
+                  <a class="slink" href="https://twitch.com/dota2ruhub"><i class="gti-twitch"></i></a>
+                  <a class="slink" href="https://youtube.com/dota2ruhub"><i class="gti-youtube"></i></a>
+                  <a class="slink" href="https://steam.com/dota2ruhub"><i class="gti-steam"></i></a>
+                </span>
+              </div>
+              {% endfor %}
+              #}
+              
+              <div class="studio-people">
+                {% for i in 0..6 %}
+                  <div class="sp">
+                    <div>
+                      <a href="" class="ava-sm">
+                        <img src="http://ggscore.com/media/logo/_60/pic-20170116-600x720-2654157159.jpeg" alt="">
+                      </a>
+                    </div>
+                    <a class="nick" href="">JerAx <img width="16px" src="https://ggscore.com/media/flag/3.png"></a>
+                    <a href="" class="name">Виталий Ивакин</a>
+                    <span class="splinks">
+                      <a class="slink" href="https://vk.com/dota2ruhub"><i class="gti-vk"></i></a>
+                      <a class="slink" href="https://facebook.com/dota2ruhub"><i class="gti-facebook"></i></a>
+                      <a class="slink" href="https://twitter.com/dota2ruhub"><i class="gti-twitter"></i></a>
+                      <a class="slink" href="https://twitch.com/dota2ruhub"><i class="gti-twitch"></i></a>
+                      <a class="slink" href="https://youtube.com/dota2ruhub"><i class="gti-youtube"></i></a>
+                      <a class="slink" href="https://google.com/dota2ruhub"><i class="gti-google-plus"></i></a>
+                      <a class="slink" href="https://steam.com/dota2ruhub"><i class="gti-steam"></i></a>
+                    </span>
+                  </div>
+                {% endfor %}
+              </div>
+              <div class="spmall mlh mlhSM" style="margin-top:-31px;"><span>
+                <a href="" class="btn btn-xs btn-default">Весь состав</a>
+              </span></div>
+            </div>
+            
+            {% set pic = ['http://www.gosugamers.net/uploads/images/news/42728-1482872435-small.jpeg', 'http://www.gosugamers.net/uploads/images/news/42727-1482864622-small.jpeg', 'http://www.gosugamers.net/uploads/images/news/42720-1482829305-small.jpeg', 'http://www.gosugamers.net/uploads/images/news/42725-1482841447-small.jpeg', 'http://www.gosugamers.net/uploads/images/news/42723-1482835201-small.jpeg'] %}
+            {% set ntype = ['gti-gt','gti-rss','gti-facebook','gti-twitter'] %}
+            {% set ohot = ['hot','','',''] %}
+            {% set txt = ['Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы','Александр «s1mple» Костылев попал на четвертое место в списке 20 лучших игроков 2016 года по версии HLTV.org','Виталий «V1lat» Волочай: «Мы просто хотели собрать команду друзей» ','Квалификация SL i-League StarSeries. Geek Fam и WG.Unity сыграли вничью с Execration и Mineski','Пол «ReDeYe» Шалоне: «В апреле 2017 Dota 2 станет первым видом киберспорта, чьи суммарные призовые за все турниры превысят 100 миллионов долларов»','Карло «Kuku» Палад: «После неудач мы всегда говорим, что следующий раз выступим лучше».','Питер «ppd» Дагер: «Virtus.Pro должна была брать второе или третье место на The Boston Major, но вошла лишь в топ-8»','Назван список участников квалификации DAC 2017, Na’Vi сыграют в европейском регионе'] %}
+
+            <h3 class="mlh mlhSM"><span>Новости студии Ruhab</span></h3>
+            <div class="tnb-mini std-news">
+              <ul class="nlist">
+                {% for i in 0..5 %}
+                 <li class="{{random(ohot)}}">
+                    <time>29 дек, 11:35</time>
+                    <i class="{{random(ntype)}}"></i>
+                    <a href="">
+                      {{random(txt)}}
+                      <span class="com"><i class="gti-commenting-o"></i>&nbsp;12</span>
+                    </a>
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+            {% include "template/pager.html" %}
+            
+            <h3 class="mlh mlhSM"><span>Лучшие моменты</span></h3>
+            <div class="videoposts">
+              {% for i in 0..3 %}
+                <div class="videopost">
+                  <div>
+                    <a class="video_link" href="http://youtu.be/L-L0XM5E3bc">
+                      <img src="https://i.ytimg.com/vi/n3bDSptN06w/maxresdefault.jpg">
+                      <!--<time><i class="gti-clock-o"></i> 9 января</time>-->
+                      <em class="tip" title="WESG, Playoff, Upper Bracket, Round 1"><img src="http://game-tournaments.com/media/tournament/_60/pic-20160831-478x178-7586446600.jpeg" alt="WESG"></em>
+                      <!--<b>
+                        <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/starladder4-profile_image-793e69df11adc8ce-300x300.jpeg" alt="">
+                      </b>-->
+                      <small class="vstats">
+                        <i class="gti-eye"></i> 123 &nbsp;&nbsp;&nbsp;
+                        <i class="gti-comments-o"></i> 123
+                      </small>
+                    </a>
+                    <!--<u>Dota 2 Watch</u>-->
+                  </div>
+                  <div class="vinfo">
+                    <a class="video" href="http://youtu.be/L-L0XM5E3bc">[RU] {{random(team)}} vs {{random(team)}} <b>bo3</b></a>
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+            <div class="spmall mlh mlhSM" style="margin-top:1px;"><span>
+              <a href="" class="btn btn-xs btn-default">Еще видео</a>
+            </span></div>
+            
+            <h3 class="mlh mlhSM"><span>Фанвидео</span></h3>
+            <div class="videoposts">
+              {% for i in 0..3 %}
+                <div class="videopost">
+                  <div>
+                    <a class="video_link" href="http://youtu.be/L-L0XM5E3bc">
+                      <img src="https://i.ytimg.com/vi/n3bDSptN06w/maxresdefault.jpg">
+                      <!--<time><i class="gti-clock-o"></i> 9 января</time>-->
+                      <em class="tip" title="WESG, Playoff, Upper Bracket, Round 1"><img src="http://game-tournaments.com/media/tournament/_60/pic-20160831-478x178-7586446600.jpeg" alt="WESG"></em>
+                      <!--<b>
+                        <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/starladder4-profile_image-793e69df11adc8ce-300x300.jpeg" alt="">
+                      </b>-->
+                      <small class="vstats">
+                        <i class="gti-eye"></i> 123 &nbsp;&nbsp;&nbsp;
+                        <i class="gti-comments-o"></i> 123
+                      </small>
+                    </a>
+                    <!--<u>Dota 2 Watch</u>-->
+                  </div>
+                  <div class="vinfo">
+                    <a class="video" href="http://youtu.be/L-L0XM5E3bc">[RU] {{random(team)}} vs {{random(team)}} <b>bo3</b></a>
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+            <div class="spmall mlh mlhSM" style="margin-top:1px;"><span>
+              <a href="" class="btn btn-xs btn-default">Еще видео</a>
+            </span></div>
+            
+          </div>
+		  <div class="col-md-8">
+           
+{#
+            <div id="srteamslider" class="toggled_stream srteamslider studio-frame" rel="XXX">
+              <div class="srteamview clearfix" id="mainstream">
+                <div class="iframer">
+                  <div id="clickMe" class="iframerClicker" style="background-image:url(https://static-cdn.jtvnw.net/previews-ttv/live_user_moonducktv-1280x720.jpg);position:absolute; top:0;left:0;right:0;bottom:0;">
+                    <div class="iframerChannel"> <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/moonducktv-profile_image-949c134b00f9b6ed-300x300.png">
+                      <div>
+                        <h4>Starladder1</h4>
+                        <h5>[RU] T.O.T. vs NL5.Reborn | Grand Final | WESG 2016 Asia-Pacific</h5> <span class="pviews"><i class="gti-eye"></i> 2345 зрителя</span> </div>
+                    </div>
+                  </div>
+                  <script>
+                    $(document).ready(function () {
+                      $('#clickMe').click(function () {
+                        $('.iframer').show();
+                        $(this).hide();
+                        $('.iframeBanner').addClass('active');
+                        $('.iframer').addClass('active');
+                      });
+                    });
+                  </script>
+                </div>
+                <!-- NO -->
+                <!--
+                <div class="iframer">
+                  <div class="white_noize"> 
+                    <div class="nostream">   
+                        <i class="fa fa-frown-o"></i> нет видео
+                    </div>
+                  </div>
+                </div>
+                -->
+                <!--<div class="bn iframeBanner">
+              <img src="../img/ad_player.jpg" alt="">
+            </div>--></div>
+            </div>
+            <div class="studio-streams">
+              <ul id="index_stream" class="slist">
+                <li rel="twitch" title="epgtv" sub="" data-sid="965" data-id="0" class="sstream live active">
+                  <span><img src="https://static-cdn.jtvnw.net/jtv_user_pictures/epgtv-profile_image-ca6391e7935f878a-300x300.jpeg"></span>
+                  <div>
+                    <strong>D2Ice {{random(team)}} vs {{random(team)}} Bo3. by...</strong>
+                    <u><i class="gti-eye"></i> 953 &nbsp; [RU] epgtv</u>
+                  </div>
+                  <em class="sstream"></em>
+                </li>
+                {% for i in 1..3 %}
+                <li rel="twitch" title="epgtv" sub="" data-sid="965" data-id="0" class="sstream live">
+                  <span><img src="https://static-cdn.jtvnw.net/jtv_user_pictures/epgtv-profile_image-ca6391e7935f878a-300x300.jpeg"></span>
+                  <div>
+                    <strong>D2Ice {{random(team)}} vs {{random(team)}} Bo3. by...</strong>
+                    <u><i class="gti-eye"></i> 953 &nbsp; [RU] epgtv</u>
+                  </div>
+                  <em class="sstream"></em>
+                </li>
+                {% endfor %}
+              </ul>
+            </div>
+            <br>
+#}
+            <div class="studio-streams">
+              <div id="srteamslider" class="srteamslider branded" rel="XXX">
+                <div class="srteamview clearfix" id="mainstream">
+                  {% include "template/match-page/player-html5.html" %}
+                </div>
+                <div class="srteamtoggle">
+                  <div class="st_inner">
+                    <div class="stream_action">
+                      <!--<span class="st-btn active" id="stream-toggle"><i class="gti-bars"></i></span>
+                      <span class="st-btn odtip" id="stream-expand" title="Развернуть на весь экран"><i class="gti-expand"></i></a>-->
+                      <ul id="stream_menu" class="player-menu" role="tablist">
+                        <li rel="stream"  class="active">
+                          <a role="tab" data-toggle="tab" href="#player-streams"><i class="gti-video-camera"></i>
+                          <span>Трансляции</span></a>
+                        </li>
+                        <li rel="stat" title="Статистика">
+                         <a role="tab" data-toggle="tab" href="#player-stat"><i class="gti-pie-chart"></i>
+                          <span>Статистика</span></a>
+                        </li>
+                        <li id="achat" rel="log">
+                          <a role="tab" data-toggle="tab" href="#player-log"><i class="gti-list-ul"></i>
+                          <span>Лог матча</span></a>
+                        </li>
+                        <li id="achat" rel="chat">
+                          <a role="tab" data-toggle="tab" href="#player-chat"><i class="gti-comments-o"></i>
+                            <span>Чат матча</span></a>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div id="stmblocks" class="stmblocks tab-content">
+                      <div id="player-streams" rel="stream" class="stmblock active">
+                          <div class="tse-sc tse_slist ps-container ps-theme-default" data-ps-id="dabbe042-0282-13fd-5c12-5e4a964601f2">
+                              <div class="tse-content">
+                                  <ul id="index_stream" class="slist">
+                                    <div class="mltText text-center" style="margin:10px">No online streams found</div>
+                                  </ul>
+                              </div>
+                          <div class="ps-scrollbar-x-rail" style="left: 0px; bottom: 3px;"><div class="ps-scrollbar-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps-scrollbar-y-rail" style="top: 0px; right: 3px;"><div class="ps-scrollbar-y" tabindex="0" style="top: 0px; height: 0px;"></div></div></div>
+                      </div>
+                      <div id="player-stat" rel="stat" class="stmblock fade" style="display:none;">
+                          <div class="stf" id="ustat">
+                              <span class="active" rel="1" onclick="stat_filter(1)">Picks</span>
+                              <span rel="81" onclick="stat_filter(81)">KDA</span>
+                              <span rel="87" onclick="stat_filter(87)">LH/DN</span>
+                              <span rel="69" onclick="stat_filter(69)">LVL</span>
+                              <span rel="84" onclick="stat_filter(84)">Gold</span>
+                              <span rel="82" onclick="stat_filter(82)">XPM</span>
+                              <span rel="89" onclick="stat_filter(89)">NW</span>
+                              <span rel="85" onclick="stat_filter(85)">GPM</span>
+                              <span rel="90" onclick="stat_filter(90)">ART</span>
+                              <span rel="88" onclick="stat_filter(88)">ABL</span>
+                          </div>
+                          <div class="stats" id="bstats">
+                              <div class="statsblock" rel="0"><div class="nostat"><i class="fa fa-info-circle"></i><span>Нет данных статистики</span></div></div>
+                              <div class="statsblock" rel="1" style="display:none;"></div>
+                              <div class="statsblock" rel="81" style="display:none;"></div>
+                              <div class="statsblock" rel="87" style="display:none;"></div>
+                              <div class="statsblock" rel="69" style="display:none;"></div>
+                              <div class="statsblock" rel="82" style="display:none;"></div>
+                              <div class="statsblock" rel="84" style="display:none;"></div>
+                              <div class="statsblock" rel="89" style="display:none;"></div>
+                              <div class="statsblock" rel="85" style="display:none;"></div>
+                              <div class="statsblock" rel="90" style="display:none;"></div>
+                              <div class="statsblock" rel="88" style="display:none;"></div>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            
+            
+            <div class="bn">
+              <img src="../img/ad.jpg" alt="">
+            </div>
+            <br>
+            <h3 class="mlh mlhSM"><span>Расписание трансляций студии Ruhab</span></h3>
+            <table class="mtable srasp">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Match</th>
+                  <th>Channel</th>
+                  <th>Date</th>
+                  <th>Commentators</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>{% for i in 1..3 %}
+                <tr>
+                  <td>[RU]</td>
+                  <td class="vname">
+                    <img src="http://ggscore.com/media/tournament/_60/pic-20170110-280x80-1208457909.jpeg">
+                    <a class="vtitle" href="javascript:;" onclick=""><span>{{random(team)}}</span> vs <span>{{random(team)}}</span> </a>
+                  </td>
+                  <td class="chan">
+                    <span>Dota 2 VODs</span>
+                  </td>
+                  <td class="date">
+                    <span class="sct" data-format="%ms% %j%%y%" data-time="1490776200">Mar 29</span>
+                  </td>
+                  <td class="cmtrs">
+                    <ul>
+                      <li>
+                        <img width="16px" src="https://ggscore.com/media/flag/3.png"> <span title="Виталий Ивакин" class="tip">N0tail</span>
+                      </li>
+                    </ul>
+                  </td>
+                  <td class="belltd">
+                    <a href="" class="bell tip" title="Напомнить мне"><i class="gti-bell-o"></i></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>[RU]</td>
+                  <td class="vname">
+                    <img src="http://ggscore.com/media/tournament/_60/pic-20170110-280x80-1208457909.jpeg">
+                    <a class="vtitle" href="javascript:;" onclick=""><span>{{random(team)}}</span> vs <span>{{random(team)}}</span></a>
+                  </td>
+                  <td class="chan">
+                    <span>Dota 2 VODs</span>
+                  </td>
+                  <td class="date">
+                    <span class="sct" data-format="%ms% %j%%y%" data-time="1490776200">Mar 29</span>
+                  </td>
+                  <td class="cmtrs">
+                    <ul>
+                      <li>
+                        <img width="16px" src="https://ggscore.com/media/flag/3.png"> <span title="Виталий Ивакин" class="tip">N0tail</span>, 
+                      </li>
+                      <li>
+                        <img width="16px" src="https://ggscore.com/media/flag/2.png"> <span title="Виталий Ивакин" class="tip">Vedroider</span>, 
+                      </li>
+                      <li>
+                        <img width="16px" src="https://ggscore.com/media/flag/25.png"> <span title="Виталий Ивакин" class="tip">Maniak</span>
+                      </li>
+                    </ul>
+                  </td>
+                  <td class="belltd">
+                    <a href="" class="bell active tip" title="Убрать напоминание"><i class="gti-bell"></i></a>
+                  </td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+            {% include "template/pager.html" %}
+            
+            <h3 class="mlh mlhSM"><span>Видеозаписи трансляций студии Ruhab</span></h3>
+            <div class="vodstable">
+              <table class="mtable">
+                <thead>
+                  <tr>
+                    <th>Матч</th>
+                    <th>Канал</th>
+                    <th></th>
+                    <th>Дата</th>
+                    <th></th>
+                  </tr>
+                </thead>
+              {% for i in 0..20 %}
+                <tr class="t-item">
+                  <td class="vname">
+                    <a href="">
+                      <img src="http://game-tournaments.com/media/tournament/_60/pic-20160831-478x178-7586446600.jpeg" alt="WESG">
+                    </a>
+                    <a class="vtitle" href="http://youtu.be/L-L0XM5E3bc"> <b>[RU]</b> <span>{{random(team)}}</span> vs <span>{{random(team)}}</span> <b class="label label-default">BO3</b></a>
+                  </td>
+                  <td class="chan">
+                    Dota 2 Watch
+                  </td>
+                  <td class="vstats">
+                    <span><i class="gti-eye"></i> 123</span>
+                    <!--<span><i class="gti-comments-o"></i> 123</span>-->
+                  </td>
+                  <td class="date">
+                    <span class="sct" data-format="%ms% %j%%y%" data-time="1484561700">Jan 16</span>
+                  </td>
+                  <td class="dwtd">
+                    <a href="" class="mlan dw tip" title="Logs"><i class="gti-dotaviewer"></i></a>
+                  </td>
+                </tr>
+              {% endfor %}
+              </table>
+              {% include "template/pager.html" %}
+            </div>
+            
+            
+          </div>
+        </div>
+      </section>
+      
+      <section class="m-sec m-odd pTeams">
+        <h3 class="mlh mlhSM"><span>Состав студии Ruhab / стримеры</span></h3>
+        <div class="teamP studio-people-2">
+          <div class="row">
+            {% for i in 1..6 %}
+              <div class="col-lg-2 col-md-3 col-sm-4 col-xs-4">
+                <div class="pinTeam">
+                  <figure class="pSmLogo">
+                    <a title="N0tail" href="/en/dota-2/player/n0tail" style="background-image:url(https://ggscore.com/media/logo/pic-20170220-425x738-26824250.png);"></a>
+                  </figure>
+                  <table>
+                    <tbody>
+                      <tr>
+                        <td><a class="pllink" href="/en/dota-2/player/n0tail" title="A player from team OG - N0tail">N0tail</a> <img width="16px" src="https://ggscore.com/media/flag/24.png"></td>
+                      </tr>
+                      <tr>
+                        <td><a href="">Виталий Ивакин</a></td>
+                      </tr>
+                      <tr>
+                        <td class="splinks">
+                          <a class="slink" href="https://vk.com/dota2ruhub"><i class="gti-vk"></i></a>
+                          <a class="slink" href="https://facebook.com/dota2ruhub"><i class="gti-facebook"></i></a>
+                          <a class="slink" href="https://twitter.com/dota2ruhub"><i class="gti-twitter"></i></a>
+                          <a class="slink" href="https://twitch.com/dota2ruhub"><i class="gti-twitch"></i></a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+        
+        
+        {#
+        <div class="row">
+          {% for i in 0..2 %}
+            <div class="col-md-4">
+                <div class="pTeam">
+                  <figure class="teamLogo">
+                     <a class="pt" href="#"><img src="http://game-tournaments.com/media/logo/_60/{{random(logo)}}" alt="{{random(team)}}"></a>
+                  </figure>
+                  <div>
+                    <b><a href="">{{random(team)}}</a></b>
+                    <em>Период: 10/11/15 - 10/11/16</em>
+                    <u>Матчей: 211</u>
+                    <s>Роль: core</s>
+                  </div>
+                </div>
+            </div>
+          {% endfor %}
+        </div>
+        #}
+      </section>
+      {#
+      <section class="m-sec m-even">
+        <div class="row">
+          <div class="col-md-8">
+            {% set ntype = ['gti-gt','gti-rss','gti-facebook','gti-twitter'] %}
+            {% set ohot = ['hot','','',''] %}
+            {% set txt = ['Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы','Александр «s1mple» Костылев попал на четвертое место в списке 20 лучших игроков 2016 года по версии HLTV.org','Виталий «V1lat» Волочай: «Мы просто хотели собрать команду друзей» ','Квалификация SL i-League StarSeries. Geek Fam и WG.Unity сыграли вничью с Execration и Mineski','Пол «ReDeYe» Шалоне: «В апреле 2017 Dota 2 станет первым видом киберспорта, чьи суммарные призовые за все турниры превысят 100 миллионов долларов»','Карло «Kuku» Палад: «После неудач мы всегда говорим, что следующий раз выступим лучше».','Питер «ppd» Дагер: «Virtus.Pro должна была брать второе или третье место на The Boston Major, но вошла лишь в топ-8»','Назван список участников квалификации DAC 2017, Na’Vi сыграют в европейском регионе'] %}
+
+            <div class="block m-news">
+              <div class="bh clearfix">
+                <h3>
+                  <i class="ih gti-newspaper-o"></i>
+                  Новости студии Ruhab
+                </h3>
+              </div><!-- bh -->
+               
+              <div class="tnb">
+                <ul class="nlist">
+                  {% for i in 0..5 %}
+                   <li class="{{random(ohot)}} {% if i == 2 %} nopic{% endif %}">
+                      <span class="com"><i class="gti-commenting-o"></i>&nbsp;12</span>
+                      <div>
+                        <time>29 дек, 11:35</time>
+                        <i class="{{random(ntype)}}"></i>
+                        <a href="">
+                          {{random(txt)}}
+                        </a>
+                      </div>
+                    </li>
+
+                  {% endfor %}
+                </ul>
+              </div>
+
+               
+            </div>
+            
+            {% include "template/pager.html" %}
+            
+          </div>
+          <div class="col-md-4">
+            <h3 class="mlh mlhSM"><span>Заголовок студии Ruhab</span></h3>
+          </div>
+        </div>
+      </section>
+      #}
+      
+      <div class="bn">
+        <img src="../img/ad.jpg" alt="">
+      </div>
+      {% include "template/footer.html" %}
+    </div>
+  </div>
+{% include "template/branding.html" %}
+{% include "template/bar.html" %}
+{% include "template/modal.html" %}
+{% include "template/scripts.html" %}
+
+</body>
+</html>

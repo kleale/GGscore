@@ -1,0 +1,61 @@
+/*
+* Third Party
+*/
+@import "../../bower_components/normalize.css/normalize.css";
+@import "../assets/css/bootstrap-chosen.css";
+@import "../assets/css/perfect-scrollbar.min.css";
+@import "../assets/css/bootstrap-switch.css";
+@import "../assets/css/owl.carousel.css";
+@import "../assets/css/owl.theme.css";
+@import "../assets/js/fancy/jquery.fancybox.css";
+@import "../assets/js/fancy/helpers/jquery.fancybox-thumbs.css";
+
+
+/*
+* Base css 
+*/
+@import "part/base.css";
+@import "part/layout.css";
+@import "part/module.css";
+@import "part/theme.css";
+@import "part/modal.css";
+@import "part/404.css";
+@import "part/branding.css";
+@import "gticons.css";
+@import "gticonstofa.css";
+
+/*
+* Pages
+*/
+
+/*match-page*/
+@import "part/page-match.css";
+@import "part/match-player.css";
+@import "part/match-player-chat.css";
+@import "part/match-player-stat.css";
+@import "part/match-player-log.css";
+@import "part/match-section-koef.css";
+@import "part/match-section-prognoz.css";
+@import "part/match-section-sravni.css";
+@import "part/match-section-players.css";
+@import "part/match-section-picks.css";
+@import "part/match-section-comments.css";
+@import "part/match-section-soc.css";
+@import "part/match-vid.css";
+
+/*match-list-page*/
+@import "part/page-match-list.css";
+@import "part/page-news.css";
+@import "part/vod-slider.css";
+@import "part/page-home.css";
+@import "part/page-game-home.css";
+@import "part/page-teams.css";
+@import "part/page-players.css";
+@import "part/page-tours.css";
+@import "part/page-vods.css";
+@import "part/page-light.css";
+@import "part/page-user.css";
+@import "part/page-predicts.css";
+@import "part/page-studio.css";
+/*states*/
+@import "part/state.css";

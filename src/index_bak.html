@@ -1,0 +1,258 @@
+{% set title = "Match Stream Page" %}
+
+<!DOCTYPE html>
+<html>
+{% include "template/head.html" %}
+
+<script>
+  $(document).ready(function () {
+      // match bar affix
+    $(window).scroll(function() {
+      var wbh = $('.m-head').parent().offset().top - 50;
+      if (wbh-$(window).scrollTop() <= 0) {
+        $('#m-fast').addClass('fix');
+      }
+      else {
+        $('#m-fast').removeClass('fix');
+      }
+    });
+  });
+</script>
+<script src="../inc/assets/js/highcharts.js"></script>
+<script src="../inc/assets/js/highcharts-more.js"></script>
+<script src="../inc/assets/js/highcharts-exporting.js"></script>
+
+<script src="../inc/match-page.js"></script>
+<script src="../inc/match-chart.init.js"></script>
+
+
+ <body>  
+  <div class="container mainwrap">
+    {% include "template/breadcrumbs.html" %}
+    
+    <div class="otstup">
+    
+      <section class="m-head">
+        <div class="m-f">
+          <div class="m-fast" id="m-fast">
+            <ul class="nav">
+               <li><a href="#player" title="Стрим"><i class="gti-video-camera"></i></a></li>
+               <li><a href="#m-koef" title="Ставки"><i class="gti-dice"></i></a></li>
+               <li><a href="#m-prognoz" title="Прогнозы"><i class="gti-bullhorn"></i></a></li>
+               <li><a href="#m-teams" title="Сравнение команд"><i class="gti-exchange"></i></a></li>
+               <li><a href="#m-players" title="Сравнение игроков"><i class="gti-male"></i></a></li>
+               <li><a href="#m-history" title="История встреч"><i class="gti-history"></i></a></li>
+               <li><a href="#m-picks" title="Пики и баны"><i class="gti-hand-o-up"></i></a></li>
+               <li><a href="#m-com" title="Комментарии"><i class="gti-comments-o"></i></a>
+               <li><a href="#m-news" title="Новости"><i class="gti-newspaper-o"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="stage">
+          <em><b>3</b>China <span class="caret"></span></em>
+          <ul>
+            <li class="s-pass"><a href=""><b>1</b><span>Квалификация</span></a></li>
+            <li class="s-pass"><a href=""><b>2</b><span>Групповой раунд</span></a></li>
+            <li class="active"><a href=""><b>3</b><span>China</span></a></li>
+            <li><a href=""><b>4</b><span>China #2</span></a></li>
+            <li><a href=""><b>5</b><span>America</span></a></li>
+            <li><a href=""><b>6</b><span>America #2</span></a></li>
+            <li><a href=""><b>7</b><span>SEA</span></a></li>
+            <li><a href=""><b>8</b><span>SEA #2</span></a></li>
+            <li><a href=""><b>9</b><span>Europe</span></a></li>
+            <li><a href=""><b>10</b><span>Europe #2</span></a></li>
+            <li><a href=""><b>11</b><span>Финал</span></a></li>
+          </ul>
+        </div>
+        <div class="row">
+          <div class="col-lg-3">
+            <div class="mr">
+              <span id="rates" class="m-rate">
+                <span class="gti-star" rel="10" onclick="rate(10)"></span>
+                <span class="gti-star-o" rel="9" onclick="rate(9)"></span>
+                <span class="gti-star-o" rel="8" onclick="rate(8)"></span>
+                <span class="gti-star-o" rel="7" onclick="rate(7)"></span>
+                <span class="gti-star-o" rel="6" onclick="rate(6)"></span>
+                <span class="gti-star-o" rel="5" onclick="rate(5)"></span>
+                <span class="gti-star-half-o starred-half" rel="4" onclick="rate(4)"></span>
+                <span class="gti-star starred" rel="3" onclick="rate(3)"></span>
+                <span class="gti-star starred" rel="2" onclick="rate(2)"></span>
+                <span class="gti-star starred" rel="1" onclick="rate(1)"></span>
+              </span>
+              <span class="rgg" id="r_my" itemtype="http://schema.org/AggregateRating" itemscope="" itemprop="aggregateRating">
+                <span itemprop="ratingValue">7.56</span>
+                <meta content="184" itemprop="reviewCount">
+                <meta content="5" itemprop="bestRating">
+                <meta content="184" itemprop="ratingCount">
+              </span>
+              <div class="m-r-ozh">Рейтинг ожидания <b>4.121</b></div>
+            </div>
+          </div>
+          <div class="col-lg-6 mtt">
+            <h1 class="m-title"><span>Матч London Conspiracy Dota2 vs SuperCloud7</span></h1>
+            <div class="m-time">29 ЯНВ 2016 15:30 МСК</div>
+            <div class="m-icons">
+              <span class="m-i-1"></span>
+              <!--<span class="m-i-2"></span>
+              <span class="m-i-3"></span>
+              <span class="m-i-4"></span>
+              <span class="m-i-5"></span>
+              <span class="m-i-6"></span>-->
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="ms">
+              <div class="m-shr">
+                <span class="m-v"><i class="gti-eye"></i>2123</span>
+                <a href="" class="shr"><i class="gti-vk"></i>993</a>
+                <a href="" class="shr"><i class="gti-facebook"></i>123</a>
+                <a href="" class="shr"><i class="gti-twitter"></i>13</a>
+                <a href="" class="shr"><i class="gti-google-plus"></i>13</a>
+              </div>
+              <div class="m-tags">
+                <a href="">#NavivsAlliance</a>
+                <a href="">#NavivsAlliance</a>
+                <a href="">#NavivsAlliance</a>
+                <a href="">#NavivsAlliance</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-5 col-sm-4">
+            <div class="m-team mt1">
+              <a href="" class="mtp"><img src="http://game-tournaments.com/media/logo/_60/pic-20160415-256x187-3994387532.png"><b>11</b></a>
+              <a href="" class="mtn">Secret</a>
+              <div class="mpl">
+                <a href="" title="игрок">Семён</a>, 
+                <a href="" title="игрок">Стрелок</a>, 
+                <a href="" title="игрок">Жопошник</a>, 
+                <a href="" title="игрок">Вася Михайло Мотайло</a>, 
+                <a href="" title="игрок">Pilipelenko</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2 col-sm-4">
+            <div class="m-act">
+              <a href="#stavka" data-toggle="modal" class="btn btn-sm btn-success">Сделать ставку</a>
+              <!-- 
+                <i class="gti-vs"></i>
+              -->
+              <div class="m-links">
+                <a href="#" data-toggle="popover" data-placement="bottom" data-trigger="focus" title="Popover title" data-content="О площадке + дополнительные сведения о матче">MarsTV League 2015 Winter</a>
+              </div>
+              <!-- или попап по клику на кнопку: -->
+              <a href="#" class="btn btn-xs btn-default" data-toggle="popover" data-placement="bottom" data-trigger="focus" title="Popover title" data-content="О площадке + дополнительные сведения о матче">Подробнее</a>
+              <em id="head-toggle" class="tip" title="Свернуть\развернуть шапку"></em>
+            </div>
+          </div>
+          <div class="col-lg-5 col-sm-4">
+            <div class="m-team mt2">
+              <a href="" class="mtp"><img src="http://game-tournaments.com/media/logo/_60/pic-20160415-256x187-3994387532.png"><b>11</b></a>
+              <a href="" class="mtn">London Conspiracy Dota2</a>
+              <div class="mpl">
+                <a href="" title="игрок">Семён</a>, 
+                <a href="" title="игрок">Стрелок</a>, 
+                <a href="" title="игрок">Жопошник</a>, 
+                <a href="" title="игрок">Вася Михайло Мотайло</a>, 
+                <a href="" title="игрок">Pilipelenko</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section><!-- /m-head" -->
+
+      <section class="player" id="player">
+        <div id="srteamslider" class="toggled_stream srteamslider branded" rel="XXX">
+          <div class="srteamview clearfix" id="mainstream">
+            {% include "template/match-page/player-html5.html" %}
+          </div>
+          <div class="srteamtoggle">
+            <div class="st_inner">
+              <div class="stream_action">
+                <!--<span class="st-btn active" id="stream-toggle"><i class="gti-bars"></i></span>
+                <span class="st-btn odtip" id="stream-expand" title="Развернуть на весь экран"><i class="gti-expand"></i></a>-->
+                <ul id="stream_menu" class="player-menu" role="tablist">
+                  <li rel="stream"  class="active">
+                    <a role="tab" data-toggle="tab" href="#player-streams"><i class="gti-video-camera"></i>
+                    <span>Трансляции</span></a>
+                  </li>
+                  <li rel="stat" title="Статистика">
+                   <a role="tab" data-toggle="tab" href="#player-stat"><i class="gti-pie-chart"></i>
+                    <span>Статистика</span></a>
+                  </li>
+                  <li id="achat" rel="log">
+                    <a role="tab" data-toggle="tab" href="#player-log"><i class="gti-list-ul"></i>
+                    <span>Лог матча</span></a>
+                  </li>
+                  <li id="achat" rel="chat">
+                    <a role="tab" data-toggle="tab" href="#player-chat"><i class="gti-comments-o"></i>
+                      <span>Чат матча</span></a>
+                  </li>
+                </ul>
+              </div>
+
+              <div id="stmblocks" class="stmblocks tab-content">
+                {% include "template/match-page/player-streams.html" %}
+                {% include "template/match-page/player-stat.html" %}
+                {% include "template/match-page/player-chat.html" %}
+                {% include "template/match-page/player-log.html" %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section><!-- /m-player" -->
+
+      <section id="m-koef" class="m-sec m-even">
+        <div class="row">
+          <div class="col-lg-6">
+           {% include "template/match-page/section-koef.html" %}
+          </div>
+          <div class="col-lg-6">
+           {% include "template/match-page/section-prognoz2.html" %}
+          </div>
+        </div>
+      </section>
+
+      <section id="m-teams" class="m-sec m-odd">
+        {% include "template/match-page/section-teams.html" %}
+      </section>
+
+      <section id="m-players" class="m-sec m-even">
+        {% include "template/match-page/section-players.html" %}
+      </section>
+
+      <div class="bn">
+        <img src="../img/ad.jpg" alt="">
+      </div>
+
+      <section id="m-picks" class="m-sec m-odd">
+        <div class="row">
+          <div class="col-md-7">
+            {% include "template/match-page/section-picks.html" %}
+          </div>
+          <div class="col-md-5">
+            {% include "template/match-page/section-comments.html" %}
+          </div>
+        </div>
+      </section>
+
+      <section id="m-news" class="m-sec m-even">
+        {% include "template/match-page/section-news.html" %}
+      </section>
+
+      <div class="bn">
+        <img src="../img/ad.jpg" alt="">
+      </div>
+      {% include "template/footer.html" %}
+    </div>
+  </div>
+
+{% include "template/branding.html" %}
+{% include "template/bar.html" %}
+{% include "template/modal.html" %}
+{% include "template/scripts.html" %}
+
+</body>
+</html>

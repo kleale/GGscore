@@ -1,0 +1,326 @@
+{% set title = "PUBG турнир" %}
+
+{% set team = ['Wings', 'OG', 'Evil Geniuses', 'EHOME', 'NewBee', 'Virtus.Pro', 'LGD.Forever Young', 'Invictus Gaming'] %}
+{% set flag = ['1', '2', '3', '4', '5', '6'] %}
+{% set rate = ['1,744', '1,622', '1,511', '1,497', '1,496', '1,469', '—'] %}
+{% set logo = ['pic-20161110-600x600-7320131375.png', 'pic-20161110-300x300-2206743285.png', 'pic-20161110-600x600-5478339632.png', 'pic-20161110-500x500-918003572.png', 'pic-20161110-600x450-6323255579.png'] %}
+{% set player = ['Bulba', 'Miracle', 'MATUMBAMAN ', 'KuroKy', 'MinD_ContRoL'] %}
+
+<!DOCTYPE html>
+<html>
+{% include "template/head.html" %}
+<body class="">
+  <div class="container mainwrap pad120">
+    <div class="otstup">
+      {% include "template/header.html" %}
+      <section class="t-top">
+        <div class="heroBg" style="background-image:url(http://ggscore.com/media/tournament/pic-20160831-478x178-7586446600.jpeg);"></div>
+        <h1>First Person<span> / <a href="/ru/pubg" title="Турниры">PUBG</a> турнир PUBG Global Invitational 2018</span></h1>
+        {% include "template/stages.html" %}
+        <div class="thd">
+<style>
+  
+  
+</style> 
+<script>
+/*! sortable.js 0.8.0 http://github.hubspot.com/sortable/ */
+(function(){var a,b,c,d,e,f,g;a="table[data-sortable]",d=/^-?[£$¤]?[\d,.]+%?$/,g=/^\s+|\s+$/g,c=["click"],f="ontouchstart"in document.documentElement,f&&c.push("touchstart"),b=function(a,b,c){return null!=a.addEventListener?a.addEventListener(b,c,!1):a.attachEvent("on"+b,c)},e={init:function(b){var c,d,f,g,h;for(null==b&&(b={}),null==b.selector&&(b.selector=a),d=document.querySelectorAll(b.selector),h=[],f=0,g=d.length;g>f;f++)c=d[f],h.push(e.initTable(c));return h},initTable:function(a){var b,c,d,f,g,h;if(1===(null!=(h=a.tHead)?h.rows.length:void 0)&&"true"!==a.getAttribute("data-sortable-initialized")){for(a.setAttribute("data-sortable-initialized","true"),d=a.querySelectorAll("th"),b=f=0,g=d.length;g>f;b=++f)c=d[b],"false"!==c.getAttribute("data-sortable")&&e.setupClickableTH(a,c,b);return a}},setupClickableTH:function(a,d,f){var g,h,i,j,k,l;for(i=e.getColumnType(a,f),h=function(b){var c,g,h,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,A,B,C,D;if(b.handled===!0)return!1;for(b.handled=!0,m="true"===this.getAttribute("data-sorted"),n=this.getAttribute("data-sorted-direction"),h=m?"ascending"===n?"descending":"ascending":i.defaultSortDirection,p=this.parentNode.querySelectorAll("th"),s=0,w=p.length;w>s;s++)d=p[s],d.setAttribute("data-sorted","false"),d.removeAttribute("data-sorted-direction");if(this.setAttribute("data-sorted","true"),this.setAttribute("data-sorted-direction",h),o=a.tBodies[0],l=[],m){for(D=o.rows,v=0,z=D.length;z>v;v++)g=D[v],l.push(g);for(l.reverse(),B=0,A=l.length;A>B;B++)k=l[B],o.appendChild(k)}else{for(r=null!=i.compare?i.compare:function(a,b){return b-a},c=function(a,b){return a[0]===b[0]?a[2]-b[2]:i.reverse?r(b[0],a[0]):r(a[0],b[0])},C=o.rows,j=t=0,x=C.length;x>t;j=++t)k=C[j],q=e.getNodeValue(k.cells[f]),null!=i.comparator&&(q=i.comparator(q)),l.push([q,k,j]);for(l.sort(c),u=0,y=l.length;y>u;u++)k=l[u],o.appendChild(k[1])}return"function"==typeof window.CustomEvent&&"function"==typeof a.dispatchEvent?a.dispatchEvent(new CustomEvent("Sortable.sorted",{bubbles:!0})):void 0},l=[],j=0,k=c.length;k>j;j++)g=c[j],l.push(b(d,g,h));return l},getColumnType:function(a,b){var c,d,f,g,h,i,j,k,l,m,n;if(d=null!=(l=a.querySelectorAll("th")[b])?l.getAttribute("data-sortable-type"):void 0,null!=d)return e.typesObject[d];for(m=a.tBodies[0].rows,h=0,j=m.length;j>h;h++)for(c=m[h],f=e.getNodeValue(c.cells[b]),n=e.types,i=0,k=n.length;k>i;i++)if(g=n[i],g.match(f))return g;return e.typesObject.alpha},getNodeValue:function(a){var b;return a?(b=a.getAttribute("data-value"),null!==b?b:"undefined"!=typeof a.innerText?a.innerText.replace(g,""):a.textContent.replace(g,"")):""},setupTypes:function(a){var b,c,d,f;for(e.types=a,e.typesObject={},f=[],c=0,d=a.length;d>c;c++)b=a[c],f.push(e.typesObject[b.name]=b);return f}},e.setupTypes([{name:"numeric",defaultSortDirection:"descending",match:function(a){return a.match(d)},comparator:function(a){return parseFloat(a.replace(/[^0-9.-]/g,""),10)||0}},{name:"date",defaultSortDirection:"ascending",reverse:!0,match:function(a){return!isNaN(Date.parse(a))},comparator:function(a){return Date.parse(a)||0}},{name:"alpha",defaultSortDirection:"ascending",match:function(){return!0},compare:function(a,b){return a.localeCompare(b)}}]),setTimeout(e.init,0),"function"==typeof define&&define.amd?define(function(){return e}):"undefined"!=typeof exports?module.exports=e:window.Sortable=e}).call(this);
+  
+  
+          </script>  
+             
+            <ul class="tour-tabs nav nav-tabs" id="myTab" role="tablist">
+              <li class="nav-item active">
+                <a class="nav-link" id="tab1" data-toggle="tab" href="#tab_1" role="tab" aria-controls="tab1" aria-selected="true">Статистика</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="tab2" data-toggle="tab" href="#tab_2" role="tab" aria-controls="tab2" aria-selected="false">Этап 1, большой</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="tab3" data-toggle="tab" href="#tab_3" role="tab" aria-controls="tab13" aria-selected="false">Этап 2, мелкий</a>
+              </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+              <div class="tab-pane fade active in" id="tab_1" role="tabpanel">
+                <h3 class="mlh"><span>Статистика игроков</span></h3>
+                <!-- -->
+                  <div style="text-align: center;">
+                    <div class="playerList" style="width: auto;display: inline-block;position:relative;z-index:2">
+                      <div class="ps"> 
+                        <div class="gtable" >
+                          <table data-sortable class="mtable pstat table-striped table table-hover">
+                          <thead>
+                            <tr>
+                              <th colspan="2">Игроки</th>
+                              <th class="num">убийства (ХШ)</th>
+                              <th class="num">убийства (ХШ)</th>
+                              <th class="num">дистанция</th>
+                              <th class="num">дальний килл</th>
+                              <th class="num">время выживания</th>
+                              <th class="num">нанесенный урон</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                           {% for i in 1..28 %}
+                            <tr class="t-item">
+                              <td width="50">
+                                <a class="ava-sm" href="/ru/dota-2/player/62" style="background-image:url(https://ggscore.com/media/logo/_60/mski.owa.jpeg);"></a>
+                              </td>
+                              <td>
+                                <a class="nick" title="Vasia" href="/ru/dota-2/player/62"><img width="16px" src="https://ggscore.com/media/flag/13.png"> <span>Vasyliy</span>.<span class="gray">VasiaTeam</span></a>
+                              </td>
+                              <td class="num">{{i}}1234</td>
+                              <td class="num">123{{i}}4</td>
+                              <td class="num">1{{i}}23</td>
+                              <td class="num">{{i}}412</td>
+                              <td class="num">12{{i}}3</td>
+                              <td class="num">12{{i}}3</td>
+                            </tr>
+                            {% endfor %}
+                          </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                <!-- -->
+              </div>
+              <div class="tab-pane fade" id="tab_2" role="tabpanel">
+                <h3 class="mlh"><span>Большая таблица</span></h3>
+                <!-- -->
+                  <div class="ggrid share-it aborder meet r1">
+                      <div class="gdiv pubg-rounds">
+                        <div class="ps"> 
+                          <div class="gtable" >
+                            <table class="table-striped table table-hover">
+                            <thead>
+                              <tr>
+                                <th class="thheadfixed" colspan="3" >Teams</th>
+                                <th class="tot"><span>Total</span></th>
+                                <th class="tot" data-sortable="true"><span>Kills</span></th>
+                                {% for i in 1..28 %}
+                                <th style="border-left: 1px solid #4a5a69 !important; border-right: 1px solid #4a5a69 !important; border-bottom: 1px solid #4a5a69 !important;" colspan="2" class="pubg-th-round">
+                                  <span>Round {{i}}</span>
+                                  <div style="position: relative;">
+                                    <a class="ic" href=""><i class="gti-info-circle"></i></a>
+
+                                     {#<i class="ic gti-info-circle" data-toggle="popover" data-placement="bottom" data-html="true" title="July 28, 2018 - 16:00 MSK" data-content="
+                                      <div class='ppl'>
+                                        <div>
+                                          <b class='frst'>1</b>
+                                          <img src='http://game-tournaments.com/media/logo/pic-20161110-600x600-7320131375.png'/>
+                                          Team Liquid
+                                        </div>
+                                        <div>
+                                          <b class='scnd'>2</b>
+                                          <img src='http://game-tournaments.com/media/logo/pic-20161110-600x600-7320131375.png'/>
+                                          Team Liquid
+                                        </div>
+                                        <div>
+                                          <b class='thrd'>3</b>
+                                          <img src='http://game-tournaments.com/media/logo/pic-20161110-600x600-7320131375.png'/>
+                                          Team Liquid
+                                        </div>
+                                      </div>"></i>#}
+                                  </div>
+                                </th>
+                                {% endfor %}
+                              </tr>
+                              <tr>
+                                <th colspan="3" class="hided"></th>
+                                <th></th><th></th>
+                                {% for i in 1..28 %}
+                                  <th style="border-left: 1px solid #4a5a69 !important;">
+                                    <abbr title="Placement">P</abbr>
+                                  </th>
+                                  <th style="border-right: 1px solid #4a5a69 !important;">
+                                    <abbr title="Kills">K</abbr>
+                                  </th>
+                                {% endfor %}
+                              </tr>
+                            </thead>
+                            <tbody>
+                              {% for i in 1..20 %}
+                                <tr>
+                                  <td class="headcol">{{i}}</td>
+                                  <td class="headcol" width="15">
+                                    <img width="15" src="http://ggscore.com/media/flag/{{random(flag)}}.png"></td>
+                                  <td class="headcol">
+                                    <a title="{{random(team)}}" href="/dota-2/team/tot">{{random(team)}}</a> 
+                                  </td>
+
+                                  <td class="tpo tot">
+                                    <b><abbr title="2375 placement points and 1050 kill points">342{{random(flag)}}</abbr></b>
+                                  </td>
+                                  <td class="tpo tot">
+                                    <b><abbr title="1050 kill points">42{{random(flag)}}</abbr></b>
+                                  </td>
+                                  {% for i in 1..28 %}
+                                    <td style="border-left: 1px solid #37424c !important;" class="tpo {% if i == 1 %}frst{% endif %}{% if i == 2 %}scnd{% endif %}{% if i == 3 %}thrd{% endif %}">1{{random(flag)}}</td>
+                                    <td style="border-right: 1px solid #37424c !important;" class="tpo">{{random(flag)}}</td>
+                                  {% endfor %}
+                                </tr>
+                              {% endfor %}
+                            </tbody>
+                          </table>
+                          </div>
+
+                        </div>
+                        <div class="shr-sm">
+                          <a href="javascript:;" onclick="Share.vkontakte();" class="shr"><i class="gti-share"></i> Поделиться</a>
+                        </div>
+                      </div>
+                  </div>
+                <!-- -->
+              </div>
+              <div class="tab-pane fade" id="tab_3" role="tabpanel">
+                <h3 class="mlh"><span>Малая таблица</span></h3>
+                <!-- -->
+                  <div class="ggrid aborder meet r1">
+                      <div class="gdiv pubg-rounds">
+                        <div class="ps">
+                          <div class="gtable" >
+                            <table class="table-striped table table-hover">
+                            <thead>
+                              <tr>
+                                <th class="thheadfixed" colspan="3" >Teams</th>
+                                <th class="tot"><span>Total</span></th>
+                                {% for i in 1..2 %}
+                                <th style="border-left: 1px solid #4a5a69 !important; border-right: 1px solid #4a5a69 !important; border-bottom: 1px solid #4a5a69 !important;" colspan="2" class="pubg-th-round">
+                                  <span>Round {{i}}</span>
+                                  <div style="position: relative;">
+                                    <a class="ic" href=""><i class="gti-info-circle"></i></a>
+
+                                     {#<i class="ic gti-info-circle" data-toggle="popover" data-placement="bottom" data-html="true" title="July 28, 2018 - 16:00 MSK" data-content="
+                                      <div class='ppl'>
+                                        <div>
+                                          <b class='frst'>1</b>
+                                          <img src='http://game-tournaments.com/media/logo/pic-20161110-600x600-7320131375.png'/>
+                                          Team Liquid
+                                        </div>
+                                        <div>
+                                          <b class='scnd'>2</b>
+                                          <img src='http://game-tournaments.com/media/logo/pic-20161110-600x600-7320131375.png'/>
+                                          Team Liquid
+                                        </div>
+                                        <div>
+                                          <b class='thrd'>3</b>
+                                          <img src='http://game-tournaments.com/media/logo/pic-20161110-600x600-7320131375.png'/>
+                                          Team Liquid
+                                        </div>
+                                      </div>"></i>#}
+                                  </div>
+                                </th>
+                                {% endfor %}
+                              </tr>
+                              <tr>
+                                <th colspan="3" class="hided"></th>
+                                <th></th>
+                                {% for i in 1..2 %}
+                                  <th style="border-left: 1px solid #4a5a69 !important;">
+                                    <abbr title="Placement">P</abbr>
+                                  </th>
+                                  <th style="border-right: 1px solid #4a5a69 !important;">
+                                    <abbr title="Kills">K</abbr>
+                                  </th>
+                                {% endfor %}
+                              </tr>
+                            </thead>
+                            <tbody>
+                              {% for i in 1..20 %}
+                                <tr>
+                                  <td class="headcol">{{i}}</td>
+                                  <td class="headcol" width="15">
+                                    <img width="15" src="http://ggscore.com/media/flag/{{random(flag)}}.png"></td>
+                                  <td class="headcol">
+                                    <a title="{{random(team)}}" href="/dota-2/team/tot">{{random(team)}}</a> 
+                                  </td>
+
+                                  <td class="tpo tot">
+                                    <b><abbr title="2375 placement points and 1050 kill points">342{{random(flag)}}</abbr></b>
+                                  </td>
+                                  {% for i in 1..2 %}
+                                    <td style="border-left: 1px solid #37424c !important;" class="tpo {% if i == 1 %}frst{% endif %}{% if i == 2 %}scnd{% endif %}{% if i == 3 %}thrd{% endif %}">1{{random(flag)}}</td>
+                                    <td style="border-right: 1px solid #37424c !important;" class="tpo">{{random(flag)}}</td>
+                                  {% endfor %}
+                                </tr>
+                              {% endfor %}
+                            </tbody>
+                          </table>
+                          </div>
+
+                        </div>
+                      </div>
+                  </div>
+                <!-- -->
+              </div>
+            </div>
+        </div>
+      </section>
+      
+      <section class="m-sec m-odd">
+        <div class="row">
+          <div class="col-md-8">
+            <div class="t-m-block">
+               <h3 class="mlh" style="margin-bottom: -14px;"><span>Матчи</span></h3>
+
+              {% include "template/match-list/match-list2.html" %}
+
+              {% include "template/match-list/match-list-future.html" %}
+
+              {% include "template/match-list/match-list-past.html" %}
+              {% include "template/pager.html" %}
+            </div>
+          </div>
+          <div class="col-md-4">
+            {% include "template/tours/tour-block.html" %}
+            {% include "template/liveblock.html" %}
+
+            <h4 class="mlh"><span>Новости турнира</span></h4>
+            {% include "template/news/newslist-block-mini.html" %}
+            {% include "template/pager.html" %}
+
+          </div>
+        </div>
+      </section>
+      
+
+      
+      <section class="grid">
+        {% include "template/players/blockzames-grid.html" %}
+      </section>
+      
+      {#
+      <section id="m-zames" class="m-sec m-even m-zames">
+        {% include "template/blockzames.html" %}
+      </section>
+      #}
+      {#
+      <section id="m-news" class="m-sec m-even">
+        <div class="row">
+          <div class="col-md-7">
+            {% include "template/match-page/section-news.html" %}
+          </div>
+          <div class="col-md-5">
+            {% include "template/match-page/section-soc.html" %}
+          </div>
+        </div>
+      </section>
+      #}
+      
+    {#
+      <div class="bn">
+        <img src="../img/ad.jpg" alt="">
+      </div>
+    #}
+      {% include "template/breadcrumbs.html" %}
+      {% include "template/footer.html" %}
+    </div>
+  </div>
+{% include "template/branding.html" %}
+{% include "template/bar.html" %}
+{% include "template/modal.html" %}
+{% include "template/scripts.html" %}
+
+</body>
+</html>

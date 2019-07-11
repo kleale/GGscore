@@ -1,0 +1,105 @@
+<!-- /game-home/match-list-future.html -->
+<div class="block mlt mlt-sm">
+  <div class="bh clearfix">
+    <form method="get" action="" id="filter">
+      <div class="rigter">
+        <i class="gti-undo refresher" onclick="match_upd()"></i>
+        <label class="checkbox-inline score-on">
+          <input type="checkbox" name="score" data-on-text="ДА" data-off-text="НЕТ" data-label-text="счет"/>
+        </label>
+        <div class="dropdown">
+          <button class="btn btn-sm btn-default dropdown-toggle" type="button" data-toggle="dropdown"><i class="gti-clock-o"></i> <span class="utime">14:45 MSK</span> <span class="caret"></span></button>
+          <ul class="dropdown-menu timezone">
+            <li>
+              <input class="elapsed" type="checkbox" name="elapsed" onclick="set_elapsed(this.checked)"> Starts in</li>
+            <li rel="-720"><a href="javascript:;" onclick="set_time(-720)">23:45 (UTC -12:00)</a></li>
+            <li rel="-660"><a href="javascript:;" onclick="set_time(-660)">00:45 (UTC -11:00)</a></li>
+            <li rel="-600"><a href="javascript:;" onclick="set_time(-600)">01:45 (UTC -10:00)</a></li>
+            <li rel="-540"><a href="javascript:;" onclick="set_time(-540)">02:45 (UTC -9:00)</a></li>
+            <li rel="-480"><a href="javascript:;" onclick="set_time(-480)">03:45 <b>PST</b> (UTC -8:00)</a></li>
+            <li rel="-420"><a href="javascript:;" onclick="set_time(-420)">04:45 <b>PDT</b> (UTC -7:00)</a></li>
+            <li rel="-360"><a href="javascript:;" onclick="set_time(-360)">05:45 <b>CST</b> (UTC -6:00)</a></li>
+            <li rel="-300"><a href="javascript:;" onclick="set_time(-300)">06:45 <b>CDT</b> (UTC -5:00)</a></li>
+            <li rel="-240"><a href="javascript:;" onclick="set_time(-240)">07:45 <b>EDT</b> (UTC -4:00)</a></li>
+            <li rel="-210"><a href="javascript:;" onclick="set_time(-210)">08:15 (UTC -3:30)</a></li>
+            <li rel="-180"><a href="javascript:;" onclick="set_time(-180)">08:45 <b>CLST</b> (UTC -3:00)</a></li>
+            <li rel="-120"><a href="javascript:;" onclick="set_time(-120)">09:45 (UTC -2:00)</a></li>
+            <li rel="-60"><a href="javascript:;" onclick="set_time(-60)">10:45 (UTC -1:00)</a></li>
+            <li rel="0"><a href="javascript:;" onclick="set_time(0)">11:45 (UTC +0:00)</a></li>
+            <li rel="60"><a href="javascript:;" onclick="set_time(60)">12:45 <b>CET</b> (UTC +1:00)</a></li>
+            <li rel="120"><a href="javascript:;" onclick="set_time(120)">13:45 <b>CEST</b> (UTC +2:00)</a></li>
+            <li rel="180" class="active"><a href="javascript:;" onclick="set_time(180)">14:45 <b>MSK</b> (UTC +3:00)</a></li>
+            <li rel="210"><a href="javascript:;" onclick="set_time(210)">15:15 (UTC +3:30)</a></li>
+            <li rel="240"><a href="javascript:;" onclick="set_time(240)">15:45 (UTC +4:00)</a></li>
+            <li rel="270"><a href="javascript:;" onclick="set_time(270)">16:15 (UTC +4:30)</a></li>
+            <li rel="300"><a href="javascript:;" onclick="set_time(300)">16:45 (UTC +5:00)</a></li>
+            <li rel="330"><a href="javascript:;" onclick="set_time(330)">17:15 (UTC +5:30)</a></li>
+            <li rel="360"><a href="javascript:;" onclick="set_time(360)">17:45 (UTC +6:00)</a></li>
+            <li rel="420"><a href="javascript:;" onclick="set_time(420)">18:45 (UTC +7:00)</a></li>
+            <li rel="480"><a href="javascript:;" onclick="set_time(480)">19:45 <b>SGT</b> (UTC +8:00)</a></li>
+            <li rel="540"><a href="javascript:;" onclick="set_time(540)">20:45 (UTC +9:00)</a></li>
+            <li rel="570"><a href="javascript:;" onclick="set_time(570)">21:15 (UTC +9:30)</a></li>
+            <li rel="600"><a href="javascript:;" onclick="set_time(600)">21:45 (UTC +10:00)</a></li>
+            <li rel="660"><a href="javascript:;" onclick="set_time(660)">22:45 (UTC +11:00)</a></li>
+            <li rel="720"><a href="javascript:;" onclick="set_time(720)">23:45 (UTC +12:00)</a></li>
+          </ul>
+        </div>
+      </div>
+      <h1 class="mH1">Dota 2 matches</h1>
+      <div class="mlt-filter">
+        <input id="mlt-filter" type="text" value="" placeholder="Команда или турнир..." class="form-control team input-sm" autocomplete="off">
+        <a href="" class="sicon"></a>
+        <ul class="dropdown-menu" id="#t1">
+          <li class="dropdown-header">Выбери команду</li>
+          <li><a href="javascript:;" onclick="mfilter('team',5806);">4manDOTA+Dnarek / 4manDOTA+Dnarek</a></li>
+        </ul>
+      </div>
+    </form>
+  </div>
+  <!-- bh -->
+ 
+  <div class="block-content">
+    <h2 class="mh mh-sm"><span>Будущие матчи</span></h2>
+    <div class="table-responsive">
+      <table class="mtable">
+       {#
+        <thead>
+          <th></th>
+          <th width="70"><span>Дата &nbsp;<i class="gti-clock-o"></i>&nbsp;&nbsp;<a href="">CET</a><!--<i class="gti-chevron-down sorter active"></i>--></span></th>
+          <th><span>Матч <!--<i class="gti-chevron-up sorter"></i>--></span></th>
+          <th><span>Турнир <!--<i class="gti-chevron-up sorter"></i>--></span></th>
+          <th></th>
+        </thead>
+        #}
+
+        {% for i in 0..5 %}
+          <tr class="m-item" data-href="/ссылка на страницу матча"  itemscope="itemscope" itemtype="https://schema.org/Event">
+            <td class="ticon">
+              <span class="m-i-2" title="Самый ожидаемый"></span>
+            </td>
+            <td class="td-m">
+              <a class="tn1" href="">Secret</a>
+              <a href="" class="mp1"><sup>11</sup><img src="http://game-tournaments.com/media/logo/pic-20161110-600x600-4303351114.png"></a>
+              <span class="bet-p">(1.60)</span>
+              <span class="mscore">vs</span>
+              <span class="bet-p">(2.30)</span>
+              <a href="" class="mp2"><sup>2</sup><img src="http://game-tournaments.com/media/logo/pic-20161110-300x300-7552439975.png"></a>
+              <a class="tn2" href="">London Conspiracy Dota2 Conspiracy Dota2</a>
+            </td>
+            <td class="tdate"><time title="17 июн 2016, 11:00" datetime="2016-06-17T11:00:00+03:00" itemprop="startDate">12 авг в 10:15</time></td>
+            <td class="tname">
+                <a class="tour-pop"  itemprop="name" data-placement="top" data-container="body" title="Esports Championship League - Америка" data-content=" <img src='http://game-tournaments.com/media/tournament/pic-20160615-264x150-3615944418.jpeg'><b>Регулярный сезон</b>
+                <span><i class='gti gti-trophy'></i> Малайзия, Куала Лумпур</span>
+                <span><i class='gti gti-clock-o'></i> 10 апр — 20 апр</span><span><i class='gti gti-money'></i> 200 000$</span>">
+                <img src="http://game-tournaments.com/media/tournament/_60/pic-20161211-280x80-7531323404.jpeg">
+              </a>
+            </td>
+            <td>
+              <a href="#prognoz" class="dice-win" data-toggle="modal"><i class="gti-dice"></i></a>
+            </td>
+          </tr>
+        {% endfor %}
+      </table>
+    </div>
+  </div>
+</div>

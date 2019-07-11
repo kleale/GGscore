@@ -1,0 +1,80 @@
+<!-- /match-page/player-stat.html -->
+<div id="player-stat" rel="stat" class="stmblock fade" style="display:none;">
+  <div class="stf">
+    <span class="active odtip" title="(Q) Kills / deaths / assists">KDA</span>
+    <span class="odtip" title="(W) Last-hits / denies">LH/DN</span>
+    <span class="odtip" title="(E) Hero level">LVL</span>
+    <span class="odtip" title="(T) Current gold">Gold</span>
+    <span class="odtip" title="(R) XP per minute">XPM</span>
+    <span class="odtip" title="(Y) Net worth">NW</span>
+    <span class="odtip" title="(U) Gold per minute">GPM</span>
+    <span class="odtip" title="(Z) Artifacts">ART</span>
+    <span class="odtip" title="(X) Abilities">ABL</span>
+  </div>
+  
+  <!--
+  <div class="stats" id="bstats">
+    <div class="statsblock" rel="0"><div class="nostat"><i class="gti-info-circle"></i><span>Нет данных статистики</span></div></div>
+  </div>
+  -->
+  
+  <div class="statsblock" rel="89">
+    <ul class="splayers withname">
+      <li class="dire">
+        <a href="javascript:;" class="odtip heroava"><img width="50px" src="http://cdn.dota2.com/apps/dota2/images/heroes/sven_sb.png"></a><span class="sitemname"><b class="sname"><a href="/dota-2/player/102">Julz*</a><small>Sven</small></b></span><span class="sitem"><b class="snum">23248</b><b class="sprogress"><u style="width:100%"></u></b></span></li>
+      <li class="dire">
+        <a href="javascript:;" class="odtip heroava"><img width="50px" src="http://cdn.dota2.com/apps/dota2/images/heroes/invoker_sb.png"></a><span class="sitemname"><b class="sname"><a href="/dota-2/player/2660">Kuku</a><small>Invoker</small></b></span><span class="sitem"><b class="snum">19372</b><b class="sprogress"><u style="width:84%"></u></b></span></li>
+      <li class="dire">
+        <a href="javascript:;" class="odtip heroava"><img width="50px" src="http://cdn.dota2.com/apps/dota2/images/heroes/brewmaster_sb.png"></a><span class="sitemname"><b class="sname"><a href="/dota-2/player/101">JessieVash*</a><small>Brewmaster</small></b></span><span class="sitem"><b class="snum">14344</b><b class="sprogress"><u style="width:62%"></u></b></span></li>
+      <li class="dire">
+        <a href="javascript:;" class="odtip heroava"><img width="50px" src="http://cdn.dota2.com/apps/dota2/images/heroes/lina_sb.png"></a><span class="sitemname"><b class="sname"><a href="/dota-2/player/97">raging-_-potato</a><small>Lina</small></b></span><span class="sitem"><b class="snum">13817</b><b class="sprogress"><u style="width:60%"></u></b></span></li>
+      <li class="radiant">
+        <a href="javascript:;" class="odtip heroava"><img width="50px" src="http://cdn.dota2.com/apps/dota2/images/heroes/juggernaut_sb.png"></a><span class="sitemname"><b class="sname"><a href="/dota-2/player/2652">Raven</a><small>Juggernaut</small></b></span><span class="sitem"><b class="snum">12756</b><b class="sprogress"><u style="width:55%"></u></b></span></li>
+      <li class="radiant">
+        <a href="javascript:;" class="odtip heroava"><img width="50px" src="http://cdn.dota2.com/apps/dota2/images/heroes/viper_sb.png"></a><span class="sitemname"><b class="sname"><a href="/dota-2/player/3679">Teehee</a><small>Viper</small></b></span><span class="sitem"><b class="snum">11849</b><b class="sprogress"><u style="width:51%"></u></b></span></li>
+      <li class="radiant">
+        <a href="javascript:;" class="odtip heroava"><img width="50px" src="http://cdn.dota2.com/apps/dota2/images/heroes/chen_sb.png"></a><span class="sitemname"><b class="sname"><a href="/dota-2/player/3676">eyyou</a><small>Chen</small></b></span><span class="sitem"><b class="snum">9464</b><b class="sprogress"><u style="width:41%"></u></b></span></li>
+      <li class="radiant">
+        <a href="javascript:;" class="odtip heroava"><img width="50px" src="http://cdn.dota2.com/apps/dota2/images/heroes/beastmaster_sb.png"></a><span class="sitemname"><b class="sname"><a href="/dota-2/player/3680">Sam H</a><small>Beastmaster</small></b></span><span class="sitem"><b class="snum">8572</b><b class="sprogress"><u style="width:37%"></u></b></span></li>
+      <li class="dire">
+        <a href="javascript:;" class="odtip heroava"><img width="50px" src="http://cdn.dota2.com/apps/dota2/images/heroes/witch_doctor_sb.png"></a><span class="sitemname"><b class="sname"><a href="/dota-2/player/488">Cast</a><small>Witch Doctor</small></b></span><span class="sitem"><b class="snum">6627</b><b class="sprogress"><u style="width:29%"></u></b></span></li>
+      <li class="radiant">
+        <a href="javascript:;" class="odtip heroava"><img width="50px" src="http://cdn.dota2.com/apps/dota2/images/heroes/lion_sb.png"></a><span class="sitemname"><b class="sname"><a href="/dota-2/player/2555">WinterG?</a><small>Lion</small></b></span><span class="sitem"><b class="snum">4650</b><b class="sprogress"><u style="width:21%"></u></b></span></li>
+    </ul>
+  </div>
+  
+  <div class="filters">
+    <table>
+      <tr>
+        <td>
+          <div class="dropdown fi">
+            <button data-toggle="dropdown" type="button" class="dropdown-toggle btn btn-sm btn-default btn-block"><span id="stitle">Фильтр статистики</span> <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+              <li class="active"><a>Фильтр статистики</a></li>
+              <li><a>Фильтр статистики</a></li>
+            </ul>
+          </div>
+        </td>
+        <td>
+          <div class="statsdelay">возможна задержка отображения статистики</div>
+        </td>
+        <td>
+          <div class="dropdown ti pull-right">
+            <span data-toggle="dropdown">
+              <i class="gti-clock-o"></i>
+              <span class="pulse odtip" id="stimes" title="Время в матче. Кликни чтобы синхронизировать стрим с данными матча">00:00</span> <span class="caret"></span>
+            </span>
+            <div class="dropdown-menu">
+              <div class="dlyi">
+                <span class="btn btn-primary btn-sm" onclick="idelay()">ОК</span>
+                <input type="text" class="form-control input-sm" value="" id="idelay" placeholder="Задержка">
+                <b>сек</b>
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+  

@@ -1,0 +1,171 @@
+<!-- match-list/player-streams-by-teams.html -->
+
+{% set hero = ['sniper_sb.png', 'sven_hphover.png', 'rattletrap_hphover.png','vengefulspirit_hphover.png','gyrocopter_hphover.png','ember_spirit_hphover.png','medusa_hphover.png'] %}
+
+<div id="player-streams" rel="stream" class="stmblock active">
+  <div class="subm">
+    <div class="dropdown">
+      <button class="btn btn-default btn-xs dropdown-toggle" type="button" id="droplang" data-toggle="dropdown"><span id="current_stream_lang">Языки</span> <span class="caret"></span></button>
+      <ul class="dropdown-menu new_langs" id="langs">
+          <li><span rel="RU" onclick="stream_lang_new('RU','Русский')"><input type="checkbox" name="RU" id="RU"> Русский</span></li>
+          <li><span rel="EN" onclick="stream_lang_new('EN','English')"><input type="checkbox" name="EN" id="EN"> English</span></li>
+      </ul>
+    </div>
+    
+    <em class="active"><i class="gti-video-camera"></i></em>
+    <em><i class="gti-youtube-play"></i></em>
+    
+    <div class="strm-filter">
+      <input id="strm-filter" type="text" placeholder="Фильтр...">
+    </div>
+  </div>
+  <div class="tse-sc tse_slist" style="top:40px;">
+    
+      <div class="tse-content">
+        <ul id="index_stream" class="slist">
+        <li class="active mInfo" onclick="go_to_link">
+          <figure>
+            <span>
+              {% for i in 0..4 %}
+                <u class="heroava"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/{{random(hero)}}"></u>
+              {% endfor %}
+            </span>
+            <span>
+              {% for i in 0..4 %}
+                <u class="heroava"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/{{random(hero)}}"></u>
+              {% endfor %}
+            </span>
+          </figure>
+          <div>
+            <table>
+              <tr>
+                <td><a href="">Team Secret</a></td>
+                <td><b>16</b></td>
+                <td class="n_t">
+                  <u>[1:0]</u>
+                  <time class="pulse1"><i class="gti-clock-o"></i>&nbsp;00:00</time>
+                </td>
+                <td><b>11</b></td>
+                <td><a href="">VIci Gaming</a></td>
+              </tr>
+            </table>
+          </div>
+        </li>
+        <li class="active hot">
+          <span>
+            <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/beyondthesummit-profile_image-d3d31e2a3b0f1e0a-300x300.jpeg">
+            <time title="345 зрителей">345231</time>
+          </span>
+          <div>
+            <strong>Navi Prime Time Legaue 2016 Season Prime</strong>
+            <u><i class="gti-play"></i>&nbsp; Dota2 Esports</u>
+          </div>
+          <em></em>
+        </li>
+        <li class="">
+          <span>
+            <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/beyondthesummit-profile_image-d3d31e2a3b0f1e0a-300x300.jpeg">
+            <time title="345 зрителей">345</time>
+          </span>
+          <div>
+            <strong>Navi Prime Time Legaue 2016 Season Prime</strong>
+            <u><i class="gti-play"></i>&nbsp; Dota2 Esports</u>
+          </div>
+          <em></em>
+        </li>
+        
+{#
+<!--
+        <li class="active mInfo">
+          <table>
+            <tr class="dire">
+              <td><a href="">Empire</a></td>
+              <td><b>2</b></td>
+              <td rowspan="2" class="n_t">
+                [1:0]
+                <time class="pulse1"><i class="gti-clock-o"></i>&nbsp;00:00</time>
+              </td>
+              <td class="mIh">
+                {% for i in 0..4 %}
+                  <u class="heroava"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/sniper_sb.png"></u>
+                {% endfor %}
+              </td>
+            </tr>
+            <tr class="radiant">
+              <td><a href="">OD</a></td>
+              <td><b>1</b></td>
+              <td class="mIh">
+                {% for i in 0..4 %}
+                  <u class="heroava"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/sand_king_sb.png"></u>
+                {% endfor %}
+              </td>
+            </tr>
+          </table>
+        </li>
+-->
+#}
+
+        <li class="mInfo">
+          <figure>
+            <span>
+              {% for i in 0..4 %}
+                <u class="heroava"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/{{random(hero)}}"></u>
+              {% endfor %}
+            </span>
+            <span>
+              {% for i in 0..4 %}
+                <u class="heroava"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/{{random(hero)}}"></u>
+              {% endfor %}
+            </span>
+          </figure>
+          <div>
+            <table>
+              <tr>
+                <td><a href="">DC</a></td>
+                <td><b>16</b></td>
+                <td class="n_t">
+                  <u>[1:0]</u>
+                  <time class="pulse1"><i class="gti-clock-o"></i>&nbsp;00:00</time>
+                </td>
+                <td><b>11</b></td>
+                <td><a href="">NaVi</a></td>
+              </tr>
+            </table>
+          </div>
+        </li>
+         {% for i in 0..4 %}
+          <li>
+            <span>
+              <img src="http://static.huomao.com/upload/web/images/headimgs/0fbfc4c1d7aa1b1c79ccf3884f1e476a/20160919141500669_normal.jpeg" alt="Stream">
+              <!--<time>5:12:34</time>-->
+            </span>
+            <div>
+              <strong>Empire OD Prime Time Legaue 2016</strong>
+              <u>Dota2 Esports</u>
+            </div>
+            <em></em>
+          </li>
+        {% endfor %}
+        
+        <li class="devide">
+          <figure>Empire <i class="gti-vs"></i> OD</figure>
+        </li>
+        
+        {% for i in 0..4 %}
+          <li>
+            <span>
+              <img src="http://static.huomao.com/upload/web/images/headimgs/0fbfc4c1d7aa1b1c79ccf3884f1e476a/20160919141500669_normal.jpeg" alt="Stream">
+              <!--<time>5:12:34</time>-->
+            </span>
+            <div>
+              <strong>Empire OD Prime Time Legaue 2016</strong>
+              <u>Dota2 Esports</u>
+            </div>
+            <em></em>
+          </li>
+        {% endfor %}
+      </ul>
+      </div>
+    
+  </div>
+</div>

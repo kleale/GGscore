@@ -1,0 +1,72 @@
+<!-- /tours/tours-list.html -->
+
+{% set tour = ['The International 2017', 'MarsTV League 2017', 'The Spring Major', 'WCA 2016', 'The Boston Major', 'WellPlay Invitational #5'] %}
+
+{% set logo = ['pic-20160818-280x80-7578568486.jpeg', 'pic-20160409-255x101-3751627425.png', 'pic-20161102-410x141-2422545002.jpeg', 'pic-20161101-300x124-5496295867.png', 'pic-20160926-280x80-5650799293.jpeg'] %}
+
+{% set when = ['<i class="gti-clock-o green"></i> через 6 мес.', '<i class="gti-clock-o green"></i> через 5 мес.', '<i class="gti-clock-o green"></i> через 3 мес.', '<i class="gti-clock-o green"></i> через 7 дн.', '', '', '', '', ''] %}
+
+{% set date = ['22 июня, 2017', 'декабрь 2016', '15 ноября', '2 ноября'] %}
+
+{% set priz = ['-', '<b>$</b> 250,000', '<b>$</b> 3,000,000', '<b>$</b> 60,000'] %}
+
+  <div class="block-content">
+    <table class="mtable">
+      <thead>
+        <th colspan="2"><span>Турнир</span></th>
+        <th><span>Время до старта <i class="gti-chevron-down sorter active"></i></span></th>
+        <th><span>Дата <i class="gti-chevron-up sorter"></i></span></th>
+        <th><span>Призовой фонд <i class="gti-chevron-up sorter"></i></span></th>
+      </thead>
+      <tr class="trHeader">
+        <td colspan="5"><h2>Текущие турниры</h2></td>
+      </tr>
+      <tbody>
+      {% for i in 0..3 %}
+        <tr class="t-item mlive">
+          <td>
+              <a href="" class="tLogo">
+                <img src="http://game-tournaments.com//media/tournament/_60/{{random(logo)}}" alt="Европа" title="Европа">
+              </a>
+          </td>
+          <td>
+            <a href="">{{random(tour)}}</a>
+          </td>
+          <td>
+            Текущий
+          </td>
+          <td>
+            {{random(date)}}
+          </td>
+          <td>
+             {{random(priz)}}
+          </td>
+        </tr>
+      {% endfor %}
+      </tbody>
+      <tr class="trHeader">
+        <td colspan="5"><h2>Будущие и прошедшие турниры</h2></td>
+      </tr>
+      {% for i in 0..19 %}
+        <tr class="t-item">
+          <td>
+              <a href="" class="tLogo">
+                <img src="http://game-tournaments.com//media/tournament/_60/{{random(logo)}}" alt="Европа" title="Европа">
+              </a>
+          </td>
+          <td>
+            <a href="">{{random(tour)}}</a>
+          </td>
+          <td>
+            {{random(when)}}
+          </td>
+          <td>
+            {{random(date)}}
+          </td>
+          <td>
+             {{random(priz)}}
+          </td>
+        </tr>
+      {% endfor %}
+    </table>
+  </div>

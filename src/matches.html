@@ -1,0 +1,110 @@
+{% set title = "Matches Page" %}
+
+<!DOCTYPE html>
+<html>
+{% include "template/head.html" %}
+<body class="">
+  {% include "template/header.html" %}
+  <div class="container mainwrap pad120">
+    <div class="otstup">
+      <section class="player" id="player">
+        <!--<div id="srteamslider" class="toggled_stream srteamslider branded" rel="XXX">-->
+        <div id="srteamslider" class="srteamslider branded" rel="XXX">
+          <div class="srteamview clearfix" id="mainstream">
+            {% include "template/match-page/player-html5.html" %}
+          </div>
+          <div class="srteamtoggle">
+            <div class="st_inner">
+              <div class="stream_action">
+                <!--<span class="st-btn active" id="stream-toggle"><i class="gti-bars"></i></span>
+                <span class="st-btn odtip" id="stream-expand" title="Развернуть на весь экран"><i class="gti-expand"></i></a>-->
+                <ul id="stream_menu" class="player-menu" role="tablist">
+                  <li rel="stream"  class="active">
+                    <a role="tab" data-toggle="tab" href="#player-streams"><i class="gti-video-camera"></i>
+                    <span>Трансляции</span></a>
+                  </li>
+                  <li rel="stat" title="Статистика">
+                   <a role="tab" data-toggle="tab" href="#player-stat"><i class="gti-pie-chart"></i>
+                    <span>Статистика</span></a>
+                  </li>
+                  <li id="achat" rel="log">
+                    <a role="tab" data-toggle="tab" href="#player-log"><i class="gti-list-ul"></i>
+                    <span>Лог матча</span></a>
+                  </li>
+                  <li id="achat" rel="chat">
+                    <a role="tab" data-toggle="tab" href="#player-chat"><i class="gti-comments-o"></i>
+                      <span>Чат матча</span></a>
+                  </li>
+                </ul>
+              </div>
+
+              <div id="stmblocks" class="stmblocks tab-content">
+                  {% include "template/match-list/player-streams-by-teams.html" %}
+                  {% include "template/match-page/player-stat.html" %}
+                  {% include "template/match-page/player-chat.html" %}
+                  {% include "template/match-page/player-log.html" %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section><!-- /m-player" -->
+
+      <section class="m-sec m-even">
+        <div class="mlist-wr row">
+          <div class="mlist col-md-8">
+            
+            {% include "template/match-list/match-list2.html" %}
+
+            {% include "template/match-list/match-list-future.html" %}
+            {% include "template/pager.html" %}
+
+            {% include "template/match-list/match-list-past.html" %}
+            {% include "template/pager.html" %}
+          </div>
+          <div class="m-hot col-md-4">
+            {% include "template/liveblock.html" %}
+            {% include "template/match-list/match-top.html" %}
+            {% include "template/blockzames-vertical.html" %}
+
+            <div class="mltText">
+              Dota 2 - одна из самых популярных игр, по которой проводится множество крупных турниров.
+            </div>
+
+          </div>
+          
+        </div>
+      </section>
+
+      {#
+      <section id="m-news" class="m-sec m-even">
+        <div class="row">
+          <div class="col-md-7">
+            {% include "template/match-page/section-news.html" %}
+          </div>
+          <div class="col-md-5">
+            {% include "template/match-page/section-soc.html" %}
+          </div>
+        </div>
+      </section>
+      #}
+      {#
+      <section id="m-zames" class="m-sec m-even m-zames">
+        {% include "template/blockzames.html" %}
+      </section>
+      #}
+      {#
+      <div class="bn">
+        <img src="../img/ad.jpg" alt="">
+      </div>
+      #}
+      {% include "template/breadcrumbs.html" %}
+      {% include "template/footer.html" %}
+    </div>
+  </div>
+{% include "template/branding.html" %}
+{% include "template/bar.html" %}
+{% include "template/modal.html" %}
+{% include "template/scripts.html" %}
+
+</body>
+</html>

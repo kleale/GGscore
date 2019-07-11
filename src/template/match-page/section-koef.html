@@ -1,0 +1,559 @@
+<!-- /match-page/section-koef.html -->
+
+<div class="block">
+  <div class="bh clearfix">
+    <h3>
+      <i class="ih gti-dice"></i>
+      Коэффициенты
+      <i data-toggle="popover" data-placement="bottom" data-trigger="hover" data-content="О площадке + дополнительные сведения о матче" class="inf gti-info-circle"></i>
+    </h3>
+    <ul class="block-menu" role="tablist">
+      <li class="active"><a id="k_tab" href="#tzn" role="tab" data-toggle="tab">Значения</a></li>
+      <li><a id="k_graf" href="#tgraf" role="tab" data-toggle="tab">График</a></li>
+      <li><a id="k_hist" role="tab" data-toggle="tab" href="#thist">История</a></li>
+    </ul>
+  </div><!-- bh -->
+  <div class="tab-content">
+    <!-- STAT -->
+    <div class="zn_grag_hist tab-pane active" role="tabpanel" id="tzn">
+      <a href="#" class="mtb mtb btn btn-border">Tabs</a>
+      <ul class="stm_nav_block" role="tablist">
+        <li class="active"><a href="#st-all" role="tab" data-toggle="tab">Все ставки</a></li>
+        <li><a href="#st-gand" role="tab" data-toggle="tab">Гандикап ставок</a></li>
+        <li><a href="#st-move" role="tab" data-toggle="tab">Движения гандикапа</a></li>
+        <li><a href="#st-drop" role="tab" data-toggle="tab">Падающие коэффициенты</a></li>
+        <li><a href="#st-din" role="tab" data-toggle="tab">Динамика прибыльности</a></li>
+        <li><a href="#st-hot" role="tab" data-toggle="tab">Горячие ставки</a></li>
+        <li><a href="#st-pr" role="tab" data-toggle="tab">Прибыльные лини</a></li>
+        <li><a href="#st-100" role="tab" data-toggle="tab">100% выигрыш</a></li>
+        <li><a href="#st-ex" role="tab" data-toggle="tab">Экспресс ставки</a></li>
+      </ul>
+      <div class="bc tab-content">
+        <div id="st-all" role="tabpanel" class="tse-sc tab-pane active">
+          <div class="tse-content">
+            <table class="table">
+              {% for i in 1..4%}
+               <tr>
+                <td><img class="bl" src="http://game-tournaments.com/html/img/logo_d2l.png" alt=""></td>
+                <td class="td-tn1"><a class="tn1" href="">London Conspiracy Dota2</a></td>
+                <td class="tkf"><span class="kbig">12.41</span> : <span class="ksm">1.45</span></td>
+                <td class="td-tn2"><a class="tn2" href="">London Conspiracy Dota2 Conspiracy Dota2</a></td>
+                <td class="td-btn"><a class="btn btn-xs btn-primary">Ставка</a></td>
+              </tr>
+              {% endfor %}
+            </table>
+          </div>
+        </div><!-- st-all -->
+
+        <div id="st-gand" role="tabpanel" class="tse-sc tab-pane ">
+          <div class="tse-content">
+            <table class="table">
+              <tr>
+                <td><img class="bl" src="http://game-tournaments.com/html/img/logo_d2l.png" alt=""></td>
+                <td class="td-tn1"><a class="tn1" href="">Navi</a></td>
+                <td class="tkf"><span class="kbig"><sup>+1.5</sup> 12.41</span> : <span class="ksm">1.45 <sup>+1.5</sup></span></td>
+                <td class="td-tn2"><a class="tn2" href="">London Conspiracy Dota2 Conspiracy Dota2</a></td>
+                <td class="td-btn"><a class="btn btn-sm btn-primary">поставить</a></td>
+              </tr>
+            </table>
+          </div>
+        </div><!-- st-gand -->
+
+        <div id="st-move" role="tabpanel" class="tse-sc tab-pane ">
+          <div class="tse-content">
+            <table class="table">
+              <tr>
+                <td><img class="bl" src="http://game-tournaments.com/html/img/logo_d2l.png" alt=""></td>
+                <td class="td-tn1"><a class="tn1" href="">London Conspiracy Dota2</a></td>
+                <td class="tkf"><span class="kbig" data-toggle="popover" data-placement="bottom" data-trigger="hover" data-container="body" data-html="true" data-content="
+                <div class='odd-moves'>
+                18 Mar, 09:33 1.88 <u>+0.01</u><br>
+                18 Mar, 04:13 1.87 <u>+0.01</u><br>
+                18 Mar, 02:32 1.85 <b>-0.01</b><br>
+                18 Mar, 01:21 1.86 <b>-0.02</b><br>
+                <br>
+                Opening odds:<br>
+                13 Mar, 13:36 1.80
+                </div>
+                  ">12.41 <i class="gti-share m-up"></i></span> : <span class="ksm" data-toggle="popover" data-placement="bottom" data-trigger="hover" data-container="body" data-html="true" data-content="
+                <div class='odd-moves'>
+                18 Mar, 09:33 1.88 <u>+0.01</u><br>
+                18 Mar, 04:13 1.87 <u>+0.01</u><br>
+                18 Mar, 02:32 1.85 <b>-0.01</b><br>
+                18 Mar, 01:21 1.86 <b>-0.02</b><br>
+                <br>
+                Opening odds:<br>
+                13 Mar, 13:36 1.80
+                </div>
+                  "><i class="gti-share m-down"></i> 1.45</span></td>
+                <td class="td-tn2"><a class="tn2" href="">London Conspiracy Dota2 Conspiracy Dota2</a></td>
+                <td class="td-btn"><a class="btn btn-sm btn-primary">поставить</a></td>
+              </tr>
+            </table>
+
+            <!-- Вторая таблица -->
+
+            <table class="table">
+              <tr>
+                <td><img class="bl" src="http://game-tournaments.com/html/img/logo_d2l.png" alt=""></td>
+                <td class="td-tn1"><a class="tn1" href="">Navi</a></td>
+                <td class="tkf"><span class="kbig">12.41</span> : <span class="ksm">1.45</span></td>
+                <td class="td-tn2"><a class="tn2" href="">London Conspiracy Dota2 Conspiracy Dota2</a></td>
+                <td>
+                  <span class="k-din">
+                    <i class="gti-share m-down"></i> 
+                    -1.45<br>
+                    -2
+                  </span>
+                </td>
+                <td class="td-btn"><a class="btn btn-sm btn-primary">поставить</a></td>
+              </tr>
+            </table>
+
+          </div>
+        </div><!-- st-gand -->
+
+        <div id="st-drop" role="tabpanel" class="tse-sc tab-pane ">
+          <div class="tse-content">
+            <div class="bc_filter">
+              <div class="row">
+                <div class="col-sm-4">
+                  <div class="dropdown">
+                    <button class="btn btn-default btn-sm dropdown-toggle" type="button"  data-toggle="dropdown">Последние 12 часов <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                        <li><a>Последние 3 часа</a></li>
+                        <li><a>Последние 6 часов</a></li>
+                        <li class="active"><a>Последние 12 часов</a></li>
+                        <li><a>Последний день</a></li>
+                        <li><a>Последние 2 дня</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="dropdown">
+                    <button class="btn btn-default btn-sm dropdown-toggle" type="button"  data-toggle="dropdown">Падение от 20%  <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                        <li><a>Падение от 10%</a></li>
+                        <li class="active"><a>Падение от 20%</a></li>
+                        <li><a>Падение от 30%</a></li>
+                        <li><a>Падение от 40%</a></li>
+                        <li><a>Падение от 50%</a></li>
+                        <li><a>Падение от 60%</a></li>
+                        <li><a>Падение от 70%</a></li>
+                        <li><a>Падение от 80%</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="dropdown">
+                    <button class="btn btn-default btn-sm dropdown-toggle" type="button"  data-toggle="dropdown">Все типы <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                        <li><a>Тип 1</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div><!-- bc_filter -->
+            <table class="table">
+              <tr>
+                <td><img class="bl" src="http://game-tournaments.com/html/img/logo_d2l.png" alt=""></td>
+                <td class="td-tn1"><a class="tn1" href="">London Conspiracy Dota2</a></td>
+                <td class="tkf">
+                  <span class="kbig">12.41</span>&nbsp;:&nbsp;
+                  <span class="ksm k-drop">
+                    <i class="gti-share m-down"></i>
+                    1.45
+                    <b>12%</b>
+                    1.33
+                  </span></td>
+                <td class="td-tn2"><a class="tn2" href="">Navi</a></td>
+                <td class="td-btn"><a class="btn btn-sm btn-primary">поставить</a></td>
+              </tr>
+            </table>
+
+            <div class="bc-bottom">
+              <a href="" class="btn btn-border btn-primary btn-sm">Все падающие коэффициенты</a>
+            </div>
+
+          </div>
+        </div><!-- st-drop -->
+
+        <div id="st-din" role="tabpanel" class="tse-sc tab-pane ">
+          <div class="tse-content">
+            <div class="no100"><i class="gti-info-circle"></i> Динамика прибыльности</div>
+          </div>
+        </div><!-- st-din -->
+
+        <div id="st-hot" role="tabpanel" class="tse-sc tab-pane ">
+          <div class="tse-content">
+            <table class="table st-hot_table">
+              <tr>
+                <td class="mtt">29 января<br>15:30 МСК</td>
+                <td class="td-tn1"><a class="tn1" href="">London Conspiracy Dota2</a></td>
+                <td><img class="bl bl_hot pull-right" src="http://game-tournaments.com/html/img/logo_d2l.png" alt=""></td>
+                <td class="tkf">
+                  <span class="kbig">12.41</span>&nbsp;:&nbsp;
+                  <span class="ksm">1.45</span>
+                </td>
+                <td><img class="bl_hot" src="http://game-tournaments.com/html/img/logo_d2l.png" alt=""></td>
+                <td class="td-tn2"><a class="tn2" href="">Navi</a></td>
+                <td class="td-btn"><a class="btn btn-sm btn-primary">поставить</a></td>
+              </tr>
+            </table>
+          </div>
+        </div><!-- st-hot -->
+
+        <div id="st-pr" role="tabpanel" class="tse-sc tab-pane ">
+          <div class="tse-content">
+            <div class="no100"><i class="gti-info-circle"></i> Прибыльные линии</div>
+          </div>
+        </div><!-- st-pr -->
+
+        <div id="st-100" role="tabpanel" class="tse-sc tab-pane ">
+          <div class="tse-content">
+            <table class="table st-hot_table">
+              <tr>
+                <td class="mtt">29 января<br>15:30 МСК</td>
+                <td class="td-tn1"><a class="tn1" href="">London Conspiracy Dota2</a></td>
+                <td><img class="bl bl_hot pull-right" src="http://game-tournaments.com/html/img/logo_d2l.png" alt=""></td>
+                <td class="tkf">
+                  <span class="kbig">12.41</span>&nbsp;:&nbsp;
+                  <span class="ksm">1.45</span>
+                </td>
+                <td><img class="bl_hot" src="http://game-tournaments.com/html/img/logo_d2l.png" alt=""></td>
+                <td class="td-tn2"><a class="tn2" href="">Navi</a></td>
+                <td class="td-btn">
+                  <div class="dropdown pull-right" style="margin-right:-10px;">
+                    <span class="g-calc" data-toggle="dropdown">
+                      <span class="dohpr">ДОХОД<span>3.9%</span></span>
+                      <i class="gti-calculator"></i>
+                    </span>
+                    <div class="dropdown-menu calc_drop">
+                      <table>
+                        <tr>
+                          <th>Команда</th>
+                          <th>Букмкер</th>
+                          <th align="right">Коэфф.</th>
+                          <th align="right">Ставка,$</th>
+                          <th align="right">Выигрыш,$</th>
+                        </tr>
+                        <tr>
+                          <td><span class="tn2">London Conspiracy Dota2</span></td>
+                          <td><img class="bl_hot" src="http://game-tournaments.com/html/img/logo_d2l.png" alt=""></td>
+                          <td><input class="form-control" type="text" name="" id="" value="2.13"></td>
+                          <td align="right"><b>5.20</b></td>
+                          <td align="right"><b>8.27</b></td>
+                        </tr>
+                        <tr>
+                          <td><span class="tn2">Secret</span></td>
+                          <td><img class="bl_hot" src="http://game-tournaments.com/html/img/logo_vital.png" alt=""></td>
+                          <td><input class="form-control" type="text" name="" id="" value="2.13"></td>
+                          <td align="right"><b>5.20</b></td>
+                          <td align="right"><b>8.27</b></td>
+                        </tr>
+                        <tr class="t_sum">
+                          <td colspan="3">
+                            Сумма для ставок, $:
+                          </td>
+                          <td>
+                            <input class="form-control" type="text" name="" id="" value="2.13">
+                          </td>
+                          <td>
+                            <button type="button" class="btn btn-success">Рассчет</button>
+                          </td>
+                        </tr>
+                      </table>
+                      <div class="calc_bottom">
+                        <input type="checkbox"> Округлить ставки
+                        <div class="calc_itog"><u>-0.05</u> до <b>0.85</b> (-0.63% до 10.63%)</div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </table>
+
+            <div class="no100"><i class="gti-info-circle"></i> Нет 100% вариантов</div>
+
+            <h4>100% выигрыш для других матчей</h4>
+
+            <table class="table st-hot_table">
+              <tr>
+                <td class="mtt">29 января<br>15:30 МСК</td>
+                <td class="td-tn1"><a class="tn1" href="">London Conspiracy Dota2</a></td>
+                <td><img class="bl bl_hot pull-right" src="http://game-tournaments.com/html/img/logo_d2l.png" alt=""></td>
+                <td class="tkf">
+                  <span class="kbig">12.41</span>&nbsp;:&nbsp;
+                  <span class="ksm">1.45</span>
+                </td>
+                <td><img class="bl_hot" src="http://game-tournaments.com/html/img/logo_d2l.png" alt=""></td>
+                <td class="td-tn2"><a class="tn2" href="">Navi</a></td>
+                <td class="td-btn">
+                  <div class="dropdown pull-right" style="margin-right:-10px;">
+                    <span class="g-calc" data-toggle="dropdown">
+                      <span class="dohpr">ДОХОД<span>3.9%</span></span>
+                      <i class="gti-calculator"></i>
+                    </span>
+                    <div class="dropdown-menu calc_drop">
+                      <table>
+                        <tr>
+                          <th>Команда</th>
+                          <th>Букмкер</th>
+                          <th align="right">Коэфф.</th>
+                          <th align="right">Ставка</th>
+                          <th align="right">Выигрыш</th>
+                        </tr>
+                        <tr>
+                          <td><span class="tn2">London Conspiracy Dota2</span></td>
+                          <td><img class="bl_hot" src="http://game-tournaments.com/html/img/logo_d2l.png" alt=""></td>
+                          <td><input class="form-control" type="text" name="" id="" value="2.13"></td>
+                          <td align="right"><b>5.20</b></td>
+                          <td align="right"><b>8.27</b></td>
+                        </tr>
+                        <tr>
+                          <td><span class="tn2">Secret</span></td>
+                          <td><img class="bl_hot" src="http://game-tournaments.com/html/img/logo_vital.png" alt=""></td>
+                          <td><input class="form-control" type="text" name="" id="" value="2.13"></td>
+                          <td align="right"><b>5.20</b></td>
+                          <td align="right"><b>8.27</b></td>
+                        </tr>
+                        <tr class="t_sum">
+                          <td colspan="3">
+                            Сумма для ставок, $:
+                          </td>
+                          <td>
+                            <input class="form-control" type="text" name="" id="" value="2.13">
+                          </td>
+                          <td>
+                            <button type="button" class="btn btn-success">Рассчет</button>
+                          </td>
+                        </tr>
+                      </table>
+                      <div class="calc_bottom">
+                        <input type="checkbox"> Округлить ставки
+                        <div class="calc_itog"><u>-0.05</u> до <b>0.85</b> (-0.63% до 10.63%)</div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </table>
+            <div class="bc-bottom">
+              <a href="" class="btn btn-border btn-primary btn-sm">Подписка на 100% выигрыш</a>
+            </div>
+          </div>
+        </div><!-- st-100 -->
+
+        <div id="st-ex" role="tabpanel" class="tse-sc tab-pane ">
+          <div class="tse-content">
+            <div class="no100"><i class="gti-info-circle"></i> Экспресс</div>
+          </div>
+        </div><!-- st-ex -->
+      </div><!--bc tab-content-->
+    </div><!--#zn-->
+    <!-- .STAT -->
+
+    <!-- CHARTS -->
+    <div class="zn_grag_hist tab-pane" role="tabpanel" id="tgraf">
+      <a href="#" class="mtb mtb btn btn-border">Tabs</a>
+      <ul class="stm_nav_block" role="tablist">
+        <li class="active"><a href="#st-all-graf" role="tab" data-toggle="tab">Все ставки</a></li>
+        <li><a href="#st-gand-graf" role="tab" data-toggle="tab">Гандикап ставок</a></li>
+        <li><a href="#st-move-graf" role="tab" data-toggle="tab">Движения гандикапа</a></li>
+        <li><a href="#st-drop-graf" role="tab" data-toggle="tab">Падающие коэффициенты</a></li>
+        <li><a href="#st-din-graf" role="tab" data-toggle="tab">Динамика прибыльности</a></li>
+        <li><a href="#st-hot-graf" role="tab" data-toggle="tab">Горячие ставки</a></li>
+        <li><a href="#st-pr-graf" role="tab" data-toggle="tab">Прибыльные лини</a></li>
+        <li><a href="#st-100-graf" role="tab" data-toggle="tab">100% выигрыш</a></li>
+        <li><a href="#st-ex-graf" role="tab" data-toggle="tab">Экспресс ставки</a></li>
+      </ul>
+      <div class="bc tab-content">
+        <div id="st-all-graf" role="tabpanel" class="tse-sc tab-pane active">
+          <div class="tse-content">
+            <div class="graf">
+              <div id="st-all-chart"></div>
+            </div>
+          </div>
+        </div><!-- st-all -->
+
+        <div id="st-gand-graf" role="tabpanel" class="tse-sc tab-pane">
+          <div class="tse-content">
+            <div class="graf">
+              <div id="st-gand-chart-t1" style="height:200px;"></div><!-- Первая -->
+              <div id="st-gand-chart-t2" style="height:200px;"></div><!-- Вторая -->
+            </div>
+          </div>
+        </div><!-- st-gand -->
+
+        <div id="st-move-graf" role="tabpanel" class="tse-sc tab-pane">
+          <div class="tse-content">
+            <div class="graf">
+              <div class="bc_filter">
+                <div class="row">
+                  <div class="col-sm-4">
+                    <div class="dropdown">
+                      <button class="btn btn-primary btn-sm dropdown-toggle" type="button"  data-toggle="dropdown">dota2lounge.com <span class="caret"></span></button>
+                      <ul class="dropdown-menu">
+                          <li><a>Vitalbet</a></li>
+                          <li><a>EGB</a></li>
+                          <li class="active"><a>dota2lounge.com</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="srs">Сравнить с</div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="dropdown">
+                      <button class="btn btn-primary btn-sm dropdown-toggle" type="button"  data-toggle="dropdown">Vitalbet <span class="caret"></span></button>
+                      <ul class="dropdown-menu">
+                          <li class="active"><a>Vitalbet</a></li>
+                          <li><a>EGB</a></li>
+                          <li><a>dota2lounge.com</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- bc_filter -->
+              <div id="st-move-chart-1" style="height:170px;"></div>
+              <div id="st-move-chart-2" style="height:170px;"></div>
+            </div>
+          </div>
+        </div><!-- st-move -->
+
+        <div id="st-drop-graf" role="tabpanel" class="tse-sc tab-pane">
+          <div class="tse-content">
+            <div class="graf">
+              <div class="no100"><i class="gti-info-circle"></i> Падающие</div>
+              <div id="st-drop-chart"></div>
+            </div>
+          </div>
+        </div><!-- st-drop -->
+
+        <div id="st-din-graf" role="tabpanel" class="tse-sc tab-pane">
+          <div class="tse-content">
+            <div class="graf">
+              <div class="no100"><i class="gti-info-circle"></i> Динамика</div>
+              <div id="st-din-chart"></div>
+            </div>
+          </div>
+        </div><!-- st-din -->
+
+        <div id="st-hot-graf" role="tabpanel" class="tse-sc tab-pane">
+          <div class="tse-content">
+            <div class="graf">
+              <div class="bc_filter bc_filter_hot-graf">
+                <select data-placeholder="Выберите букмекера" class="chosen-select" multiple>
+                  <option value=""></option>
+                  <option selected="selected">Secret vs Cloud7</option>
+                  <option selected="selected">Alliance vs NAVI</option>
+                  <option selected="selected">Fanftic vs NAVI</option>
+                  <option>Fanftic vs NAVI</option>
+                </select>
+              </div>
+              <div id="st-hot-chart" style="height:360px;"></div>
+            </div>
+          </div>
+        </div><!-- st-hot -->
+
+        <div id="st-pr-graf" role="tabpanel" class="tse-sc tab-pane">
+          <div class="tse-content">
+            <div class="graf">
+              <div class="no100"><i class="gti-info-circle"></i> Прибыльные линии</div>
+              <div id="st-pr-chart"></div>
+            </div>
+          </div>
+        </div><!-- st-pr -->
+
+        <div id="st-100-graf" role="tabpanel" class="tse-sc tab-pane">
+          <div class="tse-content">
+            <div class="graf">
+              <div class="calc_drop cal-graf">
+                <table>
+                  <tr>
+                    <th>Ставка, $</th>
+                    <th>Команда</th>
+                    <th>Букмкер</th>
+                    <th class="text-right">Коэфф.</th>
+                    <th class="text-right">Ставка,$</th>
+                    <th class="text-right">Выигрыш,$</th>
+                  </tr>
+                  <tr>
+                    <td rowspan="2"><input class="form-control cal-graf-st" type="text" name="" id="" value="2.13"></td>
+                    <td><span class="tn2">London Conspiracy Dota2</span></td>
+                    <td><img class="bl_hot" src="http://game-tournaments.com/html/img/logo_d2l.png" alt=""></td>
+                    <td><input class="form-control" type="text" name="" id="" value="2.13"></td>
+                    <td align="right"><b>5.20</b></td>
+                    <td align="right"><u>8.27</u></td>
+                  </tr>
+                  <tr>
+                    <td><span class="tn2">Secret</span></td>
+                    <td><img class="bl_hot" src="http://game-tournaments.com/html/img/logo_vital.png" alt=""></td>
+                    <td><input class="form-control" type="text" name="" id="" value="2.13"></td>
+                    <td align="right"><b>5.20</b></td>
+                    <td align="right"><u>8.27</u></td>
+                  </tr>
+                  <!--
+                   <tr class="t_sum">
+                    <td colspan="3">
+                      Сумма для ставок, $:
+                    </td>
+                    <td>
+                      <input class="form-control" type="text" name="" id="" value="2.13">
+                    </td>
+                    <td>
+                      <button type="button" class="btn btn-success">Рассчет</button>
+                    </td>
+                  </tr>
+                  -->
+                </table>
+              </div>
+              <div class="g-btns">
+                <div class="btn-group" role="group">
+                  <button type="button" class="btn active btn-border btn-primary">График доходности</button>
+                  <button type="button" class="btn btn-border btn-primary">Букмекеры</button>
+                </div>
+              </div>
+              <div id="st-100-chart" style="height:200px;"></div>
+            </div>
+          </div>
+        </div><!-- st-100 -->
+
+        <div id="st-ex-graf" role="tabpanel" class="tse-sc tab-pane">
+          <div class="tse-content">
+            <div class="graf">
+              <div class="no100"><i class="gti-info-circle"></i> Экспресс ставки</div>
+              <div id="st-ex-chart"></div>
+            </div>
+          </div>
+        </div><!-- st-ex -->
+
+      </div>
+    </div><!--#graf-->
+    <!-- .CHARTS -->
+
+    <!-- HISTORY -->
+    <div class="zn_grag_hist tab-pane" role="tabpanel" id="thist">
+      <a href="#" class="mtb mtb btn btn-border">Tabs</a>
+      <ul class="stm_nav_block" role="tablist">
+        <li class="active"><a href="#st-all-hist" role="tab" data-toggle="tab">Все ставки</a></li>
+        <li><a href="#st-gand-hist" role="tab" data-toggle="tab">Гандикап ставок</a></li>
+        <li><a href="#st-move-hist" role="tab" data-toggle="tab">Движения гандикапа</a></li>
+        <li><a href="#st-drop-hist" role="tab" data-toggle="tab">Падающие коэффициенты</a></li>
+        <li><a href="#st-din-hist" role="tab" data-toggle="tab">Динамика прибыльности</a></li>
+        <li><a href="#st-hot-hist" role="tab" data-toggle="tab">Горячие ставки</a></li>
+        <li><a href="#st-pr-hist" role="tab" data-toggle="tab">Прибыльные лини</a></li>
+        <li><a href="#st-100-hist" role="tab" data-toggle="tab">100% выигрыш</a></li>
+        <li><a href="#st-ex-hist" role="tab" data-toggle="tab">Экспресс ставки</a></li>
+      </ul>
+      <div class="bc tab-content">
+        <div id="st-all-hist" role="tabpanel" class="tse-sc tab-pane active">
+          <div class="tse-content">
+
+          </div>
+        </div><!-- st-all -->
+      </div><!--bc-->
+    </div><!--#hist-->
+    <!-- .HISTORY -->
+  </div><!-- tab-content -->
+</div><!-- block -->

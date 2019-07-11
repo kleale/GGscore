@@ -1,0 +1,143 @@
+<!-- hightlight-block.html-->
+
+{% set vid_type = ['самый массовый замес', 'больше всех убил один герой', 'самый большой камбек'] %}
+
+{% set hero = ['sniper_sb.png', 'sven_hphover.png', 'rattletrap_hphover.png','vengefulspirit_hphover.png','gyrocopter_hphover.png','ember_spirit_hphover.png','medusa_hphover.png'] %}
+
+{% set hname = ['Handsken на Ogre Magi <b>делает минус 2</b> в матче против aboshamalah на WESG', 'Dendi <b>Double Kill</b> on Templar Assassin vs Secret', 'Kotarō Hayama <b>Triple Kill</b> on Templar Assassin vs Onyx'] %}
+
+{% set logo =['http://ggscore.com/media/logo/_60/pic-20161110-600x600-5478339632.png','http://ggscore.com/media/logo/_60/pic-20161027-600x600-9332827152.png','http://ggscore.com/media/logo/_60/pic-20161110-300x300-6683929543.png','http://ggscore.com/media/logo/_60/pic-20161110-300x300-752810928.png','http://ggscore.com/media/logo/_60/pic-20161110-600x450-6323255579.png']%}
+
+{% set pl =['http://ggscore.com/media/logo/_60/pic-20170113-640x427-4358198381.jpeg','http://ggscore.com/media/logo/_60/Dai.jpeg','http://ggscore.com/media/logo/_60/pic-20170116-600x720-2654157159.jpeg','http://ggscore.com/media/logo/_60/pic-20170118-600x900-7399228955.jpeg']%}
+
+
+
+<div class="hl-block fights fightsPlayers">
+  <div>
+     <a href="" class="btn btn-default btn-xs pull-right">Все хайлайты</a>
+    <h3 class="mbh"><span><i class="gti-swords"></i> Хайлайты</span></h3>
+    <div class="row">
+      <div class="col-md-5">
+        {#
+          <h4 class="hlh"><span><i class="gti-swords"></i></span><span><a href="">Handsken на Ogre Magi делает минус 2 в матче против aboshamalah на WESG</a></span></h4>
+        #}
+        <div class="bestEvent bestKill"> 
+          <a href="">
+            <b><img src="http://download.gamezone.com/assets/old/screenshots/dota_2_3.jpg" alt="Заголовок">
+              <span><i class="gti-youtube-play"></i> Team Secret VS Og</span>
+              <time>3:12 - 4:11</time>
+            </b>
+            <span>
+              <figure class="heroava">
+                <img src="http://cdn.dota2.com/apps/dota2/images/heroes/{{random(hero)}}">
+              </figure>
+              <em>Multi kill</em>
+              <u>Potroshitel9000.<s>Team Secret</s></u>
+              <!--<s>DMG 123</s>
+              <i>GOLD 3124</i>-->
+            </span>
+            <div>
+              <figure class="teamHeroes">
+                {% for i in 0..3 %}
+                  <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/{{random(hero)}}"/></u>
+                {% endfor %}
+                <u></u>
+              </figure>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="col-md-7">
+       <ul class="hlist">
+        {% for i in 1..5 %}
+          <li class="wa-r wa-r2">
+            <a class="hero-sm" href="">
+              <img src="http://cdn.dota2.com/apps/dota2/images/heroes/{{random(hero)}}" alt="">
+            </a>
+            <a href="" class="trpic" style="background-image:url({{random(trrrsm)}})"></a>
+            <time>3:12 - 4:11</time>
+            <a class="htitle" href="/en/dota-2/highlights/">{{random(hname)}}</a>
+          </li>
+        {% endfor %}
+      </ul>
+      
+{#
+      <br><br>
+      <ul class="hlist">
+        {% for i in 1..6 %}
+          <li class="wa-r">
+            <a class="ava-sm" href="">
+              <img src="http://game-tournaments.com/media/logo/_60/pic-20170118-600x923-7670244765.jpeg" alt="">
+            </a>
+            <a href="" class="trpic" style="background-image:url({{random(trrrsm)}})"></a>
+            <a class="htitle" href="/en/dota-2/highlights/">{{random(hname)}}</a>
+          </li>
+        {% endfor %}
+          <li class="end">
+            <div class="mlh"><span><a href="/en/dota-2/highlights" class="btn btn-default btn-xs">Все хайлайты</a> <a href="/en/dota-2/highlights" class="btn btn-default btn-xs">Все видео</a></span></div>
+          </li>
+      </ul>
+      <br><br>
+      
+      <h3 class="mlh mlh-sm"><span><a href="/en/dota-2/highlights">Свежие Хайлайты</a></span></h3>
+      
+      <ul class="hlist">
+        {% for i in 1..5 %}
+          <li class="wa">
+            <a class="ava-sm" href="">
+              <img src="{{random(pl)}}" alt="">
+            </a>
+            <a href="" class="trpic" style="background-image:url({{random(trrrsm)}})"></a>
+            <a class="htitle" href="/en/dota-2/highlights/">{{random(hname)}}</a>
+          </li>
+        {% endfor %}
+          
+          <li class="end">
+            <div class="mlh"><span><a href="/en/dota-2/highlights" class="btn btn-default btn-xs">Все хайлайты</a> <a href="/en/dota-2/highlights" class="btn btn-default btn-xs">Все видео</a></span></div>
+          </li>
+      </ul>
+      <br><br>
+      
+      <h3 class="mlh mlh-sm"><span><a href="/en/dota-2/highlights">Свежие Хайлайты</a></span></h3>
+      
+      <ul class="hlist">
+        {% for i in 1..5 %}
+          <li class="wa-0">
+            <a class="ava-sm" href="">
+              <img src="{{random(pl)}}" alt="">
+            </a>
+            <a href="" class="trpic" style="background-image:url({{random(trrrsm)}})"></a>
+            <a class="htitle" href="/en/dota-2/highlights/">{{random(hname)}}</a>
+          </li>
+        {% endfor %}
+          
+          <li class="end">
+            <div class="mlh"><span><a href="/en/dota-2/highlights" class="btn btn-default btn-xs">Все хайлайты</a> <a href="/en/dota-2/highlights" class="btn btn-default btn-xs">Все видео</a></span></div>
+          </li>
+      </ul>
+      <br><br>
+      
+      <h3 class="mlh mlh-sm" style="margin-top:5px;"><span><a href="/en/dota-2/highlights">Свежие Хайлайты</a></span></h3>
+      
+      <ul class="hlist">
+        {% for i in 1..5 %}
+          <li class="wa-2">
+            <a class="as" href="">
+              <img src="{{random(logo)}}" alt="">
+            </a>
+            <a class="ava-sm" href="">
+              <img src="{{random(pl)}}" alt="">
+            </a>
+            <!--<a href="" class="trpic" style="background-image:url({{random(trrr)}})"></a>-->
+            <a class="htitle" href="/en/dota-2/highlights/">{{random(hname)}}</a>
+          </li>
+        {% endfor %}
+          <li class="end">
+            <div class="mlh"><span><a href="/en/dota-2/highlights" class="btn btn-default btn-xs">Все хайлайты</a> <a href="/en/dota-2/highlights" class="btn btn-default btn-xs">Все видео</a></span></div>
+          </li>
+      </ul>
+#} 
+    </div>
+  </div>
+  </div>
+</div>

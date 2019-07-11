@@ -1,0 +1,173 @@
+{% set title = "Список стримеров и коментаторов" %}
+
+{% set nick = ['N0tail', 'ValinGoh', 'DotaMaster', 'Validator', 'Nesmus', 'Vitalik.Pro'] %}
+{% set name = ['Андрей Голованов', 'Виктор Гусев', 'Саша Болоболов', 'Игорь Жданов', 'Михаил Булгаков', 'Алексей Толстой'] %}
+{% set chan = ['EpgTV', 'RuHub', 'IgorTV', 'Dota2TV'] %}
+{% set studio = ['EpgTV', 'RuHub', 'IgorTV', 'Dota2TV'] %}
+
+<!DOCTYPE html>
+<html>
+{% include "template/head.html" %}
+<body class="">
+   {% include "template/header.html" %}
+  <div class="container mainwrap pad120">
+    {% include "template/breadcrumbs.html" %}
+    <div class="otstup">
+      <section class="hero" data-orig-offset="0" style="background-image:url(../img/headpic.jpg);">
+        <h1 class="mh"><span>Стримеры и коментаторы</span></h1>
+        <p>В данном разделе представлены все профессиональные стримеры и комментаторы</p>
+      </section>
+      <section class="m-sec m-even">
+        <div class="row">
+          <div class="col-md-8">
+            <div class="filter">
+              
+              <script>
+              // команда-турнир фильтр
+                $(document).ready(function() {
+                  $('#mlt-filter').on('keyup', function(){
+                    $('.mlt-filter').addClass('open');
+                  });
+
+                  $(document).click(function(){
+                    $('.mlt-filter').removeClass('open');
+                  });
+                  $("#dropdown").click(function(e){
+                    e.stopPropagation();
+                    $('.mlt-filter').removeClass('open');
+                  });
+                });
+              </script>
+              
+              <div class="row">
+                <div class="col-sm-2">
+                  <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle caret-abs" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                      Язык
+                      <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Европа</a></li>
+                      <li><a href="#">Америка</a></li>
+                      <li><a href="#">Азия</a></li>
+                      <li><a href="#">Тихоокеантский регион</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-sm-5">
+                  <div class="mlt-filter">
+                    <input id="mlt-filter" type="text" value="" placeholder="Название студии\канала..." class="form-control team" autocomplete="off">
+                    <a href="" class="sicon"></a>
+                    <ul class="dropdown-menu" id="#t1">
+                      <li class="dropdown-header"><a href="#">Название студии\канала</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-sm-5">
+                  <div class="mlt-filter">
+                    <input id="mlt-filter" type="text" value="" placeholder="Имя\ник комментатора..." class="form-control team" autocomplete="off">
+                    <a href="" class="sicon"></a>
+                    <ul class="dropdown-menu" id="#t1">
+                      <li class="dropdown-header"><a href="#">Имя\ник комментатора</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="block mlt streamerslist">
+              
+              <table class="mtable">
+                <thead>
+                  <tr>
+                    <th>Lang</th>
+                    <th>Name</th>
+                    <th>Channel</th>
+                    <th>Live</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for i in 1..13 %}
+                  <tr>
+                    <td class="lang">
+                      <img width="16px" src="https://ggscore.com/media/flag/{{i}}.png">
+                    </td>
+                    <td class="vname">
+                      <table><tr>
+                        <td><a class="ava-sm" href="" style="background-image:url(https://ggscore.com/media/logo/_60/pic-20151127-294x196-3464574203.jpeg);"></a>
+                        </td>
+                        <td>
+                          <a class="vtitle" href="javascript:;">{{random(nick)}}</a> <br>
+                          <small class="gray">{{random(name)}}</small>
+                        </td>
+                      </tr></table>
+                    </td>
+                    <td class="chan">
+                      <a href=""><img src="https://static-cdn.jtvnw.net/jtv_user_pictures/epgtv-profile_image-ca6391e7935f878a-300x300.jpeg"></a>
+                      <a class="vtitle" href="javascript:;">{{random(studio)}}</a> 
+                    </td>
+                    <td class="live">
+                      <b class="livebetpin"></b>
+                    </td>
+                    <td class="belltd">
+                      <a href="" class="bell tip" title="Напомнить мне"><i class="gti-bell-o"></i></a>
+                    </td>
+                  </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+              {% include "template/pager.html" %}
+
+              
+              <div class="well well-info">
+                Инфо текст
+              </div>
+              
+            </div>
+            
+          </div>
+          <div class="col-md-4">
+            
+            {% include "template/liveblock.html" %}
+            {% include "template/players/blockzames-vertical.html" %}
+
+          </div>
+        </div>
+      </section>
+      
+      <section class="grid">
+        {% include "template/players/blockzames-grid.html" %}
+      </section>
+      
+      
+      {#
+      <section id="m-news" class="m-sec m-even">
+        <div class="row">
+          <div class="col-md-7">
+            {% include "template/match-page/section-news.html" %}
+          </div>
+          <div class="col-md-5">
+            {% include "template/match-page/section-soc.html" %}
+          </div>
+        </div>
+      </section>
+      #}
+      {#
+      <section id="m-zames" class="m-sec m-even m-zames">
+        {% include "template/blockzames.html" %}
+      </section>
+      #}
+      <div class="bn">
+        <img src="../img/ad.jpg" alt="">
+      </div>
+      {% include "template/footer.html" %}
+    </div>
+  </div>
+{% include "template/branding.html" %}
+{% include "template/bar.html" %}
+{% include "template/modal.html" %}
+{% include "template/scripts.html" %}
+
+</body>
+</html>

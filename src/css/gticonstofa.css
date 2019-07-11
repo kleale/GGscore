@@ -1,0 +1,31 @@
+
+@font-face {
+  font-family: 'gticons';
+  src:  url('../fonts/gticons.eot?hgg2nf');
+  src:  url('../fonts/gticons.eot?hgg2nf#iefix') format('embedded-opentype'),
+    url('../fonts/gticons.ttf?hgg2nf') format('truetype'),
+    url('../fonts/gticons.woff?hgg2nf') format('woff'),
+    url('../fonts/gticons.svg?hgg2nf#gticons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="fa-"], [class*=" fa-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'gticons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.fa-frown-o:before {
+  content: "\f119";
+}

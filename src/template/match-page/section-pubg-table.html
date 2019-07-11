@@ -1,0 +1,104 @@
+<!--template/match-page/section-pubg-table.html-->
+{% set pname = ['Player Nick', 'Babagon1994', 'PilotSamoleta', 'Vasyok'] %}
+<table class="mtable pubgTeams">
+  <thead>
+    <tr>
+      <th width="40">
+        <a href="">#<i class="gti-chevron-down sorter"></i></a>
+      </th>
+      <th>
+        <a href="" class="active">
+          Команды<i class="gti-chevron-down sorter"></i>
+        </a>
+        <div class="mlt-filter">
+          <div class="input-group btn-hide">
+            <input type="text" value="" class="form-control fmatch input-sm" placeholder="Команда \ игрок" autocomplete="off">
+            <a href="" class="sicon"></a>
+            <div class="input-group-btn mlt-dropdown" id="fmatch">
+              <button type="button" class="btn btn-sm btn-default dropdown-toggle caret-abs" data-toggle="dropdown"><span class="caret"></span></button>
+              <ul class="dropdown-menu dropdown-menu-right">
+              </ul>
+            </div>
+          </div>
+        </div>
+      </th>
+      <th>
+        <a href="">
+          Коэффициенты<i class="gti-chevron-up sorter"></i>
+        </a>
+      </th>
+      <th>
+        <a href="">
+          Прогнозы<i class="gti-chevron-up sorter"></i>
+        </a>
+      </th>
+      <th>
+        <a href="">
+          Очки<i class="gti-chevron-up sorter"></i>
+        </a>
+      </th>
+    </tr>
+  </thead>
+  {% for i in 0..1 %}
+    <tr>
+      <td>
+        #{{i}}
+      </td>
+      <td class="sItem">
+        <div>
+          <a href="" class="tic"><img src="http://game-tournaments.com/media/logo/pic-20150825-340x216-3370444942.png"></a>
+          {% for i in 0..3 %}
+            <span>
+              <b>{{i}} kills 
+                <a href=""><i class="gti-video-camera"></i></a>
+              </b>
+              <a href="" class="ava-sm" style="background-image:url(http://game-tournaments.com/media/logo/_60/582-no-p.png);"></a>
+              {% if i==1 %}
+                <img height="12px" class="flag" src="http://game-tournaments.com/media/flag/27.png">
+              {% else %}{% endif %}
+              <a class="nick" href="">{{random(pname)}}</a> 
+            </span>
+          {% endfor %}
+        </div>
+      </td>
+      <td class="koef">
+        <table>
+          <tr>
+            <td>
+              <a href="">ggbet.com</a>
+            </td>
+            <td><b>1.8</b></td>
+            <td>
+              <a href="" class="btn btn-success btn-xs">ставка</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="">vital.com</a>
+            </td>
+            <td><b>1.5</b></td>
+            <td>
+              <a href="" class="btn btn-success btn-xs">ставка</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="">egb.com</a>
+            </td>
+            <td><b>1.3</b></td>
+            <td>
+              <a href="" class="btn btn-success btn-xs">ставка</a>
+            </td>
+          </tr>
+        </table>
+      </td>
+      <td class="pr">
+        <b>76%</b>
+        <a href="" class="btn btn-border btn-xs">прогнозы</a>
+      </td>
+      <td class="score">
+        100{{i}}
+      </td>
+    </tr>
+  {% endfor %}
+</table>

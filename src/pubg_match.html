@@ -1,0 +1,359 @@
+{% set title = "Match Stream Page" %}
+
+<!DOCTYPE html>
+<html>
+{% include "template/head.html" %}
+
+<script>
+  $(document).ready(function () {
+      // match bar affix
+    $(window).scroll(function() {
+      var wbh = $('.m-head').parent().offset().top - 50;
+      if (wbh-$(window).scrollTop() <= 0) {
+        $('#m-fast').addClass('fix');
+      }
+      else {
+        $('#m-fast').removeClass('fix');
+      }
+    });
+  });
+</script>
+
+ <body class="chat-open1 g100">
+  {% include "template/header.html" %}
+  <div class="container mainwrap pad120">
+    <div class="otstup">
+      <section class="m-head">
+        <div class="stage">
+          <em><b>3</b>China <span class="caret"></span></em>
+          <ul>
+            <li class="s-pass"><a href=""><i class="gti-trophy"></i><span>Турнир</span></a></li>
+            <li class="s-pass"><a href=""><b>1</b><span>Квалификация</span></a></li>
+            <li class="s-pass"><a href=""><b>2</b><span>Групповой раунд</span></a></li>
+            <li class="active"><a href=""><b>3</b><span>China</span></a></li>
+            <li><a href=""><b>4</b><span>China #2</span></a></li>
+            <li><a href=""><b>5</b><span>America</span></a></li>
+            <li><a href=""><b>6</b><span>America #2</span></a></li>
+            <li><a href=""><b>7</b><span>SEA</span></a></li>
+            <li><a href=""><b>8</b><span>SEA #2</span></a></li>
+            <li><a href=""><b>9</b><span>Europe</span></a></li>
+            <li><a href=""><b>10</b><span>Europe #2</span></a></li>
+            <li><a href=""><b>11</b><span>Финал</span></a></li>
+          </ul>
+        </div>
+        
+        <div class="mmhd">
+	        <div class="mmr">
+		        <div class="mr">
+			        <span id="rates" class="m-rate">
+                <span class="gti-star" rel="10" onclick="rate(10)"></span>
+                <span class="gti-star" rel="9" onclick="rate(9)"></span>
+                <span class="gti-star" rel="8" onclick="rate(8)"></span>
+                <span class="gti-star" rel="7" onclick="rate(7)"></span>
+                <span class="gti-star" rel="6" onclick="rate(6)"></span>
+                <span class="gti-star" rel="5" onclick="rate(5)"></span>
+                <span class="gti-star" rel="4" onclick="rate(4)"></span>
+                <span class="gti-star" rel="3" onclick="rate(3)"></span>
+                <span class="gti-star" rel="2" onclick="rate(2)"></span>
+                <span class="gti-star starred" rel="1" onclick="rate(1)"></span>
+              </span>
+            <span class="rgg">
+              <span id="brate">1.000</span>
+            </span>
+            <div class="m-r-ozh">
+                Выбери матч дня!
+            </div>
+            </div>
+          </div>
+          <div class="mmshr">
+            <div class="ms">
+              <div class="m-shr">
+                  <span class="m-v"><i class="gti-eye"></i>1,469</span>
+                  <a href="javascript:;" onclick="Share.vkontakte();" class="shr"><i class="gti-vk"></i><span id="share-vk">0</span></a>
+                  <a href="javascript:;" onclick="Share.facebook();" class="shr"><i class="gti-facebook"></i><span id="share-fb">0</span></a>
+                  <a href="javascript:;" onclick="Share.twitter();" class="shr"><i class="gti-twitter"></i><span id="share-tw">0</span></a>
+                  <a href="javascript:;" onclick="Share.google();" class="shr"><i class="gti-google-plus"></i><span id="share-gg">0</span></a>
+              </div>
+              <!--<div class="m-tags">
+                  <a href="#">#NavivsAlliance</a>
+              </div>-->
+            </div>
+          </div>
+          <div class="mtt">
+            <h1 class="m-title" itemprop="summary"><span><span itemprop="eventType">Матч</span> PUBGPRO.com</span></h1>
+            <div class="m-time sct" data-time="1503230400" data-format="%j% %ms%, %h%:%i% %tz%">20 авг, 15:00 MSK</div>
+            <div class="m-best">Game 1 of 3</div>
+          </div>
+        </div>
+        
+        <div class="row mmtms">
+          <div class="col-lg-5 col-sm-4 col-xs-6 mmtms1">
+            <a class="m-team mt1" href="#pubg-table">
+                <b>30</b>
+                <span>Команд</span>
+            </a>
+          </div>
+          <div class="col-lg-2 col-sm-4 mmtms_a">
+            <div class="m-act">
+              <div class="m-item" data-score="0 : 0" data-id="53610" data-time="0"> <a href="javascript:;" class="btn btn-sm btn-success wmsb">Сделать ставку</a> </div>
+              <div class="m-links"> <a href="/ru/dota-2/prodota-cup-sea-9/group" title="ProDotA Cup SEA #9">ProDotA Cup SEA #9, Group Stage, Group B</a> </div>
+            </div>
+          </div>
+          <div class="col-lg-5 col-sm-4 col-xs-6 mmtms2">
+            <a class="m-team mt2" href="#pubg-table">
+              <b>90</b>
+              <span>Игроков</span>
+            </a>
+          </div>
+        </div>
+        
+      <!--<div class="match-text">У Imperial преимущество [1:0]</div>-->
+      </section><!-- /m-head" -->
+      <section class="player player-video" id="player">
+        
+        <div class="nav-wr mobmenu-open">
+          <span class="mobmenu"><i class="gti-bars"></i> Стрим: Игра 1 <i class="livebetpin"></i></span>
+          <ul id="videos" class="nav nav-tabs">
+            <li><a href="javascript:;" id="vidtab">Игра 1 </a></li>
+            <li class="active"><a href="javascript:;" id="strtab">Игра 2: <b>LIVE</b> <i class="livebetpin"></i></a></li>
+            {% for i in 3..5 %}
+                <li><a href="#">Игра {{i}}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+        
+  {#
+        <div class="video_block" id="video" style="">
+            <figure><img src="http://game-tournaments.com/media/export/start/41085-1.jpg"></figure>
+            <div class="gamevid" style="top: 285px;">
+              <h2>Смотреть видео Even Team Secret vs Cloud9</h2>
+              <div id="gvlist" class="tse">
+                  <div class="tse-content">
+                    <a class="g-rezults fancybox" href="/media/export/result/41085-1.jpg">
+                      <u><i class="gti-bar-chart"></i></u> 
+                      <span><b>Показать результаты игры</b><em>Статистика и результаты матча</em></span> 
+                      <sup><i class="gti-arrow-right"></i> Смотреть</sup>
+                    </a>
+                    <a class="g-rezults g-d2m" style="background-color: rgba(240, 80, 32, 0.2)" target="_blank" href="http://dotaviewer.com/ru/2916500234"> <u><i class="gti-dotaviewer"></i></u> <span><b>DotaViewer</b><em>Смотреть все важные моменты игры</em></span> <sup><i class="gti-arrow-right"></i> Смотреть</sup> </a>
+                    <a class="video" href="#"> <u style="background-image:url(http://game-tournaments.com/media/flag/3.png)"><i class="gti-play"></i></u> <span><b>[RU] Cloud 9 vs TNC Pro Team, Game 1, Final, 2016 WESG Dota 2 Grand Final presented by Alipay</b><em>WESG</em><s><i class="gti-eye"></i> 3056</s></span> <sup><i class="gti-youtube-play"></i> Смотреть</sup><i class="gti-times close"></i></a>
+                    <a class="video" href="#"> <u style="background-image:url(http://game-tournaments.com/media/flag/3.png)"><i class="gti-play"></i></u> <span><b>[EN] Cloud 9 vs TNC Pro Team, Game 1, Final, 2016 WESG Dota 2 Grand Final presented by Alipay</b><em>WESG</em><s><i class="gti-eye"></i> 29918</s></span> <sup><i class="gti-youtube-play"></i> Смотреть</sup><i class="gti-times close"></i></a>
+                  </div>
+              </div>
+            </div>
+        </div>
+  #}
+        <div id="srteamslider" class="srteamslider branded" rel="XXX">
+          <div class="srteamview clearfix" id="mainstream">
+            {% include "template/match-page/player-html5.html" %}
+          </div>
+          <div class="srteamtoggle">
+            <div class="st_inner">
+             {#
+              <div class="stream_action">
+                <!--<span class="st-btn active" id="stream-toggle"><i class="gti-bars"></i></span>
+                <span class="st-btn odtip" id="stream-expand" title="Развернуть на весь экран"><i class="gti-expand"></i></a>-->
+                <ul id="stream_menu" class="player-menu" role="tablist">
+                  <li rel="stream"  class="active">
+                    <a role="tab" data-toggle="tab" href="#player-streams"><i class="gti-video-camera"></i>
+                    <span>Трансляции</span></a>
+                  </li>
+                  <li rel="stat" title="Статистика">
+                   <a role="tab" data-toggle="tab" href="#player-stat"><i class="gti-pie-chart"></i>
+                    <span>Статистика</span></a>
+                  </li>
+                  <li id="achat" rel="log">
+                    <a role="tab" data-toggle="tab" href="#player-log"><i class="gti-list-ul"></i>
+                    <span>Лог матча</span></a>
+                  </li>
+                  <li id="achat" rel="chat">
+                    <a role="tab" data-toggle="tab" href="#player-chat"><i class="gti-comments-o"></i>
+                      <span>Чат матча</span></a>
+                  </li>
+                </ul>
+              </div>
+              #}
+              <div id="stmblocks" class="stmblocks tab-content">
+                {% include "template/match-list/player-streams-pubg.html" %}
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <script>
+          $(document).ready(function () {
+            // tabs example
+            $('#vidtab').click(function() {
+              $('#video').show();
+              $('#srteamslider').hide();
+              $(this).parent('li').addClass('active');
+              $(this).parent('li').siblings('li').removeClass('active');
+            });
+            
+            $("#strtab").click(function() {
+              $('#video').hide();
+              $('#srteamslider').show();
+              $(this).parent('li').addClass('active');
+              $(this).parent('li').siblings('li').removeClass('active');
+            });
+            
+          });
+        </script>
+        
+      </section><!-- /m-player" -->
+
+      <section id="m-koef" class="m-sec m-even">
+        <div class="row">
+          <div class="col-md-8">
+            {% include "template/match-page/section-prognoz2.html" %}
+          </div>
+          <div class="col-md-4">
+            {% include "template/liveblock.html" %}
+          </div>
+        </div>
+      </section>
+      
+      <section id="pubg-table" class="m-sec m-odd">
+        {% include "template/match-page/section-pubg-table.html" %}
+      </section>
+      
+      <section class="m-sec m-even">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="block" id="m-teams">
+              <div class="bh clearfix">
+                <h3 class="mlh">
+                  <span>
+                  <!--<i class="ih gti-exchange"></i>-->
+                  Сравнение команд
+                  <!--<i data-toggle="popover" data-placement="bottom" data-trigger="hover" data-content="О сравнении" class="inf gti-info-circle" data-original-title="" title=""></i>-->
+                  </span>
+                </h3>
+                <div class="row clearfix">
+                  <div class="col-md-6">
+                    <div class="grphilter clearfix">
+                      <div>
+                        <div class="input-group btn-hide">
+                          <input type="text" class="form-control input-sm fteam" placeholder="Команда для сравнения" value="" autocomplete="off">
+                          <div class="input-group-btn mlt-dropdown" id="fteam">
+                            <button type="button" class="btn btn-default dropdown-toggle caret-abs" data-toggle="dropdown"><span class="caret"></span></button>
+                            <ul class="dropdown-menu dropdown-menu-right"></ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="grphilter clearfix">
+                      <div>
+                        <div class="input-group btn-hide">
+                          <input type="text" class="form-control input-sm fteam" placeholder="Команда для сравнения" value="" autocomplete="off">
+                          <div class="input-group-btn mlt-dropdown" id="fteam">
+                            <button type="button" class="btn btn-default dropdown-toggle caret-abs" data-toggle="dropdown"><span class="caret"></span></button>
+                            <ul class="dropdown-menu dropdown-menu-right"></ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              {% include "template/match-page/compare-graph.html" %}
+              
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="block" id="m-players">
+              <div class="bh clearfix">
+                <h3 class="mlh">
+                  <span>
+                    <!--<i class="ih gti-male"></i>-->
+                    Сравнение игроков
+                    <!--<i data-toggle="popover" data-placement="bottom" data-trigger="hover" data-content="О сравнении" class="inf gti-info-circle" data-original-title="" title=""></i>-->
+                  </span>
+                </h3>
+                <div class="row clearfix">
+                  <div class="col-md-6">
+                    <div class="grphilter clearfix">
+                      <div>
+                        <div class="input-group btn-hide">
+                          <input type="text" class="form-control input-sm fteam" placeholder="Команда для сравнения" value="" autocomplete="off">
+                          <div class="input-group-btn mlt-dropdown" id="fteam">
+                            <button type="button" class="btn btn-default dropdown-toggle caret-abs" data-toggle="dropdown"><span class="caret"></span></button>
+                            <ul class="dropdown-menu dropdown-menu-right"></ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="grphilter clearfix">
+                      <div>
+                        <div class="input-group btn-hide">
+                          <input type="text" class="form-control input-sm fteam" placeholder="Команда для сравнения" value="" autocomplete="off">
+                          <div class="input-group-btn mlt-dropdown" id="fteam">
+                            <button type="button" class="btn btn-default dropdown-toggle caret-abs" data-toggle="dropdown"><span class="caret"></span></button>
+                            <ul class="dropdown-menu dropdown-menu-right"></ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                {% include "template/match-page/compare-graph.html" %}
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </section>
+
+      <div class="bn">
+        <img src="https://ggscore.com/media/b/ggscore_ru.jpg">
+      </div>
+
+      <section id="m-picks" class="m-sec m-even">
+        <div class="row">
+          <div class="col-md-8">
+            <h3 class="mlh"><span>Комментарии</span></h3>
+            <div class="block" id="m-com">
+              <div class="tab-content">
+                <div class="tab-pane active" role="tabpanel" id="c-com">
+                  <div class="comblock">
+                    <div class="tse-com">
+                      <div class="tse-content" id="comments">
+                        <div class="no100"><i class="gti-info-circle"></i> Пока никто не оставлял комментариев</div>
+                      </div>
+                    </div>
+                    <div class="chat-action">
+                      <div class="chat-text">
+                        <form method="POST" action="comments" name="comment">
+                          <input type="hidden" name="mid" class="input" value="53610">
+                          <input type="hidden" name="game_id" class="input" value="582">
+                          <input type="hidden" name="time" class="input" value="1503220615">
+                          <textarea name="txt" class="input" placeholder=""></textarea> <a href="javascript:;" onclick="sform('comment');" class="btn btn-chat">OK</a> </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4"> </div>
+        </div>
+      </section>
+
+      {% include "template/breadcrumbs.html" %}
+      {% include "template/footer.html" %}
+    </div>
+  </div>
+
+{% include "template/branding.html" %}
+{% include "template/bar.html" %}
+{% include "template/modal.html" %}
+{% include "template/scripts.html" %}
+
+</body>
+</html>

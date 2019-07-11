@@ -1,0 +1,422 @@
+{% set title = "Игроки дота 2. Прогнозы от пользователей" %}
+
+{% set team = ['Wings', 'OG', ' Evil Geniuses', 'EHOME', 'NewBee', 'Virtus.Pro'] %}
+{% set flag = ['1', '2', '3', '4', '5', '6'] %}
+{% set rate = ['1,744', '1,622', '1,511', '1,497', '1,496', '1,469', '—'] %}
+
+<!DOCTYPE html>
+<html>
+{% include "template/head.html" %}
+<body class="">
+   {% include "template/header.html" %}
+  <div class="container mainwrap pad120">
+    {% include "template/breadcrumbs.html" %}
+    <div class="otstup">
+      <section class="hero" data-orig-offset="0" style="background-image:url(../img/headpic.jpg);">
+        <h1 class="mh"><span>Прогнозы на матчи Dota 2</span></h1>
+        <!--<p>В данном разделе представлены все профессиональные игроки Dota 2. Для некоторых из них так же указан их индивидуальный рейтинг (Solo MMR)</p>-->
+        
+        <div class="prognozStata">
+          <div class="row">
+            <div class="col-md-4">
+              <h3 class="mlh mlh-sm">
+                <span>Прогнозист недели <small>по проходимости</small></span>
+              </h3>
+              
+              <div class="block-plw">
+                <div class="plw">
+                  <a href="" class="logo">
+                    <figure><img alt="DotA 2_hot_bets" src="https://ggscore.com/media/user/_60/pic-20160307-605x518-3425981351.jpeg"></figure>
+                    <b>
+                      <i class="p-i-1"></i>
+                    </b>
+                  </a>
+                  <div class="name">
+                    <a href="">
+                      DotA 2_hot_bets <img src="http://ggscore.com/media/flag/4.png" alt="China">
+                    </a>
+                    <br>Бесплатно
+                    <em>Прогнозов: 213</em>
+                  </div>
+
+                  <div class="hits tip" title="Проходимость">
+                    <span>Проходимость — </span><b>100%</b>
+                  </div>
+                </div>
+
+                <table class="table table-sm table-striped table-condensed pTeamOther">
+                  <tbody>
+                    <tr>
+                      <td width="50">
+                        <a class="ava-sm" href="" style="background-image:url(http://ggscore.com/media/logo/_60/pic-20170116-600x799-6254104911.jpeg);"></a>
+                      </td>
+                      <td>
+                        <a class="nick" title="Super" href=""><img width="16px" src="http://ggscore.com/media/flag/5.png"> <u>10 лет опыта</u>.<span class="gray">бесплатно</span></a>
+                      </td>
+                      <td width="24%" align="center"><b>100%</b></td>
+                    </tr>
+                    <tr>
+                      <td width="50">
+                        <a class="ava-sm" href="" style="background-image:url(http://ggscore.com/media/logo/_60/pic-20170116-600x799-6254104911.jpeg);"></a>
+                      </td>
+                      <td>
+                        <a class="nick" title="Super" href=""><img width="16px" src="http://ggscore.com/media/flag/3.png"> <u> Ставка зашла!</u>.<span class="gray">бесплатно</span></a>
+                      </td>
+                      <td width="24%" align="center"><b>98%</b></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              
+            </div>
+            <div class="col-md-4">
+              <h3 class="mlh mlh-sm">
+                <span>Победитель недели<small>по прогнозам</small></span>
+              </h3>
+              <div class="block-plw block-bs">
+                <div class="plw">
+                  <a href="" class="logo">
+                    <img src="http://ggscore.com/media/logo/_60/pic-20160203-600x600-6826089355.png" alt="Evil Geniuses">
+                    <b><i class="p-i-2"></i></b>
+                  </a>
+                  <div class="name">
+                    <a href="">
+                      Evil Geniuses <img src="http://ggscore.com/media/flag/4.png" alt="China">
+                    </a>
+                  </div>
+                  <div class="hits">
+                    55 прогнозов на победу
+                    <em>общая проходимость 83%</em>
+                  </div>
+                </div>
+                
+                <table class="table table-sm table-striped table-condensed pTeamOther">
+                  <tbody>
+                    <tr>
+                      <td class="tlogo">
+                        <a href="" class="logo">
+                          <img src="http://ggscore.com/media/logo/_60/pic-20160203-600x600-6826089355.png" alt="Evil Geniuses">
+                        </a>
+                      </td>
+                      <td>
+                        <a class="nick" title="Super" href=""><u>Evil Geniuses</u> <img width="16px" src="http://ggscore.com/media/flag/5.png"></a>
+                      </td>
+                      <td width="24%" align="center"><b>33 / 81%</b></td>
+                    </tr>
+                    <tr>
+                      <td class="tlogo">
+                        <a href="" class="logo">
+                          <img src="http://ggscore.com/media/logo/_60/pic-20160203-600x600-6826089355.png" alt="Evil Geniuses">
+                        </a>
+                      </td>
+                      <td>
+                        <a class="nick" title="Super" href=""><u>Evil Geniuses</u> <img width="16px" src="http://ggscore.com/media/flag/5.png"></a>
+                      </td>
+                      <td width="24%" align="center"><b>27 / 76%</b></td>
+                    </tr>
+                  </tbody>
+                </table>
+                
+              </div>
+              
+            </div>
+            <div class="col-md-4">
+              <h3 class="mlh mlh-sm">
+                <span>Статистика прогнозов <small>за неделю</small></span>
+              </h3>
+              <div class="block-plw prst">
+                 <table class="table table-sm table-striped table-condensed">
+                  <tbody>
+                    <tr>
+                      <td width="50">
+                        <span class="prstd"><i class="p-i-3"></i></span>
+                      </td>
+                      <th>
+                        Максимум за неделю <small class="gray">бесплатных</small>
+                      </th>
+                      <td width="50%" align="center"><a href="">10 лет опыта</a><br>подписок <b>23</b></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="prstd"><i class="p-i-3"></i></span>
+                      </td>
+                      <th>
+                        Максимум за неделю <small class="gray">платных</small>
+                      </th>
+                      <td width="50%" align="center"><a href="">DotA 2_hot_bets</a><br>подписок <b>76</b></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="prstd"><i class="p-i-5"></i></span>
+                      </td>
+                      <th>
+                        Всего прогнозов за неделю
+                      </th>
+                      <td width="50%" align="center"><b>234</b></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="prstd"><i class="p-i-4"></i></span>
+                      </td>
+                      <th>
+                        Проходимость прогнозов
+                      </th>
+                      <td align="center">
+                        Платных <b>75 %</b> <br>
+                        Бесплатных <b>54 %</b>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </section>
+      <section class="m-sec m-even">
+        <div class="row">
+          <div class="col-md-8">
+            <div class="filter">
+              <form method="get" id="filter">
+                <div class="row">
+                  <div class="col-sm-3">
+                    <div class="dropdown">
+                      <button class="btn btn-default dropdown-toggle caret-abs" type="button" data-toggle="dropdown">Статус <span class="caret"></span></button>
+                      <ul class="dropdown-menu">
+                        <li><a href="javascript:;" onclick="">Pro</a></li>
+                        <li><a href="javascript:;" onclick="">Не Pro</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-sm-3">
+                    <div class="dropdown">
+                      <button type="button" class="btn btn-default dropdown-toggle caret-abs" data-toggle="dropdown">Язык <span class="caret"></span></button>
+                      <ul class="dropdown-menu">
+                        <li><a href="javascript:;" onclick="mfilter('country','1');">Корея</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','2');">США</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','3');">Россия</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','4');">Китай</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','5');">Германия</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','6');">Норвегия</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','7');">Тайвань</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','8');">Испания</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','9');">Япония</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','10');">Швеция</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','11');">Англия</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','12');">Беларусь</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','13');">Канада</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','14');">Украина</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','15');">Австрия</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','16');">Ирландия</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','17');">Голландия</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','18');">Франция</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','19');">Бразилия</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','20');">Болгария</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','21');">Польша</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','22');">Италия</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','23');">Интернациональная</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','24');">Дания</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','25');">Европа</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','26');">Чехия</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','27');">Сингапур</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','28');">Малайзия</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','29');">Филиппины</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','30');">Тайланд</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','31');">Казахстан</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','32');">Австралия</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','33');">Финляндия</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','34');">Бельгия</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','35');">Чили</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','36');">Перу</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','37');">Сербия</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','38');">Турция</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','39');">Румыния</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','40');">Литва</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','41');">Греция</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','42');">Словакия</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','43');">Босния и Герцеговина</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','44');">Индонезия</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','45');">Португалия</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','46');">Вьетнам</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','47');">Аргентина</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','48');">Иордания</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','49');">Бутан</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','50');">Мьянма</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','51');">Бирма</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','52');">Индия</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','53');">Венгрия</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','54');">Ливан</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','55');">Новая Зеландия</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','56');">Гонг-Конг</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','57');">Аландские острова</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','58');">Македония</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','59');">Пакистан</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','60');">Монголия</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','61');">Алжир</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','62');">Боливия</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','63');">Хорватия</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','64');">Бруней</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','65');">Кыргызстан</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','66');">Израиль</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','67');">Макао</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','68');">Эстония</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','69');">Уругвай</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','70');">Албания</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','71');">Бахрейн</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','72');">Африка</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','73');">Тунис</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','74');">Грузия</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','75');">Швейцария</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','76');">Иран</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','77');">Молдавия</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','78');">Венесуэла</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','79');">Мексика</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','80');">Исландия</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','81');">Палестина</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','82');">Other</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','83');">Словения</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','84');">Черногория</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','85');">Пуэрто-Рико</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','86');">Латвия</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','87');">Марокко</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','88');">Ливия</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','89');">Египет</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','90');">Азербайджан</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','91');">Люксембург</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','92');">Южная Африка</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','93');">Шри-Ланка</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','94');">Непал</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','95');">Югославия</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','96');">Великобритания</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','97');">ОАЭ</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','98');">Ирак</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','99');">Армения</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','100');">Колумбия</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','101');">Доминиканская Республика</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','102');">Сальвадор</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','103');">Гватемала</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','104');">Мальта</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','105');">Узбекистан</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','106');">Кипр</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','107');">Сирия</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','108');">Коста-Рика</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','109');">Камбоджия</a></li>
+                        <li><a href="javascript:;" onclick="mfilter('country','110');">Эквадор</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="mlt-filter">
+                      <div>
+                        <input type="text" name="t" value="" placeholder="Название прогнозиста" class="form-control" autocomplete="off">
+                        <a href="javascript:;" onclick="" class="sicon"></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <div class="block mlt prognozList">
+              {% set nik = ['Ставка зашла!', 'DotA 2_hot_bets', 'Global Bets | Dota', 'Прогнозы от Skan', 'Bets by Boss Elite', '10 лет опыта'] %}
+              {% set logo = ['pic-20160307-605x518-3425981351.jpeg'] %}
+              {% set flag = ['1', '2', '3', '4', '5', '6'] %}
+              {% set prog = ['23','21','65','27','54','28','31','11'] %}
+              {% set proh = ['83%', '93%', '73%', '84%', '100%', '100%'] %}
+              {% set last = ['сегодня', 'вчера', '17 дн.', '173 дн.', '1 год', '2 года', '—'] %}
+              {% set price = ['бесплатно', 'бесплатно', 'бесплатно', '$0.49', '$0.5'] %}
+                <div class="block-content table-mobile">
+                  <table class="mtable">
+                    <thead>
+                      <th></th>
+                      <th>Язык</th>
+                      <th><span>Прогнозист</span></th>
+                      <th><span>Прогнозов</span></th>
+                      <th><a href="" class="active">Проходимость <i class="gti-chevron-up sorter"></i></a></th>
+                      <th><span>Последний</span></th>
+                      <th><span>Подписка</span></th>
+                    </thead>
+                    {% for i in 0..19 %}
+                      <tr class="t-item">
+                        <td>
+                          <span class="upro">PRO</span>
+                        </td>
+                        <td>
+                          <a href="" class="flag">
+                            <img src="http://game-tournaments.com/media/flag/{{random(flag)}}.png" alt="Европа" title="Европа">
+                          </a>
+                        </td>
+                        <td>
+                          <a href="#" class="ava-sm" title="Катавасия в Дота 2 (est. 2015)">
+                            <img src="https://ggscore.com/media/user/_60/{{random(logo)}}" alt="{{random(nik)}}">
+                          </a>
+                          <a href="">{{random(nik)}}</a>
+                        </td>
+                        <td>
+                          {{random(prog)}}
+                        </td>
+                        <td>
+                          {{random(proh)}}
+                        </td>
+                        <td>
+                          {{random(last)}}
+                        </td>
+                        <td>
+                          <a href="" class="btn btn-default btn-xs tip" title="Подписаться">{{random(price)}}</a>
+                        </td>
+                      </tr>
+                    {% endfor %}
+                  </table>
+                  {% include "template/pager.html" %}
+                </div>
+              <div class="well well-info">
+                Информационное сообщение
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            
+            {% include "template/liveblock.html" %}
+            {% include "template/players/blockzames-vertical.html" %}
+
+          </div>
+        </div>
+      </section>
+      
+      {#
+      <section class="grid">
+        {% include "template/players/blockzames-grid.html" %}
+      </section>
+      #}
+      
+      {#
+      <section id="m-news" class="m-sec m-even">
+        <div class="row">
+          <div class="col-md-7">
+            {% include "template/match-page/section-news.html" %}
+          </div>
+          <div class="col-md-5">
+            {% include "template/match-page/section-soc.html" %}
+          </div>
+        </div>
+      </section>
+      #}
+      {#
+      <section id="m-zames" class="m-sec m-even m-zames">
+        {% include "template/blockzames.html" %}
+      </section>
+      #}
+      <div class="bn">
+        <img src="../img/ad.jpg" alt="">
+      </div>
+      {% include "template/footer.html" %}
+    </div>
+  </div>
+{% include "template/branding.html" %}
+{% include "template/bar.html" %}
+{% include "template/modal.html" %}
+{% include "template/scripts.html" %}
+
+</body>
+</html>

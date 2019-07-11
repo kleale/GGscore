@@ -1,0 +1,56 @@
+<!-- /players/player-games.html -->
+
+{% set nik = ['Miracle', 'GH', 'ALOHADANCE', 'Limmp', 'MinD_ContRoL', ' SoNNeikO'] %}
+{% set team = ['Wings', 'OG', ' Evil Geniuses', 'EHOME', 'NewBee', 'Virtus.Pro'] %}
+{% set logo = ['pic-20161110-600x600-7320131375.png', 'pic-20161110-300x300-2206743285.png', 'pic-20161110-600x600-5478339632.png', 'pic-20161110-500x500-918003572.png', 'pic-20161110-600x450-6323255579.png'] %}
+{% set flag = ['1', '2', '3', '4', '5', '6'] %}
+
+{% set role = ['1', '2', '3', '4', '5'] %}
+{% set pos = ['Support', 'Core'] %}
+{% set mvp = ['50', '22', '73', '74', '65', '96'] %}
+{% set fights = ['50', '22', '73', '74', '65', '96'] %}
+{% set inactivity = ['50', '22', '73', '74', '65', '96'] %}
+{% set kills = ['Rampage x3', 'Ultra kill x1'] %}
+
+{% set hero = ['sniper_sb.png', 'sven_hphover.png', 'rattletrap_hphover.png','vengefulspirit_hphover.png','gyrocopter_hphover.png','ember_spirit_hphover.png','medusa_hphover.png'] %}
+
+{% set win = ['<span class="green">Выиграл</span>', '<span class="red">Проиграл</span>'] %}
+
+{% set tour = ['The Boston Major', 'International 2016', 'WESG', 'Dota2 Professional League Season 2', 'ESL One Genting 2017', 'DreamLeague Season 6'] %}
+
+{% set tourlogo = ['pic-20160926-280x80-6342360083.jpeg', 'pic-20160831-478x178-7586446600.jpeg', 'pic-20160912-600x267-6676783403.png', 'pic-20160909-378x119-9085315335.jpeg'] %}
+
+{% set last = ['сегодня', 'вчера', '17 дн.', '173 дн.', '1 год', '2 года', '—'] %}
+  
+
+  <div class="block-content playerGames">
+    <table class="mtable">
+      <thead>
+        <tr>
+	     <th> Герой </th>
+          <th>Результат</th>
+          <th></th>
+          <th>Матч</th>
+          <th>Турнир</th>
+          <th>MVP / <span class="tip" title="" data-original-title="Битвы">Битвы</span></th>
+          <th>Серия убийств</th>
+          </tr>
+      </thead>
+      {% for i in 0..19 %}
+      <tr class="t-item">
+        <td> <span class="heropic" title="Medusa"><b>Mid</b><img src="http://cdn.dota2.com/apps/dota2/images/heroes/{{random(hero)}}" alt="Medusa logo"></span> </td>
+        <td> <a href="/ru/dota-2/summit-7/china/ig-vs-ig-vitality-48185" class="red">{{random(win)}}</a>
+          <div class="sca" data-time="1494388800">3н назад</div>
+        </td>
+        <td class="tplogo"><img class="logo" style="width:30px" src="http://game-tournaments.com/media/logo/{{random(logo)}}"></td>
+        <td> <a href="/ru/dota-2/team/ig-vitality">{{random(team)}}</a>
+          <br> vs <a href="/ru/dota-2/team/ig">{{random(team)}}</a> </td>
+        <td>
+          <a href="/ru/dota-2/summit-7/china" class="tip" title="" data-original-title="The Summit 7, China"><img src="http://game-tournaments.com/media/tournament/_60/pic-20170401-280x80-6856705518.png"></a>
+        </td>
+        <td> <b>3%</b> / <b>50%</b> </td>
+        <td> </td>
+      </tr>
+      {% endfor %}
+    </table>
+  </div>

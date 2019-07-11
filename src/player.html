@@ -1,0 +1,548 @@
+{% set title = "Игроки дота 2. Рейтинг игроков Dota 2" %}
+
+{% set team = ['Wings', 'OG', ' Evil Geniuses', 'EHOME', 'NewBee', 'Virtus.Pro'] %}
+{% set logo = ['pic-20161110-600x600-7320131375.png', 'pic-20161110-300x300-2206743285.png', 'pic-20161110-600x600-5478339632.png', 'pic-20161110-500x500-918003572.png', 'pic-20161110-600x450-6323255579.png'] %}
+{% set flag = ['1', '2', '3', '4', '5', '6'] %}
+{% set rate = ['1,744', '1,622', '1,511', '1,497', '1,496', '1,469', '—'] %}
+{% set vid_type = ['самый массовый замес', 'больше всех убил один герой', 'самый большой камбек'] %}
+
+{% set hero = ['sniper_sb.png', 'sven_hphover.png', 'rattletrap_hphover.png','vengefulspirit_hphover.png','gyrocopter_hphover.png','ember_spirit_hphover.png','medusa_hphover.png'] %}
+
+<!DOCTYPE html>
+<html>
+{% include "template/head.html" %}
+<body class="">
+  {% include "template/header.html" %}
+<script src="//cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+<script>
+/*!
+* jquery.counterup.js 1.0
+*
+* Copyright 2013, Benjamin Intal http://gambit.ph @bfintal
+* Released under the GPL v2 License
+*
+* Date: Nov 26, 2013
+*/(function(e){"use strict";e.fn.counterUp=function(t){var n=e.extend({time:400,delay:10},t);return this.each(function(){var t=e(this),r=n,i=function(){var e=[],n=r.time/r.delay,i=t.text(),s=/[0-9]+,[0-9]+/.test(i);i=i.replace(/,/g,"");var o=/^[0-9]+$/.test(i),u=/^[0-9]+\.[0-9]+$/.test(i),a=u?(i.split(".")[1]||[]).length:0;for(var f=n;f>=1;f--){var l=parseInt(i/n*f);u&&(l=parseFloat(i/n*f).toFixed(a));if(s)while(/(\d+)(\d{3})/.test(l.toString()))l=l.toString().replace(/(\d+)(\d{3})/,"$1,$2");e.unshift(l)}t.data("counterup-nums",e);t.text("0");var c=function(){t.text(t.data("counterup-nums").shift());if(t.data("counterup-nums").length)setTimeout(t.data("counterup-func"),r.delay);else{delete t.data("counterup-nums");t.data("counterup-nums",null);t.data("counterup-func",null)}};t.data("counterup-func",c);setTimeout(t.data("counterup-func"),r.delay)};t.waypoint(i,{offset:"100%",triggerOnce:!0})})}})(jQuery);
+  
+jQuery(document).ready(function($) {
+    $('.counter').counterUp({
+        delay: 10,
+        time: 500
+    });
+});
+</script>
+
+<script src="../inc/assets/js/highcharts.js"></script>
+<script src="../inc/assets/js/highcharts-more.js"></script>
+<!--
+<script src="../inc/assets/js/highcharts-exporting.js"></script>
+-->
+<script src="../inc/assets/js/highcharts-theme.js"></script>
+<script>
+/* Player spider graph*/
+$(function () {
+
+    $('#spider_chart_player').highcharts({
+        colors: ["#3f79a2", "#d94c4c", "#2d6185", "#b63b3b"],
+        chart: {
+            polar: true,
+            type: 'line',
+            backgroundColor: 'none',
+            spacingBottom: 5,
+            spacingTop: 5,
+            spacingLeft: 0,
+            spacingRight: 0
+        },
+        title: {
+            text: '',
+            x: -80
+        },
+        pane: {
+            size: '95%'
+        },
+        plotOptions: {
+            series: {
+              title:''
+            }
+        },
+        credits: {
+          enabled: false
+        },
+        xAxis: {
+            categories: ['Mid', 'Safe', 'Hard', 'Jungle', 'Roaming'],
+            tickmarkPlacement: 'on',
+            lineWidth: 0,
+            labels: {
+                style: {
+                  textTransform: 'uppercase',
+                  color: '#c7c7c7'
+                }
+            }
+        },
+        yAxis: {
+            gridLineInterpolation: 'polygon',
+            //lineWidth: 0,
+            tickInterval: 2,
+            min: 0,
+            max: 100,
+            title: {
+              enabled: true
+            },
+            labels: {
+               enabled: true
+            },
+            plotBands: [{ // visualize
+                from: 0,
+                to: 20,
+                color: 'rgba(68, 118, 213, 0.1)'
+            },
+            {
+                from: 20,
+                to: 40,
+                color: 'rgba(68, 118, 213, 0.05)'
+            },
+            {
+                from: 40,
+                to: 60,
+                color: 'rgba(68, 118, 213, 0.1)'
+            },
+            {
+                from: 60,
+                to: 80,
+                color: 'rgba(68, 118, 213, 0.05)'
+            },
+            {
+                from: 80,
+                to: 100,
+                color: 'rgba(68, 118, 213, 0.1)'
+            },
+            ]
+        },
+        plotOptions: {
+            series: {
+                fillOpacity: 0.5
+            }
+        },
+        tooltip: {
+            shared: true,
+            pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f}</b><br/>'
+        },
+        legend: {
+            enabled: false
+        },
+        series: [{
+            name: 'Line',
+            type: 'area',
+            data: [20, 10, 15, 15, 40],
+            pointPlacement: 'on'
+        }]
+
+    });
+});
+
+/* Player role graph line*/
+$(function () {
+        var role = {1:'Carry',2:'Semi-Carry',3:'Hard Lane',4:'Support',5:'Support'};
+        var lane = {'mid':'Mid','safe':'Safe','hard':'Hard','forest':'Jungler','roaming':'Roaming'};
+		
+        $('#playerRole').highcharts({
+            colors: ["#3f79a2", "#5f9fcc", "#80b9e2", "#a1d5fa"],
+            chart: {
+                type: 'bar',
+                backgroundColor: 'none',
+                spacingBottom: 5,
+                spacingTop: 5,
+                spacingLeft: 0,
+                spacingRight: 0
+            },
+            credits: {
+                enabled: false
+            },
+            xAxis: {
+                categories: ['Role'],
+                lineWidth: 0,
+                minorGridLineWidth: 0,
+                lineColor: 'transparent',
+                labels: {
+                    enabled: false
+                },
+                title: {
+                    enabled: false
+                },
+                minorTickLength: 0,
+                tickLength: 0
+            },
+            yAxis: {
+                lineWidth: 0,
+                minorGridLineWidth: 0,
+                lineColor: 'transparent',
+                labels: {
+                    enabled: false
+                },
+                title: {
+                    enabled: false
+                },
+                minorTickLength: 0,
+                tickLength: 0
+            },
+            title: {
+                enabled: false,
+                text: ''
+            },
+            legend: {
+                enabled: false
+            },
+            plotOptions: {
+                series: {
+                    stacking: 'percent',
+                    crop: false,
+                    title: '',
+                    pointPadding: 0.01,
+                    groupPadding: 0.1,
+                    dataLabels: {
+	                    enabled: true,
+						style: {
+						  textTransform: 'uppercase',
+						  color: '#c7c7c7'
+						},
+	                    formatter: function () {
+                            return (this.y > 12 ? this.point.name+': '+this.y+'%' : null);
+                        }
+	                }
+                }
+            },
+            tooltip: {
+                formatter: function () {
+                    return this.point.name+': '+this.y+'%';
+                }
+            },
+              series: [{
+                  name: 'Core',
+                  data: [
+                        ['Role', 80]
+                  ],
+                  index: 4
+              }, {
+                  name: 'Support',
+                  data: [
+                        ['Role', 20]
+                  ],
+                  index: 3
+              }]
+        });
+});  
+
+</script>
+ 
+  <div class="container mainwrap pad120">
+    <div class="otstup">
+      <section class="t-top pHero plCard">
+        <div class="heroBg" style="background-image:url(https://ggscore.com/html/img/headpic_582.jpg)"></div>
+
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="pAva">
+              <div class="pAvaBg">
+                <span class="playerava">
+                    <img alt="Miracle-" src="http://game-tournaments.com/media/logo/pic-20151127-294x196-3464574203.jpeg">
+                </span>
+                <div class="pInf">
+                  <a class="pt" href="#"><img src="http://game-tournaments.com/media/logo/_60/pic-20161027-600x600-9332827152.png" alt="Liquid"></a>
+                  <h2>Miracle <b class="badge tip" title="Место в рейтинге">#1</b></h2>
+                  <!--<h3>Amer al-Barqawi, 23 года</h3>
+                  <p>
+                     Иордания <img src="http://game-tournaments.com/media/flag/48.png"><br>
+                    <b>Команда: <a href="">Team Liquid</a></b>
+                  </p>-->
+                  
+               
+                  <table>
+                  <tbody>
+                    <tr>
+                      <td width="250px">Имя</td>
+                      <td>Zhang Chengjun</td>
+                    </tr>
+                    <tr>
+                      <td>Возраст</td>
+                      <td>20 лет</td>
+                    </tr>
+                    <tr>
+                      <td>Страна</td>
+                      <td>Китай <img width="16px" style="vertical-align: text-bottom; margin-left: 2px;" alt="Китай" src="/media/flag/4.png"></td>
+                    </tr>
+                    <tr>
+                      <td>Команда</td>
+                      <td> <a href="/ru/dota-2/team/ig-vitality">iG.V</a> </td>
+                    </tr>
+                    <tr>
+                      <td>Роль</td>
+                      <td> <i class="gti-question-circle tip pull-right" title="" data-original-title="Mid=53%, Carry=40%, Offlane=6%"></i> Mid </td>
+                    </tr>
+                    <tr>
+                      <td>Линия</td>
+                      <td> <i class="gti-question-circle tip pull-right" title="" data-original-title="Mid=53%, Safe=33%, Hard=13%"></i> Mid </td>
+                    </tr>
+                    <tr>
+                      <td>MMR</td>
+                      <td>9,680<i class="gti-question-circle tip pull-right" title="" data-original-title="Обновлено: 2017-06-01"></i></td>
+                    </tr>
+                    <tr>
+                      <td>Заработано</td>
+                      <td><span class="scm tip" data-value="143836" title="" data-original-title="$143,836">$143K</span></td>
+                    </tr>
+                    <tr>
+                      <td>Всего игр</td>
+                      <td>185 / <span class="gray">236</span> <i class="gti-question-circle tip pull-right" title="" data-original-title="За последний год / За все время"></i></td>
+                    </tr>
+                  </tbody>
+                </table>
+                  <!--<div class="pRate">
+                    <table>
+                      <tr>
+                        <td>
+                          <label>SOLO MMR <i class="gti-question-circle tip" title="О параметре"></i></label>
+                          <b><span class="counter">9681</span></b>
+                        </td>
+                        <td>
+                          <label>форма <i class="gti-question-circle tip" title="Форма показывает насколько хороши текущие показатели игрока (последние 15 игр), относительно его средних показателей (последние 50 игр)"></i></label>
+                          <b><span class="counter">150</span>%</b>
+                          <div class="progress progress-small">
+                              <div class="progress-bar progress-bar-primary" style="width:50%">
+                              <span class="sr-only">100% форма</span>
+                            </div>
+                            <div class="progress-bar progress-bar-success" style="width:28%">
+                              <span class="sr-only">up 28% форма</span>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>-->
+                </div>
+                <div class="fans">
+                  <a href="" class="btn btn-primary"><i class="gti-flag-o"></i>Подписаться</a><b>123 фанов</b>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-8">
+            <a href="/ru/dota-2/team" class="btn all btn-default btn-sm">Все игроки Dota 2</a>
+            <h1 class="teamh1">Miracle</h1>
+            <div class="maingraph">
+              <h3 class="mlh"><span>Параметры игрока</span></h3>
+              <div class="grphilter clearfix">
+                  <div>
+                      <div class="input-group">
+                          <input type="text" class="form-control input-sm fplayer" placeholder="Игрок для сравнения" value="">
+                          <div class="input-group-btn mlt-dropdown" id="fplayer">
+                              <button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown"><span class="caret"></span></button>										<ul class="dropdown-menu dropdown-menu-right"><li class="dropdown-header">Type first</li></ul>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+<!--
+              <div class="pRd">
+                <div id="playerRole" class="playerRole"></div>
+                <span>Core 80%</span>
+                <b>Support 20%</b>
+              </div>
+-->
+              <!--<h3 class="mlh mlhSM"><span>ЛИНИЯ</span></h3>-->
+              
+              <div id="spider_chart_player" class="spider_chart_player"></div>
+              
+              <div class="table-responsive">
+                <table class="mtable stattable">
+                  <thead>
+                    <tr>
+                      <th id="txt_0" title="Форма показывает насколько хороши текущие Игровые показатели игрока (последние 15 игр), относительно его средних показателей (последние 50 игр)">Форма</th>
+                      <th id="txt_1" title="Обобщение: Формы, Игровых показателей, MVP, Лейнинга, Золота, Битв, Опыта">Сила</th>
+                      <th id="txt_2" title="Обобщение: KDA, Denies, Last Hits, GPM, XPM">Игровые показатели</th>
+                      <th id="txt_3" title="Наиболее ценный игрок (сумма MVP всех игроков в матче = 100%)">MVP</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><b><span class="counter" id="t1_0">92%</span></b></td>
+                      <td><b><span class="counter" id="t1_1">49%</span></b></td>
+                      <td><b><span class="counter" id="t1_2">56%</span></b></td>
+                      <td><b><span class="counter" id="t1_3">10%</span></b></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table class="mtable stattable">
+                  <thead>
+                    <tr>
+                      <th id="txt_4" title="Как часто игрок выигрывает свою линию">Лейнинг</th>
+                      <th id="txt_5" title="Сколько золота (от максимально возможного) забирает игрок со своей линии на стадии лейнинга">Золото</th>
+                      <th id="txt_6" title="Процент битв, в которых игрок принимал участие">Битвы</th>
+                      <th id="txt_7" title="Опыт участия игрока в профессиональных матчах">Опыт</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><b><span class="counter" id="t1_4">41%</span></b></td>
+                      <td><b><span class="counter" id="t1_5">65%</span></b></td>
+                      <td><b><span class="counter" id="t1_6">62%</span></b></td>
+                      <td><b><span class="counter" id="t1_7">54%</span></b></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+            </div>
+            <!--
+            <div class="pRate">
+              <table>
+                <tbody><tr>
+                  <td>
+                    <label>Число игр</label>
+                    <b><span class="counter">961</span></b>
+                  </td>
+                  <td>
+                    <label>MVP <i class="gti-question-circle tip" title="О параметре"></i></label>
+                    <b><span class="counter">20</span>%</b>
+                    <div class="progress progress-small">
+                      <div class="progress-bar progress-bar-primary" style="width:20%">
+                        <span class="sr-only">20% MVP</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <label>Fights <i class="gti-question-circle tip" title="О параметре"></i></label>
+                    <b><span class="counter">167</span>%</b>
+                    <div class="progress progress-small">
+    				    <div class="progress-bar progress-bar-primary" style="width:50%">
+    				      <span class="sr-only">100%</span>
+    				    </div>
+    				    <div class="progress-bar progress-bar-success" style="width:28%">
+                          <span class="sr-only">up 67% Fights</span>
+                        </div>
+    				</div>
+                  </td>
+                  <td>
+                    <label>Inactivity <i class="gti-question-circle tip" title="О параметре"></i></label>
+                    <b><span class="counter">41</span>%</b>
+                    <div class="progress progress-small">
+    				    <div class="progress-bar progress-bar-primary" style="width:20%">
+    				      <span class="sr-only">41%</span>
+    				    </div>
+    				</div>
+                  </td>
+                </tr>
+              </tbody></table>
+            </div>
+            -->
+          </div>
+        </div>
+      </section>
+      <section class="m-sec m-odd pTeams">
+        <h3 class="mlh mlhSM"><span>Команды за которые играл Miracle</span></h3>
+        <div class="row">
+          {% for i in 0..2 %}
+            <div class="col-md-4">
+                <div class="pTeam">
+                  <figure class="teamLogo">
+                     <a class="pt" href="#"><img src="http://game-tournaments.com/media/logo/_60/{{random(logo)}}" alt="{{random(team)}}"></a>
+                  </figure>
+                  <div>
+                    <b><a href="">{{random(team)}}</a></b>
+                    <em>Период: 10/11/15 - 10/11/16</em>
+                    <u>Матчей: 211</u>
+                    <s>Роль: core</s>
+                  </div>
+                </div>
+            </div>
+          {% endfor %}
+        </div>
+      </section>
+      
+      <section class="m-sec m-even">
+        <div class="row">
+          <div class="col-md-8">
+            <h3 class="mlh"><span>Последние матчи Miracle</span></h3>
+            {% include "template/players/player-games.html" %}
+            {% include "template/pager.html" %}
+
+            {% include "template/news/newslist-block.html" %}
+          </div>
+          <div class="col-md-4">
+            <h3 class="mlh mlh-sm"><span>КОМАНДЫ Miracle</span></h3>
+            <div class="block-content" id="block_player_teams">
+  <div class="panel panel-default panelWpager">
+    <div class="table-responsive">
+      <table class="table table-sm table-striped table-condensed table-hover teamWins">
+        <thead>
+          <tr>
+            <th width="40"></th>
+            <th>Команда</th>
+            <th>Всего игр</th>
+            <th width="120">Дата</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <a href="/ru/dota-2/team/ig-vitality"><img class="logo" style="width:30px" src="/media/logo/_60/pic-20161117-600x600-7422219468.png"></a>
+            </td>
+            <td><a title="iG.V" href="/ru/dota-2/team/ig-vitality">iG.V</a>
+              <br><span class="scm tip" title="" data-value="142288" data-original-title="Заработал $142,288 играя за iG.V">$142K</span></td>
+            <td>218</td>
+            <td> <span class="sct" data-time="1458554728" data-format="%ms% %Y%">мар 2016</span> - <span class="sct" data-time="1494388800" data-format="%ms% %Y%">мая 2017</span>
+              <br> </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="/ru/dota-2/team/ig"><img class="logo" style="width:30px" src="/media/logo/_60/pic-20161110-600x600-6048162085.png"></a>
+            </td>
+            <td><a title="IG" href="/ru/dota-2/team/ig">IG</a></td>
+            <td>3</td>
+            <td> <span class="sct" data-time="1453456800" data-format="%ms% %Y%">янв 2016</span>
+              <br> </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="/ru/dota-2/team/fantuan"><img class="logo" style="width:30px" src="/media/logo/_60/pic-20151228-294x248-8717091130.png"></a>
+            </td>
+            <td><a title="FanTuan" href="/ru/dota-2/team/fantuan">FanTuan</a>
+              <br><span class="scm tip" title="" data-value="1548" data-original-title="Заработал $1,548 играя за FanTuan">$1,548</span></td>
+            <td>15</td>
+            <td> <span class="sct" data-time="1444532400" data-format="%ms% %Y%">окт 2015</span> - <span class="sct" data-time="1452218400" data-format="%ms% %Y%">янв 2016</span>
+              <br> </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="/ru/dota-2/team/immortal-magneto"><img class="logo" style="width:30px" src="/media/logo/_60/immortal-magneto-2953913.png"></a>
+            </td>
+            <td><a title="IMG.cn" href="/ru/dota-2/team/immortal-magneto">IMG.cn</a></td>
+            <td>1</td>
+            <td> <span class="sct" data-time="1433833200" data-format="%ms% %Y%">июн 2015</span>
+              <br> </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+            {% include "template/blockzames-vertical.html" %}
+          </div>
+        </div>
+        
+      </section>
+      
+    {#
+      <div class="bn">
+        <img src="../img/ad.jpg" alt="">
+      </div>
+    #}
+      {% include "template/breadcrumbs.html" %}
+      {% include "template/footer.html" %}
+    </div>
+  </div>
+{% include "template/branding.html" %}
+{% include "template/bar.html" %}
+{% include "template/modal.html" %}
+{% include "template/scripts.html" %}
+
+</body>
+</html>

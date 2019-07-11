@@ -1,0 +1,38 @@
+<!-- com-block.html -->
+
+{% set ntype = ['gti-gt','gti-rss','gti-facebook','gti-twitter'] %}
+{% set txt = ['Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы','Александр «s1mple» Костылев попал на четвертое место в списке 20 лучших игроков 2016 года по версии HLTV.org','Виталий «V1lat» Волочай: «Мы просто хотели собрать команду друзей» ','Квалификация SL i-League StarSeries. Geek Fam и WG.Unity сыграли вничью с Execration и Mineski','Пол «ReDeYe» Шалоне: «В апреле 2017 Dota 2 станет первым видом киберспорта, чьи суммарные призовые за все турниры превысят 100 миллионов долларов»','Карло «Kuku» Палад: «После неудач мы всегда говорим, что следующий раз выступим лучше».','Питер «ppd» Дагер: «Virtus.Pro должна была брать второе или третье место на The Boston Major, но вошла лишь в топ-8»','Назван список участников квалификации DAC 2017, Na’Vi сыграют в европейском регионе'] %}
+
+<div class="com-sm">
+  <h3 class="mlh mlh-sm"><span>Что обсуждают</span></h3>
+  
+   <ul class="nav nav-pills nav-justified">
+    <li class="active"><a href="#">Сейчас</a></li>
+    <li><a href="#">Вчера</a></li>
+    <li><a href="#">Неделя</a></li>
+  </ul>
+  
+  <ul class="m-com-list">
+  {% for i in 0..5 %}
+    <li>
+      <i class="gti {{random(ntype)}}"></i> <a href="" class="title">{{random(txt)}}...</a>
+      <div>
+        <span class="com"><i class="gti-commenting-o"></i>&nbsp;12</span>
+        <time>27 февраля, 23:49</time>
+      </div>
+    </li>
+    {#
+    <li>
+      <div>
+        <b><a href="">BorodachBets</a></b> &nbsp;&bull;&nbsp; 
+        <a href="" class="title">Изменились даты проведения киевского мейджора, турнир пройдет в Национальном дворце искусств «Украина»</a> &nbsp;&bull;&nbsp; 
+        <a href="" class="com">
+          {{random(txt)}}...
+        </a> &nbsp;&bull;&nbsp; 
+        <time>27 февраля, 23:49</time>
+      </div>
+    </li>
+    #}
+  {% endfor %}
+  </ul>
+</div>

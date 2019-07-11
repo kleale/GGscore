@@ -1,0 +1,353 @@
+<!-- /match-page/section-prognoz.html -->
+
+<div class="block" id="m-prognoz">
+  <div class="bh clearfix">
+    <h3>
+      <i class="ih gti-bullhorn"></i>
+      Прогнозы
+      <i data-toggle="popover" data-placement="bottom" data-trigger="hover" data-content="О площадке + дополнительные сведения о матче" class="inf gti-info-circle"></i>
+    </h3>
+    <ul class="block-menu">
+      <li id="" class="active"><a href="">Все</a></li>
+      <li><a id="" href="">Подписки</a></li>
+    </ul>
+  </div><!-- bh -->
+
+  <div class="pr_block">
+    <a href="#" class="mtb mtb btn btn-border">Tabs</a>
+    <ul class="stm_nav_block" role="tablist">
+      <li class="active"><a href="#st-pik" role="tab" data-toggle="tab">Пики и <br>баны</a></li>
+      <li><a href="#st-ishod" role="tab" data-toggle="tab">Исход <br>матча</a></li>
+      <li><a href="#st-analytics" role="tab" data-toggle="tab">Аналитика <br>по матчу</a></li>
+      <li><a href="#st-sind" role="tab" data-toggle="tab">Синдикат <br>прогнозов</a></li>
+    </ul>
+    <div class="bc tab-content">
+      <div id="st-pik" role="tabpanel" class="tse-sc tab-pane active">
+        
+          <div class="tse-content">
+            <div class="prpf">
+                <span><input type="checkbox"> Игра 1</span>
+                <span><input type="checkbox"> Игра 2</span>
+                <span><input type="checkbox"> Игра 3</span>
+                <span><input type="checkbox"> Игра 4</span>
+                <span><input type="checkbox"> Игра 5</span>
+            </div>
+            <div class="prp active">
+              <div class="prh">
+                <table>
+                  <tr>
+                    <td>
+                      <span class="thumb"><i class="gti-thumbs-up active"></i><b>123</b><i class="gti-thumbs-o-down"></i></span>
+                    </td>
+                    <td>
+                      <a href="">Прогнозы и аналитика от entryAd</a>
+                    </td>
+                    <td class="nwr">
+                      <b class="pris p-i-1"></b>
+                      <u><em>до 30 апр <i class="gti-check"></i></em></u>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div class="pikers">
+                <b>
+                  <a href="">
+                    London Conspyracy
+                  </a>
+                </b>
+                <div>
+                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
+                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
+                  <u class="p_pik hpop"><img src="../img/heroh.jpg"></u>
+                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
+                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
+                  <u class="p_pik hpop"><img src="../img/heroh.jpg"></u>
+                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
+                  <u class="p_pik hpop"><img src="../img/heroh.jpg"></u>
+                  <u class="p_pik hpop"><img src="../img/heroh.jpg"></u>
+                  <u class="p_pik hpop"><img src="../img/heroh.jpg"></u>
+                </div>
+              </div>
+              <div class="pikers">
+                <b>
+                  <a href="">
+                    Secret
+                  </a>
+                </b>
+                <div>
+                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
+                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
+                  <u class="p_pik hpop"><img src="../img/heroh.jpg"></u>
+                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
+                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
+                  <u class="p_pik hpop"><img src="../img/heroh.jpg"></u>
+                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
+                  <u class="p_pik hpop"><img src="../img/heroh.jpg"></u>
+                  <u class="p_pik hpop"><img src="../img/heroh.jpg"></u>
+                  <u class="p_pik hpop"><img src="../img/heroh.jpg"></u>
+                </div>
+              </div>
+            </div>
+            {% for i in 0..6 %}
+            <div class="prp">
+              <div class="prh">
+                <table>
+                  <tr>
+                    <td>
+                      <span class="thumb"><i class="gti-thumbs-up active"></i><b>123</b><i class="gti-thumbs-o-down"></i></span>
+                    </td>
+                    <td>
+                      <a href="">Прогнозы от entryAd</a>
+                    </td>
+                    <td class="nwr">
+                      <b class="pris p-i-1"></b>
+                      <b class="pris p-i-2"></b>
+                      <u><button class="btn btn-xs btn-default">Free</button></u>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div class="pikers">
+                <b>
+                  <a href="">
+                    London Conspyracy
+                  </a>
+                </b>
+                <div>
+                  {% for i in 0..9 %}
+                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
+                  {% endfor %}
+                </div>
+              </div>
+              <div class="pikers">
+                <b>
+                  <a href="">
+                    Secret
+                  </a>
+                </b>
+                <div>
+                  {% for i in 0..9 %}
+                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        
+      </div><!-- st-pik -->
+
+      <div id="st-ishod" role="tabpanel" class="tse-sc tab-pane">
+        
+        <div class="tse-content">
+          <div class="prp active">
+            <div class="prh">
+              <table>
+                <tr>
+                  <td>
+                    <span class="thumb"><i class="gti-thumbs-up active"></i><b>123</b><i class="gti-thumbs-o-down"></i></span>
+                  </td>
+                  <td>
+                    <a href="">Прогнозы от entryAd</a>
+                  </td>
+                  <td class="nwr">
+                    <b class="pris p-i-1"></b>
+                    <u><em>до 30 апр <i class="gti-check"></i></em></u>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="pr_st wl">
+              <i class="gti-dice"></i> London Conspiracy Dota2 <span>WIN +1.5</span>
+            </div>
+          </div>
+          <div class="prp active">
+            <div class="prh">
+              <table>
+                <tr>
+                  <td>
+                    <span class="thumb"><i class="gti-thumbs-up active"></i><b>123</b><i class="gti-thumbs-o-down"></i></span>
+                  </td>
+                  <td>
+                    <a href="">Прогнозы и аналитика от entryAd</a>
+                  </td>
+                  <td class="nwr">
+                    <b class="pris p-i-1"></b>
+                    <b class="pris p-i-2"></b>
+                    <u><button class="btn btn-xs btn-default">$ 3.5/МЕС</button></u>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="pr_st">
+              <table>
+                <tr>
+                  <th>Прогнозы</th>
+                  <th>Проходимость</th>
+                  <th>ROI</th>
+                  <th>Ставки</th>
+                  <th>Подписки</th>
+                </tr>
+                <tr>
+                  <td>32</td>
+                  <td>76.6%</td>
+                  <td>76.6%</td>
+                  <td>23</td>
+                  <td>239</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div class="prp">
+            <div class="prh">
+              <table>
+                <tr>
+                  <td>
+                    <span class="thumb"><i class="gti-thumbs-up active"></i><b>123</b><i class="gti-thumbs-o-down"></i></span>
+                  </td>
+                  <td>
+                    <a href="">Прогнозы и аналитика от entryAd</a>
+                  </td>
+                  <td class="nwr">
+                    <b class="pris p-i-1"></b>
+                    <b class="pris p-i-2"></b>
+                    <u><button class="btn btn-xs btn-default">Free</button></u>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="pr_st wl">
+              London Conspiracy Dota2 <span>WIN 4:2</span>
+            </div>
+          </div>
+          {% for i in 0..6 %}
+          <div class="prp">
+            <div class="prh">
+              <table>
+                <tr>
+                  <td>
+                    <span class="thumb"><i class="gti-thumbs-up active"></i><b>123</b><i class="gti-thumbs-o-down"></i></span>
+                  </td>
+                  <td>
+                    <a href="">Прогнозы и аналитика от entryAd</a>
+                  </td>
+                  <td class="nwr">
+                    <b class="pris p-i-1"></b>
+                    <b class="pris p-i-2"></b>
+                    <u><button class="btn btn-xs btn-default">$ 3.5/МЕС</button></u>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="pr_st wl">
+              London Conspiracy Dota2 <span>WIN 4:2</span>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+        
+      </div><!-- st-ishod -->
+
+      <div id="st-analytics" role="tabpanel" class="tse-sc tab-pane">
+        
+          <div class="tse-content">
+          <div class="prp active">
+            <div class="prh">
+              <table>
+                <tr>
+                  <td>
+                    <span class="thumb"><i class="gti-thumbs-up active"></i><b>123</b><i class="gti-thumbs-o-down"></i></span>
+                  </td>
+                  <td>
+                    <a href="">Прогнозы и аналитика от entryAd</a>
+                  </td>
+                  <td class="nwr">
+                    <b class="pris p-i-1"></b>
+                    <u><em>до 30 апр <i class="gti-check"></i></em></u>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="prt">
+              Для меня конечно фавориты альянс,но фнатики не настолько слабы,подавно после игры с vg.Моя ставка на +1.5 за фнатик,но побеждать должны все-же альянс.
+            </div>
+            <a class="prm" href="" data-toggle="modal" data-target="#prm1">еще</a>
+          </div>
+          <div class="prp active">
+            <div class="prh">
+              <table>
+                <tr>
+                  <td>
+                    <span class="thumb"><i class="gti-thumbs-up active"></i><b>123</b><i class="gti-thumbs-o-down"></i></span>
+                  </td>
+                  <td>
+                    <a href="">Прогнозы и аналитика от entryAd</a>
+                  </td>
+                  <td class="nwr">
+                    <b class="pris p-i-1"></b>
+                    <b class="pris p-i-2"></b>
+                    <u><button class="btn btn-xs btn-default">$ 3.5/МЕС</button></u>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="pr_st">
+              <table>
+                <tr>
+                  <th>Прогнозы</th>
+                  <th>Проходимость</th>
+                  <th>ROI</th>
+                  <th>Ставки</th>
+                  <th>Подписки</th>
+                </tr>
+                <tr>
+                  <td>32</td>
+                  <td>76.6%</td>
+                  <td>76.6%</td>
+                  <td>23</td>
+                  <td>239</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          {% for i in 0..6 %}
+          <div class="prp">
+            <div class="prh">
+              <table>
+                <tr>
+                  <td>
+                    <span class="thumb"><i class="gti-thumbs-up active"></i><b>123</b><i class="gti-thumbs-o-down"></i></span>
+                  </td>
+                  <td>
+                    <a href="">Прогнозы и аналитика от entryAd</a>
+                  </td>
+                  <td class="nwr">
+                    <b class="pris p-i-1"></b>
+                    <b class="pris p-i-2"></b>
+                    <u><em>до 30 апр</em> <button class="btn btn-xs btn-default">Free</button>
+                    </u>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="prt">
+              Для меня конечно фавориты альянс,но фнатики не настолько слабы,подавно после игры с vg.Моя ставка на +1.5 за фнатик,но побеждать должны все-же альянс.
+            </div>
+            <a class="prm" href="" data-toggle="modal" data-target="#prm1">еще</a>
+          </div>
+          {% endfor %}
+        </div>
+        
+      </div><!-- st-analytics -->
+
+      <div id="st-sind" role="tabpanel" class="tse-sc tab-pane">
+          {% include "/section-prognoz-sind.html" %}
+      </div><!-- st-ishod -->
+
+    </div><!--bc-->
+  </div><!--#hist-->
+
+</div><!-- block -->
+      
+
+<!-- /Prognozi -->

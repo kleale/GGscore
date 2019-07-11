@@ -1,0 +1,54 @@
+<!-- /game-home/news-block.html -->
+
+{% set pic = ['http://www.gosugamers.net/uploads/images/news/42728-1482872435-small.jpeg', 'http://www.gosugamers.net/uploads/images/news/42727-1482864622-small.jpeg', 'http://www.gosugamers.net/uploads/images/news/42720-1482829305-small.jpeg', 'http://www.gosugamers.net/uploads/images/news/42725-1482841447-small.jpeg', 'http://www.gosugamers.net/uploads/images/news/42723-1482835201-small.jpeg'] %}
+{% set ntype = ['gti-gtlogo','gti-facebook','gti-twitter'] %}
+{% set ohot = ['hot','','',''] %}
+
+<div class="block tse-news main-news-list">
+  <div class="bh clearfix">
+    <h3>
+      <i class="ih gti-newspaper-o"></i>
+      Новости
+    </h3>
+    <ul class="block-menu">
+      <li class="active"><a href="">ВСЕ</a></li>
+      <li><a href="#"><i class="gti-gtlogo"></i></a></li>
+      <li><a href="#"><i class="gti-users"></i></a></li>
+    </ul>
+  </div>
+  <ul class="nlist">
+    {% for i in 0..9 %}
+    <li class="{{random(ohot)}} {% if i == 2 %} nopic{% endif %}">
+      {% if i == 2 %} 
+      {% elseif i == 3 %} 
+        <a class="nopic" href="">
+          <i class="{{random(ntype)}}"></i>
+        </a>
+      {% else %}
+        <a class="npic" href="" style="background-image:url({{random(pic)}})">
+          <b><i class="{{random(ntype)}}"></i></b>
+        </a>
+      {% endif %}
+       <div>
+        <h4>
+          <a href="">
+            <span><i class="gti-commenting-o"></i>&nbsp;12</span> IEM Katowice — дебют обновленного RuHub!
+          </a>
+        </h4>
+        <p>
+          Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы ...
+        </p>
+        <u>
+          <time>29 дек, 11:35</time>
+        </u>
+        <span>
+          <a href="" class="shr"><i class="gti-vk"></i>993</a>
+          <a href="" class="shr"><i class="gti-facebook"></i>123</a>
+          <a href="" class="shr"><i class="gti-twitter"></i>13</a>
+          <a href="" class="shr"><i class="gti-google-plus"></i>12</a>
+        </span>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</div>

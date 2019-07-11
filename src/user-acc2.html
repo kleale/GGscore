@@ -1,0 +1,220 @@
+{% set title = "Аккаунт: Настройки" %}
+
+
+<!DOCTYPE html>
+<html>
+{% include "template/head.html" %}
+<body class="">
+  <div class="container mainwrap" style="padding-top:60px;">
+    <div class="otstup">
+      <section class="t-top user-ac">
+        <div class="heroBg" style="background-image:url(../img/noplayers.png)"></div>
+        <h1 class="mlh">Username #1323</h1>
+        <div class="user-menu">
+          <ul class="nav nav-pills nav-stacked nav-user">
+            <li><a href="/account"><i class="gti-user-circle"></i><u>Мой профиль</u></a></li>
+            <li class="active"><a href="/account"><i class="gti-cog"></i><u>Настройки</u></a></li>
+            <li><a href="/account"><i class="gti-bullhorn"></i><u>Мои прогнозы</u></a></li>
+            <li><a href="/account"><i class="gti-bell-o"></i><u>Подписки</u></a></li>
+            <li><a href="/account"><i class="gti-money"></i><u>Платежи</u></a></li>
+            <li><a href="/account/logout"><i class="gti-power-off"></i><u>Выход</u></a></li>
+          </ul>
+        </div>
+        <div class="user-body">
+          <div class="row">
+            <div class="col-md-7">
+              
+              <div class="panel panel-light block-ava">
+                <div class="panel-heading">
+                  <h3 class="panel-title mlh mlhSM"><span>Аватар</span></h3>
+                </div>
+                <div class="panel-body">
+                  <a class="uava">
+                    <img src="http://game-tournaments.com/media/user/pic-20150909-800x847-4949833890.png" alt="">
+                  </a>
+                  <div class="uavaload">
+                    <div style="width:125px" data-count="1" data-rel="1" data-input="logo" data-title="ulogo" class="loader"></div>
+                    <div class="uava-btns">
+                      <a class="button-ulogo1 btn-primary btn btn-sm" href="javascript:;" style="overflow: hidden; direction: ltr;">Загрузить<input multiple="multiple" type="file" name="file" style="position: absolute; right: 0px; top: 0px; font-family: Arial; font-size: 18px; margin: 0px; padding: 0px; cursor: pointer; opacity: 0;"></a> 
+                      <!--<a onclick="sform('update')" class="btn btn-default btn-xs">Сохранить</a>-->
+                      <a onclick="if (confirm('Вы уверены?')) delete_logo(this)" href="javascript:;" class="btn btn-default btn-sm"> Удалить</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="panel panel-light withJsLabel">
+                <div class="panel-heading">
+                  <h3 class="mlh mlhSM">
+                    <span>твой ID – 18</span>
+                  </h3>
+                </div>
+                <div class="panel-body">
+                  <div rel="email" class="form-group" >
+                    <div class="input-group">
+                      <input type="text" rel="1" name="email" value="kleale@kleale.ru" class="form-control" placeholder="Email">
+                      <span class="input-group-btn"> <a href="/soc?vk"  class="btn btn-default tip" title="Привязать профиль к Вконтакте"><i class="gti-vk"></i></a> <a href="/soc?fb" class="btn btn-default tip" title="Привязать профиль к Facebook"><i class="gti-facebook"></i></a> </span>
+                    </div>
+                    <p class="help-block checkbox">
+                      <label>
+                        <input type="checkbox" rel="1" value="1" name="email_mail" checked=""> Получать уведомления от GG
+                      </label>
+                    </p>
+                  </div>
+                  <div class="form-group" rel="nick">
+                    <input type="text" rel="1" name="nick" class="form-control" maxlength="20" placeholder="Твой ник">
+                  </div>
+                  <div class="form-group" rel="timezone">
+                    <select rel="1" name="timezone" class="form-control">
+                      <option value="0">Часовой пояс</option>
+                      <option value="-720">18:45 (UTC -12:00)</option>
+                      <option value="-660">19:45 (UTC -11:00)</option>
+                      <option value="-600">20:45 (UTC -10:00)</option>
+                      <option value="-540">21:45 (UTC -9:00)</option>
+                      <option value="-480">22:45 PST (UTC -8:00)</option>
+                      <option value="-420">23:45 PDT (UTC -7:00)</option>
+                      <option value="-360">00:45 CST (UTC -6:00)</option>
+                      <option value="-300">01:45 EST (UTC -5:00)</option>
+                      <option value="-240">02:45 EDT (UTC -4:00)</option>
+                      <option value="-210">03:15 (UTC -3:30)</option>
+                      <option value="-180">03:45 CLST (UTC -3:00)</option>
+                      <option value="-120">04:45 (UTC -2:00)</option>
+                      <option value="-60">05:45 (UTC -1:00)</option>
+                      <option value="0">06:45 (UTC +0:00)</option>
+                      <option value="60">07:45 CET (UTC +1:00)</option>
+                      <option value="120">08:45 CEST (UTC +2:00)</option>
+                      <option value="180" selected="">09:45 MSK (UTC +3:00)</option>
+                      <option value="210">10:15 (UTC +3:30)</option>
+                      <option value="240">10:45 (UTC +4:00)</option>
+                      <option value="270">11:15 (UTC +4:30)</option>
+                      <option value="300">11:45 (UTC +5:00)</option>
+                      <option value="330">12:15 (UTC +5:30)</option>
+                      <option value="360">12:45 (UTC +6:00)</option>
+                      <option value="420">13:45 (UTC +7:00)</option>
+                      <option value="480">14:45 SGT (UTC +8:00)</option>
+                      <option value="540">15:45 (UTC +9:00)</option>
+                      <option value="570">16:15 (UTC +9:30)</option>
+                      <option value="600">16:45 (UTC +10:00)</option>
+                      <option value="660">17:45 (UTC +11:00)</option>
+                      <option value="720">18:45 (UTC +12:00)</option>
+                    </select>
+                </div>
+                  <h3 class="mlh mlhSM">
+                    <span>Привязка к соцсетям</span>
+                  </h3>
+                  <div class="soc-enter">
+                    <div class="row">
+                      <div class="col-sm-3">
+                        <a class="btn btn-vk tip" href="/soc?vk" title="Через Вконтакте"><i class="gti-vk"></i> <span>Вконтакте</span></a>
+                      </div>
+                      <div class="col-sm-3">
+                        <a class="notActive btn btn-fb tip" href="/soc?fb" title="Через Facebook"><i class="gti-facebook"></i><span>Facebook</span></a>
+                      </div>
+                      <div class="col-sm-3">
+                        <a class="notActive btn btn-gp tip" href="/soc?gp" title="Через Google"><i class="gti-google-plus"></i><span>Google</span></a>
+                      </div>
+                      <div class="col-sm-3">
+                        <a class="notActive btn btn-steam tip" href="/soc?steam" title="Через Steam"><i class="gti-steam"></i><span>Steam</span></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="panel panel-light">
+                <div class="panel-heading">
+                  <h3 class="panel-title mlh mlhSM"><span>Сменить пароль</span></h3>
+                </div>
+                <div class="panel-body" style="padding: 10px 30px">
+                  <div class="form-group" rel="pwd_new">
+                    <input type="password" rel="1" name="pwd_new" value="" class="form-control" placeholder="Новый пароль">
+                  </div>
+                  <div class="form-group" rel="repwd">
+                    <input type="password" rel="1" name="repwd" value="" class="form-control" placeholder="Повторить пароль">
+                  </div>
+                </div>
+              </div>
+              
+              <a href="" class="btn btn-primary btn-lg">Сохранить настройки</a>
+            </div>
+            
+            <div class="col-md-5">
+              
+              
+            </div>
+            
+          </div>
+        </div>
+      </section>
+      
+      
+      {% include "template/footer.html" %}
+    </div>
+  </div>
+{#
+{% include "template/branding.html" %}
+#}
+{% include "template/bar.html" %}
+
+{% include "template/scripts.html" %}
+
+<div class="modal fade in" id="wms" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+  <div class="modal-dialog" style="max-width:320px;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Пополнить свой счет</h4></div>
+      <div class="modal-body" style="padding:30px;">
+        <form action="account" method="POST" name="pay" class="form-horizontal">
+          <input type="hidden" class="input" name="method" value="robo">
+          <div class="form-group">
+            <div rel="insum" class="col-sm-12">
+              <div class="input-group">
+                <input type="text" name="insum" value="" placeholder="Сумма для перевода, $" class="form-control input">
+                <div class="input-group-addon"><i class="gti-usd"></i></div>
+              </div>
+              <p id="ferr" class="help-block"></p>
+            </div>
+          </div>
+          <div class="text-center">
+            <button class="btn btn-primary btn" onclick="sform('pay')" type="button"><i class="gti-check"></i> Подтвердить оплату</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade in" id="wms2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+  <div class="modal-dialog" style="max-width:320px;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Заказать выплату</h4></div>
+      <div class="modal-body" style="padding:30px;">
+        <form name="payout" action="account" method="POST">
+          <div class="form-group" rel="insum">
+            <input type="text" name="insum" value="" placeholder="Сколько, $ (комиссия на вывод 10%)" class="form-control">
+          </div>
+          <div class="form-group" rel="payoutmethod">
+            <select name="payoutmethod" class="form-control">
+              <option value="">Платежная система</option>
+              <option value="qiwi">QIWI</option>
+              <option value="webmoney">Webmoney</option>
+              <option value="yandex_money">Yandex</option>
+            </select>
+          </div>
+          <div class="form-group" rel="incaccount">
+            <input type="text" name="incaccount" value="" placeholder="Кошелек (WMR, Yandex, Qiwi)" class="form-control">
+          </div>
+          <center>
+            <button type="button" onclick="sform('payout')" class="btn btn-primary"><i class="gti-check"></i> Подтвердить выплату</button>
+          </center>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+	{% if u.id == 18 or u.id == 20 %}
+	{% else %}
+{# OLD #}
+	<div class="bar hiddenbar">
+    	<span id="menu-toggle" class="opener"><i class="gti-bars"></i></span>
+		<div class="barc">
+        	<a href="/" class="gt-logo"><img src="/html/img/gt-logo.png" alt="ggScore.com"></a>
+			<div class="bar-menu">
+            	{% if u.isAuth %}
+	            	<div class="bar-block">
+	                	<a href="/{{lang}}/account" class="bar-ava"><img src="/media/user/_60/{% if u.logo %}{{u.logo}}{% else %}no.png{% endif %}"></a>
+		                <div class="bar-username">
+		                    <a href="/{{lang}}/account" class="bar-name">{{u.nick}}</a>
+		                    <div class="bar-links">
+		                        <!--<span class="bar-label">pro</span>-->
+		                        <a href="/{{lang}}/logout" class="u-off"><i class="gti-sign-out"></i></a>
+		                        <a href="/{{lang}}/account" class="u-opt"><i class="gti-wrench"></i></a>
+		                    </div>
+		                </div>
+		            </div>
+		        {% else %}
+		        	<div class="bar-block lh">
+			        	<a href="/{{lang}}/login"><i class="gti-user-o"></i><span>{{'bread_login'|i18n}}</span></a>
+						<a href="/{{lang}}/reg"><i class="gti-user-plus"></i><span>{{'bread_reg'|i18n}}</span></a>
+					</div>
+		        {% endif %}
+		        <ul class="bar-nav-games bng2{% if game.id %} ingame{% endif %}">
+		            {% for i, e in opt.games %}
+		            	<li{% if game.eng == e %} class="active"{% endif %}><a href="/{{lang}}/{{e}}"><i class="gti-{{i}}"></i><span>{{e}}</span></a></li>
+						{% if game.id == i %}
+					        <ul class="bar-nav">
+					            <li{% if url[1] == 'matches' or opt.seo.rid == 1 %} class="active"{% endif %}><a href="/{{lang}}/{{e}}/matches" title="{{'menu_game_matches'|i18n}}"><i class="gti-vs"></i> <span>{{'menu_game_matches'|i18n}}</span></a></li>
+					            <li{% if url[1] == 'tournaments' %} class="active"{% endif %}><a href="/{{lang}}/{{e}}/tournaments" title="{{'menu_game_events'|i18n}}"><i class="gti-trophy"></i><span>{{'menu_game_events'|i18n}}</span></a></li>
+					            <li{% if url[1] == 'news' %} class="active"{% endif %}><a href="/{{lang}}/{{e}}/news" title="{{'menu_game_news'|i18n}}"><i class="gti-newspaper-o"></i><span>{{'menu_game_news'|i18n}}</span></a></li>
+					            <li{% if url[1] == 'team' %} class="active"{% endif %}><a href="/{{lang}}/{{e}}/team" title="{{'menu_game_teams'|i18n}}"><i class="gti-users"></i><span>{{'menu_game_teams'|i18n}}</span></a></li>
+					            <li{% if url[1] == 'player' %} class="active"{% endif %}><a href="/{{lang}}/{{e}}/player" title="{{'menu_game_players'|i18n}}"><i class="gti-user"></i><span>{{'menu_game_players'|i18n}}</span></a></li>
+					            <li{% if url[1] == 'highlights' %} class="active"{% endif %}><a href="/{{lang}}/{{e}}/highlights" title="{{'menu_game_highlight'|i18n}}"><i class="gti-swords"></i><span>{{'menu_game_highlight'|i18n}}</span></a></li>
+					            <li{% if url[1] == 'video' %} class="active"{% endif %}><a href="/{{lang}}/{{e}}/video" title="{{'menu_game_video_txt'|i18n}}"><i class="gti-play-circle-o"></i><span>{{'menu_game_video'|i18n}}</span></a></li>
+					        </ul>
+					    {% endif %}
+		            {% endfor %}
+		        </ul>
+		        <div class="dropers">
+			        <div class="s-lang">
+				        <div class="dropdown">
+					        <a class="dla" id="ddlang" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">{{lang}} <span class="caret"></span></a>
+					        <ul class="dropdown-menu" aria-labelledby="ddlang">
+								<li{% if lang == 'ru' %} class="active"{% endif %}><a href="/ru{{opt.link}}">Русский</a></li>
+								<li{% if lang == 'en' %} class="active"{% endif %}><a href="/en{{opt.link}}">English</a></li>
+								<!--<li{% if lang == 'zh' %} class="active"{% endif %}><a href="/zh{{opt.link}}">China</a></li>-->
+            				</ul>
+            			</div>
+            		</div>
+            		<div class="s-time">
+						<div class="dropdown">
+							<a class="sub" id="ddtime" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><span class="utime"></span> <span class="caret"></span></a>
+							<ul class="dropdown-menu timezone" aria-labelledby="ddtime"></ul>
+            			</div>
+        			</div>
+        		</div>
+        	</div>
+        	<!--<div class="sercher">
+	        	<input type="text" name="" id="" class="form-control" placeholder="Поиск">
+	        	<a href=""><i class="gti-search"></i></a>
+    		</div>-->
+    	</div> 
+    </div>
+	<script>
+	  $(document).ready(function () {
+		$('.chat-btn').click(function () {
+		  $('body').toggleClass('chat-open');
+		  $(this).toggleClass('active');
+		});
+		$('.ch_times').click(function () {
+		  $('body').toggleClass('chat-open');
+		  $(this).toggleClass('active');
+		});
+	  });
+	</script>
+	{% endif %}
+{# end OLD #}

@@ -1,0 +1,107 @@
+{% set title = "Site Home" %}
+
+<!DOCTYPE html>
+<html>
+{% include "template/head.html" %}
+<body class="index">
+
+  <div class="container mainwrap">
+    
+    <div class="otstup">
+      <div class="indexwrap">
+        <section class="hpower" style="background-image:url(../img/w-home.jpg)">
+          <div>
+            <h3 class="mlh"><i class="gti-gt2"></i> This is BETA version <br> of the new esport portal!</h3>
+            <h4 class="mlh"><span>explore now!</span></h4>
+
+            <div class="icons">
+              <span>
+                <i class="gti-vs"></i>
+                <b>Matches & Live Streams</b>
+              </span>
+              <span>
+                <i class="gti-trophy"></i>
+                <b>Tournaments</b>
+              </span>
+              <span>
+                <i class="gti-newspaper-o"></i>
+                <b>Cybersport News</b>
+              </span>
+              <span>
+                <i class="gti-users"></i>
+                <b>Teams stats & ratings</b>
+              </span>
+              <span>
+                <i class="gti-user"></i>
+                <b>Players stats</b>
+              </span>
+              <span>
+                <i class="gti-swords"></i>
+                <b>Highlights <em class="label label-primary">NEW</em></b>
+              </span>
+              <span>
+                <i class="gti-play-circle-o"></i>
+                <b>Match vods with logs</b>
+              </span>
+            </div>
+            <h4 class="mlh" style="margin:30px 0 0"><span>Games in progress!</span></h4>
+          </div>
+        </section>
+
+        <div class="hgames">
+          <a href="" style="background-image:url(../img/w-582.jpg)">
+            <i class="gti-582"></i>
+            <b>DOTA 2</b>
+            <em>90%</em>
+          </a>
+          <a href="" style="background-image:url(../img/w-704.jpg)">
+            <i class="gti-704"></i>
+            <b>Counter-Strike: GO</b>
+            <em>50%</em>
+          </a>
+          <a href="" style="background-image:url(../img/w-313.jpg)">
+            <i class="gti-313"></i>
+            <b>League of Legends</b>
+            <em>70%</em>
+          </a>
+          <a href="" style="background-image:url(../img/w-800.jpg)">
+            <i class="gti-800"></i>
+            <b>Overwatch</b>
+            <em>60%</em>
+          </a>
+          <a href="" style="background-image:url(../img/w-755.jpg)">
+            <i class="gti-755"></i>
+            <b>HEARTHSTONE</b>
+            <em>30%</em>
+          </a>
+        </div>
+      </div>
+    
+    {#
+      <section class="m-sec m-even">
+        <div class="mlist-wr">
+          <div class="mlist">
+            {% include "template/home/match-list-live-home.html" %}
+          </div>
+          <div class="m-hot">
+            {% include "template/home/match-top-home.html" %}
+          </div>
+        </div>
+      </section>
+    #}
+    {#
+      <div class="bn">
+        <img src="../img/ad.jpg" alt="">
+      </div>
+    #}
+      {% include "template/breadcrumbs.html" %}
+      {% include "template/footer.html" %}
+    </div>
+  </div>
+
+{% include "template/bar.html" %}
+{% include "template/modal.html" %}
+{% include "template/scripts.html" %}
+
+</body>
+</html>

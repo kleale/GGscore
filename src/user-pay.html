@@ -1,0 +1,181 @@
+{% set title = "Аккаунт: Настройки" %}
+
+
+<!DOCTYPE html>
+<html>
+{% include "template/head.html" %}
+<body class="">
+  <div class="container mainwrap" style="padding-top:60px;">
+    {% include "template/breadcrumbs.html" %}
+    <div class="otstup">
+      <section class="t-top user-ac">
+        <div class="heroBg" style="background-image:url(../img/noplayers.png)"></div>
+        <h1 class="mlh">Username #1323</h1>
+        <div class="user-menu">
+          <ul class="nav nav-pills nav-stacked nav-user">
+            <li><a href="/account"><i class="gti-user-circle"></i><u>Мой профиль</u></a></li>
+            <li><a href="/account"><i class="gti-cog"></i><u>Настройки</u></a></li>
+            <li><a href="/account"><i class="gti-bullhorn"></i><u>Мои прогнозы</u></a></li>
+            <li><a href="/account"><i class="gti-bell-o"></i><u>Подписки</u></a></li>
+            <li class="active"><a href="/account"><i class="gti-money"></i><u>Платежи</u></a></li>
+            <li><a href="/account/logout"><i class="gti-power-off"></i><u>Выход</u></a></li>
+          </ul>
+        </div>
+        <div class="user-body">
+          <div class="row">
+            <div class="col-md-7">
+              <div class="panel panel-light payment">
+                <div class="panel-heading">
+                  <h3 class="panel-title mlh mlhSM"><span>Счет</span></h3>
+                </div>
+                <div class="panel-body">
+                  <div class="umoney"><i class="gti-coins3"></i> 1.09 $</div>
+                  <div class="umoney-btn"> <a href="javascript:;" class="btn btn-sm btn-default" data-toggle="modal" data-target="#wms" ><i class="gti-plus"></i> Пополнить</a> <a href="javascript:;" class="btn btn-sm btn-default" data-toggle="modal" data-target="#wms2"><i class="gti-money"></i> Заказать выплату</a>
+                  </div>
+                </div>
+                <div id="block_pay">
+                  <table class="table table-striped" style="margin-bottom:0;">
+                    <tbody>
+                     {% for i in 1..10 %}
+                      <tr class="{{random(['text-danger','text-success'])}}">
+                        <td width="20">
+                          <i class="gti-{{random(['times','check'])}}"></i>
+                        </td>
+                        <td>2016-11-0{{i}} {{random(['Пополнение','Снятие'])}}</td>
+                        <td class="text-center"> <abbr class="tip" title="Оплата аккаунта: Player">{{random(['-1.5','+1.2'])}} <i class="gti-usd"></i></abbr> </td>
+                      </tr>
+                      {% endfor %}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              {% include "template/pager.html" %}
+            </div>
+            <div class="col-md-5">
+              
+              <form action="account" method="POST" name="pay" class="form-horizontal">
+              <div class="panel panel-light">
+                <div class="panel-heading">
+                   <h3 class="panel-title mlh mlhSM"><span>Пополнение счета</span></h3>
+                </div>
+                <div class="panel-body">
+                  <input type="hidden" class="input" name="method" value="robo">
+                  <div class="form-group">
+                    <div rel="insum" class="col-sm-12">
+                      <div class="input-group">
+                        <input type="text" name="insum" value="" placeholder="Сумма для перевода, $" class="form-control input">
+                        <div class="input-group-addon"><i class="gti-usd"></i></div>
+                      </div>
+                      <p class="help-block">Оплата с любых карточек и e-кошельков</p>
+                    </div>
+                  </div>
+                  <div class="text-center">
+                    <button class="btn btn-primary btn-sm" onclick="sform('pay')" type="button">Подтвердить оплату</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+            
+            <form name="payout" action="account" method="POST">
+                <div class="panel panel-light">
+                  <div class="panel-heading">
+                     <h3 class="panel-title mlh mlhSM"><span>Заказать выплату</span></h3>
+                  </div>
+                  <div class="panel-body">
+                  
+                    <div class="form-group" rel="insum">
+                      <input type="text" name="insum" value="" placeholder="Сколько, $ (комиссия на вывод 10%)" class="form-control">
+                    </div>
+                    <div class="form-group" rel="payoutmethod">
+                      <select name="payoutmethod" class="form-control">
+                        <option value="">Платежная система</option>
+                        <option value="qiwi">QIWI</option>
+                        <option value="webmoney">Webmoney</option>
+                        <option value="yandex_money">Yandex</option>
+                      </select>
+                    </div>
+                    <div class="form-group" rel="incaccount">
+                      <input type="text" name="incaccount" value="" placeholder="Кошелек (WMR, Yandex, Qiwi)" class="form-control">
+                    </div>
+                    <div class="text-center">
+                      <button type="button" onclick="sform('payout')" class="btn btn-primary btn-sm">Подтвердить выплату</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      
+      {% include "template/footer.html" %}
+    </div>
+  </div>
+{#
+{% include "template/branding.html" %}
+#}
+{% include "template/bar.html" %}
+
+{% include "template/scripts.html" %}
+
+<div class="modal fade in" id="wms" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+  <div class="modal-dialog" style="max-width:320px;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Пополнить свой счет</h4></div>
+      <div class="modal-body" style="padding:30px;">
+        <form action="account" method="POST" name="pay" class="form-horizontal">
+          <input type="hidden" class="input" name="method" value="robo">
+          <div class="form-group">
+            <div rel="insum" class="col-sm-12">
+              <div class="input-group">
+                <input type="text" name="insum" value="" placeholder="Сумма для перевода, $" class="form-control input">
+                <div class="input-group-addon"><i class="gti-usd"></i></div>
+              </div>
+              <p id="ferr" class="help-block"></p>
+            </div>
+          </div>
+          <div class="text-center">
+            <button class="btn btn-primary btn" onclick="sform('pay')" type="button"><i class="gti-check"></i> Подтвердить оплату</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade in" id="wms2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+  <div class="modal-dialog" style="max-width:320px;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Заказать выплату</h4></div>
+      <div class="modal-body" style="padding:30px;">
+        <form name="payout" action="account" method="POST">
+          <div class="form-group" rel="insum">
+            <input type="text" name="insum" value="" placeholder="Сколько, $ (комиссия на вывод 10%)" class="form-control">
+          </div>
+          <div class="form-group" rel="payoutmethod">
+            <select name="payoutmethod" class="form-control">
+              <option value="">Платежная система</option>
+              <option value="qiwi">QIWI</option>
+              <option value="webmoney">Webmoney</option>
+              <option value="yandex_money">Yandex</option>
+            </select>
+          </div>
+          <div class="form-group" rel="incaccount">
+            <input type="text" name="incaccount" value="" placeholder="Кошелек (WMR, Yandex, Qiwi)" class="form-control">
+          </div>
+          <center>
+            <button type="button" onclick="sform('payout')" class="btn btn-primary"><i class="gti-check"></i> Подтвердить выплату</button>
+          </center>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

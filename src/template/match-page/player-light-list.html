@@ -1,0 +1,74 @@
+<!-- /match-page/player-videos-list.html -->
+
+{% set hero = ['sniper_sb.png', 'sven_hphover.png', 'rattletrap_hphover.png','vengefulspirit_hphover.png','gyrocopter_hphover.png','ember_spirit_hphover.png','medusa_hphover.png'] %}
+
+{% set team = ['Wings', 'OG', ' Evil Geniuses', 'EHOME', 'NewBee', 'Virtus.Pro'] %}
+
+{% set type = ['Double Kill', 'Multi Kill', 'Rampage'] %}
+
+{% set tour = ['The International 2017', 'MarsTV League 2017', 'The Spring Major', 'WCA 2016', 'The Boston Major', 'WellPlay Invitational #5'] %}
+
+<div id="player-streams" rel="stream" class="stmblock active">
+  {#
+  <div class="subm">
+    <div class="dropdown">
+      <button class="btn btn-default btn-xs dropdown-toggle" type="button" id="droplang" data-toggle="dropdown"><span id="current_stream_lang">Языки</span> <span class="caret"></span></button>
+      <ul class="dropdown-menu new_langs" id="langs">
+          <li><span rel="RU" onclick="stream_lang_new('RU','Русский')"><input type="checkbox" name="RU" id="RU"> Русский</span></li>
+          <li><span rel="EN" onclick="stream_lang_new('EN','English')"><input type="checkbox" name="EN" id="EN"> English</span></li>
+      </ul>
+    </div>
+    <em><i class="gti-youtube-play"></i></em>
+  </div>
+  #}
+  <div class="tse-sc tse_slist">
+      <div class="tse-content">
+        <ul class="slist heroavas">
+        <!--
+        <li class="devide">
+          <figure><i class="gti-youtube-play"></i>  записи</figure>
+        </li>
+        -->
+        <!-- vod hot active  -->
+        
+        {% for i in 1..10 %}
+        <li class="{% if i == 1 %}hot active{% endif %}">
+          <span>
+            <img src="http://cdn.dota2.com/apps/dota2/images/heroes/{{random(hero)}}" alt="Stream">
+           <time><sup class="scd" data-time="2708">45:08</sup> - <sup class="scd" data-time="2759">45:59</sup></time>
+          </span>
+          <div>
+            <strong>{{random(team)}} VS {{random(team)}} \ {{random(tour)}}</strong>
+            <u><b>{{random(type)}}</b> &nbsp;&bull;&nbsp; <i class="gti-eye"></i> 1,951 &nbsp;&bull;&nbsp; [EN]</u>
+          </div>
+          <em></em>
+        </li>
+        {% endfor %}
+      </ul>
+      </div>
+    
+  </div>
+</div>
+
+
+<style>
+  .slist.heroavas li span{
+    width: 60px;
+  }
+  .slist.heroavas li span time{
+    bottom: -3px;
+  }
+  .slist.heroavas li span time sup{
+    top: 0;
+    font-size: 9px;
+  }
+  .slist li div {
+    margin-left: 65px;
+  }
+  .slist.heroavas li div u{
+    margin-top: 2px;
+  }
+  .slist.heroavas li div u b{
+    color: #ab7777;
+  }
+</style>
