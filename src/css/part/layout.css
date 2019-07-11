@@ -91,7 +91,7 @@ body .mainwrap{
     height: auto;
   }
   .headerwr{
-    max-width: 1200px;
+    max-width: 1180px;
     margin: auto;
     @media (max-width: $XXL){
       max-width: 1000px;
