@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html>
 {% include "template/head.html" %}
+
 <body class="">
   {% include "template/header.html" %}
   <div class="container mainwrap pad120">
@@ -19,17 +20,17 @@
                 <!--<span class="st-btn active" id="stream-toggle"><i class="gti-bars"></i></span>
                 <span class="st-btn odtip" id="stream-expand" title="Развернуть на весь экран"><i class="gti-expand"></i></a>-->
                 <ul id="stream_menu" class="player-menu" role="tablist">
-                  <li rel="stream"  class="active">
+                  <li rel="stream" class="active">
                     <a role="tab" data-toggle="tab" href="#player-streams"><i class="gti-video-camera"></i>
-                    <span>Трансляции</span></a>
+                      <span>Трансляции</span></a>
                   </li>
                   <li rel="stat" title="Статистика">
-                   <a role="tab" data-toggle="tab" href="#player-stat"><i class="gti-pie-chart"></i>
-                    <span>Статистика</span></a>
+                    <a role="tab" data-toggle="tab" href="#player-stat"><i class="gti-pie-chart"></i>
+                      <span>Статистика</span></a>
                   </li>
                   <li id="achat" rel="log">
                     <a role="tab" data-toggle="tab" href="#player-log"><i class="gti-list-ul"></i>
-                    <span>Лог матча</span></a>
+                      <span>Лог матча</span></a>
                   </li>
                   <li id="achat" rel="chat">
                     <a role="tab" data-toggle="tab" href="#player-chat"><i class="gti-comments-o"></i>
@@ -39,22 +40,35 @@
               </div>
 
               <div id="stmblocks" class="stmblocks tab-content">
-                  {% include "template/match-list/player-streams-by-teams.html" %}
-                  {% include "template/match-page/player-stat.html" %}
-                  {% include "template/match-page/player-chat.html" %}
-                  {% include "template/match-page/player-log.html" %}
+                {% include "template/match-list/player-streams-by-teams.html" %}
+                {% include "template/match-page/player-stat.html" %}
+                {% include "template/match-page/player-chat.html" %}
+                {% include "template/match-page/player-log.html" %}
               </div>
             </div>
           </div>
         </div>
       </section><!-- /m-player" -->
 
+      <a class="dynban"
+        href="https://escorenews.com/ru/dota-2/news/13354-virtus-pro-zanyala-pervoe-mesto-v-gruppe-i-proshla-v-pley-off-epic-league?utm_source=www&amp;utm_medium=news&amp;utm_campaign=7&amp;utm_content=n13354"
+        target="_blank">
+        <span class="d_img" style="background-image: url(https://escorenews.com/media/news/n13354.jpeg);"></span>
+        <span class="d_logo"></span>
+        <span class="d_txt">
+          <span class="d_hdr">
+            Virtus.pro заняла первое место в группе и прошла в плей-офф EPIC League
+          </span>
+          <span class="d_prvw">Virtus.pro обыграла Alliance и заняла первое место в групповом этапе EPIC League
+            Divison 1 по Dota 2....</span>
+        </span>
+        <span class="d_btn"><u><b>Читать</b></u></span>
+      </a>
+
       <section class="m-sec m-even">
         <div class="mlist-wr row">
           <div class="mlist col-md-8">
-            
             {% include "template/match-list/match-list2.html" %}
-
             {% include "template/match-list/match-list-future.html" %}
             {% include "template/pager.html" %}
 
@@ -62,6 +76,22 @@
             {% include "template/pager.html" %}
           </div>
           <div class="m-hot col-md-4">
+
+            <a class="dynban sq"
+              href="https://escorenews.com/ru/dota-2/news/13354-virtus-pro-zanyala-pervoe-mesto-v-gruppe-i-proshla-v-pley-off-epic-league?utm_source=www&amp;utm_medium=news&amp;utm_campaign=7&amp;utm_content=n13354"
+              target="_blank">
+              <span class="d_img" style="background-image: url(https://escorenews.com/media/news/n13354.jpeg);"></span>
+              <span class="d_logo"></span>
+              <span class="d_txt">
+                <span class="d_hdr">
+                  Virtus.pro заняла первое место в группе и прошла в плей-офф EPIC League
+                </span>
+                <span class="d_prvw">Virtus.pro обыграла Alliance и заняла первое место в групповом этапе EPIC League
+                  Divison 1 по Dota 2....</span>
+              </span>
+              <span class="d_btn"><u><b>Читать</b></u></span>
+            </a>
+
             {% include "template/liveblock.html" %}
             {% include "template/match-list/match-top.html" %}
             {% include "template/blockzames-vertical.html" %}
@@ -71,7 +101,7 @@
             </div>
 
           </div>
-          
+
         </div>
       </section>
 
@@ -101,10 +131,11 @@
       {% include "template/footer.html" %}
     </div>
   </div>
-{% include "template/branding.html" %}
-{% include "template/bar.html" %}
-{% include "template/modal.html" %}
-{% include "template/scripts.html" %}
+  {% include "template/branding.html" %}
+  {% include "template/bar.html" %}
+  {% include "template/modal.html" %}
+  {% include "template/scripts.html" %}
 
 </body>
+
 </html>

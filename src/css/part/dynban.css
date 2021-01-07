@@ -1,0 +1,334 @@
+.dynban {
+    /* background: #7c7f84; */
+    background: #1b2126 url(../img/pava.png);
+    border-bottom: 1px solid #343b3e;
+    border-top: 1px solid #272c2f;
+}
+.d_img:after {
+    /* background: linear-gradient(to left, #152640 10%, #15243b0d 100%); */
+    background: linear-gradient(to left, #1b2126 10%, #15243b0d 100%);
+}
+/* ***** */
+.dynban {
+    display: block;
+    padding: 5px 6px 5px 6px;
+    position: relative;
+    min-height: 90px;
+    overflow: hidden;
+    padding: 5px 0;
+    text-decoration: none;
+    border-bottom: 1px solid #343b3e;
+    border-top: 1px solid #343b3e;
+}
+.dynban:hover {
+    text-decoration: none;
+}
+
+.d_logo {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-image: url(/html/img/esnews.svg);
+    width: 120px;
+    height: 20px;
+    z-index: 2;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.d_img {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    background-size: cover;
+    background-position: center;
+    bottom: 0;
+}
+.d_txt {
+    display: block;
+    margin: 20px 135px 20px 165px;
+    color: #fff;
+    position: relative;
+}
+
+.d_img:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 80%;
+}
+
+span.d_hdr {
+    display: block;
+    font-family: Roboto;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-bottom: 6px;
+}
+
+span.d_prvw {
+    display: block;
+    opacity: 0.8;
+    font-size: 13px;
+}
+
+.d_btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 120px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+}
+.d_btn i {
+    display: block;
+    font-style: normal;
+    padding-top: 7px;
+    font-weight: 300;
+    font-size: 10px;
+}
+.d_btn b:hover {
+    background: #38a03c;
+}
+.d_btn b {
+    background: #4caf50;
+    border-radius: 3px;
+    padding: 3px 10px;
+    display: block;
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 15px;
+    text-align: center;
+    color: #fff;
+}
+.d_btn u {
+    text-decoration: none;
+}
+.d_bdg {
+    display: inline-block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 4px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 9px;
+    line-height: 11px;
+    text-transform: uppercase;
+    background: #ddbe9a;
+    border-radius: 2px;
+    color: #000;
+    margin-right: 6px;
+    position: relative;
+    top: -1px;
+}
+.d_btn::before {
+    content: "";
+    display: block;
+    height: 70%;
+    width: 2px;
+    background: #30353e;
+    position: absolute;
+    left: 0;
+    border-left: 1px solid #1c242f;
+}
+
+
+@media (max-width: 550px) {
+    .d_hdr {
+        font-size: 14px;
+    }
+    .d_prvw{
+        font-size: 12px;
+    }
+    .d_txt {
+        margin: 120px 35px 40px 35px;
+    }
+    .d_img {
+        width: 100%;
+    }
+    .d_img:after {
+        top: auto;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        /* background: linear-gradient(to top, #152640 10%, #15243b0d 100%); */
+        /* background: linear-gradient(to top, #052b33 10%, #15243b0d 100%); */
+        background: linear-gradient(to top, #37424c 10%, #15243b0d 100%);
+        height: 100%;
+    }
+
+    .d_btn::before {
+        display: none;
+    }
+    .d_btn u {
+        text-decoration: none;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        align-content: center;
+    }
+    .d_btn {
+        position: absolute;
+        right: 10px;
+        top: auto;
+        bottom: 10px;
+        width: auto;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+        flex-direction: row;
+    }
+    .d_btn i {
+        padding-top: 0;
+        padding-right: 20px;
+    }
+}
+
+/*square*/
+.dynban.sq {
+    margin-bottom: 15px;
+}
+.dynban.sq .d_txt {
+    margin: 90px 35px 40px 35px;
+}
+.dynban.sq .d_img {
+    width: 100%;
+}
+.dynban.sq .d_img:after {
+    top: auto;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    /* background: linear-gradient(to top, #152640 10%, #15243b0d 100%); */
+    /* background: linear-gradient(to top, #052b33 10%, #15243b0d 100%); */
+    background: linear-gradient(to top, #37424c 10%, #15243b0d 100%);
+    height: 100%;
+}
+
+ .dynban.sq .d_hdr {
+     font-size: 14px;
+}
+ .dynban.sq .d_prvw{
+     font-size: 12px;
+}
+
+.dynban.sq .d_btn::before {
+    display: none;
+}
+.dynban.sq .d_btn u {
+    text-decoration: none;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    align-content: center;
+}
+.dynban.sq .d_btn {
+    position: absolute;
+    right: 10px;
+    top: auto;
+    bottom: 10px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: row;
+}
+.dynban.sq .d_btn i {
+    padding-top: 0;
+    padding-right: 20px;
+}
+
+/*vertical*/
+.dynban.vrtcl {
+    margin-bottom: 15px;
+}
+.dynban.vrtcl .d_hdr {
+     font-size: 14px;
+}
+ .dynban.vrtcl .d_prvw{
+     font-size: 12px;
+}
+.dynban.vrtcl .d_txt {
+    margin: 90px 15px 40px 15px;
+}
+.dynban.vrtcl .d_img {
+    width: 100%;
+    height: 130px;
+    background-position: center;
+}
+.dynban.vrtcl .d_img:after {
+    top: auto;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    /* background: linear-gradient(to top, #152640 10%, #15243b0d 100%); */
+    background: linear-gradient(to top, #7c7f84 10%, #15243b0d 100%);
+    height: 100%;
+}
+
+.dynban.vrtcl .d_btn::before {
+    display: none;
+}
+.dynban.vrtcl .d_btn u {
+    text-decoration: none;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    align-content: center;
+}
+.dynban.vrtcl .d_btn {
+    position: absolute;
+    right: 10px;
+    top: auto;
+    bottom: 10px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: row;
+}
+.dynban.vrtcl .d_btn i {
+    padding-top: 0;
+    padding-right: 20px;
+}
+
+.dynban.vrtcl .d_logo {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-image: url(https://ggscore.com/html/img/esnews.svg);
+    width: 70px;
+    height: 22px;
+    z-index: 2;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.dynban.vrtcl span.d_prvw {
+    line-height: 1;
+}

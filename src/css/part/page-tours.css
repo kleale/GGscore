@@ -508,6 +508,7 @@ table.places {
           th {
             padding: 3px 2px;
             text-align: center;
+            vertical-align: middle;
             /*&:first-child {
               border-left: 3px solid #434d57;
             }*/
@@ -524,7 +525,7 @@ table.places {
               width: 3px;
             }
             &:nth-child(2) {
-              text-align: right;
+              /* text-align: right; */
               width: 25px;
               padding-right: 10px;
               padding-left: 7px!important;
@@ -532,8 +533,7 @@ table.places {
             span {
               font-size: 11px;
               opacity: .7;
-              position: relative;
-              bottom: -1px;
+              vertical-align: middle;
             }
           }
         }
@@ -613,8 +613,6 @@ animate border - to share
   @media (max-width: $M) {
     margin: 10px -15px 0;
     padding: 0;
-    background-color: rgba(46, 51, 56, 0.33);
-    border: 2px solid #37424c!important;
   }
   &::before,
   &::after {
@@ -887,7 +885,8 @@ animate border - to share
 
 .ggrid .gdiv.pubg-rounds .gtable table tr td.tpo {
   width: 35px;
-  padding: 5px 8px;
+  padding: 5px 3px;
+  font-size: 12px;
 }
 
 .ggrid .gdiv.pubg-rounds .gtable table tr td.tpo.tot {
@@ -968,6 +967,21 @@ animate border - to share
 
 .pubg-rounds .headcol {
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  b{
+    width: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: right;
+    padding-right: 3px;
+  }
+  img {
+    vertical-align: middle;
+    display: inline-block;
+    margin-bottom: 1px;
+    margin-right: 2px;
+  }
 }
 
 .ps-container {
@@ -983,8 +997,10 @@ animate border - to share
 }
 
 .tot {
-  text-align: right !important;
-  padding-right: 10px!important;
+  text-align: right;
+  padding-right: 10px !important;
+  padding-left: 10px !important;
+  vertical-align: middle;
 }
 
 .pubg-rounds .table-hover>tbody>tr:hover {
@@ -1095,7 +1111,7 @@ table[data-sortable] th:after {
   border-style: solid;
   border-color: transparent;
   margin-right: 1px;
-  margin-left: 10px;
+  margin-left: 3px;
   float: right;
 }
 
@@ -1111,6 +1127,7 @@ table[data-sortable] th[data-sorted="true"]:after {
 
 table[data-sortable] th[data-sorted-direction="descending"]:after {
   border-top-color: inherit;
+  border-bottom-color: transparent!important;
   margin-top: 4px;
 }
 
@@ -1119,7 +1136,9 @@ table[data-sortable] th[data-sorted-direction="descending"]:after {
 
 table[data-sortable] th[data-sorted-direction="ascending"]:after {
   border-bottom-color: inherit;
+  border-top-color: transparent !important;
   margin-top: 0px;
+  vertical-align: baseline;
 }
 
 table[data-sortable] th[data-sorted="true"] {
@@ -1133,13 +1152,18 @@ table[data-sortable] th[data-sorted="true"] {
   .gtable tr .headcol:nth-child(1) {
     position: absolute;
     left: 0px;
-    width: 30px!important;
+    /* width: 30px!important; */
+    width: 165px !important;
     background: #37424c;
-    height: 30px;
+    height: 27px;
     vertical-align: middle;
-    text-align: right!important;
+    /* text-align: right!important; */
     font-size: 11px;
     padding-top: 7px!important;
+  }
+  .ggrid .gdiv.pubg-rounds .gtable {
+    position: inherit !important;
+    margin-left: 166px;
   }
   .gtable tr .headcol:nth-child(2) {
     position: absolute;
@@ -1147,10 +1171,6 @@ table[data-sortable] th[data-sorted="true"] {
     width: 25px;
     height: 30px;
     background: #37424c;
-  }
-  .ggrid .gdiv.pubg-rounds .gtable {
-    position: inherit !important;
-    margin-left: 166px;
   }
   .gtable tr .headcol:nth-child(3) {
     position: absolute;
@@ -1160,19 +1180,29 @@ table[data-sortable] th[data-sorted="true"] {
     width: 120px;
     overflow: hidden;
     text-overflow: ellipsis;
-    /*box-shadow: 5px 0 0px 0px #00000054;*/
   }
   .ggrid .gdiv .gtable table tr th.thheadfixed {
     position: absolute;
     left: 0;
-    width: 165px;
-    height: 42px;
-    /*top: -42px;*/
+    width: 167px;
+    height: 40.3px;
     z-index: 2;
     border-right: 1px solid #4a5a69 !important;
+    margin-top: -.3px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
   }
+  .pubg-rounds .hided {
+    /* position: absolute; */
+    display: table-cell !important;
+
+  }
+}
+
+.pubg-rounds{
   .hided {
-    position: absolute;
+    display: none;
   }
 }
 
@@ -1337,11 +1367,15 @@ section.m-head {
 
 .tour-tabs{
   &.nav-tabs {
-      margin: 0 -30px 20px -28px;
+      margin: 10px -30px 20px -28px;
       border-bottom: 1px solid #3f4f5f;
       z-index: 1;
       position: relative;
       padding: 0 30px;
+
+      @media (max-width: $L) {
+        margin: 10px -20px 20px -18px;
+      }
   }
 
   &.nav-tabs>li>a {
@@ -1366,4 +1400,34 @@ section.m-head {
       text-decoration: none;
       background-color: #334250;
   }
+}
+
+
+table[data-sortable] th:after {
+  display: none;
+  float: none;
+  margin-left: 2px;
+}
+table[data-sortable] th[data-sorted="true"]:after {
+  display: inline-block;
+  border-top-color: inherit;
+}
+
+table[data-sortable] th.pubg-th-round{
+  width: 70px;
+}
+
+.pubg-rounds caption {
+  font-size: 10px;
+  color: #c4ccd2;
+  background: #37424c url(../img/spoiler.png) repeat scroll 0 0;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-bottom: 0;
+  text-align: center;
+  padding: 3px;
+  background: transparent;
+  border-top: 1px solid #39444e;
+  border-left: 1px solid #39444e;
+  border-right: 1px solid #39444e;
 }

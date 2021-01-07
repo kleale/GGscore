@@ -223,7 +223,7 @@ gulp.task('clean', function (done) {
 //gulp.task('default', ['build', 'webserver', 'watch']);
 
 
-// Per default, start scripts and styles
+// Per default, start scripts and styles - in console "gulp default"
 gulp.task('default', gulp.series('watch', 'build', 'webserver', function (done) { done(); }  
 ));
 
