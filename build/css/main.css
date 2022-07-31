@@ -4854,9 +4854,9 @@ body .abg .kmob{
   } 
 }
 @media (max-width : 1599px) {
-  .mainwrap {
+  /* .mainwrap {
     max-width: 1030px;
-  }
+  } */
   .abg_wrap{
     max-width: 980px;
   }
