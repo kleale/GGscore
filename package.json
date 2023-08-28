@@ -1,8 +1,9 @@
 {
-  "name": "gtproject",
+  "name": "ggscore",
   "version": "1.0.1",
-  "description": "old design",
-  "main": "index.html",
+  "description": "ggscore верстка",
+  "homepage": "https://kleale.github.io/cybersportscore/",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm version patch && gulp",
