@@ -4,7 +4,10 @@
   "description": "old design",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm version patch && gulp",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
@@ -16,6 +19,7 @@
     "autoprefixer": "^6.3.6",
     "browser-sync": "^2.26.7",
     "cssnano": "^3.5.2",
+    "gh-pages": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-imagemin": "^5.0.3",
     "gulp-livereload": "^4.0.1",
