@@ -4,7 +4,6 @@
   "description": "ggscore верстка",
   "homepage": "https://kleale.github.io/ggscore/",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm version patch && gulp",
     "deploy": "gh-pages -d build"
   },
