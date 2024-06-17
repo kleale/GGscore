@@ -5,6 +5,7 @@
   "homepage": "https://kleale.github.io/GGscore/",
   "scripts": {
     "build": "npm version patch && gulp",
+    "dev": "gulp",
     "deploy": "gh-pages -d build"
   },
   "repository": {
