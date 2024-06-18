@@ -89,12 +89,16 @@ Team X, по прошлым играм."] %}
       <tr>
         <th scope="row" colspan="2">
           <div class="playHero">
-            <picture class="hero">
+            <picture class="hero tip" title="Hero name">
               <source
                 type="image/webp"
-                srcset="../img/dummy/{{ random(hero) }}.png"
+                srcset="https://escorenews.com/media/game/hero/582/_76/23.webp"
               />
-              <img src="./img/dummy/{{ random(hero) }}.png" alt="" />
+              {# <img src="./img/dummy/{{ random(hero) }}.png" alt="" /> #}
+              <img
+                src="https://escorenews.com/media/game/hero/582/_76/23.webp"
+                alt=""
+              />
               <!-- <span>Carry</span> -->
             </picture>
             <div class="name">
@@ -146,9 +150,14 @@ Team X, по прошлым играм."] %}
             <picture class="hero tip" title="Hero name">
               <source
                 type="image/webp"
-                srcset="../img/dummy/{{ random(hero) }}.png"
+                srcset="https://escorenews.com/media/game/hero/582/_76/23.webp"
               />
-              <img src="./img/dummy/{{ random(hero) }}.png" alt="" />
+              {# <img src="./img/dummy/{{ random(hero) }}.png" alt="" /> #}
+              <img
+                src="https://escorenews.com/media/game/hero/582/_76/23.webp"
+                alt=""
+              />
+              <!-- <span>Carry</span> -->
             </picture>
             <div class="name">
               <a href="#">ninjabongie</a>
@@ -256,13 +265,17 @@ Team X, по прошлым играм."] %}
     display: block;
     text-align: left;
     min-width: 150px;
+    max-width: 100px;
   }
   .item {
-    display: inline-block;
+    display: block;
     max-width: 21px;
     overflow: hidden;
     font-size: 10px;
+    float: left;
+    margin-right: 2px;
   }
+
   .item > * {
     max-width: 100%;
     max-height: 100%;
